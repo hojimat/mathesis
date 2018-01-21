@@ -1,0 +1,131 @@
+\documentclass{beamer}
+\usetheme{PaloAlto}
+\usepackage{lmodern}
+\author{Ravshanbek Khodzhimatov}
+\title{Review of thesis by G.M.Olear ``Benefits of Individualized Lifecycle Investing''}
+\usepackage{amsmath}
+\usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage{amsfonts}
+\usepackage{geometry}
+\usepackage{nameref}
+\beamertemplatenavigationsymbolsempty
+\begin{document}
+\begin{frame}
+\titlepage
+\end{frame}
+% \item Advies Commissie parameters
+\section{Literature review}
+
+\begin{frame}[allowframebreaks]{History}
+  \begin{itemize}
+    \item Merton (1969):
+    \item portfolio selection decision does not influence consumption decision
+    \item Markowitz (1959):
+    \item minimize variance subject to expected return $\geq$ baseline return
+    \item Lagrangian method is standard (mentioned in Munk(2016))
+    \item Drawback: Markowitz is a one-period optimization; not dynamic.
+    \item Dynamic mean-variance has time inconsistency problem;
+  \end{itemize}
+\end{frame}
+
+\begin{frame}[allowframebreaks]{Simulation of Artificial Market Strategies}
+  \begin{itemize}
+    \item Bick, Kraft, Munk (2013) ``SAMS''
+    \item Consider stock $S_t$ and wage $Y_t$
+    \item $\frac{dS_t}{dt} = S_t[r+\sigma_s\lambda_s+\sigma_s\frac{dW_t}{dt}]$
+    \item $W$ is a Brownian motion, thus $\frac{dW_t}{dt}$ is a white noise
+    \item $r$ is risk-free interest rate
+    \item $\lambda_s = \frac{r_s - r}{\sigma_s}$ is a Sharpe ratio
+    \item So, this expression is straightforward.
+
+\framebreak
+
+    \item $\frac{dy_t}{dt} = y_t[\alpha + \beta (\rho \frac{dW_t}{dt} + \sqrt{1-\rho^2}\frac{dW_{Yt}}{dt})]$ before retirement
+    \item $Y_t = \eta Y_{\tilde{T}}$ after retirement, where $\tilde{T}$ is last wage before retirement
+    \item The financial wealth equation is:
+    \item $\frac{dX_t}{dt} = X_t[r+\pi_{St}\sigma_s\lambda_s + \pi_{St}\sigma_s\frac{dW_t}{dt}] + Y_t - c_t$
+    \item where $\pi_{St}$ is investment in risky asset, $c_t$ is consumption and $1-\pi_{St}$ is investment in bank
+    \item Problem: if risk free income is allowed, no closed form solution exists.
+
+\framebreak
+
+    \item Solution: Define artificial market $(v, \lambda_I)$
+    \item Solve it and apply it to the real world
+    \item This will give a near-optimal solution in a true market
+  \end{itemize}
+\end{frame}%sams
+
+
+\begin{frame}[allowframebreaks]{Stock, House prices and HH wealth allocation}
+  \begin{itemize}
+    \item Ascheberg et al. (2013)
+    \item $\frac{dS_t}{dt} = S_t(r+\mu_s + \sigma_s \frac{dB_{St}}{dt})$ only depends on stock market volatility
+    \item $\frac{dH_t}{dt} = H_t(r+\mu_h +\sigma_h\rho_{Hs}\frac{dB_{St}}{dt} + \sigma_h\hat{\rho_h}\frac{dB_{Ht}}{dt})$ depends on stock market volatility and house market volatility.
+    \item $\frac{dL_t}{dt} = L_t(\mu_l(t) + \sigma_L(t)(\rho_{ls}\frac{dB_{St}}{dt} + \hat{\rho_{ls}}\frac{dB_{ht}}{dt} + \hat{\rho_l}\frac{dB_lt}{dt}))$ depends on stock market volatility, house market volatility and labor market volatility.
+  \end{itemize}
+\end{frame}
+
+
+\begin{frame}[allowframebreaks]{Mean-variance analysis with housing}
+  \begin{itemize}
+    \item Munk (2016)
+    \item Extends on Markowitz's mean-variance analysis (Modern Portfolio Theory)
+    \item Same with Flavin and Yamashita (2002) but adds endogeneous human capital
+    \item $F$ is financial wealth, $L$ is human capital. $W = F+L$
+    \item $\max E[\frac{W_1}{W_0}] - \frac{1}{2}\lambda var(\frac{W_1}{W_0})$, note here $W$ instead of $F$ unlike classical mean-variance model.
+
+\framebreak
+
+    \item Risky asset return $r$ and risk-free asset return $r_f$. $\pi$ is a fraction invested in risky asset.
+    \item $W_1 = F_0(1+(1-\pi)r_f+\pi r) + L_0(1+r_l)$ Here we can easily derive $\frac{W_1}{W_0}$
+    \item Solution is: $\pi* = \frac{1}{\lambda}(1+\frac{L_0}{F_0})\Sigma^{-1}(\mu-r_f)-\frac{L_0}{F_0}\Sigma^{-1}cov(r, r_l)$
+    \item Result: Under no constraints assumption, the above solution is optimal.
+  \end{itemize}
+\end{frame}
+
+\section{This paper}
+
+\begin{frame}[allowframebreaks]{Individualized Lifecycle Investing}
+  \begin{itemize}
+    \item G.M. Olear (2016)
+    \item Same as Ascheberg et al. we have stock, house and labor markets dynamics. Stocks are uncorrelated with others, house ~ stocks and labor~house\&stocks
+    \item Individual total wealth: $F_t+H_t+PV(contrib) + PV(mortgage) - Mortgage(balance)$
+    \item Human capital: $L_{i,t} = \sum\limits^{T-t}_{s=1}\frac{c_s E[Y_{i,s}-FR_s]}{(1+r_f)^s}$
+    \item $c_s$ is contribution to DC pension, $FR_s$ is franchise to pension
+
+\framebreak
+
+    \item Capital accumulation: $DCC_{i,t+1} = (DCC_{i,t} + c_t(Y_{i,t}-FR_t))(1+r)$, where $r = \alpha r_s + (1-\alpha) r_f$ is a linear combination of risky and risk-free asset returns.
+    \item Pension is annuitized and paid. The retirement wealth is $W = DCC + H$ and complete depletion of human capital is assumed.
+    \item Some suggest reverse mortgage during retirement years (assuming no bequest preferences).
+
+\framebreak
+
+    \item Welfare effects:
+    \item Assume CRRA utility function
+    \item Monte Carlo over certainty equivalents is done with 2000 iterations.
+
+\framebreak
+
+    \item Individualized lifecycles:
+    \item Use same utility as Munk (2016): $\max U(\alpha_s) = E[\frac{W_{i,t+1}}{W_{i,t}}] - \frac{1}{2}\gamma var[\frac{W_{i,t+1}}{W_{i,t}}]$ where $W_{i,t+1} = F_{i,t+1}+H_{i,t+1}+L_{i,t+1}$.
+    \item The solution for optimal share of risky asset is $\alpha_s = \frac{\mu_s-r_f}{\gamma \sigma_s^2}(1+\frac{L+H}{F}) - (\frac{L}{F}\frac{\sigma_{s,y}}{\sigma^2_s} + \frac{H}{F}\frac{\sigma_{s,h}}{\sigma_s^2})$
+    \item Here the first bit is Merton's solutions.
+
+  \end{itemize}
+\end{frame}
+ 
+\begin{frame}[allowframebreaks]{Data sources}
+  \begin{itemize}
+    \item $S$ is MSI World Index in EUR and 
+    \item $H$ is Dutch sries of Bank of INternational Settlements (BIS) 
+  \end{itemize}
+\end{frame}
+
+\section{Conclusion}
+\begin{frame}{Conclusion}
+  the end
+\end{frame}
+
+\end{document}

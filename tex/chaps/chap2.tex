@@ -1,0 +1,35 @@
+\chapter{Literature Review}
+\label{litreview}
+
+\section{Beginnings of financial economnics}
+\item started with Modern Portfolio Theory (MPT) by Markowitz(1952) with his mean-variance analysis and its corresponding peer result of mutual funds separation theorem by Tobin(1958). The premise was, that if investors care only about the return and the volatility (modelled by mean and variance/standard deviation respectively) over a SINGLE PERIOD, then there is a straight line representing a fixed ratio of risky assets in the optimal portfolio. MEAN-STDDEV DIAGRAM HERE.
+
+  Mean-variance analysis:
+  Let there be two assets, risky and risk-free with returns $R$ and $R_f$ respectively. Then the portfolio return is $R_p = \alpha R + (1-\alpha) R_f$ where $\alpha$ is the ratio invested in risky asset. We want to decide on this ratio $\alpha$ to maximize the expected return and minimize volatility. The simplest way to do this is the following unconstrained optimization problem:
+  \begin{center}
+    $\max_{\alpha} {R_p - \frac{\gamma}{2}\sigma^2_p}$
+  \end{center}
+
+where $\gamma$ is risk-aversion coefficient. The solution is:
+
+  \begin{center}
+    $\alpha = \frac{E[R] - R_f}{\gamma\sigma^2}$
+  \end{center}
+
+  This will be a crucial result used a lot in industry and academia, but most importantly, revived recently by Munk(2016) which we will explore later in this chapter
+  
+\item the issue with this basic model was that it demanded fixed risky-riskless asset ratio for everybody and thus could not explain why (i) younger investors take more risks than older ones and (ii) aggressive investors invest more in stocks than bonds compared to the conservative ones.
+  it also doesn't include loss aversion of people, because this solution beats all in long run but when it underperforms, it does so in a high way. 
+\item Merton(1970) introduced a framework to understand long term portfolio investments using changes of investment opportunities during the life. But Merton used dynamic programming and didn't have closed form solutions for the general case.
+
+  also this implies the myopic choice, meaning whenever the financial wealth is the only wealth, the time horizon is not important for them (assumig that their relative risk aversion is does not depend on wealth). Again, they ignore such claims that younger should risk more, because they have more time.
+
+   
+\section{Advancements in thought}
+\item Someone introduced human capital
+  SOME FINANCIAL ECONOMISTS view labor income as a divident on individual's human wealth. It is non-tradeable because of moral hazard problem. Thus the claims of immediate money for claims of future works are not legally binding, because human rights forbid any such contracts to prevent all forms of slavery. 
+\item someone introduced housing
+\item Munk introduced closed form solution
+\section{Individualized portfolios}
+\item Olear did for Netherlands
+\item someone did for other countries
