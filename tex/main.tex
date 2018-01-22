@@ -1,8 +1,7 @@
 \documentclass[12pt, oneside, liststotoc, consistentlayout]{report}
 \usepackage[utf8]{inputenc}
-\usepackage[T1]{fontenc}\usepackage{times}
-\usepackage[backend=bibtex,style=authoryear,natbib=true]{biblatex}
-\addbibresource{example.bib}
+\usepackage[T1]{fontenc}
+\usepackage{times}
 \usepackage[autostyle=true]{csquotes}
 
 \usepackage{titlesec}
@@ -11,7 +10,6 @@
 \titleformat{\subsubsection}{\normalfont}{\thesection}{1em}{}
 \titleformat{\chapter}[display]{\normalfont\center\uppercase}{\MakeUppercase{\chaptertitlename} \thechapter}{1em}{}
 \titlespacing*{\chapter}{0pt}{0pt}{0pt}
-
 
 \usepackage{geometry}
 \geometry{paper=a4paper, left=4cm, right=2.5cm, top=2.5cm, bottom=2.5cm}
@@ -31,11 +29,11 @@
 \begin{document}
 
 \pagenumbering{gobble}
-\include{pres/titlex}
-%\include{pres/approvalx}
-%\include{pres/declarationx}
-%\include{pres/abstractx}
-%\include{pres/acknowledgementx}
+%\include{pres/title}
+%\include{pres/approval}
+%\include{pres/declaration}
+%\include{pres/abstract}
+%\include{pres/acknowledgement}
 %\tableofcontents
 %\listoffigures
 %\listoftables 
@@ -47,16 +45,16 @@
 %\include{chaps/chap4} 
 %\include{chaps/chap5} 
 %\include{chaps/chap6}
+\pagenumbering{gobble}
+
+\include{pres/bibliography}
 
 \appendix
-\pagenumbering{gobble}
 \include{apps/appa}
 %\include{apps/appb}
 %\include{apps/appc}
 %\include{apps/appd}
 %\include{apps/appe}
 %\include{apps/appf}
-
-\printbibliography[heading=bibintoc]
 
 \end{document}  
