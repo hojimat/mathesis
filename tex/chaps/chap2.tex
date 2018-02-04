@@ -1,9 +1,9 @@
 \chapter{Literature Review}
 \label{litreview}
 
-\section{Beginnings of financial economnics}
+\section{Beginnings of financial economics}
 
-\paragraph*{}The financial economics is generally thought to be started with Modern Portfolio Theory (MPT) by Markowitz(1952). He pioneered the mean-variance analysis and was followed by Mutual Funds Separation Theorem of Tobin(1958). The premise of the model was, that if investors care only about the return and the volatility (modelled by mean and variance(or standard deviation) respectively) over a single period, then there is a straight line representing a fixed ratio of risky assets in the optimal portfolio. We summarize their model as follows:
+\paragraph*{}The financial economics is generally thought to be started with Modern Portfolio Theory (MPT) by Markowitz (1952). He pioneered the mean-variance analysis and was followed by Mutual Funds Separation Theorem of Tobin (1958). The premise of the model was, that if investors care only about the return and the volatility (modelled by mean and variance(or standard deviation) respectively) over a single period, then there is a straight line representing a fixed ratio of risky assets in the optimal portfolio. We summarize their model as follows:
 
 \paragraph*{Mean-Variance Analysis}
 Let there be two assets, risky and risk-free with returns $R$ and $R_f$ respectively. Let $\alpha$ be the ratio of total wealth invested in a risky asset. Then the portfolio return is:
@@ -24,20 +24,88 @@ where $\gamma$ is risk-aversion coefficient. The classical solution is:
 	$\alpha = \frac{E[R] - R_f}{\gamma\sigma^2}$
 \end{center}
 
-\paragraph*{}This is a crucial result used a lot in industry, academia and MBA courses but most importantly, revived recently by Munk(2016) which we will explore later in this chapter. The issue with this basic model was that it demanded fixed risky asset ratio for everybody and thus could not explain why (i) younger investors take more risks than older ones and (ii) aggressive investors invest more in stocks than bonds compared to the conservative ones. The model also didn't include loss aversion of people, because although this solution performs best on average in the long run, when it underperforms, it does so in a high way and investors are willing to sacrifice possible gains for loss avoidance.
+\paragraph*{}This is a crucial result used a lot in industry, academia and MBA courses but most importantly, revived recently by Munk (2016) which we will explore later in this chapter. The issue with this basic model was that it demanded fixed risky asset ratio for everybody and thus could not explain (i) why younger investors take more risks than older ones and (ii) why aggressive investors invest more in stocks than bonds compared to the conservative ones. The model also didn't include loss aversion of people, because although this solution performs best on average in the long run, when it underperforms, it does so in a high way and investors are willing to sacrifice possible gains for loss avoidance.
 
- \paragraph*{}Following Markowitz, Merton(1970) and Samuelson(1969) introduced a framework to understand long term portfolio investments using changes of investment opportunities during the life. But Merton used dynamic programming and didn't have closed form solutions for the general case.
+ \paragraph*{}Following Markowitz, Merton (1970) and Samuelson (1969) introduced a framework to understand long term portfolio investments using changes of investment opportunities during the life. Their result was to repeat the Markowitz's myopic choice in every period. Formally he stated that whenever the relative risk aversion doesn't depend on wealth, the time horizon is not important for an investor. The Merton solution was not adopted outside academia because it failed to justify the financial rules of thumb like "young should invest more aggresively" and because it used a dynamic programming approach without general closed form solution, which finance analysts found complicated (Campbell and Viceira 2000).
 
-  also this implies the myopic choice, meaning whenever the financial wealth is the only wealth, the time horizon is not important for them (assumig that their relative risk aversion is does not depend on wealth). Again, they ignore such claims that younger should risk more, because they have more time.
 
-   
+
 \section{Advancements in thought}
-\item Bodie, Campbell, Samuelson introduced human capital to the problem.
-  They view labor income as a divident on individual's human wealth. It is non-tradeable because of moral hazard problem. Thus the claims of immediate money for claims of future works are not legally binding, because human rights forbid any such contracts to prevent all forms of slavery.
-  This was an important paper and could be summarized as follows:
-  
-\item someone introduced housing
-\item Munk introduced closed form solution
-\section{Individualized portfolios}
-\item Olear did for Netherlands
-\item someone did for other countries
+
+\paragraph*{}Merton (1971) added labor into the model and found that when the markets are complete and labor income is constant and risk-free, the optimal portfolio choice is:
+
+\begin{center}
+	$\alpha_t = \frac{\mu - R_f}{\gamma \sigma^2}(\frac{W_t + H_t}{W_t}$
+\end{center}
+
+Which meant that adding labor income into the model increased the risky asset ratio in the portfolio choice. The idea of considering labor income was further advanced with the collaboration of Merton and Samuelson with Zvi Bodie in their paper Bodie et al. (1992) where they introduced a notion of human capital to the problem. They formalized the view that labor income is a divident on individual's lifelong human wealth. It is non-tradeable because of moral hazard problem (any future claims of immediate salary for the promise of working for years to come are not enforcable as they constitute some form of slavery). Introducing human capital came as follows: they let individuals to solve two problems simultaneously each period - (a) the decision between consumption and leisure and (b) the decision of allocating portfolio between risky and riskless assets. The framework is that individuals maximize their lifetime utility from consumption and leisure:
+
+\begin{center}
+	$E_t[\int_0^T e^{-\delta s} u(C(s), L(s))ds]$
+\end{center}
+
+The risky asset and labor income both follow the Ito's process:
+
+\begin{center}
+	$\frac{dP}{P} = E_t[R]dt + \sigma dz$,\\
+	$\frac{dw}{w} = E_t[ROR_w]dt + \sigma^* dz^*$
+\end{center}
+
+For convenience, only special cases of $\sigma^* \in \{0, k\sigma \}$ are considered. Bodie et al. summarized their method in a very accessible way. The timing is in 5 steps:
+
+\begin{enumerate}
+	\item At the beginning of time $t$ the individual calculates the present value of his future earnings and finds its risk characteristics. This value is called a human capital at time $t$ and is denoted by $H(t)$.
+	\item The total wealth at time $t$ is defined as a sum of human wealth and financial wealth: $W(t) = F(t) + H(t)$.
+	\item The individual determines the optimal wealth allocated to consumption of a numeraire good and leisure.
+	\item The individual solves for $\hat{x}(t)$ - the percentage of total wealth $W(t)$ invested in a risky asset.
+	\item Subtract the wage's implicit exposure to risk from Step 1 from the total amount to be invested in a risky asset $\hat{x}(t) \cdot W(t)$.
+\end{enumerate}
+
+\paragraph*{}The result is that since the optimal risky investment ratio is calculated from the total wealth, the outside observer trained using classical theory, who only sees the financial wealth and not the human wealth, cannot explain why it is rational to invest such a large portion of a financial wealth in a risky asset. According to this model, though, the ratio invested in risky asset is not very high, because it considers the total wealth. This also means that when people get older, their human capital, which is calculated as a present value of the future labor income streams, gradually depletes. Therefore, as an investor gets older, $H(t)$ approaches $0$, the total wealth $W(t)$ approaches the financial wealth $F(t)$, which means that older people are advised to invest a smaller percentage of their financial wealth into risky assets than younger people. The paper claimed that this result holds under so-called "normal circumstances" but empirics did not confirm that view because many young people didn't invest in risky assets at all. 
+
+\paragraph*{}Cocco et al. (2005) solve the same problem numerically and simulate the investment processes using calibrated and/or conventional parameters. They introduce the heterogeneity in the model and consider different educational levels, marital status and family sizes of investors. Their results are complementary to Bodie et al. in a sense that they study incomplete markets. These results were complex but a referee of the paper suggested the following simplification (which was then included in the paper):
+
+\begin{center}
+	$\alpha_t = \begin{cases} 100\% & t<40\\(200-2.5t)\% & t\in[40,60]\\50\% & t>60 \end{cases}$,
+\end{center}
+
+where $\alpha_t$ is the investment share in risky assets and $t$ is investor's age.
+
+\paragraph*{}Flavin and Yamashita (2002) used mean-variance analysis to study how including housing as a separate investment instrument will affect life-cycle investment behavior. They simplified the above model by excluding human capital and risk-free asset from the model. Nevertheless, the results were substantial. They found that due to the large magnitude of housing investment (which is both investment and consumption good) in utility function, when consumers are forced to satisfy particular housing constraint, it exceeds their risk capacity and they tend to not invest in risky assets at all. This explained why young people don't invest in stocks empirically. They also found that introducing housing added individualization into model: similar households would invest different amounts depending on their housing wealth. Ascheberg et al. (2013) found the long-term cointegration among housing, stocks and labor income. They found similar results explaining young people's non-participation in stock markets. 
+
+
+
+\section{Reinvention of analytical solution}
+
+
+\paragraph*{}Munk (2016) showed how simple one-period mean-variance analysis can be expanded to capture all the life-cycle effects mentioned above without any need for dynamic programming and numerical solutions. His model resembles Bodie et al. (1992) but doesn't use numerical approach. Munk considered a decision between single risk-free asset with return $r_f$ and a vector of risky assets (including housing investment) with return $r \sim (\mu, \Sigma)$. The control variable is $\pi$ - a vector of shares of total wealth invested in each of risky assets with return $r$. The Markowitz's optimization problem is transformed to capture dynamics:
+
+
+\begin{center}
+	$ \displaystyle\max_{\pi} \{ E[\frac{W_1}{W_0}] - \frac{\gamma}{2} var(\frac{W_1}{W_0}) \} $
+\end{center}
+
+where total wealth is a sum of financial and human wealth: $W_t = F_t + L_t$ and human capital has returns $r_L \sim (\mu_L, \sigma_L)$ Basic formulas are:
+
+\begin{center}
+	$E[\frac{W_1}{W_0}] = \frac{F_0}{W_0} (1 + r_f(1-\pi \cdot 1) + \pi \cdot \mu) + \frac{L_0}{W_0}(1+\mu_L)$,\\
+	$var(\frac{W_1}{W_0}] = (\frac{F_0}{W_0})^2 \pi \Sigma \pi + (\frac{L_0}{W_0})^2(\sigma^2_L) + 2 \cdot \frac{F_0 L_0}{W_0 W_0} \cdot \pi\cdot cov(r,r_L)$
+\end{center}
+
+the maximization problem becomes:
+
+\begin{center}
+	$\displaystyle\max_{\pi} \{ \pi(\mu - r_f \cdot 1) - \frac{\gamma}{2} \cdot \frac{F_0}{F_0+L_0} \cdot (\pi \Sigma \pi + 2 \cdot \frac{L_0}{F_0} \cdot \pi \cdot cov(r,r_L)) \}$
+\end{center}
+
+and the solution easily comes from calculus:
+
+\begin{center}
+	$\pi^* = \frac{1}{\gamma} \frac{W_0}{F_0} \cdot \Sigma^{-1} (\mu - r_f \cdot 1) - \frac{L_0}{F_0} \cdot \Sigma^{-1} cov(r,r_L)$
+\end{center}
+
+The solution captures all the results of the previous papers and is a lot more intuitive. So, for example, if human capital is very correlated with stocks, then the risky asset investment $\pi^*$ is crowded out. Or, when a person gets old, her human capital depletes and the second term goes to zero and the solution replicates the Merton solution.
+
+
+\section{Relevant research}
+Olear (2016) uses Munk (2016) to study the welfare gains of individualized life-cycle retirement investments as opposed to standardized ones. She uses Ascheberg's human capital, stocks and labor income correlation structure and Cocco et al. (2005)'s labor income process to model the standardized life-cycles and Munk's solution to model the individualized profiles. She finds positive welfare gains when individualized investments are used for retirement on the data for Netherlands.
