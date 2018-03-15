@@ -2,9 +2,108 @@
 \label{model}
 
 \section{Labor income process}
-no switches between educations; fixed effect model
-\section{Correlations}
-Appendix A
-\section{Annuitization of pension}
+
+\paragraph*{}We model the labor income process as a regression prediction plus aggregate and idiosyncratic shocks for working people and as the percentage $\lambda$ of the last received wage for the retired. This is summarized in Cocco et al. (2005):
+
+\begin{center}
+	$\log(Y_{it}) =
+		\begin{cases}
+			f(t,Z_{it}) + v_{it} + \epsilon_{it}, & t \leq T \\
+			log(\lambda) + f(T, Z_{iT}) + v_{iT}, & t > T
+		\end{cases}
+	$
+\end{center}
+
+where $T$ is the retirement age and $f(t, Z_{it})$ is the log-wage regression outcome for individual $i$ at time $t$. The error terms are decomposed as:
+
+\begin{center}
+	$v_{it} = v_{i,t-1} + u_{it}$,\\
+	$u_{it} = \xi_t + \omega_{it}$
+\end{center}
+
+and distributed as:
+
+\begin{center}
+	$u_{i} \sim N(0, \sigma^2_u)$,\\
+	$\xi \sim N(0,\sigma^2_{\xi})$,\\
+	$\omega_{i} \sim N(0, \sigma^2_{\omega})$.
+\end{center}
+
+We use Olear's (2016) approach (Appendix B) to transform the main equation into the following:
+
+\begin{center}
+	$Y_{i,t+1} = 
+	\begin{cases}
+		Y_{it} (1 + g_{i,t+1} + \xi_t + \omega_{it}), & t \leq T \\
+		\lambda (1 + f(T, Z_{iT}) + v_{iT}), & t > T
+	\end{cases}	
+	$
+\end{center}
+
+where $g_{i,t+1} = f(t+1, Z_{i,t+1}) - f(t, Z_{it})$, $\xi$ is the aggregate shock and $\omega_{i}$ is idiosyncratic shock.
+
+
+\subsection{Correlations}
+
+To derive the above equation, we must construct the aggregate labor income shock $\xi$. Following the Approach of Ascheberg et al. (2013) we want labor income series to be correlated with both stock series and housing series. To do that we first create three uncorrelated standard normally distributed random series $\epsilon_{st}$, $\epsilon_{ht}$, $\epsilon_{yt}$ and multiply them by the Cholesky decomposition $Q$ of the correlation matrix $R$, i.e. $R = QQ'$, where:
+
+\begin{center}
+	$R = \begin{bmatrix}
+					1 & \rho_{sh} & \rho_{sy} \\
+					\rho_{hs} & 1 & \rho_{hy} \\
+					\rho_{ys} & \rho_{yh} & 1
+			\end{bmatrix}
+	$
+\end{center}
+
+Stock, housing and labor income series then take the form of expected rate of return plus the volatility multiplied by the modified error terms. For details please refer to Appendix A:\\
+$\frac{\Delta S_{t+1}}{S_t} = \mu_s + \sigma_s \cdot \epsilon_{st}$\\
+$\frac{\Delta H_{t+1}}{H_t} = \mu_h + \sigma_h \cdot \left(\rho_{hs}\epsilon_{st} + (\sqrt{1-\rho^2_{hs}})\epsilon_{ht}\right)$\\
+$\frac{\Delta Y_{t+1}}{Y_t} = \mu_v + \sigma_v \cdot \left(\rho_{ys}\epsilon_{st} + \left(\frac{\rho_{yh} - \rho_{sh}\rho_{sy}}{\sqrt{1-\rho^2_{sh}}}\right)\epsilon_{ht} + \left(\sqrt{1-\rho^2_{ys}-(\frac{\rho_{yh} - \rho_{sh}\rho_{sy}}{\sqrt{1-\rho^2_{sh}}})^2}\right)\epsilon_{vt}\right)$
+
 \section{Welfare measurement}
+Similarly to Cocco et al. (2005) we use CRRA utility function in our model:
+
+\begin{center}
+	$E_1[U(c)] = E_1 \left[\displaystyle\sum^T_{t=1} \delta^{t-1} \displaystyle\prod^{t-1}_{j=0} p_j \cdot \frac{c^{1-\gamma}_{it}}{1-\gamma}\right]$
+\end{center}
+
+where $p_k$ is the probability of survival at time $k$. Note that we omitted the bequest motives from the original formulation, thus retired person consumes all of his income at any given time.
+
+\paragraph*{}Following Olear (2016) we use certainty equivalent consumptions (CEC) instead of expected utilities to compare the welfare effects between different lifecycle choices. Appendix C shows the calculation of the following formula for CEC:
+
+\begin{center}
+	$CEC = \left( \frac{E[U(c)]\cdot(1-\gamma)}{\sum^T_{t=1} \delta^{t-1} \prod^{t-1}_{j=0} p_j} \right)^{1/(1-\gamma)}$
+\end{center}
+
+
 \section{Individualization}
+
+To derive the individual lifecycle portfolios for every wealth type we use a special case of Munk (2016) with housing and human capital included. This approach and its solution has been done by Olear (2016). First, note that total wealth at any time consists of financial, housing and labor income wealth: $W_t = F_t + H_t + L_t$. This gives the mean:
+
+\begin{center}
+	$E[\frac{W_1}{W_0}] = \frac{F_1 + H_1 + L_1}{W_0} =  \frac{F_0}{W_0} (1 + r_p) + \frac{H_0}{W_0}(1+\mu_H) + \frac{L_0}{W_0}(1+\mu_L)$
+\end{center}
+
+where $r_p = r_f(1-\pi) + \pi \cdot \mu_s$ is a portfolio return, $\pi$ is share of total wealth invested in stocks, $r_f$ is a rate of return on a risk-free asset (bond) and $\mu_s = E[r]$ is expected stock return. The volatility is given by:
+
+\begin{center}
+	$var(\frac{W_1}{W_0}] = (\frac{F_0}{W_0})^2 \pi^2 \sigma^2_s + (\frac{H_0}{W_0})^2(\sigma^2_H) + (\frac{L_0}{W_0})^2(\sigma^2_L) + 2 \cdot X$
+\end{center}
+
+where:
+
+\begin{center}
+	$X = \frac{F_0 L_0}{W_0} \cdot \pi\cdot cov(S,L) + \frac{F_0 H_0}{W_0} \cdot \pi\cdot cov(S,H) + \frac{H_0 L_0}{W_0} \cdot cov(L,H)$
+\end{center}
+
+
+Substituting this to the mean-variance maximization and solving yields:
+
+\begin{center}
+	$\pi_{t+1} = \frac{\mu_s - r_f}{\gamma \sigma^2_s} \cdot \frac{W_t}{F_t} - \frac{L_t}{F_t} \cdot \frac{corr(S,Y)}{\sigma^2_s} - \frac{H_t}{F_t} \cdot \frac{corr(S,H)}{\sigma^2_s}$
+\end{center}
+
+
+\section{Retirement income}
+WE NEED SOMETHING ABOUT REVERSE MORTGAGE AND ANNUITIZATION OF THE SAVINGS UNTIL AGE 100 I SUPPOSE OR NO?

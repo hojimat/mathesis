@@ -1,0 +1,6 @@
+rm(list=ls())
+
+#import raw income data from aktug and yigit
+aktug <- read.csv(file="/home/ravshan/Dropbox/research/data/aktug/aktug.csv", header = TRUE)
+yigit <- read.csv(file="/home/ravshan/Dropbox/research/data/yigit.csv", header=TRUE)
+

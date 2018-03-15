@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Arch Linux) (preloaded format=pdflatex 2018.1.19)  5 FEB 2018 01:20
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Arch Linux) (preloaded format=pdflatex 2018.1.19)  15 MAR 2018 20:27
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -492,8 +492,11 @@ Package csquotes Warning: No multilingual support.
 LaTeX Warning: Unused global option(s):
     [liststotoc,consistentlayout].
 
-(./main.aux (./chaps/chap1.aux) (./chaps/chap2.aux) (./pres/bibliography.aux)
-(./apps/appa.aux))
+(./main.aux (./pres/title.aux) (./pres/approval.aux) (./pres/declaration.aux)
+(./pres/abstract.aux) (./pres/acknowledgement.aux) (./chaps/chap1.aux)
+(./chaps/chap2.aux) (./chaps/chap3.aux) (./chaps/chap4.aux)
+(./pres/bibliography.aux) (./apps/appa.aux) (./apps/appb.aux) (./apps/appc.aux)
+)
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 30.
@@ -546,98 +549,46 @@ File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-\openout2 = `chaps/chap1.aux'.
+\openout2 = `chaps/chap4.aux'.
 
-(./chaps/chap1.tex
+(./chaps/chap4.tex
 Chapter 1.
 ! Missing { inserted.
 <to be read again> 
                    \parindent 
-l.1 \chapter{Introduction}
-                           % Main chapter title
-? 
-) [1
-
-
-
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-\openout2 = `chaps/chap2.aux'.
-
- (./chaps/chap2.tex
-Chapter 2.
-! Missing { inserted.
-<to be read again> 
-                   \parindent 
-l.1 \chapter{Literature Review}
-                               
+l.1 \chapter{Data and Research Design}
+                                      
 ? 
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <12> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 6.
-[2
-
-
-
-] [3] [4] [5]) [6] [7]
-\openout2 = `pres/bibliography.aux'.
-
- (./pres/bibliography.tex
-! Missing { inserted.
-<to be read again> 
-                   \parindent 
-l.1 \chapter*{References}
-                         
-? 
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 4.
 ) [1
 
 
 
-]
-\openout2 = `apps/appa.aux'.
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./main.aux
+(./chaps/chap4.aux))
 
- (./apps/appa.tex
-Appendix A.
-! Missing { inserted.
-<to be read again> 
-                   \parindent 
-l.1 \chapter{Cholesky decomposed errors}
-                                        
-? 
-) [2
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
+ )
+(\end occurred inside a group at level 1)
 
-
-] (./main.aux (./chaps/chap1.aux) (./chaps/chap2.aux)
-(./pres/bibliography.aux) (./apps/appa.aux)) )
-(\end occurred inside a group at level 4)
-
-### simple group (level 4) entered at line 1 ({)
-### simple group (level 3) entered at line 1 ({)
-### simple group (level 2) entered at line 1 ({)
 ### simple group (level 1) entered at line 1 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 3123 strings out of 492985
- 38211 string characters out of 6138638
- 119708 words of memory out of 5000000
- 6644 multiletter control sequences out of 15000+600000
- 16187 words of font info for 33 fonts, out of 8000000 for 9000
+ 3130 strings out of 492985
+ 38386 string characters out of 6138638
+ 118171 words of memory out of 5000000
+ 6650 multiletter control sequences out of 15000+600000
+ 9120 words of font info for 19 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 27i,8n,30p,1108b,292s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 27i,4n,30p,813b,189s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/
-texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fon
-ts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/publi
-c/amsfonts/cm/cmmi6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/c
-mmi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/
-share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texmf-dist
-/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/pub
-lic/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/c
-m/cmsy8.pfb></usr/share/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share
-/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texmf-dist/fonts/type1
-/urw/times/utmri8a.pfb>
-Output written on main.pdf (9 pages, 135555 bytes).
+texmf-dist/fonts/type1/urw/times/utmr8a.pfb>
+Output written on main.pdf (1 page, 18059 bytes).
 PDF statistics:
- 83 PDF objects out of 1000 (max. 8388607)
- 59 compressed objects within 1 object stream
+ 13 PDF objects out of 1000 (max. 8388607)
+ 8 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

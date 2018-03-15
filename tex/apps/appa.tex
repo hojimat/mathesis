@@ -8,3 +8,25 @@
   $cov(L\Omega) = L \cdot E[\Omega\Omega'] \cdot L' = L \cdot var(\Omega) \cdot L'$,\\
   $cov(L\Omega) = L\cdot I \cdot L' = LL' = \Sigma$
 \end{center}
+
+Now consider the correlation matrix:
+
+\begin{center}
+	$R = \begin{bmatrix}
+					1 & \rho_{sh} & \rho_{sy} \\
+					\rho_{hs} & 1 & \rho_{hy} \\
+					\rho_{ys} & \rho_{yh} & 1
+			\end{bmatrix}
+	$
+\end{center}
+
+Basic algebra gives its Cholesky decomposition as:
+
+\begin{center}
+	$Q = \begin{bmatrix}
+					1 & 0 & 0 \\
+					\rho_{hs} & \sqrt{1-\rho^2_{hs}} & 0 \\
+					\rho_{ys} & \frac{\rho_{yh} - \rho_{sh}\rho_{sy}}{\sqrt{1-\rho^2_{sh}}} & \sqrt{1-\rho^2_{ys}-(\frac{\rho_{yh} - \rho_{sh}\rho_{sy}}{\sqrt{1-\rho^2_{sh}}})^2}
+			\end{bmatrix}
+	$
+\end{center}

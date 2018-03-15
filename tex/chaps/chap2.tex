@@ -35,13 +35,13 @@ where $\gamma$ is risk-aversion coefficient. The classical solution is:
 \paragraph*{}Merton (1971) added labor into the model and found that when the markets are complete and labor income is constant and risk-free, the optimal portfolio choice is:
 
 \begin{center}
-	$\alpha_t = \frac{\mu - R_f}{\gamma \sigma^2}(\frac{W_t + H_t}{W_t}$
+	$\alpha_t = \frac{\mu - R_f}{\gamma \sigma^2}(\frac{W_t + H_t}{W_t})$
 \end{center}
 
 Which meant that adding labor income into the model increased the risky asset ratio in the portfolio choice. The idea of considering labor income was further advanced with the collaboration of Merton and Samuelson with Zvi Bodie in their paper Bodie et al. (1992) where they introduced a notion of human capital to the problem. They formalized the view that labor income is a divident on individual's lifelong human wealth. It is non-tradeable because of moral hazard problem (any future claims of immediate salary for the promise of working for years to come are not enforcable as they constitute some form of slavery). Introducing human capital came as follows: they let individuals to solve two problems simultaneously each period - (a) the decision between consumption and leisure and (b) the decision of allocating portfolio between risky and riskless assets. The framework is that individuals maximize their lifetime utility from consumption and leisure:
 
 \begin{center}
-	$E_t[\int_0^T e^{-\delta s} u(C(s), L(s))ds]$
+	$E_t \left[\displaystyle\int_0^T e^{-\delta s} u(C(s), L(s))ds \right]$
 \end{center}
 
 The risky asset and labor income both follow the Ito's process:
@@ -85,20 +85,7 @@ where $\alpha_t$ is the investment share in risky assets and $t$ is investor's a
 	$ \displaystyle\max_{\pi} \{ E[\frac{W_1}{W_0}] - \frac{\gamma}{2} var(\frac{W_1}{W_0}) \} $
 \end{center}
 
-where total wealth is a sum of financial and human wealth: $W_t = F_t + L_t$ and human capital has returns $r_L \sim (\mu_L, \sigma_L)$ Basic formulas are:
-
-\begin{center}
-	$E[\frac{W_1}{W_0}] = \frac{F_0}{W_0} (1 + r_f(1-\pi \cdot 1) + \pi \cdot \mu) + \frac{L_0}{W_0}(1+\mu_L)$,\\
-	$var(\frac{W_1}{W_0}] = (\frac{F_0}{W_0})^2 \pi \Sigma \pi + (\frac{L_0}{W_0})^2(\sigma^2_L) + 2 \cdot \frac{F_0 L_0}{W_0 W_0} \cdot \pi\cdot cov(r,r_L)$
-\end{center}
-
-the maximization problem becomes:
-
-\begin{center}
-	$\displaystyle\max_{\pi} \{ \pi(\mu - r_f \cdot 1) - \frac{\gamma}{2} \cdot \frac{F_0}{F_0+L_0} \cdot (\pi \Sigma \pi + 2 \cdot \frac{L_0}{F_0} \cdot \pi \cdot cov(r,r_L)) \}$
-\end{center}
-
-and the solution easily comes from calculus:
+where total wealth is a sum of financial and human wealth: $W_t = F_t + L_t$ and human capital has returns $r_L \sim (\mu_L, \sigma_L)$. The solution is easily obtained from calculus:
 
 \begin{center}
 	$\pi^* = \frac{1}{\gamma} \frac{W_0}{F_0} \cdot \Sigma^{-1} (\mu - r_f \cdot 1) - \frac{L_0}{F_0} \cdot \Sigma^{-1} cov(r,r_L)$
