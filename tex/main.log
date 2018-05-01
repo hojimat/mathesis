@@ -1,11 +1,11 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Arch Linux) (preloaded format=pdflatex 2018.1.19)  15 MAR 2018 20:27
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Arch Linux) (preloaded format=pdflatex 2018.3.21)  1 MAY 2018 15:32
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
 **main.tex
 (./main.tex
 LaTeX2e <2017-04-15>
-Babel <3.15> and hyphenation patterns for 84 language(s) loaded.
+Babel <3.18> and hyphenation patterns for 84 language(s) loaded.
 (/usr/share/texmf-dist/tex/latex/base/report.cls
 Document Class: report 2014/09/29 v1.4h Standard LaTeX document class
 (/usr/share/texmf-dist/tex/latex/base/size12.clo
@@ -353,10 +353,10 @@ LaTeX Font Info:    Redeclaring font encoding T1 on input line 48.
 Package: times 2005/04/12 PSNFSS-v9.2a (SPQR) 
 )
 (/usr/share/texmf-dist/tex/latex/csquotes/csquotes.sty
-Package: csquotes 2017/03/11 v5.2b context-sensitive quotations (JAW)
+Package: csquotes 2018/02/11 v5.2c context-sensitive quotations (JAW)
 
 (/usr/share/texmf-dist/tex/latex/etoolbox/etoolbox.sty
-Package: etoolbox 2017/01/02 v2.4 e-TeX tools for LaTeX (JAW)
+Package: etoolbox 2018/02/11 v2.5e e-TeX tools for LaTeX (JAW)
 \etb@tempcnta=\count88
 )
 (/usr/share/texmf-dist/tex/latex/graphics/keyval.sty
@@ -372,7 +372,7 @@ Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
 \csq@ltx@everypar=\toks17
 
 (/usr/share/texmf-dist/tex/latex/csquotes/csquotes.def
-File: csquotes.def 2017/03/11 v5.2b csquotes generic definitions (JAW)
+File: csquotes.def 2018/02/11 v5.2c csquotes generic definitions (JAW)
 )
 Package csquotes Info: Trying to load configuration file 'csquotes.cfg'...
 Package csquotes Info: ... configuration file loaded successfully.
@@ -440,17 +440,41 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 713.
 LaTeX Info: Redefining \[ on input line 2817.
 LaTeX Info: Redefining \] on input line 2818.
 )
+(/usr/share/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2017/06/01 v1.1a Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2017/06/25 v1.2c Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+)
+(/usr/share/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 99.
+
+(/usr/share/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen112
+\Gin@req@width=\dimen113
+)
 (/usr/share/texmf-dist/tex/latex/titlesec/titlesec.sty
 Package: titlesec 2016/03/21 v2.10.2 Sectioning titles
 \ttl@box=\box28
 \beforetitleunit=\skip46
 \aftertitleunit=\skip47
-\ttl@plus=\dimen112
-\ttl@minus=\dimen113
+\ttl@plus=\dimen114
+\ttl@minus=\dimen115
 \ttl@toksa=\toks23
-\titlewidth=\dimen114
-\titlewidthlast=\dimen115
-\titlewidthfirst=\dimen116
+\titlewidth=\dimen116
+\titlewidthlast=\dimen117
+\titlewidthfirst=\dimen118
+)
+(/usr/share/texmf-dist/tex/latex/titlesec/titletoc.sty
+Package: titletoc 2011/12/15 v1.6 TOC entries
+\ttl@leftsep=\dimen119
 )
 (/usr/share/texmf-dist/tex/latex/geometry/geometry.sty
 Package: geometry 2010/09/12 v5.6 Page Geometry
@@ -468,14 +492,14 @@ Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 \Gm@cnth=\count107
 \Gm@cntv=\count108
 \c@Gm@tempcnt=\count109
-\Gm@bindingoffset=\dimen117
-\Gm@wd@mp=\dimen118
-\Gm@odd@mp=\dimen119
-\Gm@even@mp=\dimen120
-\Gm@layoutwidth=\dimen121
-\Gm@layoutheight=\dimen122
-\Gm@layouthoffset=\dimen123
-\Gm@layoutvoffset=\dimen124
+\Gm@bindingoffset=\dimen120
+\Gm@wd@mp=\dimen121
+\Gm@odd@mp=\dimen122
+\Gm@even@mp=\dimen123
+\Gm@layoutwidth=\dimen124
+\Gm@layoutheight=\dimen125
+\Gm@layouthoffset=\dimen126
+\Gm@layoutvoffset=\dimen127
 \Gm@dimlist=\toks24
 )
 (/usr/share/texmf-dist/tex/latex/setspace/setspace.sty
@@ -486,7 +510,7 @@ Package csquotes Info: ... none found.
 
 
 Package csquotes Warning: No multilingual support.
-(csquotes)                Cannot enable multilingual quotes on input line 30.
+(csquotes)                Cannot enable multilingual quotes on input line 55.
 
 
 LaTeX Warning: Unused global option(s):
@@ -494,27 +518,92 @@ LaTeX Warning: Unused global option(s):
 
 (./main.aux (./pres/title.aux) (./pres/approval.aux) (./pres/declaration.aux)
 (./pres/abstract.aux) (./pres/acknowledgement.aux) (./chaps/chap1.aux)
-(./chaps/chap2.aux) (./chaps/chap3.aux) (./chaps/chap4.aux)
-(./pres/bibliography.aux) (./apps/appa.aux) (./apps/appb.aux) (./apps/appc.aux)
-)
+(./chaps/chap2.aux) (./chaps/chap3.aux) (./chaps/chap4.aux) (./chaps/chap5.aux)
+(./chaps/chap6.aux) (./pres/bibliography.aux))
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Try loading font information for T1+ptm on input line 30.
- (/usr/share/texmf-dist/tex/latex/psnfss/t1ptm.fd
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
+LaTeX Font Info:    Try loading font information for T1+ptm on input line 55.
+
+(/usr/share/texmf-dist/tex/latex/psnfss/t1ptm.fd
 File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
 )
+(/usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count110
+\scratchdimen=\dimen128
+\scratchbox=\box29
+\nofMPsegments=\count111
+\nofMParguments=\count112
+\everyMPshowfont=\toks25
+\MPscratchCnt=\count113
+\MPscratchDim=\dimen129
+\MPnumerator=\count114
+\makeMPintoPDFobject=\count115
+\everyMPtoPDFconversion=\toks26
+) (/usr/share/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
+
+(/usr/share/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
+)
+(/usr/share/texmf-dist/tex/latex/oberdiek/grfext.sty
+Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
+
+(/usr/share/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
+Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
+
+(/usr/share/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
+)))
+(/usr/share/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
+
+(/usr/share/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
+Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
+
+(/usr/share/texmf-dist/tex/generic/oberdiek/etexcmds.sty
+Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
+
+(/usr/share/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+)))
+(/usr/share/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
+Package: pdftexcmds 2018/01/21 v0.26 Utility functions of pdfTeX for LuaTeX (HO
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+38.
+Package grfext Info: Graphics extension search list:
+(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 456.
+
+(/usr/share/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -549,46 +638,387 @@ File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
+\openout2 = `pres/title.aux'.
+
+(./pres/title.tex [1
+
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}])
+[2]
+\openout2 = `pres/approval.aux'.
+
+ (./pres/approval.tex) [3
+
+
+]
+\openout2 = `pres/declaration.aux'.
+
+ (./pres/declaration.tex
+! Missing { inserted.
+<to be read again> 
+                   \parindent 
+l.1 \chapter*{Declaration of Originality}
+                                         
+? 
+LaTeX Font Info:    Try loading font information for OMS+ptm on input line 7.
+(/usr/share/texmf-dist/tex/latex/psnfss/omsptm.fd
+File: omsptm.fd 
+)
+LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <12> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 7.
+) [4
+
+
+
+]
+\openout2 = `pres/abstract.aux'.
+
+ (./pres/abstract.tex
+! Missing { inserted.
+<to be read again> 
+                   \parindent 
+l.1 \chapter*{Abstract}
+                       
+? 
+[5
+
+
+
+]
+! Missing { inserted.
+<to be read again> 
+                   \parindent 
+l.14 \chapter*{Özet}
+                     
+? 
+) [6
+
+]
+\openout2 = `pres/acknowledgement.aux'.
+
+ (./pres/acknowledgement.tex
+! Missing { inserted.
+<to be read again> 
+                   \parindent 
+l.1 \chapter*{Acknowledgements}
+                               
+? 
+LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <12> not available
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 3.
+) [7
+
+
+
+]
+! Missing { inserted.
+<to be read again> 
+                   \parindent 
+l.63 \tableofcontents
+                     
+? 
+(./main.toc [8
+
+
+])
+\tf@toc=\write3
+\openout3 = `main.toc'.
+
+ [9]
+! Missing { inserted.
+<to be read again> 
+                   \parindent 
+l.64 \listoffigures
+                   
+? 
+(./main.lof)
+\tf@lof=\write4
+\openout4 = `main.lof'.
+
+ [10
+
+]
+! Missing { inserted.
+<to be read again> 
+                   \parindent 
+l.65 \listoftables
+                  
+? 
+(./main.lot)
+\tf@lot=\write5
+\openout5 = `main.lot'.
+
+ [1
+
+]
+\openout2 = `chaps/chap1.aux'.
+
+ (./chaps/chap1.tex
+Chapter 1.
+! Missing { inserted.
+<to be read again> 
+                   \parindent 
+l.1 \chapter{Introduction}
+                           % Main chapter title
+? 
+[2
+
+
+] [3]) [4]
+\openout2 = `chaps/chap2.aux'.
+
+ (./chaps/chap2.tex
+Chapter 2.
+! Missing { inserted.
+<to be read again> 
+                   \parindent 
+l.1 \chapter{Literature Review}
+                               
+? 
+[5
+
+
+
+] [6] [7] [8]) [9] [10]
+\openout2 = `chaps/chap3.aux'.
+
+ (./chaps/chap3.tex
+Chapter 3.
+! Missing { inserted.
+<to be read again> 
+                   \parindent 
+l.1 \chapter{Model}
+                   
+? 
+[11
+
+
+
+] [12]) [13]
 \openout2 = `chaps/chap4.aux'.
 
-(./chaps/chap4.tex
-Chapter 1.
+ (./chaps/chap4.tex
+Chapter 4.
 ! Missing { inserted.
 <to be read again> 
                    \parindent 
 l.1 \chapter{Data and Research Design}
                                       
 ? 
-LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <12> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 4.
+<figs/bist.pdf, id=89, 505.89pt x 505.89pt>
+File: figs/bist.pdf Graphic file (type pdf)
+<use figs/bist.pdf>
+Package pdftex.def Info: figs/bist.pdf  used on input line 15.
+(pdftex.def)             Requested size: 202.3524pt x 202.3524pt.
+
+Overfull \hbox (16.69943pt too wide) in paragraph at lines 15--16
+ [][] 
+ []
+
+<figs/reidin.pdf, id=90, 505.89pt x 505.89pt>
+File: figs/reidin.pdf Graphic file (type pdf)
+<use figs/reidin.pdf>
+Package pdftex.def Info: figs/reidin.pdf  used on input line 21.
+(pdftex.def)             Requested size: 202.3524pt x 202.3524pt.
+
+Overfull \hbox (16.69943pt too wide) in paragraph at lines 21--22
+ [][] 
+ []
+
+<figs/wage2median.pdf, id=91, 505.89pt x 505.89pt>
+File: figs/wage2median.pdf Graphic file (type pdf)
+<use figs/wage2median.pdf>
+Package pdftex.def Info: figs/wage2median.pdf  used on input line 36.
+(pdftex.def)             Requested size: 252.94437pt x 252.94437pt.
+[14
+
+
+
+] [15 <./figs/bist.pdf> <./figs/reidin.pdf> <./figs/wage2median.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 44--48
+
+ []
+
+[16]
+<figs/wage2educ.pdf, id=118, 505.89pt x 505.89pt>
+File: figs/wage2educ.pdf Graphic file (type pdf)
+<use figs/wage2educ.pdf>
+Package pdftex.def Info: figs/wage2educ.pdf  used on input line 57.
+(pdftex.def)             Requested size: 303.53633pt x 303.53633pt.
+ [17 <./figs/wage2educ.pdf>]
+<figs/heterwage.pdf, id=127, 505.89pt x 505.89pt>
+File: figs/heterwage.pdf Graphic file (type pdf)
+<use figs/heterwage.pdf>
+Package pdftex.def Info: figs/heterwage.pdf  used on input line 80.
+(pdftex.def)             Requested size: 202.3524pt x 202.3524pt.
+
+Overfull \hbox (16.69943pt too wide) in paragraph at lines 80--81
+ [][] 
+ []
+
+<figs/heterwageless.pdf, id=128, 505.89pt x 505.89pt>
+File: figs/heterwageless.pdf Graphic file (type pdf)
+<use figs/heterwageless.pdf>
+Package pdftex.def Info: figs/heterwageless.pdf  used on input line 86.
+(pdftex.def)             Requested size: 202.3524pt x 202.3524pt.
+
+Overfull \hbox (16.69943pt too wide) in paragraph at lines 86--87
+ [][] 
+ []
+
+) [18 <./figs/heterwage.pdf> <./figs/heterwageless.pdf>] [19]
+\openout2 = `chaps/chap5.aux'.
+
+
+(./chaps/chap5.tex
+Chapter 5.
+! Missing { inserted.
+<to be read again> 
+                   \parindent 
+l.1 \chapter{Results}
+                     
+? 
+) [20
+
+
+
+]
+\openout2 = `chaps/chap6.aux'.
+
+ (./chaps/chap6.tex
+Chapter 6.
+! Missing { inserted.
+<to be read again> 
+                   \parindent 
+l.1 \chapter{Conclusion}
+                        
+? 
+) [21
+
+
+
+]
+\openout2 = `pres/bibliography.aux'.
+
+ (./pres/bibliography.tex
+! Missing { inserted.
+<to be read again> 
+                   \parindent 
+l.1 \chapter*{References}
+                         
+? 
 ) [1
 
 
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./main.aux
-(./chaps/chap4.aux))
+] (./apps/appa.tex
+Appendix A.
+! Missing { inserted.
+<to be read again> 
+                   \parindent 
+l.1 \chapter{Cholesky decomposed errors}
+                                        
+? 
+) (./apps/appb.tex [2
+
+
+]
+Appendix B.
+! Missing { inserted.
+<to be read again> 
+                   \parindent 
+l.1 \chapter{Logarithms as percentage change}
+                                             
+? 
+) (./apps/appc.tex [3
+
+]
+Appendix C.
+! Missing { inserted.
+<to be read again> 
+                   \parindent 
+l.1 \chapter{Derivation of CEC}
+                               
+? 
+! Extra \right.
+l.13 ...dot \frac{CEC^{1-\gamma}}{1-\gamma}\right]
+                                                   = E[U(c)]$
+? 
+)
+
+! LaTeX Error: File `apps/appd.tex' not found.
+
+Type X to quit or <RETURN> to proceed,
+or enter new name. (Default extension: tex)
+
+Enter file name: 
+
+! LaTeX Error: File `apps/appe.tex' not found.
+
+Type X to quit or <RETURN> to proceed,
+or enter new name. (Default extension: tex)
+
+Enter file name: 
+
+! LaTeX Error: File `apps/appf.tex' not found.
+
+Type X to quit or <RETURN> to proceed,
+or enter new name. (Default extension: tex)
+
+Enter file name: 
+[4
+
+] (./main.aux (./pres/title.aux) (./pres/approval.aux)
+(./pres/declaration.aux) (./pres/abstract.aux) (./pres/acknowledgement.aux)
+(./chaps/chap1.aux) (./chaps/chap2.aux) (./chaps/chap3.aux) (./chaps/chap4.aux)
+(./chaps/chap5.aux) (./chaps/chap6.aux) (./pres/bibliography.aux))
 
 LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
  )
-(\end occurred inside a group at level 1)
+(\end occurred inside a group at level 17)
 
+### simple group (level 17) entered at line 1 ({)
+### simple group (level 16) entered at line 1 ({)
+### simple group (level 15) entered at line 1 ({)
+### simple group (level 14) entered at line 1 ({)
+### simple group (level 13) entered at line 1 ({)
+### simple group (level 12) entered at line 1 ({)
+### simple group (level 11) entered at line 1 ({)
+### simple group (level 10) entered at line 1 ({)
+### simple group (level 9) entered at line 1 ({)
+### simple group (level 8) entered at line 1 ({)
+### simple group (level 7) entered at line 65 ({)
+### simple group (level 6) entered at line 64 ({)
+### simple group (level 5) entered at line 63 ({)
+### simple group (level 4) entered at line 1 ({)
+### simple group (level 3) entered at line 14 ({)
+### simple group (level 2) entered at line 1 ({)
 ### simple group (level 1) entered at line 1 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 3130 strings out of 492985
- 38386 string characters out of 6138638
- 118171 words of memory out of 5000000
- 6650 multiletter control sequences out of 15000+600000
- 9120 words of font info for 19 fonts, out of 8000000 for 9000
+ 4562 strings out of 492982
+ 59648 string characters out of 6138579
+ 145871 words of memory out of 5000000
+ 7941 multiletter control sequences out of 15000+600000
+ 18909 words of font info for 35 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 27i,4n,30p,813b,189s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 41i,11n,30p,1108b,722s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/
-texmf-dist/fonts/type1/urw/times/utmr8a.pfb>
-Output written on main.pdf (1 page, 18059 bytes).
+texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fon
+ts/type1/public/amsfonts/cmextra/cmex8.pfb></usr/share/texmf-dist/fonts/type1/p
+ublic/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts
+/cm/cmmi6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><
+/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texmf-dist/fonts/typ
+e1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfon
+ts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pf
+b></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/t
+exmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texmf-dist/fonts/type1/u
+rw/times/utmr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on main.pdf (35 pages, 227454 bytes).
 PDF statistics:
- 13 PDF objects out of 1000 (max. 8388607)
- 8 compressed objects within 1 object stream
+ 211 PDF objects out of 1000 (max. 8388607)
+ 146 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 31 words of extra memory for PDF output out of 10000 (max. 10000000)
 

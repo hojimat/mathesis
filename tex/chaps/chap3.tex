@@ -3,7 +3,7 @@
 
 \section{Labor income process}
 
-\paragraph*{}We model the labor income process as a regression prediction plus aggregate and idiosyncratic shocks for working people and as the percentage $\lambda$ of the last received wage for the retired. This is summarized in Cocco et al. (2005):
+We model the labor income process as a regression prediction plus aggregate and idiosyncratic shocks for working people and as the percentage $\lambda$ of the last received wage for the retired. This is summarized in Cocco et al. (2005):
 
 \begin{center}
 	$\log(Y_{it}) =
@@ -68,7 +68,7 @@ Similarly to Cocco et al. (2005) we use CRRA utility function in our model:
 	$E_1[U(c)] = E_1 \left[\displaystyle\sum^T_{t=1} \delta^{t-1} \displaystyle\prod^{t-1}_{j=0} p_j \cdot \frac{c^{1-\gamma}_{it}}{1-\gamma}\right]$
 \end{center}
 
-where $p_k$ is the probability of survival at time $k$. Note that we omitted the bequest motives from the original formulation, thus retired person consumes all of his income at any given time.
+where $p_k$ is the probability of survival from time $k-1$ to time $k$. Note that we omitted the bequest motives from the original formulation, thus retired person consumes all of his income at any given time.
 
 \paragraph*{}Following Olear (2016) we use certainty equivalent consumptions (CEC) instead of expected utilities to compare the welfare effects between different lifecycle choices. Appendix C shows the calculation of the following formula for CEC:
 

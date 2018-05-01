@@ -1,24 +1,33 @@
 \contentsline {chapter}{\numberline {1}Introduction}{2}
-\contentsline {section}{\numberline {1.1}Turkish Pension System}{2}
-\contentsline {section}{\numberline {1.2}Theory and Heuristics of Life-cycle Investments}{2}
-\contentsline {section}{\numberline {1.3}Focus of this Thesis}{2}
-\contentsline {chapter}{\numberline {2}Literature Review}{3}
-\contentsline {section}{\numberline {2.1}Beginnings of financial economics}{3}
-\contentsline {section}{\numberline {2.2}Advancements in thought}{4}
-\contentsline {section}{\numberline {2.3}Reinvention of analytical solution}{7}
-\contentsline {section}{\numberline {2.4}Relevant research}{7}
-\contentsline {chapter}{\numberline {3}Model}{9}
-\contentsline {section}{\numberline {3.1}Labor income process}{9}
-\contentsline {subsection}{\numberline {3.1.1}Correlations}{10}
-\contentsline {section}{\numberline {3.2}Welfare measurement}{10}
-\contentsline {section}{\numberline {3.3}Individualization}{11}
-\contentsline {section}{\numberline {3.4}Retirement income}{11}
-\contentsline {chapter}{\numberline {4}Data and Research Design}{12}
-\contentsline {section}{\numberline {4.1}Asset series}{12}
-\contentsline {subsection}{\numberline {4.1.1}Stocks}{12}
-\contentsline {subsection}{\numberline {4.1.2}Housing}{12}
-\contentsline {subsection}{\numberline {4.1.3}Labor income}{12}
-\contentsline {section}{\numberline {4.2}Parameters}{12}
+\contentsline {section}{\numberline {1.1}Theory and Heuristics of Life-cycle Investments}{2}
+\contentsline {section}{\numberline {1.2}Turkish Pension System}{3}
+\contentsline {section}{\numberline {1.3}Focus of this Thesis}{4}
+\contentsline {chapter}{\numberline {2}Literature Review}{5}
+\contentsline {section}{\numberline {2.1}Beginnings of financial economics}{5}
+\contentsline {section}{\numberline {2.2}Advancements in thought}{6}
+\contentsline {section}{\numberline {2.3}Reinvention of analytical solution}{9}
+\contentsline {section}{\numberline {2.4}Relevant research}{10}
+\contentsline {chapter}{\numberline {3}Model}{11}
+\contentsline {section}{\numberline {3.1}Labor income process}{11}
+\contentsline {subsection}{\numberline {3.1.1}Correlations}{12}
+\contentsline {section}{\numberline {3.2}Welfare measurement}{12}
+\contentsline {section}{\numberline {3.3}Individualization}{13}
+\contentsline {section}{\numberline {3.4}Retirement income}{13}
+\contentsline {chapter}{\numberline {4}Data and Research Design}{14}
+\contentsline {section}{\numberline {4.1}Data}{14}
+\contentsline {subsection}{\numberline {4.1.1}Stocks}{14}
+\contentsline {subsection}{\numberline {4.1.2}Housing}{14}
+\contentsline {subsection}{\numberline {4.1.3}Labor income}{14}
+\contentsline {section}{\numberline {4.2}Research Design}{16}
+\contentsline {subsection}{\numberline {4.2.1}Default Lifecycles}{16}
+\contentsline {subsection}{\numberline {4.2.2}Individualized Lifecycles}{16}
+\contentsline {subsubsection}{Heterogeneity in education}{16}
+\contentsline {subsubsection}{Heterogeneity in sectors}{18}
+\contentsline {subsection}{\numberline {4.2.3}Parameters}{18}
+\contentsline {chapter}{\numberline {5}Results}{20}
+\contentsline {chapter}{\numberline {6}Conclusion}{21}
+\let \chaptertitlename \appendixname 
 \contentsline {chapter}{\numberline {A}Cholesky decomposed errors}{}
 \contentsline {chapter}{\numberline {B}Logarithms as percentage change}{}
 \contentsline {chapter}{\numberline {C}Derivation of CEC}{}
+\contentsfinish 
