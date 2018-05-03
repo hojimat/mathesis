@@ -89,8 +89,8 @@ param_beta  <- 0.89
 param_r_f <- 0.035
 param_gamma <- 1.5
 param_R <- 57 #retirement age
-param_Y <- 27 #life cycle period
-param_T <- param_R-param_Y
+param_Y <- 28 #life cycle period
+param_T <- param_R-param_Y+1
 param_kappa <- 1
 
 #heter params

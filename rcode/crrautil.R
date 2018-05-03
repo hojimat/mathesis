@@ -1,4 +1,4 @@
-crrautil <- function(C, rave=5){
+crrautil <- function(C, rave=param_gamma){
   Death <- 110
   delta <- 1
   crra <- 0
@@ -7,4 +7,9 @@ crrautil <- function(C, rave=5){
     crra <- crra + sum_comp
   }
   return(crra)
+}
+
+cec <- function(C, rave=param_gamma){
+  BLAH BLAH BLAH
+  
 }
