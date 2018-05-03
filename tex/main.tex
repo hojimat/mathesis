@@ -20,12 +20,11 @@
 \renewcommand\contentsname{TABLE OF CONTENTS}
 \renewcommand\listfigurename{LIST OF FIGURES}
 \renewcommand\listtablename{LIST OF TABLES}
-\titlecontents{chapter}% <section-type>
-  [0pt]% <left>
-  {}% <above-code>
-  {\MakeUppercase{\chaptertitlename\ \thecontentslabel:\quad}\MakeUppercase}% <numbered-entry-format>
-  {}% <numberless-entry-format>
-  {\hfill\contentspage}% <filler-page-format>
+\titlecontents{chapter}[0pt]{}{\MakeUppercase{\chaptertitlename\ \thecontentslabel:\quad}\MakeUppercase}{}{\dotfill\contentspage}
+\titlecontents{section}[2.3em]{}{\thecontentslabel\quad}{}{\dotfill\contentspage}
+\titlecontents{figure}[0pt]{}{\figurename\ \thecontentslabel.\quad}{}{\dotfill\contentspage}
+\titlecontents{table}[0pt]{}{\tablename\ \thecontentslabel.\quad}{}{\dotfill\contentspage}
+\setcounter{tocdepth}{1}
 
 \usepackage{geometry}
 \geometry{paper=a4paper, left=4cm, right=2.5cm, top=2.5cm, bottom=2.5cm}
@@ -71,7 +70,7 @@
 \include{chaps/chap4} 
 \include{chaps/chap5} 
 \include{chaps/chap6}
-\pagenumbering{gobble}
+%\pagenumbering{gobble}
 
 \include{pres/bibliography}
 

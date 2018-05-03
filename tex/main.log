@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Arch Linux) (preloaded format=pdflatex 2018.3.21)  1 MAY 2018 15:32
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Arch Linux) (preloaded format=pdflatex 2018.3.21)  3 MAY 2018 14:53
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -510,7 +510,7 @@ Package csquotes Info: ... none found.
 
 
 Package csquotes Warning: No multilingual support.
-(csquotes)                Cannot enable multilingual quotes on input line 55.
+(csquotes)                Cannot enable multilingual quotes on input line 54.
 
 
 LaTeX Warning: Unused global option(s):
@@ -522,19 +522,19 @@ LaTeX Warning: Unused global option(s):
 (./chaps/chap6.aux) (./pres/bibliography.aux))
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 55.
-LaTeX Font Info:    ... okay on input line 55.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 55.
-LaTeX Font Info:    ... okay on input line 55.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 55.
-LaTeX Font Info:    ... okay on input line 55.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 55.
-LaTeX Font Info:    ... okay on input line 55.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 55.
-LaTeX Font Info:    ... okay on input line 55.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 55.
-LaTeX Font Info:    ... okay on input line 55.
-LaTeX Font Info:    Try loading font information for T1+ptm on input line 55.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 54.
+LaTeX Font Info:    ... okay on input line 54.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 54.
+LaTeX Font Info:    ... okay on input line 54.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 54.
+LaTeX Font Info:    ... okay on input line 54.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 54.
+LaTeX Font Info:    ... okay on input line 54.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 54.
+LaTeX Font Info:    ... okay on input line 54.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 54.
+LaTeX Font Info:    ... okay on input line 54.
+LaTeX Font Info:    Try loading font information for T1+ptm on input line 54.
 
 (/usr/share/texmf-dist/tex/latex/psnfss/t1ptm.fd
 File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
@@ -713,34 +713,34 @@ LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <12> not available
 ! Missing { inserted.
 <to be read again> 
                    \parindent 
-l.63 \tableofcontents
+l.62 \tableofcontents
                      
 ? 
-(./main.toc [8
-
-
-])
+(./main.toc)
 \tf@toc=\write3
 \openout3 = `main.toc'.
 
- [9]
+ [8
+
+
+]
 ! Missing { inserted.
 <to be read again> 
                    \parindent 
-l.64 \listoffigures
+l.63 \listoffigures
                    
 ? 
 (./main.lof)
 \tf@lof=\write4
 \openout4 = `main.lof'.
 
- [10
+ [9
 
 ]
 ! Missing { inserted.
 <to be read again> 
                    \parindent 
-l.65 \listoftables
+l.64 \listoftables
                   
 ? 
 (./main.lot)
@@ -804,72 +804,90 @@ Chapter 4.
 l.1 \chapter{Data and Research Design}
                                       
 ? 
-<figs/bist.pdf, id=89, 505.89pt x 505.89pt>
+<figs/bist.pdf, id=85, 505.89pt x 505.89pt>
 File: figs/bist.pdf Graphic file (type pdf)
 <use figs/bist.pdf>
-Package pdftex.def Info: figs/bist.pdf  used on input line 15.
+Package pdftex.def Info: figs/bist.pdf  used on input line 14.
 (pdftex.def)             Requested size: 202.3524pt x 202.3524pt.
 
-Overfull \hbox (16.69943pt too wide) in paragraph at lines 15--16
+Overfull \hbox (16.69943pt too wide) in paragraph at lines 14--15
  [][] 
  []
 
-<figs/reidin.pdf, id=90, 505.89pt x 505.89pt>
+<figs/reidin.pdf, id=86, 505.89pt x 505.89pt>
 File: figs/reidin.pdf Graphic file (type pdf)
 <use figs/reidin.pdf>
-Package pdftex.def Info: figs/reidin.pdf  used on input line 21.
+Package pdftex.def Info: figs/reidin.pdf  used on input line 20.
 (pdftex.def)             Requested size: 202.3524pt x 202.3524pt.
 
-Overfull \hbox (16.69943pt too wide) in paragraph at lines 21--22
+Overfull \hbox (16.69943pt too wide) in paragraph at lines 20--21
  [][] 
  []
 
-<figs/wage2median.pdf, id=91, 505.89pt x 505.89pt>
+<figs/wage2median.pdf, id=87, 505.89pt x 505.89pt>
 File: figs/wage2median.pdf Graphic file (type pdf)
 <use figs/wage2median.pdf>
-Package pdftex.def Info: figs/wage2median.pdf  used on input line 36.
+Package pdftex.def Info: figs/wage2median.pdf  used on input line 31.
 (pdftex.def)             Requested size: 252.94437pt x 252.94437pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
 [14
 
 
 
-] [15 <./figs/bist.pdf> <./figs/reidin.pdf> <./figs/wage2median.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 44--48
-
- []
-
-[16]
-<figs/wage2educ.pdf, id=118, 505.89pt x 505.89pt>
+] [15 <./figs/bist.pdf> <./figs/reidin.pdf>]
+<figs/wage2educ.pdf, id=104, 505.89pt x 505.89pt>
 File: figs/wage2educ.pdf Graphic file (type pdf)
 <use figs/wage2educ.pdf>
-Package pdftex.def Info: figs/wage2educ.pdf  used on input line 57.
+Package pdftex.def Info: figs/wage2educ.pdf  used on input line 82.
 (pdftex.def)             Requested size: 303.53633pt x 303.53633pt.
- [17 <./figs/wage2educ.pdf>]
-<figs/heterwage.pdf, id=127, 505.89pt x 505.89pt>
+ [16 <./figs/wage2median.pdf>]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<figs/heterwage.pdf, id=115, 505.89pt x 505.89pt>
 File: figs/heterwage.pdf Graphic file (type pdf)
 <use figs/heterwage.pdf>
-Package pdftex.def Info: figs/heterwage.pdf  used on input line 80.
+Package pdftex.def Info: figs/heterwage.pdf  used on input line 105.
 (pdftex.def)             Requested size: 202.3524pt x 202.3524pt.
 
-Overfull \hbox (16.69943pt too wide) in paragraph at lines 80--81
+Overfull \hbox (16.69943pt too wide) in paragraph at lines 105--106
  [][] 
  []
 
-<figs/heterwageless.pdf, id=128, 505.89pt x 505.89pt>
+<figs/heterwageless.pdf, id=116, 505.89pt x 505.89pt>
 File: figs/heterwageless.pdf Graphic file (type pdf)
 <use figs/heterwageless.pdf>
-Package pdftex.def Info: figs/heterwageless.pdf  used on input line 86.
+Package pdftex.def Info: figs/heterwageless.pdf  used on input line 111.
 (pdftex.def)             Requested size: 202.3524pt x 202.3524pt.
 
-Overfull \hbox (16.69943pt too wide) in paragraph at lines 86--87
+Overfull \hbox (16.69943pt too wide) in paragraph at lines 111--112
  [][] 
  []
 
-) [18 <./figs/heterwage.pdf> <./figs/heterwageless.pdf>] [19]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[17] [18 <./figs/wage2educ.pdf>]
+<figs/wage2sec.pdf, id=128, 505.89pt x 505.89pt>
+File: figs/wage2sec.pdf Graphic file (type pdf)
+<use figs/wage2sec.pdf>
+Package pdftex.def Info: figs/wage2sec.pdf  used on input line 124.
+(pdftex.def)             Requested size: 303.53633pt x 303.53633pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[19 <./figs/heterwage.pdf> <./figs/heterwageless.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 165--169
+
+ []
+
+[20 <./figs/wage2sec.pdf>]) [21]
 \openout2 = `chaps/chap5.aux'.
 
-
-(./chaps/chap5.tex
+ (./chaps/chap5.tex
 Chapter 5.
 ! Missing { inserted.
 <to be read again> 
@@ -877,7 +895,7 @@ Chapter 5.
 l.1 \chapter{Results}
                      
 ? 
-) [20
+) [22
 
 
 
@@ -892,7 +910,7 @@ Chapter 6.
 l.1 \chapter{Conclusion}
                         
 ? 
-) [21
+) [23
 
 
 
@@ -906,7 +924,7 @@ l.1 \chapter{Conclusion}
 l.1 \chapter*{References}
                          
 ? 
-) [1
+) [24
 
 
 
@@ -918,7 +936,7 @@ Appendix A.
 l.1 \chapter{Cholesky decomposed errors}
                                         
 ? 
-) (./apps/appb.tex [2
+) (./apps/appb.tex [25
 
 
 ]
@@ -929,7 +947,7 @@ Appendix B.
 l.1 \chapter{Logarithms as percentage change}
                                              
 ? 
-) (./apps/appc.tex [3
+) (./apps/appc.tex [26
 
 ]
 Appendix C.
@@ -965,16 +983,12 @@ Type X to quit or <RETURN> to proceed,
 or enter new name. (Default extension: tex)
 
 Enter file name: 
-[4
+[27
 
 ] (./main.aux (./pres/title.aux) (./pres/approval.aux)
 (./pres/declaration.aux) (./pres/abstract.aux) (./pres/acknowledgement.aux)
 (./chaps/chap1.aux) (./chaps/chap2.aux) (./chaps/chap3.aux) (./chaps/chap4.aux)
-(./chaps/chap5.aux) (./chaps/chap6.aux) (./pres/bibliography.aux))
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
- )
+(./chaps/chap5.aux) (./chaps/chap6.aux) (./pres/bibliography.aux)) )
 (\end occurred inside a group at level 17)
 
 ### simple group (level 17) entered at line 1 ({)
@@ -987,22 +1001,22 @@ LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 ### simple group (level 10) entered at line 1 ({)
 ### simple group (level 9) entered at line 1 ({)
 ### simple group (level 8) entered at line 1 ({)
-### simple group (level 7) entered at line 65 ({)
-### simple group (level 6) entered at line 64 ({)
-### simple group (level 5) entered at line 63 ({)
+### simple group (level 7) entered at line 64 ({)
+### simple group (level 6) entered at line 63 ({)
+### simple group (level 5) entered at line 62 ({)
 ### simple group (level 4) entered at line 1 ({)
 ### simple group (level 3) entered at line 14 ({)
 ### simple group (level 2) entered at line 1 ({)
 ### simple group (level 1) entered at line 1 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 4562 strings out of 492982
- 59648 string characters out of 6138579
- 145871 words of memory out of 5000000
- 7941 multiletter control sequences out of 15000+600000
- 18909 words of font info for 35 fonts, out of 8000000 for 9000
+ 4576 strings out of 492982
+ 59893 string characters out of 6138579
+ 147957 words of memory out of 5000000
+ 7955 multiletter control sequences out of 15000+600000
+ 17802 words of font info for 34 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,11n,30p,1108b,722s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 41i,11n,30p,1575b,744s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/
 texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fon
 ts/type1/public/amsfonts/cmextra/cmex8.pfb></usr/share/texmf-dist/fonts/type1/p
@@ -1013,12 +1027,12 @@ f-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texmf-dist/fonts/typ
 e1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfon
 ts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pf
 b></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/t
-exmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texmf-dist/fonts/type1/u
-rw/times/utmr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (35 pages, 227454 bytes).
+exmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texmf-dist/fonts/type1/u
+rw/times/utmri8a.pfb>
+Output written on main.pdf (36 pages, 232056 bytes).
 PDF statistics:
- 211 PDF objects out of 1000 (max. 8388607)
- 146 compressed objects within 2 object streams
+ 216 PDF objects out of 1000 (max. 8388607)
+ 149 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 31 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 36 words of extra memory for PDF output out of 10000 (max. 10000000)
 

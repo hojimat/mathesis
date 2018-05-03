@@ -4,6 +4,10 @@
 \contentsline {section}{\numberline {1.3}Focus of this Thesis}{4}
 \contentsline {chapter}{\numberline {2}Literature Review}{5}
 \contentsline {section}{\numberline {2.1}Beginnings of financial economics}{5}
+\contentsline {subsection}{\numberline {2.1.1}Mean-variance analysis}{5}
+\contentsline {paragraph}{}{5}
+\contentsline {paragraph}{}{6}
+\contentsline {paragraph}{}{6}
 \contentsline {section}{\numberline {2.2}Advancements in thought}{6}
 \contentsline {section}{\numberline {2.3}Reinvention of analytical solution}{9}
 \contentsline {section}{\numberline {2.4}Relevant research}{10}
@@ -15,19 +19,26 @@
 \contentsline {section}{\numberline {3.4}Retirement income}{13}
 \contentsline {chapter}{\numberline {4}Data and Research Design}{14}
 \contentsline {section}{\numberline {4.1}Data}{14}
-\contentsline {subsection}{\numberline {4.1.1}Stocks}{14}
-\contentsline {subsection}{\numberline {4.1.2}Housing}{14}
-\contentsline {subsection}{\numberline {4.1.3}Labor income}{14}
-\contentsline {section}{\numberline {4.2}Research Design}{16}
-\contentsline {subsection}{\numberline {4.2.1}Default Lifecycles}{16}
-\contentsline {subsection}{\numberline {4.2.2}Individualized Lifecycles}{16}
+\contentsline {paragraph}{}{14}
+\contentsline {paragraph}{}{14}
+\contentsline {subsection}{\numberline {4.1.1}Default parameters}{15}
+\contentsline {paragraph}{}{15}
+\contentsline {paragraph}{}{15}
+\contentsline {paragraph}{}{15}
+\contentsline {paragraph}{}{15}
+\contentsline {subsection}{\numberline {4.1.2}Heterogeneity parameters}{16}
 \contentsline {subsubsection}{Heterogeneity in education}{16}
-\contentsline {subsubsection}{Heterogeneity in sectors}{18}
-\contentsline {subsection}{\numberline {4.2.3}Parameters}{18}
-\contentsline {chapter}{\numberline {5}Results}{20}
-\contentsline {chapter}{\numberline {6}Conclusion}{21}
+\contentsline {subsubsection}{Heterogeneity in sectors of work}{18}
+\contentsline {subsubsection}{Individual heterogeneity}{19}
+\contentsline {subsubsection}{Housing wealth heterogeneity}{20}
+\contentsline {section}{\numberline {4.2}Research design}{21}
+\contentsline {subsection}{\numberline {4.2.1}Default lifecyccles}{21}
+\contentsline {subsection}{\numberline {4.2.2}Individualized lifecycles lifecyccles}{21}
+\contentsline {chapter}{\numberline {5}Results}{22}
+\contentsline {chapter}{\numberline {6}Conclusion}{23}
+\contentsline {chapter}{BIBLIOGRAPHY}{24}
 \let \chaptertitlename \appendixname 
-\contentsline {chapter}{\numberline {A}Cholesky decomposed errors}{}
-\contentsline {chapter}{\numberline {B}Logarithms as percentage change}{}
-\contentsline {chapter}{\numberline {C}Derivation of CEC}{}
+\contentsline {chapter}{\numberline {A}Cholesky decomposed errors}{25}
+\contentsline {chapter}{\numberline {B}Logarithms as percentage change}{26}
+\contentsline {chapter}{\numberline {C}Derivation of CEC}{27}
 \contentsfinish 

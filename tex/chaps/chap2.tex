@@ -3,16 +3,16 @@
 
 \section{Beginnings of financial economics}
 
-The financial economics is generally thought to be started with Modern Portfolio Theory (MPT) by Markowitz (1952). He pioneered the mean-variance analysis and was followed by Mutual Funds Separation Theorem of Tobin (1958). The premise of the model was, that if investors care only about the return and the volatility (modelled by mean and variance(or standard deviation) respectively) over a single period, then there is a straight line representing a fixed ratio of risky assets in the optimal portfolio. We summarize their model as follows:
+The financial economics is generally thought to be started with Modern Portfolio Theory (MPT) by Markowitz (1952). He pioneered the mean-variance analysis and was followed by Mutual Funds Separation Theorem of Tobin (1958). The premise of the model was, that if investors care only about the return and the volatility (modelled by mean and variance(or standard deviation) respectively) over a single period, then there is a straight line representing a fixed ratio of risky assets in the optimal portfolio. We summarize their model below.
 
-\paragraph*{Mean-Variance Analysis}
+\subsection{Mean-variance analysis}
 Let there be two assets, risky and risk-free with returns $R$ and $R_f$ respectively. Let $\alpha$ be the ratio of total wealth invested in a risky asset. Then the portfolio return is:
 
 \begin{center}
   $R_p = \alpha E[R] + (1-\alpha) R_f$
 \end{center}
 
-We want to choose $\alpha$ that maximizes the expected return and minimizes the volatility of the portfolio. Markowitz solves the following unconstrained optimization problem:
+\paragraph{}We want to choose $\alpha$ that maximizes the expected return and minimizes the volatility of the portfolio. Markowitz solves the following unconstrained optimization problem:
 
 \begin{center}
   $\displaystyle\max_{\alpha} \{ E[R_p] - \frac{\gamma}{2}\sigma^2_p \}$
@@ -24,9 +24,9 @@ where $\gamma$ is risk-aversion coefficient. The classical solution is:
 	$\alpha = \frac{E[R] - R_f}{\gamma\sigma^2}$
 \end{center}
 
-\paragraph*{}This is a crucial result used a lot in industry, academia and MBA courses but most importantly, revived recently by Munk (2016) which we will explore later in this chapter. The issue with this basic model was that it demanded fixed risky asset ratio for everybody and thus could not explain (i) why younger investors take more risks than older ones and (ii) why aggressive investors invest more in stocks than bonds compared to the conservative ones. The model also didn't include loss aversion of people, because although this solution performs best on average in the long run, when it underperforms, it does so in a high way and investors are willing to sacrifice possible gains for loss avoidance.
+\paragraph{}This is a crucial result used a lot in industry, academia and MBA courses but most importantly, revived recently by Munk (2016) which we will explore later in this chapter. The issue with this basic model was that it demanded fixed risky asset ratio for everybody and thus could not explain (i) why younger investors take more risks than older ones and (ii) why aggressive investors invest more in stocks than bonds compared to the conservative ones. The model also didn't include loss aversion of people, because although this solution performs best on average in the long run, when it underperforms, it does so in a high way and investors are willing to sacrifice possible gains for loss avoidance.
 
- \paragraph*{}Following Markowitz, Merton (1970) and Samuelson (1969) introduced a framework to understand long term portfolio investments using changes of investment opportunities during the life. Their result was to repeat the Markowitz's myopic choice in every period. Formally he stated that whenever the relative risk aversion doesn't depend on wealth, the time horizon is not important for an investor. The Merton solution was not adopted outside academia because it failed to justify the financial rules of thumb like "young should invest more aggresively" and because it used a dynamic programming approach without general closed form solution, which finance analysts found complicated (Campbell and Viceira 2000).
+\paragraph{}Following Markowitz, Merton (1970) and Samuelson (1969) introduced a framework to understand long term portfolio investments using changes of investment opportunities during the life. Their result was to repeat the Markowitz's myopic choice in every period. Formally he stated that whenever the relative risk aversion doesn't depend on wealth, the time horizon is not important for an investor. The Merton solution was not adopted outside academia because it failed to justify the financial rules of thumb like "young should invest more aggresively" and because it used a dynamic programming approach without general closed form solution, which finance analysts found complicated (Campbell and Viceira 2000).
 
 
 
