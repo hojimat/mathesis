@@ -79,7 +79,7 @@ where $p_k$ is the probability of survival from time $k-1$ to time $k$. Note tha
 
 \section{Individualization}
 
-To derive the individual lifecycle portfolios for every wealth type we use a special case of Munk (2016) with housing and human capital included. This approach and its solution has been done by Olear (2016). First, note that total wealth at any time consists of financial, housing and labor income wealth: $W_t = F_t + H_t + L_t$. This gives the mean:
+To derive the individual lifecycle portfolios for every wealth type we use a special case of Munk (2016) with housing and human capital included. This approach and its solution has been done by Olear (2016). First, note that total wealth at any time consists of financial, housing and human capital: $W_t = F_t + H_t + L_t$. Financial wealth corresponds to actual financial asset holdings at time $t$, HOUSING HERE EXPLAINED, and human capital corresponds to the present value of all the future wages until retirement. This gives the mean:
 
 \begin{center}
 	$E[\frac{W_1}{W_0}] = \frac{F_1 + H_1 + L_1}{W_0} =  \frac{F_0}{W_0} (1 + r_p) + \frac{H_0}{W_0}(1+\mu_H) + \frac{L_0}{W_0}(1+\mu_L)$
@@ -97,7 +97,6 @@ where:
 	$X = \frac{F_0 L_0}{W_0} \cdot \pi\cdot cov(S,L) + \frac{F_0 H_0}{W_0} \cdot \pi\cdot cov(S,H) + \frac{H_0 L_0}{W_0} \cdot cov(L,H)$
 \end{center}
 
-
 Substituting this to the mean-variance maximization and solving yields:
 
 \begin{center}
@@ -106,4 +105,13 @@ Substituting this to the mean-variance maximization and solving yields:
 
 
 \section{Retirement income}
-WE NEED SOMETHING ABOUT REVERSE MORTGAGE AND ANNUITIZATION OF THE SAVINGS UNTIL AGE 100 I SUPPOSE OR NO?
+
+The funds invested in retirement are modeled to be paid back in annuities. Thus, we ignore the case when some share of matured fund can be withdrawn immediately. Further, in order for our individualization analysis (based on house posessions) to have an effect, we also use reverse mortgages proposed. In theory, reverse mortgages pay retired individuals fixed annuity in return for inheriting the house after she dies. This is a plausible tool, because we ignore all bequest motives, and it liquidifies the housing posessions, although it is not yet available for Turkish investors. 
+
+\paragraph{}So, at the age of 57, the price of owned house is calculated and is added to the matured pension amount ($MP$) to obtain total wealth:
+
+\begin{center}
+	$W_{57} = H_{57} + MP$
+\end{center}
+
+All of the $W_{57}$ is used to buy an annuity which will repay an individual $\frac{W_{57}}{1+\sum^{100}_{t=58} \frac{p_t}{1+r_f}}$ annually. The calculation details are available in Appendix D. 

@@ -1,0 +1,14 @@
+\chapter{Annuitization of wealth}
+\label{appd}
+
+Let $W_{57}$ be a total wealth and let $x$ be a constant amount to be repaid annually. Then, at each age $k$, a firm will pay $x$ with probability $p_k$ and pay nothing with probability $1-p_k$, where $p_k$ is the survival probability at age $k$ (assuming $p_{57} = 1$). To calculate the present value of the annuity, every payment will be discounted by riskless bond return rate $r_f$, resulting in the following discounted sum:
+
+\begin{center}
+	$PV = x + p_{58} \cdot \frac{x}{1+r_f} + p_{59} \cdot \frac{x}{(1+r_f)^2} + ... + p_{100} \cdot \frac{x}{(1+r_f)^{100-57}}$
+\end{center}
+
+Since the present value of annuity is equal to its price, and all of the total wealth will be used to buy such annuity, we set $W_{57}=PV$. Factoring out $x$ from the right-hand side of the above equation gives the desired formula for annual payment amount:
+
+\begin{center}
+	$x = \frac{W_{57}}{1+\displaystyle\sum^{100}_{t=58} \frac{p_t}{1+r_f}}$ 
+\end{center}

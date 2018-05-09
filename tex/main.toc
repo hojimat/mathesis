@@ -17,28 +17,30 @@
 \contentsline {section}{\numberline {3.2}Welfare measurement}{11}
 \contentsline {section}{\numberline {3.3}Individualization}{12}
 \contentsline {section}{\numberline {3.4}Retirement income}{12}
-\contentsline {chapter}{\numberline {4}Data and Research Design}{13}
-\contentsline {section}{\numberline {4.1}Data}{13}
 \contentsline {paragraph}{}{13}
-\contentsline {paragraph}{}{13}
-\contentsline {subsection}{\numberline {4.1.1}Default parameters}{14}
+\contentsline {chapter}{\numberline {4}Data and Research Design}{14}
+\contentsline {section}{\numberline {4.1}Data}{14}
 \contentsline {paragraph}{}{14}
 \contentsline {paragraph}{}{14}
-\contentsline {paragraph}{}{14}
-\contentsline {paragraph}{}{14}
-\contentsline {subsection}{\numberline {4.1.2}Heterogeneity parameters}{16}
-\contentsline {subsubsection}{Heterogeneity in education}{16}
-\contentsline {subsubsection}{Heterogeneity in sectors of work}{18}
-\contentsline {subsubsection}{Individual heterogeneity}{19}
-\contentsline {subsubsection}{Housing wealth heterogeneity}{20}
-\contentsline {section}{\numberline {4.2}Research design}{20}
-\contentsline {subsection}{\numberline {4.2.1}Default lifecyccles}{20}
-\contentsline {subsection}{\numberline {4.2.2}Individualized lifecycles lifecyccles}{21}
-\contentsline {chapter}{\numberline {5}Results}{22}
-\contentsline {chapter}{\numberline {6}Conclusion}{23}
-\contentsline {chapter}{REFERENCES}{24}
+\contentsline {subsection}{\numberline {4.1.1}Default parameters}{15}
+\contentsline {paragraph}{}{15}
+\contentsline {paragraph}{}{15}
+\contentsline {paragraph}{}{15}
+\contentsline {paragraph}{}{15}
+\contentsline {subsection}{\numberline {4.1.2}Heterogeneity parameters}{17}
+\contentsline {subsubsection}{Heterogeneity in education}{17}
+\contentsline {subsubsection}{Heterogeneity in sectors of work}{19}
+\contentsline {subsubsection}{Individual heterogeneity}{20}
+\contentsline {subsubsection}{Housing wealth heterogeneity}{21}
+\contentsline {section}{\numberline {4.2}Research design}{22}
+\contentsline {subsection}{\numberline {4.2.1}Default lifecyccles}{22}
+\contentsline {subsection}{\numberline {4.2.2}Individualized lifecycles}{22}
+\contentsline {chapter}{\numberline {5}Results}{24}
+\contentsline {chapter}{\numberline {6}Conclusion}{25}
+\contentsline {chapter}{REFERENCES}{26}
 \let \chaptertitlename \appendixname 
-\contentsline {chapter}{\numberline {A}Cholesky decomposed errors}{26}
-\contentsline {chapter}{\numberline {B}Logarithms as percentage change}{27}
-\contentsline {chapter}{\numberline {C}Derivation of CEC}{28}
+\contentsline {chapter}{\numberline {A}Cholesky decomposed errors}{28}
+\contentsline {chapter}{\numberline {B}Logarithms as percentage change}{29}
+\contentsline {chapter}{\numberline {C}Derivation of CEC}{30}
+\contentsline {chapter}{\numberline {D}Annuitization of wealth}{31}
 \contentsfinish 

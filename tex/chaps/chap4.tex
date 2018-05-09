@@ -28,20 +28,26 @@ To measure the stock series we used BIST 30 index which measures the aggregate p
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[scale=0.5]{figs/wage2median.pdf}
+	\includegraphics[scale=0.6]{figs/wage2median.pdf}
 	\caption{Median Turkish salaries by age}
 \end{figure}
 
 \subsection{Default parameters}
 In our simulation we start with a 28 years old individual who invests in her retirement for 30 years until she reaches retirement at 57. In line with Torul et al. (2018) we set the coefficient of relative risk aversion for Turkey at $1.5$, and the subjective discount rate at $0.89$.
 
-\paragraph{}Real stock returns for Turkey were estimated from historical data and gave $10.58\%$ annually, with variance $13\%$, but we opted out for more conservative generally accepted annual $7\%$ returns.
+\paragraph{}Stock returns for Turkey were estimated from historical data to be equal to $23.2\%$ annually, with variance $36\%$. Risk-free rate forecasts are obtained from OECD Data Bank (2018) and are equal to $10.8\%$ per annum.
 
-\paragraph{}Housing capital appreciation averaged at $8.5\%$ with $9.6\%$ variance. Aggregate wage growth series showed $4.7\%$ variance.
+\paragraph{}Housing capital appreciation averaged at $8.3\%$ with $9.5\%$ variance. Aggregate wage growth series showed $5.5\%$ standard deviation.
 
-\paragraph{}The correlations between house and stock prices, and house prices and wages gave $0.19$ and $0.27$ respectively.
+\paragraph{}The correlations between house and stock prices, and house prices and wages gave $0.24$ and $0.37$ respectively.
 
-\paragraph{}The data on survival probability for all ages has been taken from Turkish Statistical Institute's (TUIK) database. Obviously, we assume that a person is alive at 28 years with $100\%$ probability. All of these findings have been summarized in Table 4.1. 
+\paragraph{}The data on survival probability for all ages has been taken from Turkish Statistical Institute's (TUIK) database and illustrated in Figure 4.4. All of these findings have been summarized in Table 4.1. 
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[scale=0.6]{figs/survival.pdf}
+	\caption{Survival probabilities by age}
+\end{figure}
 
 \begin{table}
 	\centering
@@ -55,18 +61,20 @@ In our simulation we start with a 28 years old individual who invests in her ret
 		$T$&Lifespan (years)&$100$\\
 		$\gamma$&Risk aversion&$1.5$\\
 		$\beta$&Discount rate&$0.89$\\
+		$r_f$&Risk-free rate&$0.108$\\
+		$\pi$&Average inflation rate&$0.084$\\
 		\hline
-		$\mu_s$&Expected stock returns&$0.07$\\
-		$\mu_h$&Expected housing returns&$0.085$\\
-		$\sigma_s$&Stock returns volatility&$0.13$\\
-		$\sigma_h$&Housing returns volatility&$0.096$\\
-		$\sigma_w$&Wage growth volatility&$0.047$\\
-		$\rho_{hs}$&Housing-stock correlation&$0.19$\\
-		$\rho_{hw}$&Housing-wage correlation&$0.27$\\
+		$\mu_s$&Expected stock returns&$0.232$\\
+		$\mu_h$&Expected housing returns&$0.083$\\
+		$\sigma_s$&Stock returns volatility&$0.36$\\
+		$\sigma_h$&Housing returns volatility&$0.095$\\
+		$\sigma_w$&Wage growth volatility&$0.056$\\
+		$\rho_{hs}$&Housing-stock correlation&$0.24$\\
+		$\rho_{hw}$&Housing-wage correlation&$0.37$\\
 		\hline
 		$p_{28}$&Survival probability at age 28&$0.977$\\
 		$p_{57}$&Survival probability at age 57&$0.924$\\
-		$p_{87}$&Survival probability at age 87&$0.287$\\	
+		$p_{100}$&Survival probability at age 100&$0$\\	
 		\hline
 	\end{tabular}
 \end{table}
@@ -76,7 +84,7 @@ In our simulation we start with a 28 years old individual who invests in her ret
 In the same manner as Olear(2014) we will use wage growth rate, stock-income correlation and idiosyncratic labor income risk to model heterogeneities in education and sector. Let's now consider the heterogeneities one at a time:
 
 \subsubsection{Heterogeneity in education}
-In line with Olear's (2016) approach we model the heterogeneity in education using the differences in wage growth rates. Indeed, we expect the salaries for higher education level to grow faster than for the lower education level. Some of this expectation comes from the fact that people with lower education are restricted in their career ladders and cannot rise very high in a workplace. Another intuition is that while college dropouts start working immediately, college graduates and graduate students continue to study and thus report zero income. When they graduate, their salary immediately rises from zero to the average salary, and this constitutes a steeper wage growth curve at the beginning of their lives. Figure 4.4 shows the wage series for different levels of education. Note that the curves for the lowest education levels are practically flat and the those for the highest education levels have varying non-zero slopes. 
+In line with Olear's (2016) approach we model the heterogeneity in education using the differences in wage growth rates. Indeed, we expect the salaries for higher education level to grow faster than for the lower education level. Some of this expectation comes from the fact that people with lower education are restricted in their career ladders and cannot rise very high in a workplace. Another intuition is that while college dropouts start working immediately, college graduates and graduate students continue to study and thus report zero income. When they graduate, their salary immediately rises from zero to the average salary, and this constitutes a steeper wage growth curve at the beginning of their lives. Figure 4.5 shows the wage series for different levels of education. Note that the curves for the lowest education levels are practically flat and the those for the highest education levels have varying non-zero slopes. 
 
 \begin{figure}[h]
 	\centering
@@ -84,7 +92,7 @@ In line with Olear's (2016) approach we model the heterogeneity in education usi
 	\caption{Lifetime wage dynamics by education level}
 \end{figure}
 
-Performing kinked regressions of log wages on ages yielded best linear fits for three different education levels of our choice: postgraduate, high school, and no schooling. The corresponding labor income growth rates can be characterized as steep, moderate, and flat respectively. We considered wage data until 60 years, as Turkish retirement age is at 57, and have added empirically best kinks at ages 35 and 45. The results are summarized in Table 4.2 and illustrated in Figure 4.5. In this figure red lines represent the actual wages dynamics for postgraduate, high school, and no schooling, and blue lines are plots of the percentage changes proposed in Table 4.2, where the starting points all correspond to the actual starting points from the data. Figure 4.6 illustrates the same parameterized curves without actual wage curves. 
+Performing kinked regressions of log wages on ages yielded best linear fits for three different education levels of our choice: postgraduate, high school, and no schooling. The corresponding labor income growth rates can be characterized as steep, moderate, and flat respectively. We considered wage data until 60 years, as Turkish retirement age is at 57, and have added empirically best kinks at ages 35 and 45. The results are summarized in Table 4.2 and illustrated in Figure 4.6. In this figure red lines represent the actual wages dynamics for postgraduate, high school, and no schooling, and blue lines are plots of the percentage changes proposed in Table 4.2, where the starting points all correspond to the actual starting points from the data. Figure 4.7 illustrates the same parameterized curves without actual wage curves. 
 
 \begin{table}
 	\centering
@@ -118,7 +126,7 @@ Performing kinked regressions of log wages on ages yielded best linear fits for 
 
 \subsubsection{Heterogeneity in sectors of work}
 
-As we explained in Chapter 3, we model our labor income series as functions of age, gender, education, sector of work etc. We already showed in previous section how we incorporated the heterogeneity in education. We also stated at the beginning of this chapter that we consider only male individuals as heads of households; age is implicit in our analysis. In this section we will model the differences in sectors of work. Again, similar to Olear's (2016) approach we model these differences using correlations of wage growth rates with stock market returns. Indeed, it is expected that sectoral wages would be proportional to the stock returns only to the extent of their exposure to stock markets. In that sense, the stock-wage correlations are expected to be zero for public sector, where wages are fixed regardless the markets, and high in financial institutions. When we juxtaposed wages by sector and stock prices we obtained very high correlations, which was expected due to the economic growth over the years represented in Figure 4.7. Therefore we divided the wages by price levels to obtain the real wages, and, as expected, we obtained more realistic correlations. The financial sector's correlations were as high as $0.44$  and public sector, social service and education's were as low as $0.08$. Thus, our expectations that different sectors have different wage-stock correlation $\rho_{sw}$ were confirmed and we decided on three measures of $\rho_{sw}$ as our simulation benchmarks: $0$, $0.2$ and $0.4$ as stated in Table 4.3.
+As we explained in Chapter 3, we model our labor income series as functions of age, gender, education, sector of work etc. We already showed in previous section how we incorporated the heterogeneity in education. We also stated at the beginning of this chapter that we consider only male individuals as heads of households; age is implicit in our analysis. In this section we will model the differences in sectors of work. Again, similar to Olear's (2016) approach we model these differences using correlations of wage growth rates with stock market returns. Indeed, it is expected that sectoral wages would be proportional to the stock returns only to the extent of their exposure to stock markets. In that sense, the stock-wage correlations are expected to be zero for public sector, where wages are fixed regardless the markets, and high in financial institutions. When we juxtaposed wages by sector and stock prices we obtained very high correlations, which was expected due to the economic growth over the years represented in Figure 4.8. Therefore we divided the wages by price levels to obtain the real wages, and, as expected, we obtained more realistic correlations. The financial sector's correlations were as high as $0.44$  and public sector, social service and education's were as low as $0.08$. Thus, our expectations that different sectors have different wage-stock correlation $\rho_{sw}$ were confirmed and we decided on three measures of $\rho_{sw}$ as our simulation benchmarks: $0$, $0.2$ and $0.4$ as stated in Table 4.3.
 
 \begin{figure}[h]
 	\centering
@@ -148,9 +156,10 @@ We model individual heterogeneity using idiosyncratic labor income shocks $\sigm
 	\begin{tabular}[c]{l|ccc}
 		&Low&Moderate&High\\
 		\hline
-		$\sigma_w$&$0.047$&$0.047$&$0.047$\\
+		$\sigma_w$&$0.056$&$0.056$&$0.056$\\
 		$\sigma_{\epsilon}$&$0.03$&$0.05$&$0.07$\\
-		$\sigma^2_{W}$&$0.0031$&$0.0047$&$0.007$
+		\hline
+		$\sigma^2_{W}$&$0.004$&$0.0056$&$0.008$
 	\end{tabular}
 \end{table}
 
@@ -167,11 +176,11 @@ As was discussed in the previous chapter, our individual decides between investi
 \begin{itemize}
 	\item $100-t$, for all $t$
 	\item $\begin{cases} 100\%, & t<40\\(200-2.5t)\%, & t\in[40,60]\end{cases}$
-	\item $50\%$, for all $t$
+	\item $63\%$, for all $t$
 	\item $30\%$, for all $t$
 \end{itemize}
 
-where the latter two are Anadolu Hayat's aggressive and moderate investment options. Since we are only interested in age span between 28 and 57, Figure 4.8 shows the risky asset share $\pi_t$ only for that interval. 
+where the latter two are Markowitz's solution and Anadolu Hayat's moderate investment option respectively. Since we are only interested in age span between 28 and 57, Figure 4.9 shows the risky asset share $\pi_t$ only for that interval. 
 
 \begin{figure}[h]
 	\centering
@@ -180,5 +189,6 @@ where the latter two are Anadolu Hayat's aggressive and moderate investment opti
 \end{figure}
 
 
+\subsection{Individualized lifecycles}
 
-\subsection{Individualized lifecycles lifecyccles}
+

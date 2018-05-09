@@ -59,18 +59,22 @@ lines(x, type="l", col="green")
 legend(x="topleft", y=0,legend = c("steep", "moderate", "flat"), fill = c("red", "orange", "green"), lty = c(1,1), cex = 1.5)
 dev.off()
 
+pdf(file = "Dropbox/research/tex/figs/survival.pdf")
+plot(surv, xlab = "age", ylab = "survival probability")
+dev.off()
 
 #finding rho_ws
+tmpindex <- c("1","6","7","8","9","10","11","12","14")
 tmpsec <- subset(aktug, aktug$sector==tmpindex[7] | aktug$sector==tmpindex[8] | aktug$sector==tmpindex[9])
 tmpsec <- aggregate(x=tmpsec, FUN=mean, by=list(tmpsec$year))[c("year","income")]
 tmpsec <- na.spline(object = tmpsec$income, x=tmpsec$year, xout = yigit$date)
-tmpsec <- diff(tmpsec)
-print(cor(tmpsec/df$cpi, df$stock))
+tmpsec <- diff(tmpsec,12)
+print(cor(tmpsec, df$dstock))
 tmpsec <- subset(aktug, aktug$sector==tmpindex[5] | aktug$sector==tmpindex[6]  | aktug$sector==tmpindex[4])
 tmpsec <- aggregate(x=tmpsec, FUN=mean, by=list(tmpsec$year))[c("year","income")]
 tmpsec <- na.spline(object = tmpsec$income, x=tmpsec$year, xout = yigit$date)
-tmpsec <- diff(tmpsec)
-print(cor(tmpsec/df$cpi, df$stock))
+tmpsec <- diff(tmpsec,12)
+print(cor(tmpsec, df$dstock))
 
 
 
@@ -78,15 +82,16 @@ print(cor(tmpsec/df$cpi, df$stock))
 # Params:
 
 #common params
-param_mu_s <- 0.07 #10.58% 
-param_mu_h <- 0.085
-param_sig_s <- 0.13
-param_sig_h <- 0.096 #0.01
-param_sig_w <- 0.047
-param_rho_hs <- cor(df$dhouse/df$cpi, df$dstock/df$cpi)
-param_rho_hw <- cor(df$dhouse/df$cpi, df$dwage/df$cpi)
+param_mu_s <- 0.232 #0.1058 #mean(df$dstock)
+param_mu_h <- 0.083 #mean(df$dhouse)
+param_sig_s <- 0.36 #0.017 #0.13 #sd(df$dstock)
+param_sig_h <- 0.095 #0.01 #sd(df$dhouse])
+param_sig_w <- 0.056 #sd(df$dwage)
+param_rho_hs <- 0.24 #cor(df$dhouse, df$dstock)
+param_rho_hw <- 0.37 #cor(df$dhouse, df$dwage)
 param_beta  <- 0.89
-param_r_f <- 0.035
+param_r_f <- 0.108
+param_inf <- 0.084
 param_gamma <- 1.5
 param_R <- 57 #retirement age
 param_Y <- 28 #life cycle period
@@ -102,7 +107,9 @@ param_sig_eps_low <- 0.03
 param_sig_eps_medium <- 0.05
 param_sig_eps_high <- 0.07
 
-
+param_rho_ws_low <- 0
+param_rho_ws_medium <- 0.2
+param_rho_ws_high <- 0.4
 
 
 

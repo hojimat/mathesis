@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Arch Linux) (preloaded format=pdflatex 2018.3.21)  4 MAY 2018 00:20
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Arch Linux) (preloaded format=pdflatex 2018.3.21)  8 MAY 2018 22:54
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -819,7 +819,7 @@ l.1 \chapter{Model}
 
 
 
-] [11]) [12]
+] [11] [12]) [13]
 \openout2 = `chaps/chap4.aux'.
 
  (./chaps/chap4.tex
@@ -830,7 +830,7 @@ Chapter 4.
 l.1 \chapter{Data and Research Design}
                                       
 ? 
-<figs/bist.pdf, id=85, 505.89pt x 505.89pt>
+<figs/bist.pdf, id=88, 505.89pt x 505.89pt>
 File: figs/bist.pdf Graphic file (type pdf)
 <use figs/bist.pdf>
 Package pdftex.def Info: figs/bist.pdf  used on input line 14.
@@ -840,7 +840,7 @@ Overfull \hbox (16.69943pt too wide) in paragraph at lines 14--15
  [][] 
  []
 
-<figs/reidin.pdf, id=86, 505.89pt x 505.89pt>
+<figs/reidin.pdf, id=89, 505.89pt x 505.89pt>
 File: figs/reidin.pdf Graphic file (type pdf)
 <use figs/reidin.pdf>
 Package pdftex.def Info: figs/reidin.pdf  used on input line 20.
@@ -850,66 +850,86 @@ Overfull \hbox (16.69943pt too wide) in paragraph at lines 20--21
  [][] 
  []
 
-<figs/wage2median.pdf, id=87, 505.89pt x 505.89pt>
+<figs/wage2median.pdf, id=90, 505.89pt x 505.89pt>
 File: figs/wage2median.pdf Graphic file (type pdf)
 <use figs/wage2median.pdf>
 Package pdftex.def Info: figs/wage2median.pdf  used on input line 31.
-(pdftex.def)             Requested size: 252.94437pt x 252.94437pt.
+(pdftex.def)             Requested size: 303.53633pt x 303.53633pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[13
+[14
 
 
 
-] [14 <./figs/bist.pdf> <./figs/reidin.pdf>] [15]
-<figs/wage2educ.pdf, id=108, 505.89pt x 505.89pt>
+]
+<figs/survival.pdf, id=94, 505.89pt x 505.89pt>
+File: figs/survival.pdf Graphic file (type pdf)
+<use figs/survival.pdf>
+Package pdftex.def Info: figs/survival.pdf  used on input line 48.
+(pdftex.def)             Requested size: 303.53633pt x 303.53633pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[15 <./figs/bist.pdf> <./figs/reidin.pdf>] [16] [17 <./figs/wage2median.pdf>]
+<figs/wage2educ.pdf, id=121, 505.89pt x 505.89pt>
 File: figs/wage2educ.pdf Graphic file (type pdf)
 <use figs/wage2educ.pdf>
-Package pdftex.def Info: figs/wage2educ.pdf  used on input line 83.
+Package pdftex.def Info: figs/wage2educ.pdf  used on input line 91.
 (pdftex.def)             Requested size: 303.53633pt x 303.53633pt.
- [16 <./figs/wage2median.pdf>]
-<figs/heterwage.pdf, id=118, 505.89pt x 505.89pt>
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<figs/heterwage.pdf, id=122, 505.89pt x 505.89pt>
 File: figs/heterwage.pdf Graphic file (type pdf)
 <use figs/heterwage.pdf>
-Package pdftex.def Info: figs/heterwage.pdf  used on input line 106.
+Package pdftex.def Info: figs/heterwage.pdf  used on input line 114.
 (pdftex.def)             Requested size: 202.3524pt x 202.3524pt.
 
-Overfull \hbox (16.69943pt too wide) in paragraph at lines 106--107
+Overfull \hbox (16.69943pt too wide) in paragraph at lines 114--115
  [][] 
  []
 
-<figs/heterwageless.pdf, id=119, 505.89pt x 505.89pt>
+<figs/heterwageless.pdf, id=123, 505.89pt x 505.89pt>
 File: figs/heterwageless.pdf Graphic file (type pdf)
 <use figs/heterwageless.pdf>
-Package pdftex.def Info: figs/heterwageless.pdf  used on input line 112.
+Package pdftex.def Info: figs/heterwageless.pdf  used on input line 120.
 (pdftex.def)             Requested size: 202.3524pt x 202.3524pt.
 
-Overfull \hbox (16.69943pt too wide) in paragraph at lines 112--113
+Overfull \hbox (16.69943pt too wide) in paragraph at lines 120--121
  [][] 
  []
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[17 <./figs/wage2educ.pdf>] [18 <./figs/heterwage.pdf> <./figs/heterwageless.pd
-f>]
+[18 <./figs/survival.pdf>] [19 <./figs/wage2educ.pdf>]
 <figs/wage2sec.pdf, id=141, 505.89pt x 505.89pt>
 File: figs/wage2sec.pdf Graphic file (type pdf)
 <use figs/wage2sec.pdf>
-Package pdftex.def Info: figs/wage2sec.pdf  used on input line 125.
+Package pdftex.def Info: figs/wage2sec.pdf  used on input line 133.
 (pdftex.def)             Requested size: 303.53633pt x 303.53633pt.
- [19 <./figs/wage2sec.pdf>]
-<figs/defaults.pdf, id=150, 505.89pt x 505.89pt>
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[20 <./figs/heterwage.pdf> <./figs/heterwageless.pdf>] [21 <./figs/wage2sec.pdf
+>]
+<figs/defaults.pdf, id=164, 505.89pt x 505.89pt>
 File: figs/defaults.pdf Graphic file (type pdf)
 <use figs/defaults.pdf>
-Package pdftex.def Info: figs/defaults.pdf  used on input line 178.
+Package pdftex.def Info: figs/defaults.pdf  used on input line 187.
 (pdftex.def)             Requested size: 303.53633pt x 303.53633pt.
- [20]) [21 <./figs/defaults.pdf>]
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+) [22] [23 <./figs/defaults.pdf>]
 \openout2 = `chaps/chap5.aux'.
 
-
-(./chaps/chap5.tex
+ (./chaps/chap5.tex
 Chapter 5.
 ! Missing { inserted.
 <to be read again> 
@@ -917,7 +937,7 @@ Chapter 5.
 l.1 \chapter{Results}
                      
 ? 
-) [22
+) [24
 
 
 
@@ -932,7 +952,7 @@ Chapter 6.
 l.1 \chapter{Conclusion}
                         
 ? 
-) [23
+) [25
 
 
 
@@ -946,11 +966,11 @@ l.1 \chapter{Conclusion}
 l.1 \chapter*{References}
                          
 ? 
-[24
+[26
 
 
 
-]) [25] (./apps/appa.tex
+]) [27] (./apps/appa.tex
 Appendix A.
 ! Missing { inserted.
 <to be read again> 
@@ -958,7 +978,7 @@ Appendix A.
 l.1 \chapter{Cholesky decomposed errors}
                                         
 ? 
-) (./apps/appb.tex [26
+) (./apps/appb.tex [28
 
 
 ]
@@ -969,7 +989,7 @@ Appendix B.
 l.1 \chapter{Logarithms as percentage change}
                                              
 ? 
-) (./apps/appc.tex [27
+) (./apps/appc.tex [29
 
 ]
 Appendix C.
@@ -983,14 +1003,25 @@ l.1 \chapter{Derivation of CEC}
 l.13 ...dot \frac{CEC^{1-\gamma}}{1-\gamma}\right]
                                                    = E[U(c)]$
 ? 
-) [28
+) (./apps/appd.tex [30
+
+]
+Appendix D.
+! Missing { inserted.
+<to be read again> 
+                   \parindent 
+l.1 \chapter{Annuitization of wealth}
+                                     
+? 
+) [31
 
 ] (./main.aux (./pres/title.aux) (./pres/approval.aux)
 (./pres/declaration.aux) (./pres/abstract.aux) (./pres/acknowledgement.aux)
 (./chaps/chap1.aux) (./chaps/chap2.aux) (./chaps/chap3.aux) (./chaps/chap4.aux)
 (./chaps/chap5.aux) (./chaps/chap6.aux) (./pres/bibliography.aux)) )
-(\end occurred inside a group at level 17)
+(\end occurred inside a group at level 18)
 
+### simple group (level 18) entered at line 1 ({)
 ### simple group (level 17) entered at line 1 ({)
 ### simple group (level 16) entered at line 1 ({)
 ### simple group (level 15) entered at line 1 ({)
@@ -1010,13 +1041,13 @@ l.13 ...dot \frac{CEC^{1-\gamma}}{1-\gamma}\right]
 ### simple group (level 1) entered at line 1 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 5636 strings out of 492982
- 79210 string characters out of 6138579
- 167203 words of memory out of 5000000
- 9011 multiletter control sequences out of 15000+600000
+ 5645 strings out of 492982
+ 79371 string characters out of 6138579
+ 167227 words of memory out of 5000000
+ 9016 multiletter control sequences out of 15000+600000
  17802 words of font info for 34 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,11n,41p,1575b,744s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 41i,11n,41p,1575b,746s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/
 texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fon
 ts/type1/public/amsfonts/cmextra/cmex8.pfb></usr/share/texmf-dist/fonts/type1/p
@@ -1029,10 +1060,10 @@ ts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pf
 b></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/t
 exmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texmf-dist/fonts/type1/u
 rw/times/utmri8a.pfb>
-Output written on main.pdf (38 pages, 242002 bytes).
+Output written on main.pdf (41 pages, 252029 bytes).
 PDF statistics:
- 231 PDF objects out of 1000 (max. 8388607)
- 160 compressed objects within 2 object streams
+ 247 PDF objects out of 1000 (max. 8388607)
+ 171 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 41 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 46 words of extra memory for PDF output out of 10000 (max. 10000000)
 

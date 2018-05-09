@@ -10,6 +10,5 @@ crrautil <- function(C, rave=param_gamma){
 }
 
 cec <- function(C, rave=param_gamma){
-  BLAH BLAH BLAH
-  
+  print("BLAH BLAH BLAH")
 }

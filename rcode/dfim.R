@@ -20,8 +20,8 @@ df <- yigit
 df$wage <- wage
 df$cpi <- cpi$V3
 
-df$dhouse <- append(diff(df$house)/df$house[-length(df$house)],NA,0)
-df$dstock <- append(diff(df$stock)/df$stock[-length(df$stock)],NA,0)
-df$dwage <- append(diff(df$wage)/df$wage[-length(df$wage)],NA,0)
-df$inf <- append(diff(df$cpi, lag = 12)/df$cpi[-((length(df$cpi)-11):length(df$cpi))],rep(NA,12),0)
-df <- df[-1,]
+df$dhouse <- append(diff(df$house,12)/df$house[1:132],rep(NA,12),0)
+df$dstock <- append(diff(df$stock,12)/df$stock[1:132],rep(NA,12),0)
+df$dwage <- append(diff(df$wage,12)/df$wage[1:132],rep(NA,12),0)
+df$inf <- append(diff(df$cpi, 12)/df$cpi[1:132],rep(NA,12),0)
+df <- df[-c(1:12),]
