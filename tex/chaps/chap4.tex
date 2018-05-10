@@ -169,13 +169,65 @@ We model individual heterogeneity using idiosyncratic labor income shocks $\sigm
 Apart from the above three heterogeneities, all related to labor income process, we also consider differences in housing wealth to match Munk's (2016) approach completely. We have SOMETHING ABOUT H ZERO ET CETERA...
 
 
-\section{Research design}
+
+\section{Capital series}
+
+\subsection{Human capital}
+Human capital at all ages has been calculated as a discounted sum of all future wages until retirement with the discount factor $r_f$. To construct the individualized capital we used steep, moderate and flat wage series mentioned in the previous section. It can be seen in Figure 4.9 that human capital is declining for flat wages and hump-shaped for moderate and steep wages. 
+
+\begin{figure}[h]
+	\centering
+    \begin{minipage}{0.45\textwidth}
+		\centering
+		\includegraphics[scale=0.4]{figs/humancapital.pdf}
+		\caption{Human capital by age}
+	\end{minipage}
+	\hfill
+    \begin{minipage}{0.45\textwidth}
+		\centering
+		\includegraphics[scale=0.4]{figs/fincapital.pdf}
+		\caption{Financial capital by age}
+	\end{minipage}
+\end{figure}
+
+\subsection{Financial capital}
+
+Financial capital evolves according to dynamic investment illustrated in Figure 4.11. Every period $t$ a certain percentage $c$ (equal to $3\%$ in Turkey) of that period's wage $w_t$ is invested in a retirement portfolio. At the same time, the previously invested amount accrues interest. We started with 28 years old individual who invests for 30 years until retirement, as has been mentioned previously numerous times.
+
+\begin{figure}[h]
+	\centering
+	\begin{tikzpicture}
+		\draw [->, line width=0.25mm] (0,0) -- (11,0);
+		\foreach \x in {0,4,8}
+			\draw (\x cm,3pt) -- (\x cm, -3pt);
+		\draw (0,0) node[below=21pt] {$ cw_0 $} node[above=3pt] {$ t_0 $};
+    	\draw (4,0) node[below=21pt] {$ +cw_1 $} node[above=3pt] {$ t_1 $};
+    	\draw (8,0) node[below=21pt] {$ +cw_2 $} node[above=3pt] {$ t_2 $};
+		\draw (0,0) node[below=3pt] {$ 0 $} node[above=3pt] {$ t_0 $};
+    	\draw (4,0) node[below=3pt] {$ cw_0(1+r_p) $};
+    	\draw (8,0) node[below=3pt] {$ \left[cw_0(1+r_p) + cw_1 \right] \cdot (1+r_p) $};
+	    \draw (-1.5,0) node[below=18pt] {$ Invest: $};
+    	\draw (-1.5,0) node[below=0pt] {$ Harvest: $};
+	\end{tikzpicture}
+	\caption{Law of motion of financial capital}
+\end{figure}
+
+\paragraph{}Note that the shape of the financial capital depends on $r_p$ - the rate of return on portfolio, which itself depends on the risky-to-riskless asset ratio. Different such ratios are listed and analyzed in detail in the next section. Figure 4.10 demonstrates the evolution of financial capital for two investment options, provided by Anadolu Hayat Emeklilik - $30\%$ in stocks and $70\%$ in bonds, and by solving Markowitz's formula - $63\%$ in stocks and $37\%$ in bonds.
+
+\paragraph{}It is important to notice here that since human capital is declining by age and financial capital is increasing, the ratio $\frac{L_t}{F_t}$ is declining in $t$. Recalling Merton's formula for $\alpha_t$ from Chapter 2, $\frac{\mu - R_f}{\gamma \sigma^2}(1+\frac{L_t}{F_t})$, it should be now clear how the above fraction creates a lifecycle effect - different ratios for different ages. 
+
+\subsection{Housing capital}
+
+
+
+
+\section{Investment strategies}
 \subsection{Default lifecyccles}
 As was discussed in the previous chapter, our individual decides between investing in risky (stocks) or risk-free (bonds) assets. The default allocations for share of risky asset are given by:
 
 \begin{itemize}
 	\item $100-t$, for all $t$
-	\item $\begin{cases} 100\%, & t<40\\(200-2.5t)\%, & t\in[40,60]\end{cases}$
+	\item $\begin{cases} 100\%, & t<40\\(200-2.5t)\%, & t\in[40,57]\end{cases}$
 	\item $63\%$, for all $t$
 	\item $30\%$, for all $t$
 \end{itemize}
@@ -191,4 +243,10 @@ where the latter two are Markowitz's solution and Anadolu Hayat's moderate inves
 
 \subsection{Individualized lifecycles}
 
+To derive individualized lifecycle strategies, we used Merton's (1971) and Munk's (2016) optimal portfolio allocation formulas mentioned in chapters 2 and 3. Since these formulas depended on intratemporal amounts of capital, we have constructed three human capital series corresponding to flat, moderate and steep wage growth curves mentioned in the previous section. Figure 4.10 illustrates the risky asset shares given by Merton and Munk. 
 
+\begin{figure}[h]
+	\centering
+	\includegraphics[scale=0.6]{figs/individuals.pdf}
+	\caption{Individual portfolio allocations of stock investments}
+\end{figure}

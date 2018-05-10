@@ -32,15 +32,22 @@
 \contentsline {subsubsection}{Heterogeneity in sectors of work}{19}
 \contentsline {subsubsection}{Individual heterogeneity}{20}
 \contentsline {subsubsection}{Housing wealth heterogeneity}{21}
-\contentsline {section}{\numberline {4.2}Research design}{22}
-\contentsline {subsection}{\numberline {4.2.1}Default lifecyccles}{22}
-\contentsline {subsection}{\numberline {4.2.2}Individualized lifecycles}{22}
-\contentsline {chapter}{\numberline {5}Results}{24}
-\contentsline {chapter}{\numberline {6}Conclusion}{25}
-\contentsline {chapter}{REFERENCES}{26}
+\contentsline {section}{\numberline {4.2}Capital series}{22}
+\contentsline {subsection}{\numberline {4.2.1}Human capital}{22}
+\contentsline {subsection}{\numberline {4.2.2}Financial capital}{22}
+\contentsline {paragraph}{}{22}
+\contentsline {paragraph}{}{23}
+\contentsline {subsection}{\numberline {4.2.3}Housing capital}{23}
+\contentsline {section}{\numberline {4.3}Investment strategies}{23}
+\contentsline {subsection}{\numberline {4.3.1}Default lifecyccles}{23}
+\contentsline {subsection}{\numberline {4.3.2}Individualized lifecycles}{24}
+\contentsline {chapter}{\numberline {5}Results}{26}
+\contentsline {section}{\numberline {5.1}Welfare comparison}{26}
+\contentsline {chapter}{\numberline {6}Conclusion}{27}
+\contentsline {chapter}{REFERENCES}{28}
 \let \chaptertitlename \appendixname 
-\contentsline {chapter}{\numberline {A}Cholesky decomposed errors}{28}
-\contentsline {chapter}{\numberline {B}Logarithms as percentage change}{29}
-\contentsline {chapter}{\numberline {C}Derivation of CEC}{30}
-\contentsline {chapter}{\numberline {D}Annuitization of wealth}{31}
+\contentsline {chapter}{\numberline {A}Cholesky decomposed errors}{30}
+\contentsline {chapter}{\numberline {B}Logarithms as percentage change}{31}
+\contentsline {chapter}{\numberline {C}Derivation of CEC}{32}
+\contentsline {chapter}{\numberline {D}Annuitization of wealth}{33}
 \contentsfinish 
