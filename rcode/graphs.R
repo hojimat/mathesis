@@ -72,3 +72,22 @@ dev.off()
 #ak1 <- subset(aktug, aktug$sector==9)
 #w3 <- aggregate(x=ak1, FUN=mean, by=list(ak1$year))[c("year","income")]
 #lines(w3, type="l")
+
+
+
+# FINCAPITAL INVESTMENT DEFAULTS
+
+pdf(file = "Dropbox/research/tex/figs/defaults.pdf")
+plot(age, stoage, ylim = c(0.2,1), xlim = c(param_Y,param_R), type="l", col="red", ylab = "stock share")
+lines(age, bodie, type="l", col="orange")
+lines(age, ahl, type="l", col="green")
+lines(age, ah0, type="l", col="purple")
+legend(x = "topright", y=0, legend = c("(100-t)%", "(200-2.5t)%", "50%", "30%"), fill = c("red", "orange", "green", "purple"))
+dev.off()
+
+# FINCAPITAL MERTON
+
+# FINCAPITAL MUNK NO HOUSING
+
+# FINCAPTIAL MUNK HOUSING
+

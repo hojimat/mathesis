@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Arch Linux) (preloaded format=pdflatex 2018.3.21)  10 MAY 2018 12:28
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Arch Linux) (preloaded format=pdflatex 2018.3.21)  27 MAY 2018 17:47
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -957,6 +957,13 @@ LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <12> not available
 l.1 \chapter*{Abstract}
                        
 ? 
+
+Overfull \hbox (181.47185pt too wide) in paragraph at lines 6--8
+[]\T1/ptm/m/n/12 We analkjsalkd-f-jals-d-kjf lak-sjd-flaskd-jflas-d-jkf lak-sjd
+-flad-kjflkd-jas-flka-jdf;kljadlkfjasldkfja;slkfjlsadkjf;alskdjfl;askdjfalskdjf
+
+ []
+
 [5
 
 
@@ -965,7 +972,7 @@ l.1 \chapter*{Abstract}
 ! Missing { inserted.
 <to be read again> 
                    \parindent 
-l.14 \chapter*{Özet}
+l.11 \chapter*{Özet}
                      
 ? 
 ) [6
@@ -1079,8 +1086,8 @@ Chapter 4.
 ! Missing { inserted.
 <to be read again> 
                    \parindent 
-l.1 \chapter{Data and Research Design}
-                                      
+l.1 \chapter{Data Structure and Sources}
+                                        
 ? 
 <figs/bist.pdf, id=94, 505.89pt x 505.89pt>
 File: figs/bist.pdf Graphic file (type pdf)
@@ -1114,54 +1121,55 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 
 
-]
-<figs/survival.pdf, id=101, 505.89pt x 505.89pt>
+] [15 <./figs/bist.pdf> <./figs/reidin.pdf>]
+<figs/survival.pdf, id=114, 505.89pt x 505.89pt>
 File: figs/survival.pdf Graphic file (type pdf)
 <use figs/survival.pdf>
-Package pdftex.def Info: figs/survival.pdf  used on input line 48.
+Package pdftex.def Info: figs/survival.pdf  used on input line 50.
 (pdftex.def)             Requested size: 303.53633pt x 303.53633pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[15 <./figs/bist.pdf> <./figs/reidin.pdf>] [16] [17 <./figs/wage2median.pdf>]
+[16 <./figs/wage2median.pdf>] [17]
 <figs/wage2educ.pdf, id=127, 505.89pt x 505.89pt>
 File: figs/wage2educ.pdf Graphic file (type pdf)
 <use figs/wage2educ.pdf>
-Package pdftex.def Info: figs/wage2educ.pdf  used on input line 91.
+Package pdftex.def Info: figs/wage2educ.pdf  used on input line 93.
 (pdftex.def)             Requested size: 303.53633pt x 303.53633pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<figs/heterwage.pdf, id=128, 505.89pt x 505.89pt>
+[18 <./figs/survival.pdf>]
+<figs/heterwage.pdf, id=137, 505.89pt x 505.89pt>
 File: figs/heterwage.pdf Graphic file (type pdf)
 <use figs/heterwage.pdf>
-Package pdftex.def Info: figs/heterwage.pdf  used on input line 114.
+Package pdftex.def Info: figs/heterwage.pdf  used on input line 116.
 (pdftex.def)             Requested size: 202.3524pt x 202.3524pt.
 
-Overfull \hbox (16.69943pt too wide) in paragraph at lines 114--115
+Overfull \hbox (16.69943pt too wide) in paragraph at lines 116--117
  [][] 
  []
 
-<figs/heterwageless.pdf, id=129, 505.89pt x 505.89pt>
+<figs/heterwageless.pdf, id=138, 505.89pt x 505.89pt>
 File: figs/heterwageless.pdf Graphic file (type pdf)
 <use figs/heterwageless.pdf>
-Package pdftex.def Info: figs/heterwageless.pdf  used on input line 120.
+Package pdftex.def Info: figs/heterwageless.pdf  used on input line 122.
 (pdftex.def)             Requested size: 202.3524pt x 202.3524pt.
 
-Overfull \hbox (16.69943pt too wide) in paragraph at lines 120--121
+Overfull \hbox (16.69943pt too wide) in paragraph at lines 122--123
  [][] 
  []
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[18 <./figs/survival.pdf>] [19 <./figs/wage2educ.pdf>]
+[19 <./figs/wage2educ.pdf>]
 <figs/wage2sec.pdf, id=147, 505.89pt x 505.89pt>
 File: figs/wage2sec.pdf Graphic file (type pdf)
 <use figs/wage2sec.pdf>
-Package pdftex.def Info: figs/wage2sec.pdf  used on input line 133.
+Package pdftex.def Info: figs/wage2sec.pdf  used on input line 135.
 (pdftex.def)             Requested size: 303.53633pt x 303.53633pt.
 
 
@@ -1172,47 +1180,24 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 <figs/humancapital.pdf, id=170, 505.89pt x 505.89pt>
 File: figs/humancapital.pdf Graphic file (type pdf)
 <use figs/humancapital.pdf>
-Package pdftex.def Info: figs/humancapital.pdf  used on input line 182.
+Package pdftex.def Info: figs/humancapital.pdf  used on input line 184.
 (pdftex.def)             Requested size: 202.3524pt x 202.3524pt.
 
-Overfull \hbox (16.69943pt too wide) in paragraph at lines 182--183
+Overfull \hbox (16.69943pt too wide) in paragraph at lines 184--185
  [][] 
  []
 
 <figs/fincapital.pdf, id=171, 505.89pt x 505.89pt>
 File: figs/fincapital.pdf Graphic file (type pdf)
 <use figs/fincapital.pdf>
-Package pdftex.def Info: figs/fincapital.pdf  used on input line 188.
+Package pdftex.def Info: figs/fincapital.pdf  used on input line 190.
 (pdftex.def)             Requested size: 202.3524pt x 202.3524pt.
 
-Overfull \hbox (16.69943pt too wide) in paragraph at lines 188--189
+Overfull \hbox (16.69943pt too wide) in paragraph at lines 190--191
  [][] 
  []
 
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[22 <./figs/humancapital.pdf> <./figs/fincapital.pdf>]
-<figs/defaults.pdf, id=186, 505.89pt x 505.89pt>
-File: figs/defaults.pdf Graphic file (type pdf)
-<use figs/defaults.pdf>
-Package pdftex.def Info: figs/defaults.pdf  used on input line 239.
-(pdftex.def)             Requested size: 303.53633pt x 303.53633pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[23]
-<figs/individuals.pdf, id=190, 505.89pt x 505.89pt>
-File: figs/individuals.pdf Graphic file (type pdf)
-<use figs/individuals.pdf>
-Package pdftex.def Info: figs/individuals.pdf  used on input line 250.
-(pdftex.def)             Requested size: 303.53633pt x 303.53633pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-) [24 <./figs/defaults.pdf>] [25 <./figs/individuals.pdf>]
+[22 <./figs/humancapital.pdf> <./figs/fincapital.pdf>]) [23]
 \openout2 = `chaps/chap5.aux'.
 
  (./chaps/chap5.tex
@@ -1223,14 +1208,31 @@ Chapter 5.
 l.1 \chapter{Results}
                      
 ? 
-) [26
+<figs/defaults.pdf, id=189, 505.89pt x 505.89pt>
+File: figs/defaults.pdf Graphic file (type pdf)
+<use figs/defaults.pdf>
+Package pdftex.def Info: figs/defaults.pdf  used on input line 19.
+(pdftex.def)             Requested size: 303.53633pt x 303.53633pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<figs/individuals.pdf, id=190, 505.89pt x 505.89pt>
+File: figs/individuals.pdf Graphic file (type pdf)
+<use figs/individuals.pdf>
+Package pdftex.def Info: figs/individuals.pdf  used on input line 30.
+(pdftex.def)             Requested size: 303.53633pt x 303.53633pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+) [24
 
 
 
-]
+] [25 <./figs/defaults.pdf>] [26 <./figs/individuals.pdf>]
 \openout2 = `chaps/chap6.aux'.
 
- (./chaps/chap6.tex
+
+(./chaps/chap6.tex
 Chapter 6.
 ! Missing { inserted.
 <to be read again> 
@@ -1322,18 +1324,18 @@ l.1 \chapter{Annuitization of wealth}
 ### simple group (level 6) entered at line 67 ({)
 ### simple group (level 5) entered at line 66 ({)
 ### simple group (level 4) entered at line 1 ({)
-### simple group (level 3) entered at line 14 ({)
+### simple group (level 3) entered at line 11 ({)
 ### simple group (level 2) entered at line 1 ({)
 ### simple group (level 1) entered at line 1 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
  15553 strings out of 492982
  290050 string characters out of 6138579
- 351724 words of memory out of 5000000
+ 351721 words of memory out of 5000000
  18713 multiletter control sequences out of 15000+600000
  17802 words of font info for 34 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 55i,11n,54p,1575b,1057s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 55i,11n,54p,1575b,1059s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/
 texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fon
 ts/type1/public/amsfonts/cmextra/cmex8.pfb></usr/share/texmf-dist/fonts/type1/p
@@ -1346,7 +1348,7 @@ ts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pf
 b></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/t
 exmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texmf-dist/fonts/type1/u
 rw/times/utmri8a.pfb>
-Output written on main.pdf (44 pages, 270344 bytes).
+Output written on main.pdf (44 pages, 270396 bytes).
 PDF statistics:
  278 PDF objects out of 1000 (max. 8388607)
  193 compressed objects within 2 object streams

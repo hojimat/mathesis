@@ -18,7 +18,7 @@
 \contentsline {section}{\numberline {3.3}Individualization}{12}
 \contentsline {section}{\numberline {3.4}Retirement income}{12}
 \contentsline {paragraph}{}{13}
-\contentsline {chapter}{\numberline {4}Data and Research Design}{14}
+\contentsline {chapter}{\numberline {4}Data Structure and Sources}{14}
 \contentsline {section}{\numberline {4.1}Data}{14}
 \contentsline {paragraph}{}{14}
 \contentsline {paragraph}{}{14}
@@ -27,22 +27,23 @@
 \contentsline {paragraph}{}{15}
 \contentsline {paragraph}{}{15}
 \contentsline {paragraph}{}{15}
-\contentsline {subsection}{\numberline {4.1.2}Heterogeneity parameters}{17}
-\contentsline {subsubsection}{Heterogeneity in education}{17}
+\contentsline {paragraph}{}{16}
+\contentsline {subsection}{\numberline {4.1.2}Heterogeneity parameters}{16}
+\contentsline {subsubsection}{Heterogeneity in education}{16}
 \contentsline {subsubsection}{Heterogeneity in sectors of work}{19}
-\contentsline {subsubsection}{Individual heterogeneity}{20}
-\contentsline {subsubsection}{Housing wealth heterogeneity}{21}
+\contentsline {subsubsection}{Individual heterogeneity}{21}
+\contentsline {subsubsection}{Housing wealth heterogeneity}{22}
 \contentsline {section}{\numberline {4.2}Capital series}{22}
 \contentsline {subsection}{\numberline {4.2.1}Human capital}{22}
 \contentsline {subsection}{\numberline {4.2.2}Financial capital}{22}
-\contentsline {paragraph}{}{22}
+\contentsline {paragraph}{}{23}
 \contentsline {paragraph}{}{23}
 \contentsline {subsection}{\numberline {4.2.3}Housing capital}{23}
-\contentsline {section}{\numberline {4.3}Investment strategies}{23}
-\contentsline {subsection}{\numberline {4.3.1}Default lifecyccles}{23}
-\contentsline {subsection}{\numberline {4.3.2}Individualized lifecycles}{24}
-\contentsline {chapter}{\numberline {5}Results}{26}
-\contentsline {section}{\numberline {5.1}Welfare comparison}{26}
+\contentsline {chapter}{\numberline {5}Results}{24}
+\contentsline {section}{\numberline {5.1}Investment strategies}{24}
+\contentsline {subsection}{\numberline {5.1.1}Default lifecyccles}{24}
+\contentsline {subsection}{\numberline {5.1.2}Individualized lifecycles}{24}
+\contentsline {section}{\numberline {5.2}Welfare comparison}{25}
 \contentsline {chapter}{\numberline {6}Conclusion}{27}
 \contentsline {chapter}{REFERENCES}{28}
 \let \chaptertitlename \appendixname 

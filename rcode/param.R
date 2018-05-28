@@ -83,9 +83,9 @@ print(cor(tmpsec, df$dstock))
 
 #common params
 param_mu_s <- 0.232 #0.1058 #mean(df$dstock)
-param_mu_h <- 0.083 #mean(df$dhouse)
+param_mu_h <- 0.113 #mean(subset(df$dhouse, df$dhouse>0))
 param_sig_s <- 0.36 #0.017 #0.13 #sd(df$dstock)
-param_sig_h <- 0.095 #0.01 #sd(df$dhouse])
+param_sig_h <- 0.052 #0.01 #sd(subset(df$dhouse]))
 param_sig_w <- 0.056 #sd(df$dwage)
 param_rho_hs <- 0.24 #cor(df$dhouse, df$dstock)
 param_rho_hw <- 0.37 #cor(df$dhouse, df$dwage)

@@ -1,7 +1,35 @@
-munk <- function(t, rhowsi, dwi){
-  ans <- 0
-  ans <- ans + ( (param_mu_s - param_r_f) / (param_gamma * (sig_s^2) ) ) * (LL[t-1]+HH[t-1]) / FF[t-1]
-  ans <- ans - ( rhows / (sig_s^2) ) * LL[t-1] / FF[t-1]
-  ans <- ans - ( rho_hs / (sig_s^2) ) * HH[t-1] / FF[t-1]
-  return(ans)
+munk <- function(t, dwi, dfi, rhowsi, rhowhi,house=TRUE){
+  pismunk <- 0
+  pihmunk <- 0
+  
+  stocksh <- (param_mu_s - param_r_f) / param_sig_s
+  housesh <- (param_mu_h - param_r_f) / param_sig_h
+  firstcoef <- param_gamma * (1-param_rho_hs^2)
+  secondcoef <- (dwi[t]/dfi[t]) * (param_sig_w / param_sig_s) * (rhowsi - param_rho_hs * rhowhi) / (1-param_rho_hs^2)
+  thirdcoef <- (dwi[t]/dfi[t]) * (param_sig_w / param_sig_h) * (rhowhi - param_rho_hs * rhowsi) / (1-param_rho_hs^2)
+  fourthcoef <- param_gamma * param_sig_s
+  fifthcoef <- (dwi[t]/dfi[t]) * rhowsi * param_sig_w / param_sig_s
+
+  if(house==TRUE){
+    pismunk <- stocksh - param_rho_hs * housesh
+    pihmunk <- housesh - param_rho_hs * stocksh
+  
+    pismunk <- pismunk / firstcoef
+    pihmunk <- pismunk / firstcoef
+  
+    pismunk <- pismunk * (1 + dwi[t]/dfi[t]) / param_sig_s
+    pihmunk <- pihmunk * (1 + dwi[t]/dfi[t]) / param_sig_h
+  
+    pismunk <- pismunk - secondcoef
+    pihmunk <- pismunk - thirdcoef
+  }else if(house==FALSE){
+    pismunk <- stocksh / fourthcoef
+    pismunk <- pismunk * (1 + dwi[t]/dfi[t])
+    pismunk <- pismunk - fifthcoef
+  }
+  
+  results <- list()
+  results$pis <- pismunk
+  results$pih <- pihmunk
+  return(results)
 }
