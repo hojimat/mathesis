@@ -109,21 +109,21 @@ for(i in 2:param_T){
 
   
   #law of motion of financial capital
-  fc$merton_steep[i] <- (fc$merton_steep[i-1] + LL_steep[i-1]*0.03)*(1 + param_mu_s*merton_s + param_r_f*(1-merton_s))
-  fc$merton_moderate[i] <- (fc$merton_moderate[i-1] + LL_moderate[i-1]*0.03)*(1 + param_mu_s*merton_m + param_r_f*(1-merton_m))
-  fc$merton_flat[i] <- (fc$merton_flat[i-1] + LL_flat[i-1]*0.03)*(1 + param_mu_s*merton_f + param_r_f*(1-merton_f))
+  fc$merton_steep[i] <- (fc$merton_steep[i-1] + LL_steep[i-1]*0.03)*(1 + param_mu_s*merton_s[i-1] + param_r_f*(1-merton_s[i-1]))
+  fc$merton_moderate[i] <- (fc$merton_moderate[i-1] + LL_moderate[i-1]*0.03)*(1 + param_mu_s*merton_m[i-1] + param_r_f*(1-merton_m[i-1]))
+  fc$merton_flat[i] <- (fc$merton_flat[i-1] + LL_flat[i-1]*0.03)*(1 + param_mu_s*merton_f[i-1] + param_r_f*(1-merton_f[i-1]))
   
-  fc$munk_flat_hi[i] <- (fc$munk_flat_hi[i-1] + LL_flat*0.03)*(1 + param_mu_s*munk_f_h + param_r_f*(1-munk_f_h))
-  fc$munk_flat_mod[i] <- (fc$munk_flat_hi[i-1] + LL_flat*0.03)*(1 + param_mu_s*munk_f_m + param_r_f*(1-munk_f_m))
-  fc$munk_flat_low[i] <- (fc$munk_flat_hi[i-1] + LL_flat*0.03)*(1 + param_mu_s*munk_f_l + param_r_f*(1-munk_f_l))
+  fc$munk_flat_hi[i] <- (fc$munk_flat_hi[i-1] + LL_flat[i-1]*0.03)*(1 + param_mu_s*munk_f_h[i-1] + param_r_f*(1-munk_f_h[i-1]))
+  fc$munk_flat_mod[i] <- (fc$munk_flat_hi[i-1] + LL_flat[i-1]*0.03)*(1 + param_mu_s*munk_f_m[i-1] + param_r_f*(1-munk_f_m[i-1]))
+  fc$munk_flat_low[i] <- (fc$munk_flat_hi[i-1] + LL_flat[i-1]*0.03)*(1 + param_mu_s*munk_f_l[i-1] + param_r_f*(1-munk_f_l[i-1]))
   
-  fc$munk_moderate_hi[i] <- (fc$munk_moderate_hi[i-1] + LL_moderate*0.03)*(1 + param_mu_s*munk_m_h + param_r_f*(1-munk_m_h))
-  fc$munk_moderate_mod[i] <- (fc$munk_moderate_hi[i-1] + LL_moderate*0.03)*(1 + param_mu_s*munk_m_m + param_r_f*(1-munk_m_m))
-  fc$munk_moderate_low[i] <- (fc$munk_moderate_hi[i-1] + LL_moderate*0.03)*(1 + param_mu_s*munk_m_l + param_r_f*(1-munk_m_l))
+  fc$munk_moderate_hi[i] <- (fc$munk_moderate_hi[i-1] + LL_moderate[i-1]*0.03)*(1 + param_mu_s*munk_m_h[i-1] + param_r_f*(1-munk_m_h[i-1]))
+  fc$munk_moderate_mod[i] <- (fc$munk_moderate_hi[i-1] + LL_moderate[i-1]*0.03)*(1 + param_mu_s*munk_m_m[i-1] + param_r_f*(1-munk_m_m[i-1]))
+  fc$munk_moderate_low[i] <- (fc$munk_moderate_hi[i-1] + LL_moderate[i-1]*0.03)*(1 + param_mu_s*munk_m_l[i-1] + param_r_f*(1-munk_m_l[i-1]))
   
-  fc$munk_steep_hi[i] <- (fc$munk_steep_hi[i-1] + LL_steep*0.03)*(1 + param_mu_s*munk_s_h + param_r_f*(1-munk_s_h))
-  fc$munk_steep_mod[i] <- (fc$munk_steep_hi[i-1] + LL_steep*0.03)*(1 + param_mu_s*munk_s_m + param_r_f*(1-munk_s_m))
-  fc$munk_steep_low[i] <- (fc$munk_steep_hi[i-1] + LL_steep*0.03)*(1 + param_mu_s*munk_s_l + param_r_f*(1-munk_s_l))
+  fc$munk_steep_hi[i] <- (fc$munk_steep_hi[i-1] + LL_steep[i-1]*0.03)*(1 + param_mu_s*munk_s_h[i-1] + param_r_f*(1-munk_s_h[i-1]))
+  fc$munk_steep_mod[i] <- (fc$munk_steep_hi[i-1] + LL_steep[i-1]*0.03)*(1 + param_mu_s*munk_s_m[i-1] + param_r_f*(1-munk_s_m[i-1]))
+  fc$munk_steep_low[i] <- (fc$munk_steep_hi[i-1] + LL_steep[i-1]*0.03)*(1 + param_mu_s*munk_s_l[i-1] + param_r_f*(1-munk_s_l[i-1]))
   
   fc$stoage[i]   <- (fc$stoage[i-1] + LL_moderate[i-1]*0.03)*(1+param_mu_s*stoage[i-1] + param_r_f*(1-stoage[i-1]))
   fc$bodie[i]   <- (fc$bodie[i-1] + LL_moderate[i-1]*0.03)*(1+param_mu_s*bodie[i-1] + param_r_f*(1-bodie[i-1]))
@@ -135,16 +135,17 @@ for(i in 2:param_T){
 
 
 pdf(file = "Dropbox/research/tex/figs/individuals.pdf")
-plot(c(28:56),riskyf, type="l", col="green", xlab="age", ylab="stock share")
-lines(c(28:56),riskym, col="orange")
-lines(c(28:56),riskys, col="red")
-legend(x = "bottomleft", y =0, legend = c("steep","moderate","flat"), fill=c("red","orange","green"))
+plot(c(28:56),merton_f, type="l", col="green", xlab="age", ylab="stock share",ylim = c(0.65,1))
+lines(c(28:56),merton_s, col="red")
+lines(c(28:56),munk_m_m, col="blue")
+lines(c(28:56),munk_f_h, col="orange")
+legend(x = "bottomleft", y =0, legend = c("steep Merton","flat Munk","flat Merton", "moderates"), fill=c("red","orange","green", "blue"))
 dev.off()
 
 
 
 pdf(file="Dropbox/research/tex/figs/fincapital.pdf")
-plot(c(28:57), Fah0, type="l", xlab="age", ylab="financial capital",col="red3")
-lines(c(28:57), Fmarkowitz, col="orange2")
+plot(c(28:57), fc$ah0, type="l", xlab="age", ylab="financial capital",col="red3")
+lines(c(28:57), fc$markowitz, col="orange2")
 legend(x = "topleft", y =0, legend = c("30% stocks", "63% stocks"), fill=c("red3","orange2"), cex=1.5)
 dev.off()
