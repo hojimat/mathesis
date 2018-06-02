@@ -33,7 +33,7 @@ To measure the stock series we used BIST 30 index which measures the aggregate p
 \end{figure}
 
 \subsection{Default parameters}
-In our simulation we start with a 28 years old individual who invests in her retirement for 30 years until she reaches retirement at 57. In line with Torul et al. (2018) we set the coefficient of relative risk aversion for Turkey at $1.5$, and the subjective discount rate at $0.89$.
+In our simulation we start with a 28 years old individual who invests in her retirement for 30 years until she reaches retirement at 57. We set the default coefficient of relative risk aversion at $5$, but, in line with Torul et al. (2018), we check the sensitivity for $1.5$ and other values. Also, according to Torul et al. (2018), we set the subjective discount rate at $0.89$.
 
 \paragraph{}Stock returns for Turkey were estimated from historical data to be equal to $23.2\%$ annually, with variance $36\%$. Risk-free rate forecasts are obtained from OECD Data Bank (2018) and are equal to $10.8\%$ per annum.
 
@@ -61,7 +61,7 @@ In our simulation we start with a 28 years old individual who invests in her ret
 		$Y$&Beginning age&$28$\\
 		$R$&Retirement age&$57$\\
 		$T$&Lifespan (years)&$100$\\
-		$\gamma$&Risk aversion&$1.5$\\
+		$\gamma$&Risk aversion&$5$\\
 		$\beta$&Discount rate&$0.89$\\
 		$r_f$&Risk-free rate&$0.108$\\
 		$\pi$&Average inflation rate&$0.084$\\
@@ -149,28 +149,33 @@ As we explained in Chapter 3, we model our labor income series as functions of a
 
 \subsubsection{Individual heterogeneity}
 
-We model individual heterogeneity using idiosyncratic labor income shocks $\sigma_{\epsilon}$. We consider three different values $0.03$,$0.05$ and $0.07$. Total variance is calculated, as stated in previous chapter, as a sum of squares of aggregate and idiosyncratic shocks $\sigma^2_W = \sigma^2_w + \sigma^2_{\epsilon}$. This heterogeneity is summarized in Table 4.4. 
+%We model individual heterogeneity using idiosyncratic labor income shocks $\sigma_{\epsilon}$. We consider three different values $0.03$,$0.05$ and $0.07$. Total variance is calculated, as stated in previous chapter, as a sum of squares of aggregate and idiosyncratic shocks $\sigma^2_W = \sigma^2_w + \sigma^2_{\epsilon}$. This heterogeneity is summarized in Table 4.4. 
 
+
+%\begin{table}
+%	\centering
+%	\caption{Benchmark Wage Volatilities and Their Sum of Squares}
+%	\begin{tabular}[c]{l|ccc}
+%		&Low&Moderate&High\\
+%		\hline
+%		$\sigma_w$&$0.056$&$0.056$&$0.056$\\
+%		$\sigma_{\epsilon}$&$0.03$&$0.05$&$0.07$\\
+%		\hline
+%		$\sigma^2_{W}$&$0.004$&$0.0056$&$0.008$
+%	\end{tabular}
+%\end{table}
+
+We check for individual heterogeneity using a sensitivity analysis on different risk aversion coefficients, summarized in Table 4.4.
 
 \begin{table}
 	\centering
-	\caption{Benchmark Wage Volatilities and Their Sum of Squares}
-	\begin{tabular}[c]{l|ccc}
-		&Low&Moderate&High\\
+	\caption{Coefficients of Risk Averion}
+	\begin{tabular}[c]{r|cccc}
+		Values&Torul&low&default&high\\
 		\hline
-		$\sigma_w$&$0.056$&$0.056$&$0.056$\\
-		$\sigma_{\epsilon}$&$0.03$&$0.05$&$0.07$\\
-		\hline
-		$\sigma^2_{W}$&$0.004$&$0.0056$&$0.008$
+		$\gamma$&1.5&3&5&10\\
 	\end{tabular}
 \end{table}
-
-
-\subsubsection{Housing wealth heterogeneity}
-
-Apart from the above three heterogeneities, all related to labor income process, we also consider differences in housing wealth to match Munk's (2016) approach completely. We have SOMETHING ABOUT H ZERO ET CETERA...
-
-
 
 \section{Capital series}
 
@@ -214,11 +219,6 @@ Financial capital evolves according to dynamic investment illustrated in Figure 
 	\caption{Law of motion of financial capital}
 \end{figure}
 
-\paragraph{}Note that the shape of the financial capital depends on $r_p$ - the rate of return on portfolio, which itself depends on the risky-to-riskless asset ratio. Different such ratios are listed and analyzed in detail in the next section. Figure 4.10 demonstrates the evolution of financial capital for two investment options, provided by Anadolu Hayat Emeklilik - $30\%$ in stocks and $70\%$ in bonds, and by solving Markowitz's formula - $63\%$ in stocks and $37\%$ in bonds.
+\paragraph{}Note that the shape of the financial capital depends on $r_p$ --- the rate of return on portfolio, which itself depends on the risky-to-riskless asset ratio. Different such ratios are listed and analyzed in detail in the next section. Figure 4.10 demonstrates the evolution of financial capital for two investment options, provided by Anadolu Hayat Emeklilik --- $30\%$ in stocks and $70\%$ in bonds, and by solving Markowitz's formula --- $63\%$ in stocks and $37\%$ in bonds.
 
-\paragraph{}It is important to notice here that since human capital is declining by age and financial capital is increasing, the ratio $\frac{L_t}{F_t}$ is declining in $t$. Recalling Merton's formula for $\alpha_t$ from Chapter 2, $\frac{\mu - R_f}{\gamma \sigma^2}(1+\frac{L_t}{F_t})$, it should be now clear how the above fraction creates a lifecycle effect - different ratios for different ages. 
-
-\subsection{Housing capital}
-
-
-
+\paragraph{}It is important to notice here that since human capital is declining by age and financial capital is increasing, the ratio $\frac{L_t}{F_t}$ is declining in $t$. Recalling Merton's formula for $\alpha_t$ from Chapter 2, $\frac{\mu - R_f}{\gamma \sigma^2}(1+\frac{L_t}{F_t})$, it should be now clear how the above fraction creates a lifecycle effect --- different ratios for different ages. 

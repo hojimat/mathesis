@@ -82,7 +82,7 @@ stoage <- stoage/100
 bodie <- bodie/100
 age <- c(param_Y:param_R)
 ah0 <- rep(0.3, param_T)
-markowitz <- rep(1, param_T)
+markowitz <- rep(0.63, param_T)
 
 
 
@@ -99,8 +99,8 @@ for(i in 2:param_T){
   munk_f_m[i-1] <- min(munk(t = i-1, dwi =  L_flat, dfi = fc$munk_flat_mod, rhowsi = param_rho_ws_medium, rhowhi = param_rho_hw,house = FALSE)$pis,1)
   
   munk_m_h[i-1] <- min(munk(t = i-1, dwi =  L_moderate, dfi = fc$munk_moderate_hi, rhowsi = param_rho_ws_high, rhowhi = param_rho_hw,house = FALSE)$pis,1)
-  munk_m_l[i-1] <- min(munk(t = i-1, dwi = L_moderate, dfi = fc$munk_moderate_low, rhowsi = param_rho_ws_low, rhowhi = param_rho_hw,FALSE)$pis,1)
-  munk_m_m[i-1] <- min(munk(t = i-1, dwi = L_moderate, dfi = fc$munk_moderate_mod, rhowsi = param_rho_ws_medium, rhowhi = param_rho_hw,FALSE)$pis,1)
+  munk_m_l[i-1] <- min(munk(t = i-1, dwi = L_moderate, dfi = fc$munk_moderate_low, rhowsi = param_rho_ws_low, rhowhi = param_rho_hw,house=FALSE)$pis,1)
+  munk_m_m[i-1] <- min(munk(t = i-1, dwi = L_moderate, dfi = fc$munk_moderate_mod, rhowsi = param_rho_ws_medium, rhowhi = param_rho_hw,house=FALSE)$pis,1)
   
   munk_s_h[i-1] <- min(munk(t = i-1, dwi = L_steep, dfi = fc$munk_steep_hi, rhowsi = param_rho_ws_high, rhowhi = param_rho_hw,house = FALSE)$pis,1)
   munk_s_l[i-1] <- min(munk(t = i-1, dwi = L_steep, dfi = fc$munk_steep_low, rhowsi = param_rho_ws_low, rhowhi = param_rho_hw,house = FALSE)$pis,1)
@@ -134,18 +134,18 @@ for(i in 2:param_T){
 
 
 
-pdf(file = "Dropbox/research/tex/figs/individuals.pdf")
-plot(c(28:56),merton_f, type="l", col="green", xlab="age", ylab="stock share",ylim = c(0.65,1))
-lines(c(28:56),merton_s, col="red")
-lines(c(28:56),munk_m_m, col="blue")
-lines(c(28:56),munk_f_h, col="orange")
-legend(x = "bottomleft", y =0, legend = c("steep Merton","flat Munk","flat Merton", "moderates"), fill=c("red","orange","green", "blue"))
-dev.off()
-
-
-
-pdf(file="Dropbox/research/tex/figs/fincapital.pdf")
-plot(c(28:57), fc$ah0, type="l", xlab="age", ylab="financial capital",col="red3")
-lines(c(28:57), fc$markowitz, col="orange2")
-legend(x = "topleft", y =0, legend = c("30% stocks", "63% stocks"), fill=c("red3","orange2"), cex=1.5)
-dev.off()
+#pdf(file = "Dropbox/research/tex/figs/individuals.pdf")
+# plot(c(28:56),merton_f, type="l", col="green", xlab="age", ylab="stock share",ylim = c(0,1))
+# lines(c(28:56),merton_s, col="red")
+# lines(c(28:56),munk_m_m, col="blue")
+# lines(c(28:56),munk_f_h, col="orange")
+# legend(x = "bottomleft", y =0, legend = c("Merton for steep wages","Merton for flat wages", "Munk for flat wage", "Munk for moderate wages"), fill=c("red","green","orange", "blue"))
+# dev.off()
+# 
+# 
+# 
+# pdf(file="Dropbox/research/tex/figs/fincapital.pdf")
+# plot(c(28:57), fc$ah0, type="l", xlab="age", ylab="financial capital",col="red3")
+# lines(c(28:57), fc$markowitz, col="orange2")
+# legend(x = "topleft", y =0, legend = c("Anadolu Hayat Riskless", "Markowitz Solution"), fill=c("red3","orange2"), cex=1.5)
+# dev.off()

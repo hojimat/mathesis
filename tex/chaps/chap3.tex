@@ -3,7 +3,7 @@
 
 \section{Labor income process}
 
-We model the labor income process as a regression prediction plus aggregate and idiosyncratic shocks for working people and as the percentage $\lambda$ of the last received wage for the retired. This is summarized in Cocco et al. (2005):
+We model the labor income process as a function of individiual characteristics plus aggregate and idiosyncratic shocks for working people, and as the percentage $\lambda$ of the last received wage for the retired. This is summarized in Cocco et al. (2005) as follows:
 
 \begin{center}
 	$\log(Y_{it}) =
@@ -70,39 +70,41 @@ Similarly to Cocco et al. (2005) we use CRRA utility function in our model:
 
 where $p_k$ is the probability of survival from time $k-1$ to time $k$. Note that we omitted the bequest motives from the original formulation, thus retired person consumes all of his income at any given time.
 
-\paragraph*{}Following Olear (2016) we use certainty equivalent consumptions (CEC) instead of expected utilities to compare the welfare effects between different lifecycle choices. Appendix C shows the calculation of the following formula for CEC:
+%\paragraph*{}Following Olear (2016) we use certainty equivalent consumptions (CEC) instead of expected utilities to compare the welfare effects between different lifecycle choices. Appendix C shows the calculation of the following formula for CEC:
 
-\begin{center}
-	$CEC = \left( \frac{E[U(c)]\cdot(1-\gamma)}{\sum^T_{t=1} \delta^{t-1} \prod^{t-1}_{j=0} p_j} \right)^{1/(1-\gamma)}$
-\end{center}
+%\begin{center}
+%	$CEC = \left( \frac{E[U(c)]\cdot(1-\gamma)}{\sum^T_{t=1} \delta^{t-1} \prod^{t-1}_{j=0} p_j} \right)^{1/(1-\gamma)}$
+%\end{center}
 
 
 \section{Individualization}
 
-To derive the individual lifecycle portfolios for every wealth type we use a special case of Munk (2016) with housing and human capital included. This approach and its solution has been done by Olear (2016). First, note that total wealth at any time consists of financial, housing and human capital: $W_t = F_t + H_t + L_t$. Financial wealth corresponds to actual financial asset holdings at time $t$, HOUSING HERE EXPLAINED, and human capital corresponds to the present value of all the future wages until retirement. This gives the mean:
+To derive the individual lifecycle portfolios for every wealth type we use a special case of Munk (2016) with housing investment and human capital included. The similar approach and its solution has been done by Olear (2016), but she included housing capital as a pre-existing wealth bought for an outside mortgage, independent of the investment decision. In this paper, we consider housing as a purely financial investment, in line with Munk (2016). First, note that total wealth at any time consists of financial, housing and human capital: $W_t = F_t + L_t$. Financial wealth corresponds to actual financial and housing asset holdings at time $t$, and human capital corresponds to the present value of all the future wages until retirement. This gives the mean:
 
 \begin{center}
-	$E[\frac{W_1}{W_0}] = \frac{F_1 + H_1 + L_1}{W_0} =  \frac{F_0}{W_0} (1 + r_p) + \frac{H_0}{W_0}(1+\mu_H) + \frac{L_0}{W_0}(1+\mu_L)$
+	$E[\frac{W_1}{W_0}] = \frac{F_1 + L_1}{W_0} =  \frac{F_0}{W_0} (1 + r_p) + \frac{L_0}{W_0}(1+\mu_L)$
 \end{center}
 
-where $r_p = r_f(1-\pi) + \pi \cdot \mu_s$ is a portfolio return, $\pi$ is share of total wealth invested in stocks, $r_f$ is a rate of return on a risk-free asset (bond) and $\mu_s = E[r]$ is expected stock return. The volatility is given by:
+where $r_p = r_f(1-\pi - \pi_h) + \pi \cdot \mu_s + \pi_h \cdot \mu_h$ is a portfolio return, $\pi$ and $\pi_h$ are shares of total wealth invested in stocks and housing respectively, $r_f$ is a rate of return on a risk-free asset (bond), and $\mu_s = E[r]$ and $\mu_h$ are expected stock and housing returns respectively. The volatility is given by:
 
 \begin{center}
-	$var(\frac{W_1}{W_0}) = (\frac{F_0}{W_0})^2 \pi^2 \sigma^2_s + (\frac{H_0}{W_0})^2(\sigma^2_H) + (\frac{L_0}{W_0})^2(\sigma^2_L) + 2 \cdot X$
+	$var(\frac{W_1}{W_0}) = (\frac{F_0}{W_0})^2 \boldsymbol{\pi} \Sigma \boldsymbol{\pi} + (\frac{L_0}{W_0})^2(\sigma^2_L) + 2 \cdot \frac{F_0 L_0}{W^2_0} \cdot \pi\cdot cov(\boldsymbol{r},\mu_L)$
 \end{center}
 
-where:
+where: $\boldsymbol{\pi} = \left( \pi, \pi_h \right)$ and $\boldsymbol{r} = \left( \mu_s, \mu_h \right)$. Substituting this into the unconstrained mean-variance maximization and solving yields:
 
 \begin{center}
-	$X = \frac{F_0 L_0}{W_0} \cdot \pi\cdot cov(S,L) + \frac{F_0 H_0}{W_0} \cdot \pi\cdot cov(S,H) + \frac{H_0 L_0}{W_0} \cdot cov(L,H)$
+	$\pi_{t+1} = \frac{\mu_s - r_f}{\gamma \sigma^2_s}  + \frac{L_t}{F_t} \cdot \left(\frac{\mu_s - r_f}{\gamma \sigma^2_s} - \frac{\rho_{SL}\sigma_L}{\sigma_S} \right)$
 \end{center}
 
-Substituting this to the mean-variance maximization and solving yields:
+without housing investment, and:
 
 \begin{center}
-	$\pi_{t+1} = \frac{\mu_s - r_f}{\gamma \sigma^2_s} \cdot \frac{W_t}{F_t} - \frac{L_t}{F_t} \cdot \frac{corr(S,Y)}{\sigma^2_s} - \frac{H_t}{F_t} \cdot \frac{corr(S,H)}{\sigma^2_s}$
+	$\pi_{t+1} = \frac{1}{\gamma (1 - \rho^2_{SH}) \sigma_S} \cdot \frac{W_t}{F_t} \left( \frac{\mu_s - r_f}{\sigma_S} - \rho_{SH} \frac{\mu_h - r_f}{\sigma_h} \right) - \frac{L_t}{F_t} \cdot \frac{\sigma_L}{\sigma_S} \frac{\rho_{SL} - \rho_{SH}\rho_{HL}}{1 - \rho^2_{SH}}$\\
+	$\pi_{h,t+1} = \frac{1}{\gamma (1 - \rho^2_{SH}) \sigma_H} \cdot \frac{W_t}{F_t} \left( \frac{\mu_h - r_f}{\sigma_h} - \rho_{SH} \frac{\mu_s - r_f}{\sigma_s} \right) - \frac{L_t}{F_t} \cdot \frac{\sigma_L}{\sigma_h} \frac{\rho_{HL} - \rho_{SH}\rho_{SL}}{1 - \rho^2_{SH}}$
 \end{center}
 
+when housing is considered as a second risky financial investment. In line with Munk (2016), we calculate the risk free asset share as $\left( 1 - \pi - \pi_h \right)$ and only then impose constraints. If any of the above shares is negative, we equate it to zero, and if the sum of remaining shares exceeds $1$, we divde all of the shares by their sum to obtain a proportionate asset allocation. 
 
 \section{Retirement income}
 
