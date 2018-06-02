@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Arch Linux) (preloaded format=pdflatex 2018.3.21)  2 JUN 2018 18:45
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Arch Linux) (preloaded format=pdflatex 2018.3.21)  2 JUN 2018 19:01
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -993,13 +993,6 @@ LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <12> not available
 l.1 \chapter*{Abstract}
                        
 ? 
-
-Overfull \hbox (181.47185pt too wide) in paragraph at lines 6--8
-[]\T1/ptm/m/n/12 We analkjsalkd-f-jals-d-kjf lak-sjd-flaskd-jflas-d-jkf lak-sjd
--flad-kjflkd-jas-flka-jdf;kljadlkfjasldkfja;slkfjlsadkjf;alskdjfl;askdjfalskdjf
-
- []
-
 [5
 
 
@@ -1008,8 +1001,8 @@ Overfull \hbox (181.47185pt too wide) in paragraph at lines 6--8
 ! Missing { inserted.
 <to be read again> 
                    \parindent 
-l.11 \chapter*{Özet}
-                     
+l.9 \chapter*{Özet}
+                    
 ? 
 ) [6
 
@@ -2625,7 +2618,7 @@ l.99 		&
 ### simple group (level 6) entered at line 70 ({)
 ### simple group (level 5) entered at line 69 ({)
 ### simple group (level 4) entered at line 1 ({)
-### simple group (level 3) entered at line 11 ({)
+### simple group (level 3) entered at line 9 ({)
 ### simple group (level 2) entered at line 1 ({)
 ### simple group (level 1) entered at line 1 ({)
 ### bottom level 
@@ -2651,7 +2644,7 @@ msfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6
 nts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texmf-dist/fonts/type1/publi
 c/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist/fonts/type1/urw/times/utmr8a.pfb
 ></usr/share/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (59 pages, 373644 bytes).
+Output written on main.pdf (59 pages, 374128 bytes).
 PDF statistics:
  404 PDF objects out of 1000 (max. 8388607)
  278 compressed objects within 3 object streams
