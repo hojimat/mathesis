@@ -7,7 +7,7 @@ plot(c(28:57),HH)
 
 #individualized portfolios
 LL <- rep(0,param_T); LL[1] <- w2[12,]$income*1.3
-pdf(file = "Dropbox/research/tex/figs/heterwageless.pdf")
+pdf(file = "Dropbox/research/mathesis/tex/figs/heterwageless.pdf")
 x <- c(rep(1.065,35), rep(1.02,10), rep(1,15))
 x[1] <- LL[1]
 x[1:35] <- cumprod(x[1:35])

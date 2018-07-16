@@ -61,6 +61,24 @@ $\frac{\Delta S_{t+1}}{S_t} = \mu_s + \sigma_s \cdot \epsilon_{st}$\\
 $\frac{\Delta H_{t+1}}{H_t} = \mu_h + \sigma_h \cdot \left(\rho_{hs}\epsilon_{st} + (\sqrt{1-\rho^2_{hs}})\epsilon_{ht}\right)$\\
 $\frac{\Delta Y_{t+1}}{Y_t} = \mu_v + \sigma_v \cdot \left(\rho_{ys}\epsilon_{st} + \left(\frac{\rho_{yh} - \rho_{sh}\rho_{sy}}{\sqrt{1-\rho^2_{sh}}}\right)\epsilon_{ht} + \left(\sqrt{1-\rho^2_{ys}-(\frac{\rho_{yh} - \rho_{sh}\rho_{sy}}{\sqrt{1-\rho^2_{sh}}})^2}\right)\epsilon_{vt}\right)$
 
+
+\subsection{Calibration}
+
+To do our simulation, we must calibrate the above model parameters from the historical labor income data. The calibration is done using data obtained from the repeated cross-sectional study by TUIK (2003-2014). Aggregating these studies results in a pseudo-panel, which we will use to summarize labor income dynamics.
+
+\paragraph{}
+In summarizing the series we will use simple medians and means. In determining the expected values of time-series parameters, we will use simple arithmetic mean and standard deviation.
+
+\paragraph{}
+In constructing the simulated labor income series, we used kinked ordinary least-squares (OLS) estimations with kinks at ages of 35 and 45 separately for every education level $i$:
+
+\begin{center}
+	$\Delta\log (wage_{it}) = \alpha_0 + \alpha_1 \cdot d_{35} + \alpha_2 \cdot d_{45} + \alpha_3 \cdot t$
+\end{center}
+
+
+
+
 \section{Welfare measurement}
 Similarly to Cocco et al. (2005) we use CRRA utility function in our model:
 
@@ -79,19 +97,8 @@ where $p_k$ is the probability of survival from time $k-1$ to time $k$. Note tha
 
 \section{Individualization}
 
-To derive the individual lifecycle portfolios for every wealth type we use a special case of Munk (2016) with housing investment and human capital included. The similar approach and its solution has been done by Olear (2016), but she included housing capital as a pre-existing wealth bought for an outside mortgage, independent of the investment decision. In this paper, we consider housing as a purely financial investment, in line with Munk (2016). First, note that total wealth at any time consists of financial, housing and human capital: $W_t = F_t + L_t$. Financial wealth corresponds to actual financial and housing asset holdings at time $t$, and human capital corresponds to the present value of all the future wages until retirement. This gives the mean:
+To derive the individual lifecycle portfolios for every wealth type we use a special case of Munk (2016) with housing investment and human capital included. The similar approach and its solution has been done by Olear (2016), but she included housing capital as a pre-existing wealth bought for an outside mortgage, independent of the investment decision. In this paper, we consider housing as a purely financial investment, in line with Munk (2016). Munk provides the following optimal asset allocation:
 
-\begin{center}
-	$E[\frac{W_1}{W_0}] = \frac{F_1 + L_1}{W_0} =  \frac{F_0}{W_0} (1 + r_p) + \frac{L_0}{W_0}(1+\mu_L)$
-\end{center}
-
-where $r_p = r_f(1-\pi - \pi_h) + \pi \cdot \mu_s + \pi_h \cdot \mu_h$ is a portfolio return, $\pi$ and $\pi_h$ are shares of total wealth invested in stocks and housing respectively, $r_f$ is a rate of return on a risk-free asset (bond), and $\mu_s = E[r]$ and $\mu_h$ are expected stock and housing returns respectively. The volatility is given by:
-
-\begin{center}
-	$var(\frac{W_1}{W_0}) = (\frac{F_0}{W_0})^2 \boldsymbol{\pi} \Sigma \boldsymbol{\pi} + (\frac{L_0}{W_0})^2(\sigma^2_L) + 2 \cdot \frac{F_0 L_0}{W^2_0} \cdot \pi\cdot cov(\boldsymbol{r},\mu_L)$
-\end{center}
-
-where: $\boldsymbol{\pi} = \left( \pi, \pi_h \right)$ and $\boldsymbol{r} = \left( \mu_s, \mu_h \right)$. Substituting this into the unconstrained mean-variance maximization and solving yields:
 
 \begin{center}
 	$\pi_{t+1} = \frac{\mu_s - r_f}{\gamma \sigma^2_s}  + \frac{L_t}{F_t} \cdot \left(\frac{\mu_s - r_f}{\gamma \sigma^2_s} - \frac{\rho_{SL}\sigma_L}{\sigma_S} \right)$

@@ -109,26 +109,26 @@ for(i in 2:param_T){
 
   
   #law of motion of financial capital
-  fc$merton_steep[i] <- (fc$merton_steep[i-1] + LL_steep[i-1]*0.03)*(1 + param_mu_s*merton_s[i-1] + param_r_f*(1-merton_s[i-1]))
-  fc$merton_moderate[i] <- (fc$merton_moderate[i-1] + LL_moderate[i-1]*0.03)*(1 + param_mu_s*merton_m[i-1] + param_r_f*(1-merton_m[i-1]))
-  fc$merton_flat[i] <- (fc$merton_flat[i-1] + LL_flat[i-1]*0.03)*(1 + param_mu_s*merton_f[i-1] + param_r_f*(1-merton_f[i-1]))
+  fc$merton_steep[i] <- (fc$merton_steep[i-1] + LL_steep[i-1]*0.03)*(1 + param_stock[i-1]*merton_s[i-1] + param_r_f*(1-merton_s[i-1]))
+  fc$merton_moderate[i] <- (fc$merton_moderate[i-1] + LL_moderate[i-1]*0.03)*(1 + param_stock[i-1]*merton_m[i-1] + param_r_f*(1-merton_m[i-1]))
+  fc$merton_flat[i] <- (fc$merton_flat[i-1] + LL_flat[i-1]*0.03)*(1 + param_stock[i-1]*merton_f[i-1] + param_r_f*(1-merton_f[i-1]))
   
-  fc$munk_flat_hi[i] <- (fc$munk_flat_hi[i-1] + LL_flat[i-1]*0.03)*(1 + param_mu_s*munk_f_h[i-1] + param_r_f*(1-munk_f_h[i-1]))
-  fc$munk_flat_mod[i] <- (fc$munk_flat_hi[i-1] + LL_flat[i-1]*0.03)*(1 + param_mu_s*munk_f_m[i-1] + param_r_f*(1-munk_f_m[i-1]))
-  fc$munk_flat_low[i] <- (fc$munk_flat_hi[i-1] + LL_flat[i-1]*0.03)*(1 + param_mu_s*munk_f_l[i-1] + param_r_f*(1-munk_f_l[i-1]))
+  fc$munk_flat_hi[i] <- (fc$munk_flat_hi[i-1] + LL_flat[i-1]*0.03)*(1 + param_stock[i-1]*munk_f_h[i-1] + param_r_f*(1-munk_f_h[i-1]))
+  fc$munk_flat_mod[i] <- (fc$munk_flat_hi[i-1] + LL_flat[i-1]*0.03)*(1 + param_stock[i-1]*munk_f_m[i-1] + param_r_f*(1-munk_f_m[i-1]))
+  fc$munk_flat_low[i] <- (fc$munk_flat_hi[i-1] + LL_flat[i-1]*0.03)*(1 + param_stock[i-1]*munk_f_l[i-1] + param_r_f*(1-munk_f_l[i-1]))
   
-  fc$munk_moderate_hi[i] <- (fc$munk_moderate_hi[i-1] + LL_moderate[i-1]*0.03)*(1 + param_mu_s*munk_m_h[i-1] + param_r_f*(1-munk_m_h[i-1]))
-  fc$munk_moderate_mod[i] <- (fc$munk_moderate_hi[i-1] + LL_moderate[i-1]*0.03)*(1 + param_mu_s*munk_m_m[i-1] + param_r_f*(1-munk_m_m[i-1]))
-  fc$munk_moderate_low[i] <- (fc$munk_moderate_hi[i-1] + LL_moderate[i-1]*0.03)*(1 + param_mu_s*munk_m_l[i-1] + param_r_f*(1-munk_m_l[i-1]))
+  fc$munk_moderate_hi[i] <- (fc$munk_moderate_hi[i-1] + LL_moderate[i-1]*0.03)*(1 + param_stock[i-1]*munk_m_h[i-1] + param_r_f*(1-munk_m_h[i-1]))
+  fc$munk_moderate_mod[i] <- (fc$munk_moderate_hi[i-1] + LL_moderate[i-1]*0.03)*(1 + param_stock[i-1]*munk_m_m[i-1] + param_r_f*(1-munk_m_m[i-1]))
+  fc$munk_moderate_low[i] <- (fc$munk_moderate_hi[i-1] + LL_moderate[i-1]*0.03)*(1 + param_stock[i-1]*munk_m_l[i-1] + param_r_f*(1-munk_m_l[i-1]))
   
-  fc$munk_steep_hi[i] <- (fc$munk_steep_hi[i-1] + LL_steep[i-1]*0.03)*(1 + param_mu_s*munk_s_h[i-1] + param_r_f*(1-munk_s_h[i-1]))
-  fc$munk_steep_mod[i] <- (fc$munk_steep_hi[i-1] + LL_steep[i-1]*0.03)*(1 + param_mu_s*munk_s_m[i-1] + param_r_f*(1-munk_s_m[i-1]))
-  fc$munk_steep_low[i] <- (fc$munk_steep_hi[i-1] + LL_steep[i-1]*0.03)*(1 + param_mu_s*munk_s_l[i-1] + param_r_f*(1-munk_s_l[i-1]))
+  fc$munk_steep_hi[i] <- (fc$munk_steep_hi[i-1] + LL_steep[i-1]*0.03)*(1 + param_stock[i-1]*munk_s_h[i-1] + param_r_f*(1-munk_s_h[i-1]))
+  fc$munk_steep_mod[i] <- (fc$munk_steep_hi[i-1] + LL_steep[i-1]*0.03)*(1 + param_stock[i-1]*munk_s_m[i-1] + param_r_f*(1-munk_s_m[i-1]))
+  fc$munk_steep_low[i] <- (fc$munk_steep_hi[i-1] + LL_steep[i-1]*0.03)*(1 + param_stock[i-1]*munk_s_l[i-1] + param_r_f*(1-munk_s_l[i-1]))
   
-  fc$stoage[i]   <- (fc$stoage[i-1] + LL_moderate[i-1]*0.03)*(1+param_mu_s*stoage[i-1] + param_r_f*(1-stoage[i-1]))
-  fc$bodie[i]   <- (fc$bodie[i-1] + LL_moderate[i-1]*0.03)*(1+param_mu_s*bodie[i-1] + param_r_f*(1-bodie[i-1]))
-  fc$markowitz[i]   <- (fc$markowitz[i-1] + LL_moderate[i-1]*0.03)*(1+param_mu_s*0.63 + param_r_f*0.37)
-  fc$ah0[i]   <- (fc$ah0[i-1] + LL_moderate[i-1]*0.03)*(1+param_mu_s*0.3 + param_r_f*0.7)
+  fc$stoage[i]   <- (fc$stoage[i-1] + LL_moderate[i-1]*0.03)*(1+param_stock[i-1]*stoage[i-1] + param_r_f*(1-stoage[i-1]))
+  fc$bodie[i]   <- (fc$bodie[i-1] + LL_moderate[i-1]*0.03)*(1+param_stock[i-1]*bodie[i-1] + param_r_f*(1-bodie[i-1]))
+  fc$markowitz[i]   <- (fc$markowitz[i-1] + LL_moderate[i-1]*0.03)*(1+param_stock[i-1]*0.63 + param_r_f*0.37)
+  fc$ah0[i]   <- (fc$ah0[i-1] + LL_moderate[i-1]*0.03)*(1+param_stock[i-1]*0.3 + param_r_f*0.7)
 }
 
 

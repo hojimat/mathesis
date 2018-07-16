@@ -15,7 +15,10 @@
 \contentsline {chapter}{\numberline {3}Model}{10}
 \contentsline {section}{\numberline {3.1}Labor income process}{10}
 \contentsline {subsection}{\numberline {3.1.1}Correlations}{11}
-\contentsline {section}{\numberline {3.2}Welfare measurement}{11}
+\contentsline {subsection}{\numberline {3.1.2}Calibration}{11}
+\contentsline {paragraph}{}{11}
+\contentsline {paragraph}{}{12}
+\contentsline {section}{\numberline {3.2}Welfare measurement}{12}
 \contentsline {section}{\numberline {3.3}Individualization}{12}
 \contentsline {section}{\numberline {3.4}Retirement income}{13}
 \contentsline {paragraph}{}{13}
@@ -47,21 +50,21 @@
 \contentsline {section}{\numberline {5.2}Welfare comparison}{27}
 \contentsline {subsection}{\numberline {5.2.1}Early results}{29}
 \contentsline {subsection}{\numberline {5.2.2}Annuitization}{30}
-\contentsline {subsection}{\numberline {5.2.3}Consumption during retirement}{32}
-\contentsline {subsection}{\numberline {5.2.4}Expected utilities}{32}
+\contentsline {subsection}{\numberline {5.2.3}Consumption during retirement}{30}
+\contentsline {subsection}{\numberline {5.2.4}Expected utilities}{30}
 \contentsline {subsection}{\numberline {5.2.5}Conclusions}{32}
-\contentsline {paragraph}{}{34}
-\contentsline {chapter}{\numberline {6}Conclusion}{36}
-\contentsline {paragraph}{}{36}
-\contentsline {paragraph}{}{36}
-\contentsline {paragraph}{}{36}
-\contentsline {paragraph}{}{36}
-\contentsline {chapter}{REFERENCES}{37}
+\contentsline {paragraph}{}{32}
+\contentsline {chapter}{\numberline {6}Conclusion}{35}
+\contentsline {paragraph}{}{35}
+\contentsline {paragraph}{}{35}
+\contentsline {paragraph}{}{35}
+\contentsline {paragraph}{}{35}
+\contentsline {chapter}{REFERENCES}{36}
 \let \chaptertitlename \appendixname 
-\contentsline {chapter}{\numberline {A}Cholesky decomposed errors}{39}
-\contentsline {chapter}{\numberline {B}Logarithms as percentage change}{40}
-\contentsline {chapter}{\numberline {C}Derivation of CEC}{41}
-\contentsline {chapter}{\numberline {D}Annuitization of wealth}{42}
-\contentsline {chapter}{\numberline {E}Default and Derived Solutions}{43}
-\contentsline {paragraph}{}{43}
+\contentsline {chapter}{\numberline {A}Cholesky decomposed errors}{38}
+\contentsline {chapter}{\numberline {B}Logarithms as percentage change}{39}
+\contentsline {chapter}{\numberline {C}Derivation of CEC}{40}
+\contentsline {chapter}{\numberline {D}Annuitization of wealth}{41}
+\contentsline {chapter}{\numberline {E}Default and Derived Solutions}{42}
+\contentsline {paragraph}{}{42}
 \contentsfinish 

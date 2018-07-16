@@ -1,7 +1,7 @@
 # house price
 #set.seed(1)
 #HH <- rep(0,param_T); HH[1] <- 200000
-#HH[2:30] <- 1+rnorm(29,param_mu_h,param_sig_h)
+#HH[2:30] <- 1+rnorm(29,param_house[i-1],param_sig_h)
 #HH <- cumprod(HH)
 #plot(c(28:57),HH)
 
@@ -99,9 +99,9 @@ for(i in 2:param_T){
   if(smunkh_f_h[i-1] + hmunkh_f_h[i-1] > 1){
     gammas$smunkh_f_h[i-1] <- smunkh_f_h[i-1] / (smunkh_f_h[i-1] + hmunkh_f_h[i-1])
     gammas$hmunkh_f_h[i-1] <- hmunkh_f_h[i-1] / (smunkh_f_h[i-1] + hmunkh_f_h[i-1])
-    fc$munkhouse_flat_hi[i] <- (fc$munkhouse_flat_hi[i-1] + LL_flat[i-1]*0.03)*(1 + param_mu_s*gammas$smunkh_f_h[i-1] + param_mu_h*gammas$hmunkh_f_h[i-1])
+    fc$munkhouse_flat_hi[i] <- (fc$munkhouse_flat_hi[i-1] + LL_flat[i-1]*0.03)*(1 + param_stock[i-1]*gammas$smunkh_f_h[i-1] + param_house[i-1]*gammas$hmunkh_f_h[i-1])
   }else{
-    fc$munkhouse_flat_hi[i] <- (fc$munkhouse_flat_hi[i-1] + LL_flat[i-1]*0.03)*(1 + param_mu_s*smunkh_f_h[i-1] + param_mu_h*hmunkh_f_h[i-1] + param_r_f*(1-smunkh_f_h[i-1] - hmunkh_f_h[i-1]))    
+    fc$munkhouse_flat_hi[i] <- (fc$munkhouse_flat_hi[i-1] + LL_flat[i-1]*0.03)*(1 + param_stock[i-1]*smunkh_f_h[i-1] + param_house[i-1]*hmunkh_f_h[i-1] + param_r_f*(1-smunkh_f_h[i-1] - hmunkh_f_h[i-1]))    
     gammas$smunkh_f_h[i-1] <- smunkh_f_h[i-1]
     gammas$hmunkh_f_h[i-1] <- hmunkh_f_h[i-1]
   }
@@ -110,9 +110,9 @@ for(i in 2:param_T){
   if(smunkh_f_l[i-1] + hmunkh_f_l[i-1] > 1){
     gammas$smunkh_f_l[i-1] <- smunkh_f_l[i-1] / (smunkh_f_l[i-1] + hmunkh_f_l[i-1])
     gammas$hmunkh_f_l[i-1] <- hmunkh_f_l[i-1] / (smunkh_f_l[i-1] + hmunkh_f_l[i-1])
-    fc$munkhouse_flat_low[i] <- (fc$munkhouse_flat_low[i-1] + LL_flat[i-1]*0.03)*(1 + param_mu_s*gammas$smunkh_f_l[i-1] + param_mu_h*gammas$hmunkh_f_l[i-1])
+    fc$munkhouse_flat_low[i] <- (fc$munkhouse_flat_low[i-1] + LL_flat[i-1]*0.03)*(1 + param_stock[i-1]*gammas$smunkh_f_l[i-1] + param_house[i-1]*gammas$hmunkh_f_l[i-1])
   }else{
-    fc$munkhouse_flat_low[i] <- (fc$munkhouse_flat_low[i-1] + LL_flat[i-1]*0.03)*(1 + param_mu_s*smunkh_f_l[i-1] + param_mu_h*hmunkh_f_l[i-1] + param_r_f*(1-smunkh_f_l[i-1] - hmunkh_f_l[i-1]))    
+    fc$munkhouse_flat_low[i] <- (fc$munkhouse_flat_low[i-1] + LL_flat[i-1]*0.03)*(1 + param_stock[i-1]*smunkh_f_l[i-1] + param_house[i-1]*hmunkh_f_l[i-1] + param_r_f*(1-smunkh_f_l[i-1] - hmunkh_f_l[i-1]))    
     gammas$smunkh_f_l[i-1] <- smunkh_f_l[i-1]
     gammas$hmunkh_f_l[i-1] <- hmunkh_f_l[i-1]
   }
@@ -122,9 +122,9 @@ for(i in 2:param_T){
   if(smunkh_f_m[i-1] + hmunkh_f_m[i-1] > 1){
     gammas$smunkh_f_m[i-1] <- smunkh_f_m[i-1] / (smunkh_f_m[i-1] + hmunkh_f_m[i-1])
     gammas$hmunkh_f_m[i-1] <- hmunkh_f_h[i-1] / (smunkh_f_m[i-1] + hmunkh_f_m[i-1])
-    fc$munkhouse_flat_mod[i] <- (fc$munkhouse_flat_mod[i-1] + LL_flat[i-1]*0.03)*(1 + param_mu_s*gammas$smunkh_f_m[i-1] + param_mu_h*gammas$hmunkh_f_m[i-1])
+    fc$munkhouse_flat_mod[i] <- (fc$munkhouse_flat_mod[i-1] + LL_flat[i-1]*0.03)*(1 + param_stock[i-1]*gammas$smunkh_f_m[i-1] + param_house[i-1]*gammas$hmunkh_f_m[i-1])
   }else{
-    fc$munkhouse_flat_mod[i] <- (fc$munkhouse_flat_mod[i-1] + LL_flat[i-1]*0.03)*(1 + param_mu_s*smunkh_f_m[i-1] + param_mu_h*hmunkh_f_m[i-1] + param_r_f*(1-smunkh_f_m[i-1] - hmunkh_f_m[i-1]))    
+    fc$munkhouse_flat_mod[i] <- (fc$munkhouse_flat_mod[i-1] + LL_flat[i-1]*0.03)*(1 + param_stock[i-1]*smunkh_f_m[i-1] + param_house[i-1]*hmunkh_f_m[i-1] + param_r_f*(1-smunkh_f_m[i-1] - hmunkh_f_m[i-1]))    
     gammas$smunkh_f_m[i-1] <- smunkh_f_m[i-1]
     gammas$hmunkh_f_m[i-1] <- hmunkh_f_m[i-1]
   }
@@ -133,9 +133,9 @@ for(i in 2:param_T){
   if(smunkh_m_h[i-1] + hmunkh_m_h[i-1] > 1){
     gammas$smunkh_m_h[i-1] <- smunkh_m_h[i-1] / (smunkh_m_h[i-1] + hmunkh_m_h[i-1])
     gammas$hmunkh_m_h[i-1] <- hmunkh_m_h[i-1] / (smunkh_m_h[i-1] + hmunkh_m_h[i-1])
-    fc$munkhouse_moderate_hi[i] <- (fc$munkhouse_moderate_hi[i-1] + LL_moderate[i-1]*0.03)*(1 + param_mu_s*gammas$smunkh_m_h[i-1] + param_mu_h*gammas$hmunkh_m_h[i-1])
+    fc$munkhouse_moderate_hi[i] <- (fc$munkhouse_moderate_hi[i-1] + LL_moderate[i-1]*0.03)*(1 + param_stock[i-1]*gammas$smunkh_m_h[i-1] + param_house[i-1]*gammas$hmunkh_m_h[i-1])
   }else{
-    fc$munkhouse_moderate_hi[i] <- (fc$munkhouse_moderate_hi[i-1] + LL_moderate[i-1]*0.03)*(1 + param_mu_s*smunkh_m_h[i-1] + param_mu_h*hmunkh_m_h[i-1] + param_r_f*(1-smunkh_m_h[i-1] - hmunkh_m_h[i-1]))    
+    fc$munkhouse_moderate_hi[i] <- (fc$munkhouse_moderate_hi[i-1] + LL_moderate[i-1]*0.03)*(1 + param_stock[i-1]*smunkh_m_h[i-1] + param_house[i-1]*hmunkh_m_h[i-1] + param_r_f*(1-smunkh_m_h[i-1] - hmunkh_m_h[i-1]))    
     gammas$smunkh_m_h[i-1] <- smunkh_m_h[i-1]
     gammas$hmunkh_m_h[i-1] <- hmunkh_m_h[i-1]
   }
@@ -143,9 +143,9 @@ for(i in 2:param_T){
   if(smunkh_m_l[i-1] + hmunkh_m_l[i-1] > 1){
     gammas$smunkh_m_l[i-1] <- smunkh_m_l[i-1] / (smunkh_m_l[i-1] + hmunkh_m_l[i-1])
     gammas$hmunkh_m_l[i-1] <- hmunkh_m_l[i-1] / (smunkh_m_l[i-1] + hmunkh_m_l[i-1])
-    fc$munkhouse_moderate_low[i] <- (fc$munkhouse_moderate_low[i-1] + LL_moderate[i-1]*0.03)*(1 + param_mu_s*gammas$smunkh_m_l[i-1] + param_mu_h*gammas$hmunkh_m_l[i-1])
+    fc$munkhouse_moderate_low[i] <- (fc$munkhouse_moderate_low[i-1] + LL_moderate[i-1]*0.03)*(1 + param_stock[i-1]*gammas$smunkh_m_l[i-1] + param_house[i-1]*gammas$hmunkh_m_l[i-1])
   }else{
-    fc$munkhouse_moderate_low[i] <- (fc$munkhouse_moderate_low[i-1] + LL_moderate[i-1]*0.03)*(1 + param_mu_s*smunkh_m_l[i-1] + param_mu_h*hmunkh_m_l[i-1] + param_r_f*(1-smunkh_m_l[i-1] - hmunkh_m_l[i-1]))    
+    fc$munkhouse_moderate_low[i] <- (fc$munkhouse_moderate_low[i-1] + LL_moderate[i-1]*0.03)*(1 + param_stock[i-1]*smunkh_m_l[i-1] + param_house[i-1]*hmunkh_m_l[i-1] + param_r_f*(1-smunkh_m_l[i-1] - hmunkh_m_l[i-1]))    
     gammas$smunkh_m_l[i-1] <- smunkh_m_l[i-1]
     gammas$hmunkh_m_l[i-1] <- hmunkh_m_l[i-1]
   }
@@ -153,9 +153,9 @@ for(i in 2:param_T){
   if(smunkh_m_m[i-1] + hmunkh_m_m[i-1] > 1){
     gammas$smunkh_m_m[i-1] <- smunkh_m_m[i-1] / (smunkh_m_m[i-1] + hmunkh_m_m[i-1])
     gammas$hmunkh_m_m[i-1] <- hmunkh_m_m[i-1] / (smunkh_m_m[i-1] + hmunkh_m_m[i-1])
-    fc$munkhouse_moderate_mod[i] <- (fc$munkhouse_moderate_mod[i-1] + LL_moderate[i-1]*0.03)*(1 + param_mu_s*gammas$smunkh_m_m[i-1] + param_mu_h*gammas$hmunkh_m_m[i-1])
+    fc$munkhouse_moderate_mod[i] <- (fc$munkhouse_moderate_mod[i-1] + LL_moderate[i-1]*0.03)*(1 + param_stock[i-1]*gammas$smunkh_m_m[i-1] + param_house[i-1]*gammas$hmunkh_m_m[i-1])
   }else{
-    fc$munkhouse_moderate_mod[i] <- (fc$munkhouse_moderate_mod[i-1] + LL_moderate[i-1]*0.03)*(1 + param_mu_s*smunkh_m_m[i-1] + param_mu_h*hmunkh_m_m[i-1] + param_r_f*(1-smunkh_m_m[i-1] - hmunkh_m_m[i-1]))    
+    fc$munkhouse_moderate_mod[i] <- (fc$munkhouse_moderate_mod[i-1] + LL_moderate[i-1]*0.03)*(1 + param_stock[i-1]*smunkh_m_m[i-1] + param_house[i-1]*hmunkh_m_m[i-1] + param_r_f*(1-smunkh_m_m[i-1] - hmunkh_m_m[i-1]))    
     gammas$smunkh_m_m[i-1] <- smunkh_m_m[i-1]
     gammas$hmunkh_m_m[i-1] <- hmunkh_m_m[i-1]
   }
@@ -163,9 +163,9 @@ for(i in 2:param_T){
   if(smunkh_s_h[i-1] + hmunkh_s_h[i-1] > 1){
     gammas$smunkh_s_h[i-1] <- smunkh_s_h[i-1] / (smunkh_s_h[i-1] + hmunkh_s_h[i-1])
     gammas$hmunkh_s_h[i-1] <- hmunkh_s_h[i-1] / (smunkh_s_h[i-1] + hmunkh_s_h[i-1])
-    fc$munkhouse_steep_hi[i] <- (fc$munkhouse_steep_hi[i-1] + LL_steep[i-1]*0.03)*(1 + param_mu_s*gammas$smunkh_s_h[i-1] + param_mu_h*gammas$hmunkh_s_h[i-1])
+    fc$munkhouse_steep_hi[i] <- (fc$munkhouse_steep_hi[i-1] + LL_steep[i-1]*0.03)*(1 + param_stock[i-1]*gammas$smunkh_s_h[i-1] + param_house[i-1]*gammas$hmunkh_s_h[i-1])
   }else{
-    fc$munkhouse_steep_hi[i] <- (fc$munkhouse_steep_hi[i-1] + LL_steep[i-1]*0.03)*(1 + param_mu_s*smunkh_s_h[i-1] + param_mu_h*hmunkh_s_h[i-1] + param_r_f*(1-smunkh_s_h[i-1] - hmunkh_s_h[i-1]))    
+    fc$munkhouse_steep_hi[i] <- (fc$munkhouse_steep_hi[i-1] + LL_steep[i-1]*0.03)*(1 + param_stock[i-1]*smunkh_s_h[i-1] + param_house[i-1]*hmunkh_s_h[i-1] + param_r_f*(1-smunkh_s_h[i-1] - hmunkh_s_h[i-1]))    
     gammas$smunkh_s_h[i-1] <- smunkh_s_h[i-1]
     gammas$hmunkh_s_h[i-1] <- hmunkh_s_h[i-1]
   }
@@ -173,9 +173,9 @@ for(i in 2:param_T){
   if(smunkh_s_l[i-1] + hmunkh_s_l[i-1] > 1){
     gammas$smunkh_s_l[i-1] <- smunkh_s_l[i-1] / (smunkh_s_l[i-1] + hmunkh_s_l[i-1])
     gammas$hmunkh_s_l[i-1] <- hmunkh_s_l[i-1] / (smunkh_s_l[i-1] + hmunkh_s_l[i-1])
-    fc$munkhouse_steep_low[i] <- (fc$munkhouse_steep_low[i-1] + LL_steep[i-1]*0.03)*(1 + param_mu_s*gammas$smunkh_s_l[i-1] + param_mu_h*gammas$hmunkh_s_l[i-1])
+    fc$munkhouse_steep_low[i] <- (fc$munkhouse_steep_low[i-1] + LL_steep[i-1]*0.03)*(1 + param_stock[i-1]*gammas$smunkh_s_l[i-1] + param_house[i-1]*gammas$hmunkh_s_l[i-1])
   }else{
-    fc$munkhouse_steep_low[i] <- (fc$munkhouse_steep_low[i-1] + LL_steep[i-1]*0.03)*(1 + param_mu_s*smunkh_s_l[i-1] + param_mu_h*hmunkh_s_l[i-1] + param_r_f*(1-smunkh_s_l[i-1] - hmunkh_s_l[i-1]))    
+    fc$munkhouse_steep_low[i] <- (fc$munkhouse_steep_low[i-1] + LL_steep[i-1]*0.03)*(1 + param_stock[i-1]*smunkh_s_l[i-1] + param_house[i-1]*hmunkh_s_l[i-1] + param_r_f*(1-smunkh_s_l[i-1] - hmunkh_s_l[i-1]))    
     gammas$smunkh_s_l[i-1] <- smunkh_s_l[i-1]
     gammas$hmunkh_s_l[i-1] <- hmunkh_s_l[i-1]
   }
@@ -183,9 +183,9 @@ for(i in 2:param_T){
   if(smunkh_s_m[i-1] + hmunkh_s_m[i-1] > 1){
     gammas$smunkh_s_m[i-1] <- smunkh_s_m[i-1] / (smunkh_s_m[i-1] + hmunkh_s_m[i-1])
     gammas$hmunkh_s_m[i-1] <- hmunkh_s_m[i-1] / (smunkh_s_m[i-1] + hmunkh_s_m[i-1])
-    fc$munkhouse_steep_mod[i] <- (fc$munkhouse_steep_mod[i-1] + LL_steep[i-1]*0.03)*(1 + param_mu_s*gammas$smunkh_s_m[i-1] + param_mu_h*gammas$hmunkh_s_m[i-1])
+    fc$munkhouse_steep_mod[i] <- (fc$munkhouse_steep_mod[i-1] + LL_steep[i-1]*0.03)*(1 + param_stock[i-1]*gammas$smunkh_s_m[i-1] + param_house[i-1]*gammas$hmunkh_s_m[i-1])
   }else{
-    fc$munkhouse_steep_mod[i] <- (fc$munkhouse_steep_mod[i-1] + LL_steep[i-1]*0.03)*(1 + param_mu_s*smunkh_s_m[i-1] + param_mu_h*hmunkh_s_m[i-1] + param_r_f*(1-smunkh_s_m[i-1] - hmunkh_s_m[i-1]))    
+    fc$munkhouse_steep_mod[i] <- (fc$munkhouse_steep_mod[i-1] + LL_steep[i-1]*0.03)*(1 + param_stock[i-1]*smunkh_s_m[i-1] + param_house[i-1]*hmunkh_s_m[i-1] + param_r_f*(1-smunkh_s_m[i-1] - hmunkh_s_m[i-1]))    
     gammas$smunkh_s_m[i-1] <- smunkh_s_m[i-1]
     gammas$hmunkh_s_m[i-1] <- hmunkh_s_m[i-1]
   }

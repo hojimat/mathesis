@@ -1,0 +1,70 @@
+\contentsline {chapter}{\numberline {1}Introduction}{1}
+\contentsline {section}{\numberline {1.1}Theory and heuristics of life-cycle investments}{1}
+\contentsline {section}{\numberline {1.2}Turkish pension system}{2}
+\contentsline {section}{\numberline {1.3}Focus of this thesis}{3}
+\contentsline {chapter}{\numberline {2}Literature Review}{4}
+\contentsline {section}{\numberline {2.1}Beginnings of financial economics}{4}
+\contentsline {subsection}{\numberline {2.1.1}Mean-variance analysis}{4}
+\contentsline {paragraph}{}{4}
+\contentsline {paragraph}{}{4}
+\contentsline {paragraph}{}{5}
+\contentsline {section}{\numberline {2.2}Advancements in thought}{5}
+\contentsline {section}{\numberline {2.3}Reinvention of analytical solution}{7}
+\contentsline {paragraph}{}{8}
+\contentsline {section}{\numberline {2.4}Relevant research}{8}
+\contentsline {chapter}{\numberline {3}Model}{9}
+\contentsline {section}{\numberline {3.1}Labor income process}{9}
+\contentsline {subsection}{\numberline {3.1.1}Correlations}{9}
+\contentsline {subsection}{\numberline {3.1.2}Calibration}{10}
+\contentsline {paragraph}{}{10}
+\contentsline {paragraph}{}{10}
+\contentsline {section}{\numberline {3.2}Welfare measurement}{10}
+\contentsline {section}{\numberline {3.3}Individualization}{10}
+\contentsline {section}{\numberline {3.4}Retirement income}{11}
+\contentsline {paragraph}{}{11}
+\contentsline {chapter}{\numberline {4}Data Structure and Sources}{12}
+\contentsline {section}{\numberline {4.1}Data}{12}
+\contentsline {paragraph}{}{13}
+\contentsline {paragraph}{}{13}
+\contentsline {subsection}{\numberline {4.1.1}Default parameters}{13}
+\contentsline {paragraph}{}{13}
+\contentsline {paragraph}{}{13}
+\contentsline {paragraph}{}{13}
+\contentsline {paragraph}{}{14}
+\contentsline {paragraph}{}{14}
+\contentsline {subsection}{\numberline {4.1.2}Heterogeneity parameters}{14}
+\contentsline {subsubsection}{Heterogeneity in education}{15}
+\contentsline {subsubsection}{Heterogeneity in sectors of work}{16}
+\contentsline {subsubsection}{Individual heterogeneity}{17}
+\contentsline {section}{\numberline {4.2}Capital series}{17}
+\contentsline {subsection}{\numberline {4.2.1}Human capital}{17}
+\contentsline {subsection}{\numberline {4.2.2}Financial capital}{18}
+\contentsline {paragraph}{}{18}
+\contentsline {paragraph}{}{18}
+\contentsline {chapter}{\numberline {5}Results}{20}
+\contentsline {section}{\numberline {5.1}Investment strategies}{20}
+\contentsline {subsection}{\numberline {5.1.1}Default lifecyccles}{20}
+\contentsline {subsection}{\numberline {5.1.2}Individualized lifecycles}{20}
+\contentsline {paragraph}{}{21}
+\contentsline {paragraph}{}{22}
+\contentsline {section}{\numberline {5.2}Welfare comparison}{22}
+\contentsline {subsection}{\numberline {5.2.1}Early results}{23}
+\contentsline {subsection}{\numberline {5.2.2}Annuitization}{24}
+\contentsline {subsection}{\numberline {5.2.3}Consumption during retirement}{24}
+\contentsline {subsection}{\numberline {5.2.4}Expected utilities}{25}
+\contentsline {subsection}{\numberline {5.2.5}Conclusions}{27}
+\contentsline {paragraph}{}{28}
+\contentsline {chapter}{\numberline {6}Conclusion}{30}
+\contentsline {paragraph}{}{30}
+\contentsline {paragraph}{}{30}
+\contentsline {paragraph}{}{30}
+\contentsline {paragraph}{}{30}
+\contentsline {chapter}{REFERENCES}{31}
+\let \chaptertitlename \appendixname 
+\contentsline {chapter}{\numberline {A}Cholesky decomposed errors}{33}
+\contentsline {chapter}{\numberline {B}Logarithms as percentage change}{34}
+\contentsline {chapter}{\numberline {C}Derivation of CEC}{35}
+\contentsline {chapter}{\numberline {D}Annuitization of wealth}{36}
+\contentsline {chapter}{\numberline {E}Default and Derived Solutions}{37}
+\contentsline {paragraph}{}{37}
+\contentsfinish 

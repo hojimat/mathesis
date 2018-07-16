@@ -124,12 +124,24 @@ In order to compare welfare we use CRRA expected utility function, mentioned in 
 After a lifetime of investing in the above portfolios, the household accumulates different levels of wealth, summarized in Table 5.1. Since the consumption preferences are monotonic, we can make early conclusions even without calculating expected utilities --- the higher the accumulated wealth, the better: 
 
 \begin{itemize}
-\item Considering lifecycles, even naively, like $(100-age)\%$, is better than investing a fixed amount throughout lifetime
+\item Naively considering lifecycles does not guarantee the better investment. So, in our case, $(100-age)\%$ is worse than fixed Markowitz.
 \item Different stock-wage correlations don't make much difference in the outcome without housing, and make considerable difference in models with housing
 \item Stock-wage correlations are negatively correlated with total wealth
-\item The risk aversion is negatively correlated with total wealth for models without housing and positively --- for models with housing
+\item Both too low and too high risk aversion results in less accumulated capital than moderate risk aversion for models with housing and only too high risk aversion --- for models without housing (because of monotonicity).\\
 \item Default options are better for people with flat wage growth rate and worse for people with moderate or steep wage curves
 \end{itemize}
+
+\subsection{Annuitization}
+To formalize the observations made in the previous section, we will construct annuities and plug them into expected utility functions. As described in detail in Chapter 3, we define annuities by dividing the total wealth before retirement by the discount factor $1 + \sum^{100}_{t=58}\frac{p_t}{1+r_f}$. Using survival probabilities, obtained from TUIK, and risk-free rate of return, described in the previous chapter, we calculate the discount factor as $205.29$. The annuities are obtained by dividing all the values in the Table 5.1 by $205.29$. The resulting values are presented in Table 5.2. 
+
+
+\subsection{Consumption during retirement}
+We model that the individuals spend their annuity returns to consume baskets which cost $100$ TL during the year, when our agent is 58 years old, and increase by inflation rate $\pi = 8.4\%$. Thus, every period $t>57$ our agent consumes $\frac{annuity}{100\cdot\left(1.084\right)^{t-58}}$. We do not provide the separate table with the value streams, as they will be implicitly included in utility values.
+
+
+\subsection{Expected utilities}
+Finally, we will plug the consumption streams, calculated in the previous section, into the constant relative risk-aversion expected utility functions to compare the welfare effects. The resulting expected utility values are presented in Table 5.3.
+
 
 \newgeometry{top=2cm,bottom=2cm}
 \begin{table}%TABLE 5.1
@@ -140,42 +152,40 @@ After a lifetime of investing in the above portfolios, the household accumulates
 		Option&$\gamma=5$ (default) & $\gamma=1.5$ & $\gamma=3$ & $\gamma=10$\\
 		\hline
 		\multicolumn{5}{c}{Defaults}\\
-		Anadolu Hayat (riskless)&537,309 TL&537,309 TL&537,309 TL&537,309 TL\\
-		$(100-age)\%$&1,039,812 TL&1,039,812 TL&1,039,812 TL&1,039,812 TL\\
-		Cocco et al.&2,147,019 TL&2,147,019 TL&2,147,019 TL&2,147,019 TL\\
-		Markowitz&412,501 TL&1,206,147 TL&550,465 TL&325,428 TL\\
-		\multicolumn{5}{c}{}\\
-		\multicolumn{5}{c}{Individualized (no housing)}\\
-		Merton (steep) & 2,938,506 TL&6,078,824 TL&3,986,493 TL&2,023,847 TL\\
-		Merton (moderate) & 1,242,367 TL&2,583,202 TL&1,689,263 TL&853,121 TL\\
-		Merton (flat) & 379,516 TL&860,653 TL&529,776 TL&255,587 TL\\
-		Munk (steep-hi) & 2,613,595 TL&6,021,186 TL&3,783,643 TL&1,443,410 TL\\
-		Munk (steep-mod) & 2,614,594 TL&6,022,182 TL&3,784,641 TL&1,444,411 TL\\	
-		Munk (steep-lo) & 2,615,592 TL&6,023,178 TL&3,785,638 TL&1,445,411 TL\\
-		Munk (moderate-hi) & 1,102,873 TL&2,558,560 TL&1,602,748 TL&603,991 TL\\
-		Munk (moderate-mod) & 1,103,290 TL&2,558,976 TL&1,603,164 TL&604,409 TL\\	
-		Munk (moderate-lo) & 1,103,707 TL&2,559,391 TL&1,603,580 TL&604,826 TL\\
-		Munk (flat-hi) & 336,116 TL&850,375 TL&501,534 TL&182,719 TL\\
-		Munk (flat-mod) & 336,212 TL&850,471 TL&501,630 TL&182,816 TL\\	
-		Munk (flat-lo) & 336,308 TL&850,568 TL&501,726 TL&182,912 TL\\
-		\multicolumn{5}{c}{}\\
-		\multicolumn{5}{c}{Individualized (housing)}\\
-		Munk (steep-hi) & 2,516,069 TL&1,850,423 TL&2,170,033 TL&3,666,651 TL\\
-		Munk (steep-mod) & 2,619,683 TL&1,885,502 TL&2,244,519 TL&4,546,216 TL\\	
-		Munk (steep-lo) & 2,713,638 TL&1,919,640 TL&2,314,174 TL&4,050,822 TL\\
-		Munk (moderate-hi) & 1,061,251 TL&777,423 TL&913,347 TL&1,501,775 TL\\
-		Munk (moderate-mod) & 1,105,444 TL&792,331 TL&945,023 TL&1,881,273 TL\\	
-		Munk (moderate-lo) & 1,145,103 TL&806,841 TL&974,647 TL&1,686,710 TL\\
-		Munk (flat-hi) & 328,450 TL&256,110 TL&297,080 TL&426,696 TL\\
-		Munk (flat-mod) & 340,351 TL&261,520 TL&307,038 TL&540,733 TL\\	
-		Munk (flat-lo) & 355,176 TL&265,574 TL&316,592 TL&479,246 TL\\
+Anadolu Hayat (riskless)&614,195 TL&614,195 TL&614,195 TL&614,195 TL\\
+$(100-age)\%$&1,160,977 TL&1,160,977 TL&1,160,977 TL&1,160,977 TL\\
+Cocco et al.&1,599,852 TL&1,599,852 TL&1,599,852 TL&1,599,852 TL\\
+Markowitz&1,300,187 TL&1,300,187 TL&1,300,187 TL&1,300,187 TL\\
+\multicolumn{5}{c}{}\\
+\multicolumn{5}{c}{Individualized (no housing)}\\
+Merton (steep)&3,812,053 TL&4,212,735 TL&3,104,746 TL&2,920,892 TL\\
+Merton (moderate)&1,629,904 TL&1,813,821 TL&1,447,951 TL&1,248,330 TL\\
+Merton (flat)&543,602 TL&612,548 TL&639,866 TL&398,235 TL\\
+Munk (steep-lo)&3,547,442 TL&4,168,823 TL&3,829,218 TL&2,085,883 TL\\
+Munk (steep-mod)&3,543,435 TL&4,164,850 TL&3,825,221 TL&2,081,872 TL\\
+Munk (steep-hi)&3,539,425 TL&4,160,872 TL&3,821,219 TL&2,077,854 TL\\
+Munk (moderate-lo)&1,513,198 TL&1,794,772 TL&1,689,491 TL&868,955 TL\\
+Munk (moderate-mod)&1,511,527 TL&1,793,113 TL&1,687,822 TL&867,281 TL\\
+Munk (moderate-hi)&1,509,853 TL&1,791,452 TL&1,686,152 TL&865,604 TL\\
+Munk (flat-lo)&508,757 TL&606,410 TL&657,762 TL&262,161 TL\\
+Munk (flat-mod)&508,371 TL&606,025 TL&657,376 TL&261,774 TL\\
+Munk (flat-hi)&507,984 TL&605,640 TL&656,990 TL&261,386 TL\\
+\multicolumn{5}{c}{}\\
+\multicolumn{5}{c}{Individualized (no housing)}\\
+Munk (steep-lo)&8,937,159 TL&3,087,377 TL&4,718,332 TL&3,920,863 TL\\
+Munk (steep-mod)&7,645,621 TL&2,966,467 TL&4,371,031 TL&2,900,022 TL\\
+Munk (steep-hi)&6,353,327 TL&2,846,577 TL&4,017,054 TL&1,872,799 TL\\
+Munk (moderate-lo)&3,652,223 TL&1,304,014 TL&1,998,234 TL&1,605,470 TL\\
+Munk (moderate-mod)&3,125,930 TL&1,252,432 TL&1,850,278 TL&1,189,240 TL\\
+Munk (moderate-hi)&2,599,301 TL&1,201,297 TL&1,700,235 TL&770,295 TL\\
+Munk (flat-lo)&1,026,845 TL&430,353 TL&614,929 TL&455,296 TL\\
+Munk (flat-mod)&881,934 TL&435,168 TL&598,789 TL&341,199 TL\\
+Munk (flat-hi)&736,896 TL&397,829 TL&527,533 TL&226,188 TL\\
 		\hline
 	\end{tabular}
 \end{table}
 \resetgeometry
 
-\subsection{Annuitization}
-To formalize the observations made in the previous section, we will construct annuities and plug them into expected utility functions. As described in detail in Chapter 3, we define annuities by dividing the total wealth before retirement by the discount factor $1 + \sum^{100}_{t=58}\frac{p_t}{1+r_f}$. Using survival probabilities, obtained from TUIK, and risk-free rate of return, described in the previous chapter, we calculate the discount factor as $205.29$. The annuities are obtained by dividing all the values in the Table 5.1 by $205.29$. The resulting values are presented in Table 5.2. 
 
 \newgeometry{top=2cm,bottom=2cm}
 \begin{table}%TABLE 5.2
@@ -186,46 +196,40 @@ To formalize the observations made in the previous section, we will construct an
 		Option&$\gamma=5$ (default) & $\gamma=1.5$ & $\gamma=3$ & $\gamma=10$\\
 		\hline
 		\multicolumn{5}{c}{Defaults}\\
-		Anadolu Hayat (riskless)&2,617 TL&2,617 TL&2,617&2,617 TL\\
-		$(100-age)\%$&5,065 TL&5,065 TL&5,065 TL&5,065 TL\\
-		Cocco et al.&10,459 TL&10,459 TL&10,459 TL&10,459 TL\\
-		Markowitz&2,009 TL&5,875 TL&2,681 TL&1585 TL\\
-		\multicolumn{5}{c}{}\\
-		\multicolumn{5}{c}{Individualized (no housing)}\\
-		Merton (steep) &14,314 TL&29,611 TL&19,419 TL&9,859 TL\\
-		Merton (moderate) &6,052 TL&12,583 TL&8,229 TL&4,156 TL\\
-		Merton (flat) & 1,849 TL&4,192 TL&2,581 TL&1,245 TL\\
-		Munk (steep-hi) &12,731 TL&29,330 TL&18,431 TL&7,031 TL\\
-		Munk (steep-mod)&12,736 TL&29,335 TL&18,436 TL&7,036 TL\\
-		Munk (steep-lo) &12,741 TL&29,340 TL&18,441 TL&7,041 TL\\
-		Munk (moderate-hi)&5,372 TL&12,463 TL&7,807 TL&2,942 TL\\
-		Munk (moderate-mod)&5,374 TL&12,465 TL&7,809 TL&2,944 TL\\
-		Munk (moderate-lo)&5,376 TL&12,467 TL&7,811 TL&2,946 TL\\
-		Munk (flat-hi) &1,637 TL&4,142 TL&2,443 TL&890 TL\\
-		Munk (flat-mod) &1,638 TL&4,143 TL&2,444 TL&891 TL\\
-		Munk (flat-lo) &1,638 TL&4,143 TL&2,444 TL&891 TL\\
-		\multicolumn{5}{c}{}\\
-		\multicolumn{5}{c}{Individualized (housing)}\\
-		Munk (steep-hi) &12,256 TL&9,014 TL&10,571 TL&17,861 TL\\
-		Munk (steep-mod) & 12,761 TL&9,185 TL&10,933 TL&22,146 TL\\
-		Munk (steep-lo) &13,219 TL&9,351 TL&11,273 TL&19,732 TL\\
-		Munk (moderate-hi)&5,170 TL&3,787 TL&4,449 TL&7,315 TL\\
-		Munk (moderate-mod)&5,385 TL&3,860 TL&4,603 TL&9,164 TL\\
-		Munk (moderate-lo)&5,578 TL&3,930 TL&4,748 TL&8,216 TL\\
-		Munk (flat-hi) & 1,600 TL&1,248 TL&1,447 TL&2,079 TL\\
-		Munk (flat-mod) &1,658 TL&1,274 TL&1,496 TL&2,634 TL\\
-		Munk (flat-lo) & 1,730 TL&1,294 TL&1,542 TL&2,335 TL\\
+Anadolu Hayat (riskless) TL&2,992 TL&2,992 TL&2,992 TL&2,992 TL\\
+$(100-age)\%$ TL&5,655 TL&5,655 TL&5,655 TL&5,655 TL\\
+Cocco et al. TL&7,793 TL&7,793 TL&7,793 TL&7,793 TL\\
+Markowitz TL&6,333 TL&6,333 TL&6,333 TL&6,333 TL\\
+\multicolumn{5}{c}{}\\
+\multicolumn{5}{c}{Individualized (no housing)}\\
+Merton (steep) TL&18,569 TL&20,521 TL&15,124 TL&14,228 TL\\
+Merton (moderate) TL&7,940 TL&8,835 TL&7,053 TL&6,081 TL\\
+Merton (flat) TL&2,648 TL&2,984 TL&3,117 TL&1,940 TL\\
+Munk (steep-lo) TL&17,280 TL&20,307 TL&18,653 TL&10,161 TL\\
+Munk (steep-mod) TL&17,261 TL&20,288 TL&18,633 TL&10,141 TL\\
+Munk (steep-hi) TL&17,241 TL&20,268 TL&18,614 TL&10,122 TL\\
+Munk (moderate-lo) TL&7,371 TL&8,743 TL&8,230 TL&4,233 TL\\
+Munk (moderate-mod) TL&7,363 TL&8,735 TL&8,222 TL&4,225 TL\\
+Munk (moderate-hi) TL&7,355 TL&8,726 TL&8,214 TL&4,216 TL\\
+Munk (flat-lo) TL&2,478 TL&2,954 TL&3,204 TL&1,277 TL\\
+Munk (flat-mod) TL&2,476 TL&2,952 TL&3,202 TL&1,275 TL\\
+Munk (flat-hi) TL&2,474 TL&2,950 TL&3,200 TL&1,273 TL\\
+\multicolumn{5}{c}{}\\
+\multicolumn{5}{c}{Individualized (housing)}\\
+Munk (steep-lo) TL&43,534 TL&15,039 TL&22,984 TL&19,099 TL\\
+Munk (steep-mod) TL&37,243 TL&14,450 TL&21,292 TL&14,126 TL\\
+Munk (steep-hi) TL&30,948 TL&13,866 TL&19,568 TL&9,123 TL\\
+Munk (moderate-lo) TL&17,791 TL&6,352 TL&9,734 TL&7,820 TL\\
+Munk (moderate-mod) TL&15,227 TL&6,101 TL&9,013 TL&5,793 TL\\
+Munk (moderate-hi) TL&12,662 TL&5,852 TL&8,282 TL&3,752 TL\\
+Munk (flat-lo) TL&5,002 TL&2,096 TL&2,995 TL&2,218 TL\\
+Munk (flat-mod) TL&4,296 TL&2,120 TL&2,917 TL&1,662 TL\\
+Munk (flat-hi) TL&3,590 TL&1,938 TL&2,570 TL&1,102 TL\\
+
 		\hline
 	\end{tabular}
 \end{table}
 \resetgeometry
-
-
-\subsection{Consumption during retirement}
-We model that the individuals spend their annuity returns to consume baskets which cost $100$ TL during the year, when our agent is 58 years old, and increase by inflation rate $\pi = 8.4\%$. Thus, every period $t>57$ our agent consumes $\frac{annuity}{100\cdot\left(1.084\right)^{t-58}}$. We do not provide the separate table with the value streams, as they will be implicitly included in utility values.
-
-\subsection{Expected utilities}
-Finally, we will plug the consumption streams, calculated in the previous section, into the constant relative risk-aversion expected utility functions to compare the welfare effects. The resulting expected utility values are presented in Table 5.3.
 
 \subsection{Conclusions}
 Now, we can observe the final resutls:
@@ -234,12 +238,12 @@ Now, we can observe the final resutls:
 
 \item Naive lifecycle investment portfolios, such as $(100-age)\%$ don't overperform fixed-ratio Markowitz, because they don't take the risk aversion into consideration.
 \item Cocco et al.'s $(200-2.5\cdot age)\%$ approximation is the best default portfolio. It is easy to interpret and captures lifecycle effect.
-\item All models perform better for higher risk aversion and worse for lower risk aversion.
+\item All models perform better for higher risk aversion and worse for lower risk aversion --- for everyone except flat-wagers.
 \item Higher stock-wage correlation considerably decreases the utility for moderate and flat wages, and doesn't affect much for steep wages.
-\item Merton's solution outperforms Munk's solution without housing for low levels of risk aversion, and performs save for high level of risk aversion ($\gamma=10$).
-\item Munk's solution with housing outperforms every other solution for high levels of risk aversion ($\gamma=10$).
+\item Merton's solution outperforms Munk's solution without housing for low levels of risk aversion, and performs same for high level of risk aversion ($\gamma=10$).
+\item Munk's solution with housing outperforms every other solution for high levels of risk aversion ($\gamma=10$) --- for everyone except flat-wagers.
 \item Munk's solution with housing outperforms Munk's solution without housing for $\gamma=5,10$.
-\item Markowitz's solution outperforms both Merton's and Munk's solutions for flat wages.
+\item Markowitz's solution outperforms both Merton's and Munk's solutions for flat wages and low risk aversion.
 \item Individualizing lifecycles by wage growth rate and stock-wage correlation increases welfare for steep wagers and decreases welfare for flat wagers.
 \end{itemize}
 
@@ -254,35 +258,36 @@ Now, we can observe the final resutls:
 		Option&$\gamma=5$ (default) & $\gamma=1.5$ & $\gamma=3$ & $\gamma=10$\\
 		\hline
 \multicolumn{5}{c}{Defaults}\\
-Anadolu Hayat (riskless)&-0.0014323&-3.8493850&-0.0323960&-0.0001696\\
-$(100-age)\%$&-0.0001021&-2.7671080&-0.0086503&-0.0000004\\
-Cocco et al.&-0.0000056&-1.9256860&-0.0020289&0.0000000\\
-Markowitz&-0.0000564&-2.5692320&-0.0064289&-0.0000001\\
+Anadolu Hayat (riskless)&-0.0008389&-3.6004130&-0.0247934&-0.0000509\\
+(100-age)\%&-0.0000657&-2.6187470&-0.0069390&-0.0000002\\
+Cocco et al.&-0.0000182&-2.2308240&-0.0036542&0.0000000\\
+Markowitz&-0.0000418&-2.4745850&-0.0055327&-0.0000001\\
 \multicolumn{5}{c}{}\\
 \multicolumn{5}{c}{Individualized (no housing)}\\
-Merton (steep) &-0.0000016&-1.1444420&-0.0005885&0.0000000\\
-Merton (moderate) &-0.0000501&-1.7555950&-0.0032775&-0.0000026\\
-Merton (flat) &-0.0057545&-3.0415100&-0.0333239&-0.1360504\\
-Munk (steep-hi) &-0.0000026&-1.1499060&-0.0006533&0.0000000\\
-Munk (steep-mod)&-0.0000026&-1.1498110&-0.0006530&0.0000000\\
-Munk (steep-lo) &-0.0000026&-1.1497160&-0.0006526&0.0000000\\
-Munk (moderate-hi)&-0.0000807&-1.7640290&-0.0036409&-0.0000592\\
-Munk (moderate-mod)&-0.0000806&-1.7638860&-0.0036390&-0.0000588\\
-Munk (moderate-lo)&-0.0000804&-1.7637420&-0.0036371&-0.0000585\\
-Munk (flat-hi) &-0.0093535&-3.0598360&-0.0371825&-2.7892210\\
-Munk (flat-mod) &-0.0093428&-3.0596630&-0.0371682&-2.7759950\\
-Munk (flat-lo) &-0.0093321&-3.0594900&-0.0371540&-2.7628600\\
+Merton (steep)&-0.0000006&-1.3747480&-0.0009703&0.0000000\\
+Merton (moderate)&-0.0000169&-2.0951160&-0.0044611&-0.0000001\\
+Merton (flat)&-0.0013672&-3.6052480&-0.0228439&-0.0025138\\
+Munk (steep-lo)&-0.0000008&-1.3819700&-0.0006379&0.0000000\\
+Munk (steep-mod)&-0.0000008&-1.3826290&-0.0006392&0.0000000\\
+Munk (steep-hi)&-0.0000008&-1.3832900&-0.0006405&0.0000000\\
+Munk (moderate-lo)&-0.0000228&-2.1062050&-0.0032767&-0.0000022\\
+Munk (moderate-mod)&-0.0000229&-2.1071790&-0.0032832&-0.0000023\\
+Munk (moderate-hi)&-0.0000230&-2.1081550&-0.0032897&-0.0000023\\
+Munk (flat-lo)&-0.0017820&-3.6234500&-0.0216177&-0.1082611\\
+Munk (flat-mod)&-0.0017874&-3.6245990&-0.0216431&-0.1097095\\
+Munk (flat-hi)&-0.0017929&-3.6257500&-0.0216686&-0.1111816\\
 \multicolumn{5}{c}{}\\
 \multicolumn{5}{c}{Individualized (housing)}\\
-Munk (steep-hi) &-0.0000030&-2.0742830&-0.0019861&0.0000000\\
-Munk (steep-mod) &-0.0000025&-2.0548970&-0.0018565&0.0000000\\
-Munk (steep-lo) &-0.0000022&-2.0365430&-0.0017464&0.0000000\\
-Munk (moderate-hi)&-0.0000941&-3.2001820&-0.0112116&0.0000000\\
-Munk (moderate-mod)&-0.0000799&-3.1699320&-0.0104726&0.0000000\\
-Munk (moderate-lo)&-0.0000694&-3.1412990&-0.0098457&0.0000000\\
-Munk (flat-hi) &-0.0102577&-5.5755810&-0.1059719&-0.0013504\\
-Munk (flat-mod) &-0.0088965&-5.5176110&-0.0992097&-0.0001602\\
-Munk (flat-lo) &-0.0075016&-5.4753340&-0.0933124&-0.0004748\\
+Munk (steep-lo)&0.0000000&-1.6058700&-0.0004201&0.0000000\\
+Munk (steep-mod)&0.0000000&-1.6382700&-0.0004895&0.0000000\\
+Munk (steep-hi)&-0.0000001&-1.6724140&-0.0005796&0.0000000\\
+Munk (moderate-lo)&-0.0000007&-2.4709510&-0.0023424&0.0000000\\
+Munk (moderate-mod)&-0.0000013&-2.5213210&-0.0027320&-0.0000001\\
+Munk (moderate-hi)&-0.0000026&-2.5744240&-0.0032354&-0.0000066\\
+Munk (flat-lo)&-0.0001074&-4.3012340&-0.0247341&-0.0007532\\
+Munk (flat-mod)&-0.0001973&-4.2773710&-0.0260855&-0.0101044\\
+Munk (flat-hi)&-0.0004049&-4.4735990&-0.0336084&-0.4086488\\
+
 		\hline
 	\end{tabular}
 \end{table}

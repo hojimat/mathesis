@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Arch Linux) (preloaded format=pdflatex 2018.3.21)  2 JUN 2018 19:01
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Arch Linux) (preloaded format=pdflatex 2018.3.21)  28 JUN 2018 13:44
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1118,7 +1118,7 @@ Chapter 4.
 l.1 \chapter{Data Structure and Sources}
                                         
 ? 
-<figs/bist.pdf, id=94, 505.89pt x 505.89pt>
+<figs/bist.pdf, id=93, 505.89pt x 505.89pt>
 File: figs/bist.pdf Graphic file (type pdf)
 <use figs/bist.pdf>
 Package pdftex.def Info: figs/bist.pdf  used on input line 14.
@@ -1128,7 +1128,7 @@ Overfull \hbox (16.69943pt too wide) in paragraph at lines 14--15
  [][] 
  []
 
-<figs/reidin.pdf, id=95, 505.89pt x 505.89pt>
+<figs/reidin.pdf, id=94, 505.89pt x 505.89pt>
 File: figs/reidin.pdf Graphic file (type pdf)
 <use figs/reidin.pdf>
 Package pdftex.def Info: figs/reidin.pdf  used on input line 20.
@@ -1138,7 +1138,7 @@ Overfull \hbox (16.69943pt too wide) in paragraph at lines 20--21
  [][] 
  []
 
-<figs/wage2median.pdf, id=96, 505.89pt x 505.89pt>
+<figs/wage2median.pdf, id=95, 505.89pt x 505.89pt>
 File: figs/wage2median.pdf Graphic file (type pdf)
 <use figs/wage2median.pdf>
 Package pdftex.def Info: figs/wage2median.pdf  used on input line 31.
@@ -1151,7 +1151,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 
 ] [15 <./figs/bist.pdf> <./figs/reidin.pdf>]
-<figs/survival.pdf, id=114, 505.89pt x 505.89pt>
+<figs/survival.pdf, id=113, 505.89pt x 505.89pt>
 File: figs/survival.pdf Graphic file (type pdf)
 <use figs/survival.pdf>
 Package pdftex.def Info: figs/survival.pdf  used on input line 50.
@@ -1161,7 +1161,7 @@ Package pdftex.def Info: figs/survival.pdf  used on input line 50.
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [16 <./figs/wage2median.pdf>] [17]
-<figs/wage2educ.pdf, id=127, 505.89pt x 505.89pt>
+<figs/wage2educ.pdf, id=126, 505.89pt x 505.89pt>
 File: figs/wage2educ.pdf Graphic file (type pdf)
 <use figs/wage2educ.pdf>
 Package pdftex.def Info: figs/wage2educ.pdf  used on input line 93.
@@ -1171,7 +1171,7 @@ Package pdftex.def Info: figs/wage2educ.pdf  used on input line 93.
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [18 <./figs/survival.pdf>]
-<figs/heterwage.pdf, id=137, 505.89pt x 505.89pt>
+<figs/heterwage.pdf, id=136, 505.89pt x 505.89pt>
 File: figs/heterwage.pdf Graphic file (type pdf)
 <use figs/heterwage.pdf>
 Package pdftex.def Info: figs/heterwage.pdf  used on input line 116.
@@ -1181,7 +1181,7 @@ Overfull \hbox (16.69943pt too wide) in paragraph at lines 116--117
  [][] 
  []
 
-<figs/heterwageless.pdf, id=138, 505.89pt x 505.89pt>
+<figs/heterwageless.pdf, id=137, 505.89pt x 505.89pt>
 File: figs/heterwageless.pdf Graphic file (type pdf)
 <use figs/heterwageless.pdf>
 Package pdftex.def Info: figs/heterwageless.pdf  used on input line 122.
@@ -1195,7 +1195,7 @@ Overfull \hbox (16.69943pt too wide) in paragraph at lines 122--123
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [19 <./figs/wage2educ.pdf>]
-<figs/wage2sec.pdf, id=147, 505.89pt x 505.89pt>
+<figs/wage2sec.pdf, id=146, 505.89pt x 505.89pt>
 File: figs/wage2sec.pdf Graphic file (type pdf)
 <use figs/wage2sec.pdf>
 Package pdftex.def Info: figs/wage2sec.pdf  used on input line 135.
@@ -1205,7 +1205,7 @@ Package pdftex.def Info: figs/wage2sec.pdf  used on input line 135.
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [20 <./figs/heterwage.pdf> <./figs/heterwageless.pdf>]
-<figs/humancapital.pdf, id=162, 505.89pt x 505.89pt>
+<figs/humancapital.pdf, id=161, 505.89pt x 505.89pt>
 File: figs/humancapital.pdf Graphic file (type pdf)
 <use figs/humancapital.pdf>
 Package pdftex.def Info: figs/humancapital.pdf  used on input line 189.
@@ -1215,7 +1215,7 @@ Overfull \hbox (16.69943pt too wide) in paragraph at lines 189--190
  [][] 
  []
 
-<figs/fincapital.pdf, id=163, 505.89pt x 505.89pt>
+<figs/fincapital.pdf, id=162, 505.89pt x 505.89pt>
 File: figs/fincapital.pdf Graphic file (type pdf)
 <use figs/fincapital.pdf>
 Package pdftex.def Info: figs/fincapital.pdf  used on input line 195.
@@ -1237,7 +1237,7 @@ Chapter 5.
 l.1 \chapter{Results}
                      
 ? 
-<figs/defaults.pdf, id=189, 505.89pt x 505.89pt>
+<figs/defaults.pdf, id=188, 505.89pt x 505.89pt>
 File: figs/defaults.pdf Graphic file (type pdf)
 <use figs/defaults.pdf>
 Package pdftex.def Info: figs/defaults.pdf  used on input line 21.
@@ -1250,7 +1250,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 
 ]
-<figs/individuals15.pdf, id=193, 505.89pt x 505.89pt>
+<figs/individuals15.pdf, id=192, 505.89pt x 505.89pt>
 File: figs/individuals15.pdf Graphic file (type pdf)
 <use figs/individuals15.pdf>
 Package pdftex.def Info: figs/individuals15.pdf  used on input line 34.
@@ -1260,7 +1260,7 @@ Overfull \hbox (16.69943pt too wide) in paragraph at lines 34--35
  [][] 
  []
 
-<figs/individuals3.pdf, id=194, 505.89pt x 505.89pt>
+<figs/individuals3.pdf, id=193, 505.89pt x 505.89pt>
 File: figs/individuals3.pdf Graphic file (type pdf)
 <use figs/individuals3.pdf>
 Package pdftex.def Info: figs/individuals3.pdf  used on input line 40.
@@ -1270,7 +1270,7 @@ Overfull \hbox (16.69943pt too wide) in paragraph at lines 40--41
  [][] 
  []
 
-<figs/individuals5.pdf, id=195, 505.89pt x 505.89pt>
+<figs/individuals5.pdf, id=194, 505.89pt x 505.89pt>
 File: figs/individuals5.pdf Graphic file (type pdf)
 <use figs/individuals5.pdf>
 Package pdftex.def Info: figs/individuals5.pdf  used on input line 46.
@@ -1280,7 +1280,7 @@ Overfull \hbox (16.69943pt too wide) in paragraph at lines 46--47
  [][] 
  []
 
-<figs/individuals10.pdf, id=196, 505.89pt x 505.89pt>
+<figs/individuals10.pdf, id=195, 505.89pt x 505.89pt>
 File: figs/individuals10.pdf Graphic file (type pdf)
 <use figs/individuals10.pdf>
 Package pdftex.def Info: figs/individuals10.pdf  used on input line 52.
@@ -1292,7 +1292,7 @@ Overfull \hbox (16.69943pt too wide) in paragraph at lines 52--53
 
 [25 <./figs/defaults.pdf>] [26 <./figs/individuals15.pdf> <./figs/individuals3.
 pdf> <./figs/individuals5.pdf> <./figs/individuals10.pdf>]
-<figs/smunkhouse15.pdf, id=231, 505.89pt x 505.89pt>
+<figs/smunkhouse15.pdf, id=230, 505.89pt x 505.89pt>
 File: figs/smunkhouse15.pdf Graphic file (type pdf)
 <use figs/smunkhouse15.pdf>
 Package pdftex.def Info: figs/smunkhouse15.pdf  used on input line 73.
@@ -1302,7 +1302,7 @@ Overfull \hbox (16.69943pt too wide) in paragraph at lines 73--74
  [][] 
  []
 
-<figs/hmunkhouse15.pdf, id=232, 505.89pt x 505.89pt>
+<figs/hmunkhouse15.pdf, id=231, 505.89pt x 505.89pt>
 File: figs/hmunkhouse15.pdf Graphic file (type pdf)
 <use figs/hmunkhouse15.pdf>
 Package pdftex.def Info: figs/hmunkhouse15.pdf  used on input line 79.
@@ -1312,7 +1312,7 @@ Overfull \hbox (16.69943pt too wide) in paragraph at lines 79--80
  [][] 
  []
 
-<figs/smunkhouse3.pdf, id=233, 505.89pt x 505.89pt>
+<figs/smunkhouse3.pdf, id=232, 505.89pt x 505.89pt>
 File: figs/smunkhouse3.pdf Graphic file (type pdf)
 <use figs/smunkhouse3.pdf>
 Package pdftex.def Info: figs/smunkhouse3.pdf  used on input line 85.
@@ -1322,7 +1322,7 @@ Overfull \hbox (16.69943pt too wide) in paragraph at lines 85--86
  [][] 
  []
 
-<figs/hmunkhouse3.pdf, id=234, 505.89pt x 505.89pt>
+<figs/hmunkhouse3.pdf, id=233, 505.89pt x 505.89pt>
 File: figs/hmunkhouse3.pdf Graphic file (type pdf)
 <use figs/hmunkhouse3.pdf>
 Package pdftex.def Info: figs/hmunkhouse3.pdf  used on input line 91.
@@ -1332,7 +1332,7 @@ Overfull \hbox (16.69943pt too wide) in paragraph at lines 91--92
  [][] 
  []
 
-<figs/smunkhouse5.pdf, id=235, 505.89pt x 505.89pt>
+<figs/smunkhouse5.pdf, id=234, 505.89pt x 505.89pt>
 File: figs/smunkhouse5.pdf Graphic file (type pdf)
 <use figs/smunkhouse5.pdf>
 Package pdftex.def Info: figs/smunkhouse5.pdf  used on input line 97.
@@ -1342,7 +1342,7 @@ Overfull \hbox (16.69943pt too wide) in paragraph at lines 97--98
  [][] 
  []
 
-<figs/hmunkhouse5.pdf, id=236, 505.89pt x 505.89pt>
+<figs/hmunkhouse5.pdf, id=235, 505.89pt x 505.89pt>
 File: figs/hmunkhouse5.pdf Graphic file (type pdf)
 <use figs/hmunkhouse5.pdf>
 Package pdftex.def Info: figs/hmunkhouse5.pdf  used on input line 103.
@@ -1352,7 +1352,7 @@ Overfull \hbox (16.69943pt too wide) in paragraph at lines 103--104
  [][] 
  []
 
-<figs/smunkhouse10.pdf, id=237, 505.89pt x 505.89pt>
+<figs/smunkhouse10.pdf, id=236, 505.89pt x 505.89pt>
 File: figs/smunkhouse10.pdf Graphic file (type pdf)
 <use figs/smunkhouse10.pdf>
 Package pdftex.def Info: figs/smunkhouse10.pdf  used on input line 110.
@@ -1362,7 +1362,7 @@ Overfull \hbox (16.69943pt too wide) in paragraph at lines 110--111
  [][] 
  []
 
-<figs/hmunkhouse10.pdf, id=238, 505.89pt x 505.89pt>
+<figs/hmunkhouse10.pdf, id=237, 505.89pt x 505.89pt>
 File: figs/hmunkhouse10.pdf Graphic file (type pdf)
 <use figs/hmunkhouse10.pdf>
 Package pdftex.def Info: figs/hmunkhouse10.pdf  used on input line 116.
@@ -1374,7 +1374,12 @@ Overfull \hbox (16.69943pt too wide) in paragraph at lines 116--117
 
 [27] [28 <./figs/smunkhouse15.pdf> <./figs/hmunkhouse15.pdf> <./figs/smunkhouse
 3.pdf> <./figs/hmunkhouse3.pdf> <./figs/smunkhouse5.pdf> <./figs/hmunkhouse5.pd
-f>] [29 <./figs/smunkhouse10.pdf> <./figs/hmunkhouse10.pdf>]
+f>]
+Underfull \hbox (badness 10000) in paragraph at lines 130--131
+
+ []
+
+[29 <./figs/smunkhouse10.pdf> <./figs/hmunkhouse10.pdf>] [30]
 *geometry* verbose mode - [ newgeometry ] result:
 * driver: pdftex
 * paper: a4paper
@@ -1408,17 +1413,15 @@ f>] [29 <./figs/smunkhouse10.pdf> <./figs/hmunkhouse10.pdf>]
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 
-Overfull \hbox (31.33617pt too wide) in paragraph at lines 138--174
+Overfull \hbox (31.33617pt too wide) in paragraph at lines 150--186
  [][] 
  []
 
 ! Undefined control sequence.
-l.175 \resetgeometry
+l.187 \resetgeometry
                     
 ? 
-[30
-
-] [31]
+[31]
 *geometry* verbose mode - [ newgeometry ] result:
 * driver: pdftex
 * paper: a4paper
@@ -1452,13 +1455,18 @@ l.175 \resetgeometry
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 
+Overfull \hbox (4.00014pt too wide) in paragraph at lines 194--231
+ [][] 
+ []
+
 ! Undefined control sequence.
-l.221 \resetgeometry
+l.232 \resetgeometry
                     
 ? 
 [32
 
-] [33] [34]
+
+] [33]
 *geometry* verbose mode - [ newgeometry ] result:
 * driver: pdftex
 * paper: a4paper
@@ -1493,10 +1501,10 @@ l.221 \resetgeometry
 
 
 ! Undefined control sequence.
-l.289 \resetgeometry
+l.294 \resetgeometry
                     
 ? 
-) [35]
+) [34]
 \openout2 = `chaps/chap6.aux'.
 
  (./chaps/chap6.tex
@@ -1507,7 +1515,7 @@ Chapter 6.
 l.1 \chapter{Conclusion}
                         
 ? 
-) [36
+) [35
 
 
 
@@ -1528,11 +1536,11 @@ Overfull \hbox (11.18575pt too wide) in paragraph at lines 10--11
 o-nomic Dy-nam-ics and Control\T1/ptm/m/n/12 ,16(3-
  []
 
-[37
+[36
 
 
 
-]) [38] (./apps/appa.tex
+]) [37] (./apps/appa.tex
 Appendix A.
 ! Missing { inserted.
 <to be read again> 
@@ -1540,7 +1548,7 @@ Appendix A.
 l.1 \chapter{Cholesky decomposed errors}
                                         
 ? 
-) (./apps/appb.tex [39
+) (./apps/appb.tex [38
 
 
 ]
@@ -1551,7 +1559,7 @@ Appendix B.
 l.1 \chapter{Logarithms as percentage change}
                                              
 ? 
-) (./apps/appc.tex [40
+) (./apps/appc.tex [39
 
 ]
 Appendix C.
@@ -1565,7 +1573,7 @@ l.1 \chapter{Derivation of CEC}
 l.13 ...dot \frac{CEC^{1-\gamma}}{1-\gamma}\right]
                                                    = E[U(c)]$
 ? 
-) (./apps/appd.tex [41
+) (./apps/appd.tex [40
 
 ]
 Appendix D.
@@ -1575,7 +1583,7 @@ Appendix D.
 l.1 \chapter{Annuitization of wealth}
                                      
 ? 
-) (./apps/appe.tex [42
+) (./apps/appe.tex [41
 
 ]
 Appendix E.
@@ -1585,9 +1593,9 @@ Appendix E.
 l.1 \chapter{Default and Derived Solutions}
                                            
 ? 
-[43
+[42
 
-] [44]
+] [43]
 *geometry* verbose mode - [ newgeometry ] result:
 * driver: pdftex
 * paper: a4paper
@@ -2574,7 +2582,7 @@ Overfull \hbox (28.96819pt too wide) in paragraph at lines 54--91
 l.92 \resetgeometry
                    
 ? 
-[45]
+[44]
 ! Misplaced \noalign.
 \hline ->\noalign 
                   {\ifnum 0=`}\fi \penalty \@M \futurelet \@let@token \LT@@h...
@@ -2593,10 +2601,10 @@ l.99 		&
 l.99 		&
         \multicolumn{3}{|c|}{Munk stock}&\multicolumn{3}{c|}{Munk housing}\\
 ? 
-[46
+[45
 
 
-] [47]) [48] (./main.aux (./pres/title.aux) (./pres/approval.aux)
+] [46]) [47] (./main.aux (./pres/title.aux) (./pres/approval.aux)
 (./pres/declaration.aux) (./pres/abstract.aux) (./pres/acknowledgement.aux)
 (./chaps/chap1.aux) (./chaps/chap2.aux) (./chaps/chap3.aux) (./chaps/chap4.aux)
 (./chaps/chap5.aux) (./chaps/chap6.aux) (./pres/bibliography.aux)) )
@@ -2623,31 +2631,30 @@ l.99 		&
 ### simple group (level 1) entered at line 1 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 15877 strings out of 492982
- 295302 string characters out of 6138579
+ 15859 strings out of 492982
+ 295119 string characters out of 6138579
  394220 words of memory out of 5000000
- 19000 multiletter control sequences out of 15000+600000
- 24433 words of font info for 49 fonts, out of 8000000 for 9000
+ 18991 multiletter control sequences out of 15000+600000
+ 21664 words of font info for 40 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 55i,11n,54p,1575b,1282s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 55i,11n,54p,1575b,1290s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/
 texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fon
 ts/type1/public/amsfonts/cmextra/cmex8.pfb></usr/share/texmf-dist/fonts/type1/p
 ublic/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts
 /cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb>
 </usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/tex
-mf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/share/texmf-dist/fonts
-/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/a
-msfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6
-.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share
-/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fo
-nts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texmf-dist/fonts/type1/publi
-c/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist/fonts/type1/urw/times/utmr8a.pfb
-></usr/share/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (59 pages, 374128 bytes).
+mf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/t
+ype1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/ams
+fonts/cm/cmr6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pf
+b></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texmf-dist/font
+s/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist/fonts/type1/urw/tim
+es/utmr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on main.pdf (58 pages, 365210 bytes).
 PDF statistics:
- 404 PDF objects out of 1000 (max. 8388607)
- 278 compressed objects within 3 object streams
+ 397 PDF objects out of 1000 (max. 8388607)
+ 273 compressed objects within 3 object streams
  0 named destinations out of 1000 (max. 500000)
  128 words of extra memory for PDF output out of 10000 (max. 10000000)
 

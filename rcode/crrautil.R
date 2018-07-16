@@ -7,14 +7,3 @@ crrautil <- function(C, rave=param_gamma){
   }
   return(crra)
 }
-
-
-basket <- rep(1.084, 43)
-basket[1] <- 100
-basket <- cumprod(basket)
-
-for(j in fc[30,]){
-  kv <- rep(j/disc,43)
-  kvv <- kv/basket
-  print(crrautil(kvv,rave=param_gamma))
-}
