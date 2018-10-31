@@ -1,8 +1,8 @@
 #import raw income data from aktug and yigit
-aktug <- read.csv(file="/home/ravshan/Dropbox/research/data/aktug/aktug.csv", header = TRUE)
-yigit <- read.csv(file="/home/ravshan/Dropbox/research/data/yigit.csv", header=TRUE)
-cpi   <- read.csv(file="/home/ravshan/Dropbox/research/data/cpi.csv", header=FALSE)
-surv  <- read.csv(file="/home/ravshan/Dropbox/research/data/survival.csv", header=TRUE)[,2]
+aktug <- read.csv(file="/home/ravshan/Dropbox/research/mathesis/data/aktug/aktug.csv", header = TRUE)
+yigit <- read.csv(file="/home/ravshan/Dropbox/research/mathesis/data/yigit.csv", header=TRUE)
+cpi   <- read.csv(file="/home/ravshan/Dropbox/research/mathesis/data/cpi.csv", header=FALSE)
+surv  <- read.csv(file="/home/ravshan/Dropbox/research/mathesis/data/survival.csv", header=TRUE)[,2]
 surv  <- cumprod(surv)
 
 

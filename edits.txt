@@ -1,0 +1,28 @@
+*** About the stock and housing rates of return ***
+
+i) I obtained stock and housing data from Dr. Saltoglu, which was prepared (as I understand) by Yigit (my fellow). I was always worried about the high stock rates of return and after long re-checks, I eventually ended up convinced.
+
+After your email, I again re-checked the sources, (Investing.com, borsaistanbul.com etc.) and this time I ended up checking TUIK's data for BIST100 index (instead of BIST30 as Dr. Saltoglu suggested). This gave the result of 40% mean with 72% std. deviation (as opposed to 23% mean with 36% std. deviation for BIST30). Therefore I became convinced again about the accuracy of the returns.
+
+Basically, our stocks are highly volatile and can go as low as -50% and as high as 100%, which is consistent with BIST30 historical graphs.
+
+
+ii) However, after your last email I have found another very bad error in my calculations: when AFTER determining the optimal allocations, I recreated the 30-year series, I realized that I used stock returns directly (mu_s), instead of adding a randomness into consideration (rnorm(mu_s, sigma_s)).
+
+This didn't affect the optimal allocations but did affect the resulting series. So, I fixed that and reconstructed the tables.
+
+The conclusions almost haven't changed. But I edited and updated them.
+
+
+
+*** About writing more on estimation methods ***
+
+iii) I added the "Calibration" section in "Chapter 3: Model" which explains how I calibrated the stock and wage growth rates.
+
+
+
+*** About overall editing ***
+
+iv) I removed Munk's solution process and wrote the results directly, and just cited him, as you have said.
+
+v) I will gladly edit the text overall with your and editor's feedback.
