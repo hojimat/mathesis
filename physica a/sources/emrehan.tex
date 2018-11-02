@@ -1,0 +1,1151 @@
+\documentclass[12pt,author-year]{article}
+%\usepackage[margin=0.90in]{geometry}
+\usepackage{blindtext}
+\usepackage[utf8]{inputenc}
+\usepackage{hanging}
+%----------------------------------------------
+\usepackage{graphicx}
+%Image-related packages
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{natbib}
+\usepackage{caption}
+\usepackage{subcaption}
+\graphicspath{ {images/} }
+\usepackage[utf8]{inputenc}
+\usepackage[export]{adjustbox}
+\usepackage{wrapfig}
+\usepackage{booktabs}
+\usepackage{amsmath}
+\usepackage{longtable}
+
+\usepackage{setspace}
+%------------------------------
+\usepackage{comment}
+%Table-related commands
+\usepackage{array}
+\setlength{\arrayrulewidth}{1mm}
+\setlength{\tabcolsep}{18pt}
+\renewcommand{\arraystretch}{1.3}
+\newcolumntype{s}{>{\columncolor[HTML]{AAACED}} p{3cm}}
+%-------------------------------------------------------
+\setlength{\parindent}{2em}
+\setlength{\parskip}{0.5em}
+\renewcommand{\baselinestretch}{1.3}
+%------------------------------------------------
+\usepackage[rightcaption]{sidecap}
+\usepackage[super]{nth}
+
+\linespread{1} \oddsidemargin=-0.20in \evensidemargin=-0.20in
+\topmargin=-0.30in  \textwidth=6.9in \textheight=8.7in
+
+%----------------------------------------------
+%\usepackage{indentfirst}
+
+\usepackage[usenames,dvipsnames,svgnames,table,x11names]{xcolor}
+\usepackage[linktocpage=true,bookmarksnumbered=true]{hyperref} 
+\hypersetup{
+  colorlinks,
+  citecolor=OliveGreen,
+  linkcolor=Brown,
+  urlcolor=RoyalBlue3,
+  anchorcolor= Fuchsia}
+
+
+\begin{document}
+
+\title{{\textsc{Heterogeneity in Labor Income Profiles: Evidence from Turkey}}\thanks{We would like to thank Murat G\"uray K\i rdar, Malik \c{C}\"ur\"uk, and other faculty at the Department of Economics, Bo\u{g}azi\c{c}i University for their helpful comments and suggestions. We also thank the participants at the \nth{6} All-Istanbul Workshop in Istanbul for their feedback. Torul acknowledges financial support by Bo\u{g}azi\c{c}i University Research Fund, grant number BAP \texttt{9081} and \texttt{13920}. All remaining errors are ours.}}
+
+\author{\textsc{Emrehan Aktu\u{g}}\thanks{{Address: University of Texas at Austin, Department of Economics, 2225 Speedway, Austin, TX 78712, USA.
+E-Mail: \href{mailto:emrehanaktug@utexas.edu}{\texttt{emrehanaktug@utexas.edu}}}} \\
+\emph{University of Texas at Austin}
+\and \textsc{Tolga Umut Kuzuba\c{s}}\thanks{{Address: Bo\u{g}azi\c{c}i University, Department of Economics, 34342 Bebek, Istanbul, Turkey.\newline
+E-Mail: \href{mailto:umut.kuzubas@boun.edu.tr}{\texttt{umut.kuzubas@boun.edu.tr}}}}
+\\\emph{Bo\u{g}azi\c{c}i University}
+\and 
+\textsc{Orhan Torul}\thanks{{Corresponding Author. Address: Bo\u{g}azi\c{c}i University, Department of Economics, 34342 Bebek, Istanbul, Turkey.
+E-Mail: \href{mailto:orhan.torul@boun.edu.tr}{\texttt{orhan.torul@boun.edu.tr}}}}
+\\\emph{Bo\u{g}azi\c{c}i University}
+}
+
+{\vspace{-30pt}\date{}}
+
+\maketitle
+
+\singlespacing
+\vspace{-40pt}
+{\abstract{In this paper, we investigate labor income profiles in Turkey. In doing so, we investigate the role of educational attainment, gender, and the public versus private sector employment on labor income profiles by using the Household Budget Survey data from 2002 to 2014. We first report that while average labor income profile in Turkey exhibits a moderate hump-shape over age, there exists an immense degree of heterogeneity in labor income trajectories over education, gender and sector of employment. Second, while the public sector employment is more advantageous for low-educated Turkish employees, university graduates in Turkey's labor market face a risk versus return trade-off in their choice of sectoral employment: the private sector labor income profiles display both a higher level of average income and a higher degree of cross-sectional variation compared to their public sector counterparts. Third, we report a significant gender pay gap especially among low-educated workers, which aligns well with historically low female participation rates in Turkey. Our findings via distributional clustering analysis, ordinary least squares and pseudo-panel estimations all indicate that in attempts to infer about economy-wide average labor income profiles, abstracting away from any of these listed factors could lead to misleading inferences.}}
+
+
+\vspace{0pt}
+%\indent\hspace{0pt}$^\ddag$For the latest version, please visit: \url{http://www.econ.boun.edu.tr/torul/ilipt.pdf}\newline
+%\vspace{-5pt}
+\hspace{-23pt}\textbf{Keywords:} pseudo-panel analysis; synthetic cohorts; public vs private sector; education; gender\vspace{2pt}\newline 
+\textbf{JEL Classification:}  D31, I24, R20 
+
+%\end{singlespace}
+\newpage
+\doublespacing
+\section{Introduction}
+Both the number and the scope of studies addressing income inequality have risen sharply over the recent decades.%Income inequality has become more visible and gained notable popularity over the recent decades.
+\footnote{See \cite{Piketty}, \cite{Piketty2}, \cite{Atkinson}, \cite{Milanovic} and \cite{Saez} for through discussions on recent debates about several dimensions of income and wealth inequality, and \cite{Tamkoc08} for a review and comparison of the economic inequalities in Turkey.} Much of the rise in inequality aligns well with a widening dispersion of \emph{labor income}, and Turkey is not an exception as Turkey has the second highest level of income inequality among OECD countries in 2014.\footnote{See \href{http://data..org/inequality/income-inequality.htm}{OECD Income Inequality Database} for further details.} In this paper, we analyze heterogeneity in labor income profiles of Turkish employees, aiming to discern the determinants of this notable labor income inequality in an era of increasing distributional concerns.
+
+
+The literature examining \emph{income profiles over the life-cycle} has expanded in recent years, especially for developed economies.\footnote{See \cite{Lagakos}, \cite{Kolasa} and \cite{Rupert}, among others.} In particular, the recent comprehensive analysis by \cite{Lagakos} extracts labor income profiles in a selected group of both developed and developing countries by concentrating on male workers in the private sector. Our work complements their paper, and extends their analysis by dissecting the \emph{role of gender} and the \emph{public versus private sector of employment} in Turkey, while also factoring in the role of education, thereby constituting the first comprehensive research on labor income profiles in Turkey. Using a rich cross-sectional data set by the Turkish Statistical Institute's Household Budget Survey covering 2002 to 2014, our results document that income profiles in Turkey vary immensely over these previously unveiled characteristics.
+
+We first show that the \emph{average} life-cycle labor income profile in Turkey is moderately hump-shaped over age with a peak around 45, similar as in the case of the United States and Germany. Our decomposition exercises, however, reveal novelly that this pattern is generated by the \emph{private sector} employees with high school and university backgrounds, since the \emph{public} sector employees face almost monotonic and ever-increasing labor income trajectories. We further report that cross-sectional dispersion of labor income in Turkey is also increasing with age, in accordance with the findings on developing countries, yet contrary to developed economies.\footnote{See \cite{Lagakos}, among others.} We document that this pattern is also driven by the private sector compensations, as variance-to-mean income ratio over age is ever-increasing for the private sector but stagnant for the public sector employees.
+
+Second, we document that the private sector labor income profiles of university graduates in Turkey display both a higher average level and a higher degree of cross-sectional dispersion compared to their public sector counterparts, thereby implicating a \emph{risk versus return trade-off} for their sectoral choice of employment.\footnote{This finding is particularly relevant and critical for the Turkish economy, as the share of university graduates in the labor force is ever-increasing, and the public sector employment constitutes no less than a non-negligible 12-15\% of total employment in Turkey, which is going to increase by a further 3-5\% due to a recent decree law (\texttt{KHK No:696}) enacted in late December 2017. See \cite{OECD2} for \href{http://www.oecd.org/gov/Turkey.pdf}{further details}.} This risk versus return trade-off, however, is not applicable for primary or high school graduate employees, as the public sector employees with below-university education earn more on average and face lower cross-sectional variation than their private sector counterparts, while having to compete for the scarce public sector job positions.
+
+
+Third, we find strong evidence for a gender pay gap in Turkey, especially prevalent among primary school graduate employees. This observation is consistent with the historically low female labor force participation rate in Turkey, which is only around 30\%. Indeed, our results confirm that female labor force participation rate increases with education, which is as high as 70\% among female university graduates. However, the fact that 50\% of women in the Turkish labor force are primary school graduates, combined with the significant and life-long persistent wage gap for this group is likely to impede a higher female labor force participation in Turkey.\footnote{For a detailed discussion on this issue, see \cite{SPO2010} and \cite{Tansel94}.}
+
+Throughout our investigation, we first use descriptive graphical analyses to shed light on the heterogeneity in labor income profiles in Turkey, and we complement our graphical analyses with ordinary least squares (OLS) and pseudo-panel estimations. We further verify that our results hold true when using alternative data sets. We believe our use of several analytical approaches and data sets offer both rigor and robustness in our findings on the several critical dimensions of heterogeneity in labor income profiles in Turkey. 
+
+The rest of paper is organized as follows: in \hyperref[Section2]{section 2} we summarize the previous literature; in \hyperref[Section3]{section 3} we describe the data and provide the detailed description of labor income over various clusters; in \hyperref[Section4]{section 4} we explain our estimation methodology and present our results, and in \hyperref[Section5]{section 5} we discuss our findings and conclude.
+
+\section{Literature Review}
+\label{Section2}
+Earlier literature on labor income profiles documents well that average labor income profiles exhibit a hump-shaped pattern over age in many developed countries.%Average labor income profile exhibits a hump-shaped pattern over age in many developed countries, which is well-established in the literature.
+\footnote{See \cite{Attanasio} and \cite{Alessie}, among others.} Findings on developing economies are, however, rather limited, and Turkey is no exception.\footnote{See \cite{Lagakos} for a recent discussion on the developments in developing countries.} Among the very few studies on Turkey, \cite{Kirdar2} investigate \emph{average} life-cycle income profiles of \emph{household-heads} in Turkey between 2002-2006 and report that median income profiles display a hump-shaped pattern over life-cycle when controlling for educational attainment. However, authors do not concentrate on \emph{labor income} of households and do not investigate the role of gender and the public versus private sector of employment, both of which have first-order implications, as we document in this paper. 
+
+Turkish Statistical Institute's Household Budget Survey (HBS), the data set we use for our benchmark analysis, has been used widely to address several other questions related to income inequality, precautionary savings, income and expenditure decompositions, but not labor income profiles. \cite{Eksi} investigate wage inequality in Turkey by addressing the role of educational attainment for the 2002-2011 period and \cite{Bakis} study the same topic by addressing industries as well for the 2002-2011 period but with Household Labor Force Survey (HLFS). \cite{Nazli}, \cite{Yukseler} and \cite{Ceritoglu} focus on savings decisions of households but not labor income profiles over life-cycle. \cite{Tansel05} and \cite{Tansel94} demonstrate the public versus private sector wage differentials and a gender pay gap in Turkey via a single year of individual-level data. \cite{Tansel18} studies income inequality by presenting 90/10 and 90/50 wage ratios by gender, age, education, and sector by employing the Surveys on Income and Living Conditions (SILC). \cite{Tamkoc08} study the evolution of wage, income and consumption inequality in Turkey after 2002 via a cross-country comparable methodology. Regarding labor income profile over life-cycle in Turkey, the number of studies is extremely limited. As a rare exception, \cite{Cilasun} analyzes labor income profiles in Turkey via a pseudo-panel data approach by constructing cohorts based on birth-years for household-heads, thereby not allowing the estimation of the role of educational attainment, gender, or the public versus private sector employment. By using a more comprehensive data set and expanding analyses on several fronts, we believe this paper sheds light on the role of the lacking dimensions on labor income profiles, thereby constituting the first comprehensive analysis of labor income profiles in Turkey. 
+
+Throughout our econometric analysis, we rely on OLS regressions to estimate life-cycle profiles of labor income in Turkey; and we complement our analysis via pseudo-panel estimation methodology. To this end, we construct cohorts based on birth-year, educational attainment, gender and the public versus private sector employment, which allows us to identify the marginal effects of the listed heterogeneities in a pseudo-panel design.
+
+\section{Data and Descriptive Results}
+\label{Section3}
+
+We use cross-sectional data from the Turkish Statistical Institute's (TurkStat) Household Budget Survey (HBS) covering the period 2002-2014.\footnote{Information on the public versus private sector employment is only available for 2002-2011, thus it becomes our working sample when investigating labor income differences due to the public versus private sector employment.} HBS  is conducted annually by the TurkStat on a representative sample of approximately 10,000 Turkish households. The dependent variable is individual labor income that consists of cash, income received in-kind and bonus.\footnote{58\% of the sample have positive income received in-kind, which constitutes 12\% of the labor income, on average. 23\% of the sample receive a bonus, and among them, bonus constitutes 13\% of the labor income.} We restrict our sample to 20-59 year-old individuals due to the limited number of observations beyond this range. The resultant total sample size is 86,666.\footnote{For further details about the sample, please see \hyperref[tablee1]{Table E.1}} We convert nominal labor income into real units by deflating via the Turkish consumer price index (CPI), for which we use the base year as 2014; and we exclude workers who earn below the half of minimum wage so as to focus only on full-time employees (\citealp{Krueger}).\footnote{There are 101,648 observations with positive labor income. After truncation, we have 86,666 observations, which constitute 85\% of all positive labor income earners.} TurkStat provides education data in eleven ordinal categories, which we re-cluster into three categories: i) primary and secondary school graduates, ii) high-school graduates, and iii) university or post-university graduates.\footnote{We do the re-clustering in order to increase the efficiency of our estimates. Results by alternative education re-clustering are available upon request.}  
+
+We start by reporting our results via descriptive graphical analysis of household income profiles over the life-cycle with various clusters, using box-plots to provide visualization of level and dispersion of income profiles in a compact manner.\footnote{On the box plot, the upper bar of the box represents the third quartile and the lower bar displays the first quartile. The line inside the box represents the median. The end of the whiskers represents the lowest observation within 1.5 times the interquartile range of the lower quartile and the highest observation within 1.5 times the interquartile range of the upper quartile (\citealp{Tukey}). We follow this approach because we believe visual distributional illustration is more informative than reporting merely on moments.}
+
+
+\subsection{Average Labor Income Profile}
+In \hyperref[figure1]{Figure 1}, we plot the \emph{average} labor income profile in Turkey. We document a moderate hump-shaped pattern with a peak at the 45-49 year age group for the median labor income, coupled with ever-increasing cross-sectional dispersion until the age 60.\footnote{The peak of the \emph{mean} labor income is reached at around 55-59, which is further in the life-cycle compared to the result of previous studies (\citealp{Kirdar2}). The main reason behind this difference is that we concentrate only on full-time employees, whereas \citealp{Kirdar2} consider all positive labor income earners.} This hump-shaped pattern is most similar to labor income profiles in Germany and the United States among the countries that are analyzed in \cite{Lagakos}.\footnote{The sharp decrease after the age of 60 stems mainly from retirement: since 1999, the retirement age in Turkey is 60, which was even lower prior to 1999, therefore the oldest cluster corresponds to the individuals who work after retirement and possibly settle for relatively lower wages. In our estimations, we exclude the teen labor and the retired, therefore we omit both the 15-19 and above 60 year age groups.}  
+
+
+\begin{center}
+	[place \hyperref[figure1]{Figure 1} here]
+\end{center}
+\subsection{Education}
+We next investigate the role of educational attainment, which is one of the key determinants of labor income differences across age categories. Indeed, in \hyperref[figure2]{Figure 2} where we condition labor income profiles on education, we report a clear positive correlation between labor income and education. Among the highest earners, i.e. university graduates, we observe a sharp increase in labor income over age until late 30s, followed by a stagnant profile beyond, with the exception of an additional increase for the 55-59 year age group. High school graduates experience a similar upward trajectory over their life-cycle, with a moderate downturn around age 55-59. The upward trajectory of primary school graduates is yet in a much narrower band compared to the two other education categories, thereby exhibiting a rather stagnant life-cycle trajectory. On average, high school and university graduates earn 35\% and 120\% more than primary school graduates, respectively.
+
+A cross-country comparison of Turkey reveals that when conditioned on education, labor income profiles in Turkey exhibit similarities again with Germany, where university graduates have non-decreasing labor income profiles, and high school and primary school graduates have slightly hump-shaped patterns, with a peak at around age 50 (\citealp{Lagakos}). Furthermore, these patterns are at odds with the evidence for developing countries such as Brazil, Chile, and Mexico, where education premium is relatively lower. 
+
+\begin{center}
+	[place \hyperref[figure2]{Figure 2} here]
+\end{center}
+
+\subsection{Public vs Private Sector Employment}
+In \hyperref[figure3]{Figure 3} we plot labor income profiles by the public versus private sector employment. \hyperref[figure3]{Figure 3} reveals stark differences in income profiles of the public and private sector employees: the public sector employees face monotonic upward income trajectories over the life-cycle, whereas the private sector employees are considerably more likely to encounter stagnant labor income trajectories in a sizeably narrower band. In the private sector, individuals aged 35-39 at the 25$^{th}$ percentile earn half of the mean labor income and at the 75$^{th}$ percentile earn the mean. Afterward, we can observe the decline in labor income until retirement for both quartiles. In the public sector, individuals aged 35-39 at the 25$^{th}$ percentile earn 90\% and at the 75$^{th}$ percentile earn 170\% of the sample mean. Labor income is increasing and before retirement individual at the 25$^{th}$ percentile earns the mean and at the 75$^{th}$ percentile earns the 190\% of the sample mean. On average, the public sector employees earn 64\% more than the private sector employees. In addition, the public sector employees of any age group earn more than their private sector counterparts. These contradictory patterns can be attributable mainly to the educational backgrounds of employees in the two sectors: while over 45\% of the public sector employees are university graduates, only 10\% of the private sector employees hold a university degree or above.\footnote{We discuss this issue in more detail in the \hyperref[sectioneduc]{next section}. For further distributional statistics, see \hyperref[AppendixE]{Appendix E}.}
+
+\begin{center}
+	[place \hyperref[figure3]{Figure 3} here]
+\end{center}
+
+Even though the private sector jobs pay less on average, the dispersion in the private sector income of employees over 30 years old is larger than that of the public sector. \hyperref[figure4]{Figure 4} displays that the variance of (logarithmic) income in the private sector first monotonically increases over age starting from 0.2, surpasses that of the public sector after age 30 and remains rather stable around 0.4. On the contrary, the variance of (logarithmic) income in the public sector remains almost stagnant at 0.2 over the life-cycle.\footnote{As one of the anonymous referees rightfully points out, the lower dispersion of labor income profiles in the public sector is at least to a certain extent attributable to the public sector payment structure that is pre-determined by law: promotion criteria in the public sector are usually pre-defined and mostly tenure-based. These salary gains as a result of promotions are often confined to particular rates, thereby putting a bound on the cross-sectional dispersion of the public sector labor incomes.} This dispersion profile for the private sector in Turkey differs from many developed countries, such as Germany, France, the United Kingdom and Canada, where variance moderately decreases or remains almost constant over the life-cycle. A notable exception among developed countries is the United States with its similar variance profile to Turkey (\citealp{Lagakos}). The similar concave pattern in Turkey's variance trajectory is also observed in several developing countries, such as Mexico, Uruguay, and Chile.
+
+%In the next \hyperref[sectioneduc]{section}, further specification based on educational attainment within the sector will provide necessary information on the pay gap between sectors and for the variance difference as well.
+
+\begin{center}
+	[place \hyperref[figure4]{Figure 4} here]
+\end{center}
+
+\subsection{Education and Public vs Private Sector Employment}
+\label{sectioneduc}
+In \hyperref[figure5]{Figure 5} we depict labor income profiles by education and the public versus private sector employment. We observe substantial variation in labor incomes over the three education categories in the private sector, yet limited differences in the public one. In the private sector, almost all workers with below-university educational background earn less than the mean income, whereas university graduates earn above the mean and median income after the age 30, coupled with facing higher dispersions towards retirement. In the public sector, however, labor income profiles monotonically increase over age, with an almost constant variance and a limited education premium. Further, contrary to the ever-increasing income profile in the public sector, we observe a hump-shaped pattern in the private sector with different trajectories over education. 
+
+\begin{center}
+	[place \hyperref[figure5]{Figure 5} here]
+\end{center}
+
+\begin{center}
+	[place \hyperref[figure6]{Figure 6} here]
+\end{center}
+
+\begin{center}
+	[place \hyperref[figure6]{Figure 7} here]
+\end{center}
+
+\begin{center}
+	[place \hyperref[figure6]{Figure 8} here]
+\end{center}
+
+\hyperref[figure5]{Figure 5} reveals that university-graduate employees in Turkey face a risk versus return trade-off in their sectoral choice of employment: the private sector income profiles display both a higher level of average income and a higher degree of cross-sectional variation compared to their public sector counterparts. However, for primary and high-school graduates, this trade-off disappears, making the public sector jobs more appealing, where this additional demand is rationed due to the limited number of the public sector jobs.
+
+\hyperref[figure8]{Figure 8} displays the histograms of labor incomes in the public and private sectors. The two histograms affirm the stark differences in incomes over the public versus private sector employment: while the distribution of income in the public sector resembles a normal distribution except for its long right tail, the distribution in the private sector is close to a Pareto distribution, i.e. left-skewed with a mass around the half of minimum wage.\footnote{The step-wise increases on the left-end of the private sector distribution stem from the adjustments to the \emph{real} minimum wage over time, i.e. as we convert nominal income into real income by deflating via the consumer price index, the survey year's inflation induces step-wise departures from the lower bound: the half of minimum wage.} The main reason behind the pattern exhibited in the private sector is, to a large extent, due to the employment of low-skilled workers earning in the close proximity of the minimum wage. 
+
+In order to display the first-order role of education on income dispersion, in \hyperref[figure9]{Figure 9} we abstract from the sector of employment and present the variance of labor income over education. \hyperref[figure9]{Figure 9} verifies that educational background indeed plays a critical role in income dispersion over the life-cycle, and the increasing income dispersion over age is generated predominantly by high school and university graduates.\footnote{In addition to educational background, the public versus private sector of employment is also decisive in delivering the dispersion patterns in \hyperref[figure4]{Figure 4} and \hyperref[figure9]{Figure 9}. For further details, see \hyperref[AppendixB]{Appendix B}, where we condition employees with respect to their educational backgrounds and the sector of employment, and plot their variance-to-mean income ratios over the life-cycle.} In brief, our results summarize that labor income profiles by education and sector of employment differ significantly from one another, and heterogeneity in labor income profiles due to these factors are immense.  
+\begin{center}
+	[place \hyperref[figure9]{Figure 9} here]
+\end{center}
+
+\subsection{Gender}
+In \hyperref[figure10]{Figure 10} we display gender differences in average labor income profiles. We report that both the mean and the median labor incomes of male employees are slightly lower than those of their female counterparts until age 35, but higher afterward. Further, while income profiles of male employees exhibit an upward trajectory until age 40-44 and remain stagnant afterward, labor income profiles of female employees increase over age until early 30s, beyond which income remains stagnant. In addition, cross-sectional income dispersion of both male and female employees exhibit monotonically upward trends over the life-cycle. 
+
+\begin{center}
+	[place \hyperref[figure10]{Figure 10} here]
+\end{center}
+
+In order to elaborate more on gender differences in income profiles, we first focus on the role of education and display labor income profiles by gender and education in \hyperref[figure11]{Figure 11}. We report that while labor income profiles of high school and university graduates possess similar life-cycle trajectories for both genders, labor income trajectories of primary school graduates exhibit striking gender differences: for males, we report a hump-shaped pattern with considerable income dispersion, whereas for females we document an age-independent income profile with low mean, median and variance levels. Male primary school graduates earn 35\% more than their female counterparts. The same ratio is 29\% for high school graduates and 24\% for university graduates. We argue that these stark gender differences for low educated employees align well with the historically low female labor force participation in Turkey (around 30\%), as Turkish women's labor market prospects are significantly worse than those of men's.\footnote{In particular, this observation is valid for female employees with primary education (and below) as they earn labor incomes significantly lower than that of their male counterparts. This gap narrows down over educational attainment. See \cite{SPO2010} for further discussion.}$^,$\footnote{In our data set, female labor participation rate indeed increases over years of schooling, up to 70\% among university graduates, and only 25\% of primary school graduates. Further, more than 50\% of women in the labor force in our data set are primary school graduates and the significant pay gap might be a factor affecting female labor force participation rates.} 
+
+\begin{center}
+	[place \hyperref[figure11]{Figure 11} here]
+\end{center}
+
+While Panel (b) in \hyperref[figure11]{Figure 11} reveals limited gender differences in labor income profiles over the public versus private sector of employment. Male workers in the private sector earn 14\% more than their female counterparts and earn 10\% more in the public sector, on average. \hyperref[figure12]{Figure 12} reveals that conditioning further on education unveils a gender pay gap for the below-university graduates in the private sector: primary school graduate female employees in the private sector are the lowest income-earning group of all with no prospects of earning nearly the mean income throughout their life-cycles. Further, only a select group of high-school graduate female employees in the private sector earn above the mean income, and they do so only when their income profiles peak. Their male counterparts of similar educational backgrounds have noticeably better labor income prospects in the private sector. The gender pay gap among university graduates in the private sector is yet rather limited. 
+
+For the public sector, on average we observe a moderate gender pay gap among the primary school graduates, which diminishes by further educational attainment. 
+\begin{center}
+	[place \hyperref[figure12]{Figure 12} here]
+\end{center}
+
+\begin{center}
+	[place \hyperref[figure12]{Figure 13} here]
+\end{center}
+
+\section{Estimation Methodology and Results}
+\label{Section4}
+We next complement our descriptive graphical analysis with econometric regressions. We first rely on OLS estimation of pooled cross-sections of labor income profiles for different subcategories. Our main estimation equation is as follows:\footnote{Our data is a repeated cross-section, and not a longitudinal one and we are pooling cross-sections i.e. we observe each individual $i$ only for one point in time and $y_{it}$ denotes the observation on individual $i$ at time $t$. Age and education categories are denoted as $j$ and $k$, respectively.}
+
+%\begin{equation}
+%\log(y_{it})=\alpha+\sum_{j}^7\beta_j \  \text{age}_{ij} + \sum_{k}^5 \gamma_{ik} \  \text{edu}_k + \delta \ \text{sector}_i + \sum_{l}^5 \xi_l \ \text{sector}_i\times\text{edu}_{il} \ + \theta \ \text{gender}_i + \lambda \ \text{union}_i + \mu \ \text{area}_i + \phi \ \text{tenure}_i + \rho t + \varepsilon_{it}
+%\end{equation}
+\begin{align}
+\log(y_{it})=  &\alpha+\sum_{j}^7\beta_j \  \text{age}_{ij} + \sum_{k}^5 \gamma_{k} \  \text{edu}_{ik} + \delta \ \text{public sector}_i + \sum_{l}^5 \xi_l \ \text{public sector}_i\times\text{edu}_{ik} \nonumber \\
+ & \ \ + \ \theta \ \text{gender}_i + \mu \ \text{area}_i + \phi \ \text{tenure}_i + \rho_t + \varepsilon_{it}
+\end{align}
+
+\noindent where $\log(y_{it})$ refers to natural logarithm of labor income of person $i$ in year $t$; $age$ refers to age categories of 5 year intervals captured by dummy variables : ages 20 to 24, 25 to 29, \ldots, 55 to 59; $edu$ refers to years of schooling categories: 6 to 8 years (primary school graduates or dropouts), 9 to 12 years, 13 to 14 years, 15 to 16 years and 17 years and above; $public \ sector$ is a dummy variable which equals 1 if individual $i$ works in the public sector; $gender$ is a dummy variable which equals 1 if individual $i$ is female; $area$ is a dummy variable which equals 1 if individual $i$ resides in an urban location; $tenure$ stands for years of job experience of individual $i$, and $\rho$ captures the year-fixed effect.\footnote{We take ages 20 to 24 as the baseline age group. HBS measures \emph{tenure} as  is the number of years worked in the main job}
+
+
+For robustness purposes, we next conduct a pseudo-panel estimation. Since the Turkish HBS data is composed of independent cross-sections, it is not possible to track the same individuals over time. Thus, we construct cohorts based on their common characteristics, such as educational attainment, the sector of employment, gender and year of birth to create a synthetic cohort panel, following the approach by \cite{Deaton}.\footnote{We discuss the advantages of pseudo-panel estimation over OLS in more detail in \hyperref[AppendixD]{Appendix D}.}
+
+
+We construct groups by birth year with a 5-year span starting from 1950-1954 to 1985-1989, for a total of 8 groups. We use a static linear model with cohort fixed-effects as follows:
+\[\bar{y}_{ct}=\bar{x}_{ct}\beta+\bar{\theta}_c+\bar{\epsilon}_{ct} \tag{2} \]
+where $c$ denotes cohorts, $\bar{y}_{ct}$ denotes cohort income averages and $\bar{x}_{ct}$ denote the vector of variables generated by cohort averages, and $\bar{\theta}_c$ stands for the cohort-fixed effects.\footnote{Since each cohort consists of different members in each year, the cohort effect is time varying: $\bar{\theta}_{ct}$. According to \cite{Verbeek}, with a sufficiently large cohort size the time-varying $\bar{\theta}_{ct}$ can be treated as constant over time, which takes the form $\bar{\theta}_c$ in our regression equation. The reason behind the constancy is that clustering similar individuals into cohorts tends to homogenize individual effects among individuals grouped in the same cohort, so that average individual effect is approximately time-invariant (\citealp{Ziegelhofer}). Thus, it is possible to use conventional estimation tools such as fixed-effects estimator (see \hyperref[AppendixD]{Appendix D} for further details).}$^,$\footnote{Instead of constructing birth-year cohorts over a single-year span, we use 5-year spans so as to enlarge cohort sizes, reduce erraticity and minimize measurement errors. We discuss more on the efficiency versus bias trade-off in \hyperref[AppendixD]{Appendix D}.} 
+
+
+We present our OLS estimation results under alternative specifications in \hyperref[table1]{Table 1}. We report that the regression coefficients for age categories verify a hump-shaped pattern in labor income over the life-cycle, with a peak around age 40 to 44.\footnote{See \hyperref[AppendixC]{Appendix C} for marginal effects of age evaluated at the means of other covariates.} Further, we provide evidence on education premium over years of schooling, and higher average income levels in the public sector. In order to shed light on role of the public versus private sector employment on education premium, in column (2) of \hyperref[table1]{Table 1}, we incorporate the interaction of education and the public versus private sector of employment to our baseline regression, and report that education premium in the private sector surpasses that of the public sector for each education category. In addition, as discussed in the descriptive analysis, \hyperref[table1]{Table 1} provides further robust evidence of a significant gender pay gap. These findings provide further support on the risk-versus-return trade-off faced by university graduates in their sectoral choice of employment. 
+
+\begin{center}
+	[place \hyperref[table1]{Table 1} here]
+\end{center}
+
+In order to elaborate further on the role of gender and education, we estimate a modified version of our baseline regression by conditioning on gender and education, and we display our findings in \hyperref[table2]{Table 2}. \hyperref[table2]{Table 2} reveals that marginal effects of age indicate a hump-shaped labor income trajectory over the life-cycle for all gender and education groups (albeit with different peak ages), but the female primary school graduates. For the female primary school graduates, our estimation results confirm age-independent labor income profiles, as we discussed in the \hyperref[Section3]{previous section}.
+
+\begin{center}
+	[place \hyperref[table2]{Table 2} here]
+\end{center}
+
+In \hyperref[table3]{Table 3} we repeat the above exercise by this time conditioning on the public versus private sector of employment. We document a similar robust hump-shaped pattern in labor income profiles, except for the primary school graduates in the public sector. We also verify gender differences in favor of male employees both in the public and the private sector.     
+
+\begin{center}
+	[place \hyperref[table3]{Table 3} here]
+\end{center}
+
+
+We next turn to the pseudo-panel methodology and summarize our estimation results in \hyperref[table4]{Table 4}. \hyperref[table4]{Table 4} reveals that the pseudo-panel estimation offers results consistent with those by OLS and our descriptive analysis, thereby contributing further robustness to our findings.\footnote{We conduct a fixed-effects regression without any sector specification at the cohort level, therefore it is infeasible to estimate the effect of the public versus private sector employment on labor incomes under this specification. Since the explanatory variables should be time-varying in fixed-effects estimator, we interact the age variable with time-invariant characteristics in the regressions. We use labor income in its natural logarithm form in regressions.} \hyperref[table4]{Table 4} confirms that the labor income profile is hump-shaped over age groups, as coefficients for age and age-squared are positive and negative, respectively.\footnote{This result is consistent with \cite{Tansel05}.}. Further, \hyperref[table4]{Table 4} verifies the presence of a significant education premium valid to both high school and university graduates. 
+
+\begin{center}
+	[place \hyperref[table4]{Table 4} here]
+\end{center}
+
+
+
+%Finally, we calculate the permanent and transitory components of annual income of cohorts by following \cite{Moffitt}. We divided our sample into two: before and after the 2008 financial crises. \hyperref[table5]{Table 5} reveals that the variance of permanent labor income increases after the crisis for university graduates, but decreases for less educated workers. The permanent variance increases over age in both subsamples. On the other hand, the variance of transitory income decreases for all groups for both before and after the crises, and the largest decrease is observed for less educated workers. Overall, our findings suggest that the 2008 financial crises induces long-lasting effects on particularly the dispersion of university graduate employees in Turkey.  
+%
+%
+%
+%\begin{center}
+%	[place \hyperref[table5]{Table 5} here]
+%\end{center}
+
+
+
+\section{Discussion and Concluding Remarks}
+\label{Section5}
+
+In this paper, we explore labor income profiles over the life-cycle in Turkey. In doing so, we study the role of education, gender and the public versus private sector employment, all of which we document matter starkly and heterogeneously. In brief, our findings first reveal that the \emph{average} life-cycle labor income profile in Turkey is moderately hump-shaped over age, similar as in the case for the United States and Germany. Our decomposition exercises, however, elucidate novelly that this pattern in averages is driven by the \emph{private} sector employees, as the Turkish \emph{public} sector employees encounter ever-increasing labor income profiles over their life-cycle. Second, we report that the public versus private sector income profiles of university graduates in Turkey display sizable differences: labor income profiles of the private sector employees exhibit both a higher average level and a higher degree of cross-sectional dispersion compared to their public sector counterparts, thereby implicating a \emph{risk versus return trade-off} for their sectoral choice of employment in an economy with ever-increasing share of university graduates in the labor force. Third, we find strong evidence for a gender pay gap in Turkey, especially prevalent among primary school graduate employees, which we argue is consistent with the historically low female labor force participation rate in Turkey. 
+
+Throughout our investigation, we first use descriptive graphical analyses to shed light on the heterogeneity in labor income profiles in Turkey, and we complement our graphical analyses with OLS and pseudo-panel estimations. We further verify that our results hold true when relying on alternative data sets (i.e. HLFS). We believe our use of several analytical approaches, as well as our use of multiple data sets offer both rigor and robustness to our findings on the several dimensions of heterogeneity in labor income profiles in Turkey. 
+
+While our analysis in this paper is confined to the study of the Turkish economy, we believe our findings offer lessons beyond. The frontier state-of-the-art research investigating labor income profiles across countries by \cite{Lagakos} concentrates solely on male employees in the private sector. Our findings indicate the limitations of inferring such figures as representative of countries of interest. Specifically, our results connote that in countries with sizeable public sector employment, concentrating only on the private sector income profiles to infer about economy-wide averages would be misleading, and the same misinference concern would be valid when focusing only on male employees for economies where gender differences in the labor market are sizeable, as in the case of most developing economies. We believe the missing gender and the public versus private sector employment dimensions would plausibly play a seminal role in household decisions in the labor market, as well as in their portfolio choice and risk-sharing decisions, thereby preserving decisive implications on the effectiveness of policy decisions.    
+
+While our findings shed light on several dimensions of heterogeneities in Turkish labor income profiles with a comparable methodology, we believe a full-fledged panel-data analysis would be illuminating. Given data limitations, we leave this to future research. 
+ 
+
+\clearpage
+
+\pagebreak
+
+\clearpage
+\bibliographystyle{apa}
+\bibliography{bibliography}
+
+\pagebreak
+\begin{center}
+	\textsc{\LARGE{Figures}}
+\end{center}
+
+\begin{figure}[H]
+\label{figure1}
+	\centering
+	\includegraphics[width=0.66\textwidth]{figure_1}
+	\caption{Average labor income profile over age groups}
+	\medskip
+	\begin{minipage}{0.75\textwidth} % choose width suitably
+		{\footnotesize \textit{Notes:} The sample includes individuals aged 20-59 years in the Household Budget Survey from 2002 to 2014. The sample size is 86,666. The horizontal line at 1 indicates the sample mean. Labor income of each individual is divided by the sample mean. \par}
+	\end{minipage}
+\end{figure}
+
+\begin{figure}[H]
+\label{figure2}
+	\centering
+	\includegraphics[width=0.65\textwidth]{figure_2.pdf}
+	\caption{Labor income profile by education}
+\end{figure}
+
+\begin{figure}[H]
+\label{figure3}
+	\centering
+	\includegraphics[width=0.65\textwidth]{figure_3.pdf}   
+	\caption{Labor income profile by the public vs private sector employment}
+\medskip % induce some separation between caption and explanatory material
+\begin{minipage}{0.75\textwidth} % choose width suitably
+	{\footnotesize \textit{Notes:} Sector variable exists from year 2002 to 2011. Therefore, the sample size is reduced to 66,100 for the figures that include sector variable. \par}
+\end{minipage}
+\end{figure}
+
+\begin{figure}[H]
+\label{figure4}
+	\centering
+	\begin{subfigure}[b]{0.48\textwidth}
+		\includegraphics[width=\textwidth]{figure_4a.pdf}
+		\caption{Private Sector}
+	\end{subfigure}
+	~ %add desired spacing between images, e. g. ~, \quad, \qquad, \hfill etc. 
+	%(or a blank line to force the subfigure onto a new line)
+	\begin{subfigure}[b]{0.48\textwidth}
+		\includegraphics[width=\textwidth]{figure_4b.pdf}
+		\caption{Public Sector}
+	\end{subfigure}    
+	\caption{Variance of log labor income by sector}
+\end{figure}
+
+\begin{figure}[H]
+\label{figure5}
+	\centering
+	\includegraphics[width=0.65\textwidth]{figure_5.pdf} 
+	\caption{Labor income profile by education and the public vs private sector employment}
+\end{figure}
+
+\begin{figure}[H]
+	\label{figure6}
+	\centering
+	\includegraphics[width=0.65\textwidth]{figure_6.pdf} 
+	\caption{Labor income profile by education and the public vs private sector employment}
+\end{figure}
+
+
+\begin{figure}[H]
+	\label{figure7}
+	\centering
+	\begin{subfigure}[b]{0.32\textwidth}
+		\includegraphics[width=\textwidth]{figure_7a.pdf}
+		\caption{Primary School}
+	\end{subfigure}
+	%add desired spacing between images, e. g. ~, \quad, \qquad, \hfill etc. 
+	%(or a blank line to force the subfigure onto a new line)
+	\begin{subfigure}[b]{0.32\textwidth}
+		\includegraphics[width=\textwidth]{figure_7b.pdf}
+		\caption{High School}
+	\end{subfigure}    
+	%add desired spacing between images, e. g. ~, \quad, \qquad, \hfill etc. 
+	%(or a blank line to force the subfigure onto a new line)
+	\begin{subfigure}[b]{0.32\textwidth}
+		\includegraphics[width=\textwidth]{figure_7c.pdf}
+		\caption{University}
+	\end{subfigure}  
+	\caption{Labor income profile by education}
+	\medskip
+	\begin{minipage}{0.75\textwidth} % choose width suitably
+		{\footnotesize \textit{Notes:} In this figure, labor income of each individual is divided by the average labor income of the corresponding education group. \par}
+	\end{minipage}
+\end{figure}
+
+\begin{figure}[H]
+	\label{figure8}
+	\centering
+	\includegraphics[width=0.65\textwidth]{figure_8.pdf}
+	\caption{Labor income histograms by the public vs private sector employment}
+	\medskip
+	\begin{minipage}{0.75\textwidth} % choose width suitably
+		{\footnotesize \textit{Notes:} In this histogram, the individuals who earn more than 80,000 TRY (in 2014 prices) in a year are excluded. They constitute only 0.6\% of the sample. \par}
+	\end{minipage}
+\end{figure}
+
+\begin{figure}[H]
+	\label{figure9}
+	\centering
+	\begin{subfigure}[b]{0.32\textwidth}
+		\includegraphics[width=\textwidth]{figure_9a.pdf}
+		\caption{Primary School}
+	\end{subfigure}
+	%add desired spacing between images, e. g. ~, \quad, \qquad, \hfill etc. 
+	%(or a blank line to force the subfigure onto a new line)
+	\begin{subfigure}[b]{0.32\textwidth}
+		\includegraphics[width=\textwidth]{figure_9b.pdf}
+		\caption{High School}
+	\end{subfigure}    
+	%add desired spacing between images, e. g. ~, \quad, \qquad, \hfill etc. 
+	%(or a blank line to force the subfigure onto a new line)
+	\begin{subfigure}[b]{0.32\textwidth}
+		\includegraphics[width=\textwidth]{figure_9c.pdf}
+		\caption{University}
+	\end{subfigure}  
+	\caption{Variance of log labor income in the private sector by education}
+\end{figure}
+
+\begin{figure}[H]
+	\label{figure10}
+	\centering
+	\includegraphics[width=0.7\textwidth]{figure_10.pdf}
+	\caption{Labor income profile by gender}
+\end{figure}
+
+\begin{figure}[H]
+	\label{figure11}
+	\centering
+	\begin{subfigure}[b]{0.48\textwidth}
+		\includegraphics[width=\textwidth]{figure_11a.pdf}
+		\caption{Gender-education clusters}
+	\end{subfigure}
+	~
+	\begin{subfigure}[b]{0.48\textwidth}
+		\includegraphics[width=\textwidth]{figure_11b.pdf}
+		\caption{Gender-sector clusters}
+	\end{subfigure}    
+	\caption{Labor income profile by education, gender and the public vs private sector employment}
+\end{figure}
+
+\begin{figure}[H]
+	\label{figure12}
+	\centering
+	\begin{subfigure}[b]{0.48\textwidth}
+		\includegraphics[width=\textwidth]{figure_12a.pdf}
+		\caption{Female Distribution}
+	\end{subfigure}
+	~
+	\begin{subfigure}[b]{0.48\textwidth}
+		\includegraphics[width=\textwidth]{figure_12b.pdf}
+		\caption{Male Distribution}
+	\end{subfigure}    
+	\caption{Labor income profile by education, the public vs private sector employment and gender}
+	\medskip
+	\begin{minipage}{0.75\textwidth} % choose width suitably
+		{\footnotesize \textit{Notes:} In this figure, labor income of each female is divided by the average labor income of female employees and labor income of each male is divided by the average labor income of male employees. \par}
+	\end{minipage}
+\end{figure}
+
+\begin{figure}[H]
+	\label{figure13}
+	\centering
+	\includegraphics[width=0.7\textwidth]{figure_13.pdf}
+	\caption{Labor income profile by gender}
+	\medskip
+	\begin{minipage}{0.75\textwidth} % choose width suitably
+		{\footnotesize \textit{Notes:} In this figure, for every age group the average labor income is plotted based on education and gender clusters. \par}
+	\end{minipage}
+\end{figure}
+
+
+%\begin{figure}[H]
+%\label{figure10}
+%	\centering
+%	\includegraphics[width=0.8\textwidth]{figure_10.pdf}
+%	\caption{Female labor income distribution over age, education and sector}
+%\end{figure}
+
+\iffalse
+
+\renewcommand{\thefigure}{B\arabic{figure}} 
+\setcounter{figure}{0}   
+
+\begin{figure}[H]
+\label{a-figure1}
+	\centering
+	\includegraphics[width=0.8\textwidth]{APCdesc2.pdf}
+	\caption{Labor income over life-cycle by birth-cohort}
+\end{figure}
+
+\begin{figure}[H]
+\label{a-figure2}
+	\centering
+	\includegraphics[width=0.8\textwidth]{APCek4.pdf}
+	\caption{Labor income over life-cycle by time periods}
+\end{figure}
+
+\begin{figure}[H]
+\label{a-figure3}
+	\begin{subfigure}[b]{0.48\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{APC1.pdf}
+		\caption{Age effects}
+	\end{subfigure}
+	~
+	\begin{subfigure}[b]{0.48\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{APC2.pdf}
+		\caption{Period effects}
+	\end{subfigure}    
+	\caption{Effect coefficients}
+\end{figure}
+
+\begin{figure}[H]
+\label{a-figure4}
+	\centering
+	\includegraphics[width=0.75\textwidth]{APC13.pdf}
+	\caption{Cohort effects}
+\end{figure}
+\fi
+
+\pagebreak
+
+\pagebreak
+\begin{center}
+	\textsc{\LARGE{Tables}}
+\end{center}
+
+\begin{table}[H]
+\label{table1}
+\centering
+	\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+	\caption{OLS Estimates for Labor Income}
+	{\scriptsize\renewcommand{\arraystretch}{1}
+		\resizebox{0.73\textwidth}{!}{%
+			\begin{tabular}{l*{2}{c}}
+				\toprule
+				&\multicolumn{1}{c}{(1)}&\multicolumn{1}{c}{(2)}\\
+				&\multicolumn{1}{c}{\textit{log}(Labor Income)}&\multicolumn{1}{c}{\textit{log}(Labor Income)}\\
+				\midrule
+				\hspace{-5mm} \textit{Age}	\\
+25 to 29            &    0.187\sym{***}&    0.183\sym{***}\\
+&  (0.007)         &  (0.007)         \\
+30 to 34            &    0.291\sym{***}&    0.288\sym{***}\\
+&  (0.007)         &  (0.007)         \\
+35 to 39            &    0.321\sym{***}&    0.315\sym{***}\\
+&  (0.007)         &  (0.007)         \\
+40 to 44            &    0.320\sym{***}&    0.308\sym{***}\\
+&  (0.008)         &  (0.008)         \\
+45 to 49            &    0.292\sym{***}&    0.279\sym{***}\\
+&  (0.009)         &  (0.009)         \\
+50 to 54            &    0.213\sym{***}&    0.195\sym{***}\\
+&  (0.011)         &  (0.011)         \\
+55 to 59            &    0.121\sym{***}&    0.107\sym{***}\\
+&  (0.016)         &  (0.016)         \\
+				\hspace{-5mm} \textit{Years of Education}	\\
+6-8                 &    0.156\sym{***}&    0.164\sym{***}\\
+&  (0.006)         &  (0.006)         \\
+9-12                &    0.302\sym{***}&    0.305\sym{***}\\
+&  (0.005)         &  (0.006)         \\
+13-14               &    0.441\sym{***}&    0.435\sym{***}\\
+&  (0.008)         &  (0.013)         \\
+15-16               &    0.648\sym{***}&    0.863\sym{***}\\
+&  (0.008)         &  (0.013)         \\
+17+                 &    1.044\sym{***}&    1.332\sym{***}\\
+&  (0.023)         &  (0.049)         \\
+				\hspace{-5mm} \textit{Education-Sector Interaction}	\\
+6-8 $\times$ Public Sector&                  &   -0.120\sym{***}\\
+&                  &  (0.015)         \\
+9-12 $\times$ Public Sector&                  &   -0.127\sym{***}\\
+&                  &  (0.012)         \\
+13-14 $\times$ Public Sector&                  &   -0.131\sym{***}\\
+&                  &  (0.017)         \\
+15-16 $\times$ Public Sector&                  &   -0.474\sym{***}\\
+&                  &  (0.017)         \\
+17+ $\times$ Public Sector&                  &   -0.562\sym{***}\\
+&                  &  (0.054)         \\
+				Sector(Public=1)       &    0.271\sym{***}&    0.436\sym{***}\\
+				&  (0.006)         &  (0.010)         \\
+				Gender(Female=1)       &   -0.188\sym{***}&   -0.182\sym{***}\\
+				&  (0.005)         &  (0.005)         \\
+				Area(Urban=1)        &    0.168\sym{***}&    0.170\sym{***}\\
+				&  (0.005)         &  (0.005)         \\
+				Tenure        &    0.012\sym{***}&    0.012\sym{***}\\
+				&  (0.000)         &  (0.000)         \\
+				\midrule
+Year Dummies        &      Yes         &      Yes         \\
+N                   &  66100           &  66100         \\
+R-squared          &    0.415         &    0.426         \\
+F-statistic          & 2387.326         & 2087.542         \\
+				\bottomrule
+				%\multicolumn{3}{l}{\footnotesize Note: Numbers in parantheses are standard errors. * for $p<.05$, ** for $p<.0$1, and *** for $p<.001$.}\\
+	\end{tabular}}}
+		\caption*{{\scriptsize Note: Numbers in parantheses are standard errors. * for $p<.05$, ** for $p<.01$, and *** for $p<.001$. 20-24 age category is the basis.}}
+\end{table}
+
+\begin{table}[H]
+\label{table2}
+\centering
+	\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+	\caption{OLS Estimates for Labor Income Based on Education and Gender}
+	{\scriptsize\renewcommand{\arraystretch}{1}
+		\resizebox{1\textwidth}{!}{%
+			\begin{tabular}{l*{6}{c}}
+				\toprule
+				&\multicolumn{3}{c}{Male}&\multicolumn{3}{c}{Female} \\ 
+				\cmidrule(l{2pt}r{2pt}){2-4} \cmidrule(l{2pt}r{2pt}){5-7}
+				&\multicolumn{1}{c}{Primary}&\multicolumn{1}{c}{High School}&\multicolumn{1}{c}{University}&\multicolumn{1}{c}{Primary}&\multicolumn{1}{c}{High School}&\multicolumn{1}{c}{University} \\
+				\midrule
+				\hspace{-2mm} \textit{Age}	\\
+25 to 29            &    0.157\sym{***}&    0.245\sym{***}&    0.354\sym{***}&    0.010         &    0.212\sym{***}&    0.326\sym{***}\\
+&  (0.010)         &  (0.013)         &  (0.031)         &  (0.021)         &  (0.020)         &  (0.026)         \\
+30 to 34            &    0.223\sym{***}&    0.371\sym{***}&    0.625\sym{***}&   -0.027         &    0.209\sym{***}&    0.482\sym{***}\\
+&  (0.010)         &  (0.014)         &  (0.032)         &  (0.022)         &  (0.023)         &  (0.029)         \\
+35 to 39            &    0.234\sym{***}&    0.400\sym{***}&    0.717\sym{***}&   -0.043\sym{*}  &    0.189\sym{***}&    0.530\sym{***}\\
+&  (0.010)         &  (0.016)         &  (0.033)         &  (0.020)         &  (0.030)         &  (0.033)         \\
+40 to 44            &    0.246\sym{***}&    0.386\sym{***}&    0.681\sym{***}&   -0.056\sym{**} &    0.131\sym{***}&    0.511\sym{***}\\
+&  (0.011)         &  (0.018)         &  (0.035)         &  (0.022)         &  (0.033)         &  (0.041)         \\
+45 to 49            &    0.204\sym{***}&    0.352\sym{***}&    0.665\sym{***}&   -0.096\sym{***}&    0.105\sym{*}  &    0.533\sym{***}\\
+&  (0.012)         &  (0.020)         &  (0.038)         &  (0.024)         &  (0.046)         &  (0.047)         \\
+50 to 54            &    0.113\sym{***}&    0.262\sym{***}&    0.606\sym{***}&   -0.109\sym{***}&    0.070         &    0.457\sym{***}\\
+&  (0.014)         &  (0.026)         &  (0.042)         &  (0.033)         &  (0.065)         &  (0.058)         \\
+55 to 59            &    0.015         &    0.203\sym{***}&    0.635\sym{***}&   -0.190\sym{***}&   -0.291\sym{**} &    0.384\sym{**} \\
+&  (0.019)         &  (0.044)         &  (0.055)         &  (0.051)         &  (0.095)         &  (0.126)         \\
+				Sector(Public=1)     &    0.472\sym{***}&    0.226\sym{***}&    0.012         &    0.320\sym{***}&    0.170\sym{***}&    0.096\sym{***}\\
+				&  (0.009)         &  (0.011)         &  (0.016)         &  (0.032)         &  (0.022)         &  (0.020)         \\
+				Area(Urban=1)      &    0.211\sym{***}&    0.134\sym{***}&    0.115\sym{***}&    0.144\sym{***}&    0.099\sym{***}&    0.056\sym{*}  \\
+				&  (0.006)         &  (0.011)         &  (0.016)         &  (0.019)         &  (0.024)         &  (0.024)         \\
+				Tenure            &    0.007\sym{***}&    0.022\sym{***}&    0.010\sym{***}&    0.014\sym{***}&    0.030\sym{***}&    0.010\sym{***}\\
+				&  (0.000)         &  (0.001)         &  (0.001)         &  (0.002)         &  (0.002)         &  (0.002)         \\
+				\midrule
+Year Dummies        &      Yes         &      Yes         &      Yes         &      Yes         &      Yes         &      Yes         \\
+N                   &  31029        &  14480         & 8621        & 4118         & 3415         & 4437        \\
+R-squared                &    0.235         &    0.328         &    0.208         &    0.185         &    0.319         &    0.255         \\
+F-statistic           &  554.249         &  474.720         &  121.473         &   44.903         &  104.048         &   89.764         \\
+				\bottomrule
+	\end{tabular}}}
+	\caption*{{\scriptsize Note: Numbers in parantheses are standard errors. * for $p<.05$, ** for $p<.01$, and *** for $p<.001$. 20-24 age category is the basis.}}
+\end{table}
+\vspace{-5pt}
+
+\begin{table}[H]
+\label{table3}
+\centering
+	\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+	\caption{OLS for Labor Income Based on Education and Sector}
+	{\scriptsize\renewcommand{\arraystretch}{1}
+		\resizebox{1\textwidth}{!}{%
+			\begin{tabular}{l*{6}{c}}
+				\toprule
+				&\multicolumn{3}{c}{Private Sector}&\multicolumn{3}{c}{Public Sector}\\ \cmidrule(l{2pt}r{2pt}){2-4} \cmidrule(l{2pt}r{2pt}){5-7}
+				&\multicolumn{1}{c}{Primary}&\multicolumn{1}{c}{High School}&\multicolumn{1}{c}{University}&\multicolumn{1}{c}{Primary}&\multicolumn{1}{c}{High School}&\multicolumn{1}{c}{University}\\
+				\midrule
+				\hspace{-2mm} \textit{Age}	\\
+25 to 29            &    0.127\sym{***}&    0.207\sym{***}&    0.304\sym{***}&    0.088         &    0.220\sym{***}&    0.245\sym{***}\\
+&  (0.009)         &  (0.011)         &  (0.025)         &  (0.074)         &  (0.038)         &  (0.031)         \\
+30 to 34            &    0.187\sym{***}&    0.320\sym{***}&    0.590\sym{***}&    0.224\sym{**} &    0.246\sym{***}&    0.371\sym{***}\\
+&  (0.010)         &  (0.013)         &  (0.030)         &  (0.070)         &  (0.036)         &  (0.031)         \\
+35 to 39            &    0.197\sym{***}&    0.346\sym{***}&    0.775\sym{***}&    0.232\sym{***}&    0.250\sym{***}&    0.417\sym{***}\\
+&  (0.010)         &  (0.017)         &  (0.036)         &  (0.069)         &  (0.037)         &  (0.032)         \\
+40 to 44            &    0.200\sym{***}&    0.362\sym{***}&    0.700\sym{***}&    0.219\sym{**} &    0.213\sym{***}&    0.437\sym{***}\\
+&  (0.010)         &  (0.021)         &  (0.047)         &  (0.069)         &  (0.039)         &  (0.034)         \\
+45 to 49            &    0.139\sym{***}&    0.309\sym{***}&    0.672\sym{***}&    0.186\sym{**} &    0.211\sym{***}&    0.460\sym{***}\\
+&  (0.012)         &  (0.027)         &  (0.056)         &  (0.071)         &  (0.042)         &  (0.037)         \\
+50 to 54            &    0.052\sym{***}&    0.183\sym{***}&    0.437\sym{***}&    0.115         &    0.170\sym{***}&    0.466\sym{***}\\
+&  (0.014)         &  (0.036)         &  (0.057)         &  (0.072)         &  (0.047)         &  (0.040)         \\
+55 to 59            &   -0.008         &    0.123\sym{*}  &    0.486\sym{***}&   -0.095         &    0.071         &    0.497\sym{***}\\
+&  (0.019)         &  (0.055)         &  (0.091)         &  (0.079)         &  (0.074)         &  (0.051)         \\
+				Gender(Female=1)       &   -0.242\sym{***}&   -0.105\sym{***}&   -0.111\sym{***}&   -0.282\sym{***}&   -0.190\sym{***}&   -0.133\sym{***}\\
+				&  (0.007)         &  (0.011)         &  (0.020)         &  (0.029)         &  (0.015)         &  (0.009)         \\
+				Area(Urban=1)       &    0.187\sym{***}&    0.165\sym{***}&    0.223\sym{***}&    0.216\sym{***}&    0.088\sym{***}&    0.065\sym{***}\\
+				&  (0.007)         &  (0.014)         &  (0.039)         &  (0.015)         &  (0.013)         &  (0.011)         \\
+				Tenure            &    0.004\sym{***}&    0.028\sym{***}&    0.034\sym{***}&    0.030\sym{***}&    0.019\sym{***}&    0.004\sym{***}\\
+				&  (0.000)         &  (0.001)         &  (0.002)         &  (0.001)         &  (0.001)         &  (0.001)         \\
+				\midrule
+Year Dummies        &      Yes         &      Yes         &      Yes         &      Yes         &      Yes         &      Yes         \\
+N                   &  30583         &  12215         & 4821         & 4564        & 5680         & 8237         \\
+R-squared               &    0.167         &    0.250         &    0.262         &    0.311         &    0.278         &    0.292         \\
+F-statistic               &  333.734         &  208.937         &   97.859         &  111.479         &  114.932         &  185.274         \\
+				\bottomrule
+	\end{tabular}}}
+		\caption*{{\scriptsize Note: Numbers in parantheses are standard errors. * for $p<.05$, ** for $p<.01$, and *** for $p<.001$. 20-24 age category is the basis.}}
+\end{table}
+
+\begin{table}[H]
+\label{table4}
+\centering
+	\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+	\caption{Pseudo-Panel Estimates}
+	{\scriptsize\renewcommand{\arraystretch}{1.25}
+		\resizebox{0.75\textwidth}{!}{%
+			\begin{tabular}{l*{4}{c}}
+				\toprule
+				&\multicolumn{4}{c}{{log}(Labor Income)} \\
+				&\multicolumn{1}{c}{(1)}&\multicolumn{1}{c}{(2)}&\multicolumn{1}{c}{(3)}&\multicolumn{1}{c}{(4)}\\
+				\midrule
+				Age                &    0.122\sym{***}&    0.133\sym{***}&    0.116\sym{***}&    0.127\sym{***}\\
+				&  (0.013)         &  (0.013)         &  (0.011)         &  (0.010)         \\
+				$\textnormal{Age}^2  $       &   -0.001\sym{***}&   -0.001\sym{***}&   -0.001\sym{***}&   -0.001\sym{***}\\
+				&  (0.000)         &  (0.000)         &  (0.000)         &  (0.000)         \\
+				Female $\times$ Age &                  &   -0.013\sym{*}  &                  &   -0.013\sym{***}\\
+				&                  &  (0.005)         &                  &  (0.003)         \\
+				High School $\times$ Age &                  &                  &    0.003         &    0.002         \\
+				&                  &                  &  (0.005)         &  (0.004)         \\
+				University $\times$ Age &                  &                  &    0.028\sym{***}&    0.028\sym{***}\\
+				&                  &                  &  (0.004)         &  (0.004)         \\
+				\bottomrule
+			Cohort Dummies      &      Yes         &      Yes         &      Yes         &      Yes         \\
+			N                   &  512         &  512        &  512         &  512         \\
+			R-squared                  &    0.779         &    0.791         &    0.830         &    0.843         \\
+			F-statistic                   &  148.179         &  142.236         &  235.971         &  209.743         \\
+				\bottomrule
+	\end{tabular}}}
+			\caption*{{\scriptsize Note: Numbers in parantheses are standard errors. * for $p<.05$, ** for $p<.01$, and *** for $p<.001$. 20-24 age category is the basis.}}
+\end{table}
+%
+%\begin{table}[H]
+%\label{table5}
+%\centering
+%	\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+%	\caption{Variances of Permanent and Transitory Real Labor Income, 2002-2014}
+%	{\scriptsize\renewcommand{\arraystretch}{1.5}
+%		\resizebox{1\textwidth}{!}{%
+%			\begin{tabular}{l*{6}{c}}
+%				\toprule
+%				&\multicolumn{3}{c}{Permanent Variance} & \multicolumn{3}{c}{Transitory Variance} \\ \cmidrule(l{2pt}r{2pt}){2-4} \cmidrule(l{2pt}r{2pt}){5-7}
+%				Sample Definition  &\multicolumn{1}{c}{2002-08}&\multicolumn{1}{c}{2009-2014}&\multicolumn{1}{c}{Change}&\multicolumn{1}{c}{2002-08}&\multicolumn{1}{c}{2009-2014}&\multicolumn{1}{c}{Change}\\
+%				\midrule
+%				\hspace{2mm} All           &  0.311 &  0.333 & 7\% &   0.160 &  0.094 & -41\% \\
+%				
+%				\textit{Education}	\\
+%				
+%				\hspace{2mm} Primary School   &  0.179 &  0.134 & -25\% &   0.148 &  0.067 & -54\% \\
+%				
+%				\hspace{2mm} High School   &  0.248 &  0.227 & -8\% &   0.162 &  0.098 & -39\% \\
+%				
+%				\hspace{2mm} University   &  0.223 &  0.251 & 12\% &   0.172 &  0.118 & -31\% \\
+%				
+%				\textit{Age} \\
+%				\hspace{2mm} 25-34    &  0.242 &  0.256 & 5\% &   0.153 &  0.092 & -39\% \\
+%				\hspace{2mm} 35-44    &  0.290 &  0.340 & 17\% &   0.143 &  0.075 & -47\% \\
+%				\hspace{2mm} 45-54    &  0.289 &  0.358 & 23\% &   0.109 &  0.081 & -25\% \\
+%				
+%				\textit{Earnings \%}\\
+%				
+%				\hspace{2mm} Lowest 33 percent   &  0.086 &  0.079 & -8\% &   0.127 &  0.061 & -51\% \\
+%				
+%				\hspace{2mm} 33-66 percent   &  0.068 &  0.085 & 25\% &   0.072 &  0.058 & -19\% \\
+%				
+%				\hspace{2mm} Top 66 percent   &  0.153 &  0.175 & 14\% &   0.109 &  0.096 & -12\% \\
+%				
+%				\bottomrule
+%				
+%				{Variances are for log annual earnings adjusted to 2014 liras}
+%	\end{tabular}}}
+%\end{table}
+%
+%\pagebreak
+
+%\begin{center}
+%	\label{AppendixA}
+%	APPENDIX-A\\
+%	OLS Analysis Using Household Labor Force Survey
+%\end{center}
+
+\iffalse 
+
+\pagebreak
+\begin{center}
+	\label{AppendixA}
+	\textsc{\large{APPENDIX-A: OLS via Household Labor Force Survey}}
+\end{center}
+
+In the HLFS data, the wage consists of cash and premiums, but not income received in-kind. The unit of analysis is the individual. The sample size is 336,484 and the data covers only the period 2009-2013.
+
+\renewcommand{\thetable}{A\arabic{table}} 
+\setcounter{table}{0}  
+
+\begin{table}[H]
+\label{tablea1}
+\centering
+	\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+	\caption{OLS Estimates for Wage}
+	{\scriptsize\renewcommand{\arraystretch}{1}
+		\resizebox{1\textwidth}{!}{%
+			\begin{tabular}{l*{2}{c}}
+				\toprule
+				&\multicolumn{1}{c}{(1)}&\multicolumn{1}{c}{(2)}\\
+				&\multicolumn{1}{c}{Wage}&\multicolumn{1}{c}{Wage}\\
+				\midrule
+				\hspace{-2mm} \textit{Age}	\\
+				25 to 29            &    0.096\sym{***}&    0.094\sym{***}\\
+				&  (0.002)         &  (0.002)         \\
+				30 to 34            &    0.169\sym{***}&    0.168\sym{***}\\
+				&  (0.002)         &  (0.002)         \\
+				35 to 39            &    0.210\sym{***}&    0.209\sym{***}\\
+				&  (0.002)         &  (0.002)         \\
+				40 to 44            &    0.223\sym{***}&    0.221\sym{***}\\
+				&  (0.003)         &  (0.003)         \\
+				45 to 49            &    0.219\sym{***}&    0.214\sym{***}\\
+				&  (0.003)         &  (0.003)         \\
+				50 to 54            &    0.219\sym{***}&    0.213\sym{***}\\
+				&  (0.003)         &  (0.003)         \\
+				55 to 59            &    0.199\sym{***}&    0.195\sym{***}\\
+				&  (0.005)         &  (0.005)         \\
+				\hspace{-2mm} \textit{Years of Education}	\\
+				6-8                 &    0.071\sym{***}&    0.070\sym{***}\\
+				&  (0.002)         &  (0.002)         \\
+				9-12                &    0.175\sym{***}&    0.155\sym{***}\\
+				&  (0.002)         &  (0.002)         \\
+				13+                 &    0.534\sym{***}&    0.564\sym{***}\\
+				&  (0.002)         &  (0.003)         \\
+				Sector(Public=1)       &    0.283\sym{***}&    0.280\sym{***}\\
+				&  (0.002)         &  (0.004)         \\
+				\hspace{-2mm} \textit{Education-Sector Interaction}	\\
+				6-8 $\times$ Public Sector&                  &    0.005         \\
+				&                  &  (0.005)         \\
+				
+				9-12 $\times$ Public Sector&                  &    0.082\sym{***}\\
+				&                  &  (0.004)         \\
+				
+				13+ $\times$ Public Sector&                  &   -0.048\sym{***}\\
+				&                  &  (0.005)         \\
+				Gender(Female=1)     &   -0.134\sym{***}&   -0.134\sym{***}\\
+				&  (0.001)         &  (0.001)         \\
+				Tenure             &    0.009\sym{***}&    0.009\sym{***}\\
+				&  (0.000)         &  (0.000)         \\
+				\midrule
+				Year Effects        &         Yes         &         Yes         \\
+				District Effects        &         Yes         &         Yes         \\
+				N                   &  336484         &  336484       \\
+				\bottomrule
+				\multicolumn{3}{l}{\footnotesize Note: Numbers in parantheses are standard errors. * for $p<.05$, ** for $p<.01$, and *** for $p<.001$.}\\
+	\end{tabular}}}
+\end{table}
+
+\begin{table}[H]
+\label{tablea2}
+\centering
+	\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+	\caption{OLS Estimates for Wage Based on Education and Sector}
+	{\scriptsize\renewcommand{\arraystretch}{1}
+		\resizebox{1\textwidth}{!}{%
+			\begin{tabular}{l*{6}{c}}
+				\toprule
+				&\multicolumn{3}{c}{Private Sector}&\multicolumn{3}{c}{Public Sector}\\ \cmidrule(l{2pt}r{2pt}){2-4} \cmidrule(l{2pt}r{2pt}){5-7}
+				&\multicolumn{1}{c}{Primary}&\multicolumn{1}{c}{High School}&\multicolumn{1}{c}{University}&\multicolumn{1}{c}{Primary}&\multicolumn{1}{c}{High School}&\multicolumn{1}{c}{University}\\
+				\midrule
+				\hspace{-2mm} \textit{Age}	\\
+				25 to 29            &    0.037\sym{***}&    0.064\sym{***}&    0.219\sym{***}&    0.020\sym{***}&    0.052\sym{***}&    0.238\sym{***}\\
+				&  (0.003)         &  (0.004)         &  (0.007)         &  (0.005)         &  (0.006)         &  (0.007)         \\
+				30 to 34            &    0.056\sym{***}&    0.123\sym{***}&    0.376\sym{***}&    0.026\sym{***}&    0.110\sym{***}&    0.358\sym{***}\\
+				&  (0.003)         &  (0.004)         &  (0.007)         &  (0.005)         &  (0.006)         &  (0.007)         \\
+				35 to 39            &    0.065\sym{***}&    0.176\sym{***}&    0.493\sym{***}&    0.015\sym{**} &    0.123\sym{***}&    0.425\sym{***}\\
+				&  (0.003)         &  (0.004)         &  (0.008)         &  (0.005)         &  (0.008)         &  (0.009)         \\
+				40 to 44            &    0.073\sym{***}&    0.198\sym{***}&    0.536\sym{***}&    0.010\sym{*}  &    0.089\sym{***}&    0.469\sym{***}\\
+				&  (0.003)         &  (0.005)         &  (0.009)         &  (0.005)         &  (0.009)         &  (0.011)         \\
+				45 to 49            &    0.084\sym{***}&    0.160\sym{***}&    0.531\sym{***}&    0.002         &    0.049\sym{***}&    0.475\sym{***}\\
+				&  (0.003)         &  (0.006)         &  (0.010)         &  (0.006)         &  (0.012)         &  (0.014)         \\
+				50 to 54            &    0.085\sym{***}&    0.152\sym{***}&    0.526\sym{***}&    0.008         &    0.069\sym{***}&    0.452\sym{***}\\
+				&  (0.004)         &  (0.007)         &  (0.012)         &  (0.008)         &  (0.021)         &  (0.016)         \\
+				55 to 59            &    0.084\sym{***}&    0.109\sym{***}&    0.496\sym{***}&    0.030\sym{*}  &    0.134\sym{**} &    0.400\sym{***}\\
+				&  (0.006)         &  (0.011)         &  (0.014)         &  (0.013)         &  (0.045)         &  (0.024)         \\
+				Sector(Public=1)       &    0.320\sym{***}&    0.342\sym{***}&    0.250\sym{***}&    0.235\sym{***}&    0.301\sym{***}&    0.226\sym{***}\\
+				&  (0.003)         &  (0.004)         &  (0.005)         &  (0.012)         &  (0.007)         &  (0.005)         \\
+				Area(Urban=1)           &    0.017\sym{***}&    0.038\sym{***}&    0.064\sym{***}&    0.007         &    0.031\sym{***}&    0.031\sym{***}\\
+				&  (0.002)         &  (0.003)         &  (0.005)         &  (0.004)         &  (0.007)         &  (0.007)         \\
+				Tenure              &    0.007\sym{***}&    0.014\sym{***}&    0.002\sym{***}&    0.009\sym{***}&    0.016\sym{***}&    0.005\sym{***}\\
+				&  (0.000)         &  (0.000)         &  (0.000)         &  (0.000)         &  (0.000)         &  (0.000)         \\
+				\midrule
+				Year Effects        &       Yes           &          Yes        &       Yes           &          Yes        &           Yes       &      Yes            \\
+				District Effects        &       Yes           &          Yes        &       Yes           &          Yes        &           Yes       &      Yes            \\
+				N                   &  125210         &  73428         &  66504         &  16083         &  18825         &  3871         \\
+				\bottomrule
+				\multicolumn{7}{l}{\footnotesize Note: Numbers in parantheses are standard errors. * for $p<.05$, ** for $p<.01$, and *** for $p<.001$.}\\
+	\end{tabular}}}
+\end{table}
+\fi 
+
+\pagebreak
+
+\renewcommand{\thefigure}{A\arabic{figure}} 
+\setcounter{figure}{0}   
+
+\begin{center}
+	\label{AppendixA}
+	\textsc{\large{APPENDIX-A: Age-Period-Cohort (APC) Analysis}}
+\end{center}
+
+
+In order to unveil the role of time-varying components in the life-cycle income analysis, one needs to explore age, period and cohort effects. Age effects are variations linked to social processes of aging specific to individuals, but orthogonal to time periods and birth cohorts. Period effects are the sum of all external factors that equally influence all age groups at a certain year.\footnote{Examples of social, economic and environmental factors can be wars, natural disasters, and crises.} Finally, cohort effects result from the unique experience of each cohort as time goes by. Age-Period-Cohort (APC) analysis allows us to disentangle the independent effects of these factors and to estimate the effects of age, period and cohort effects separately.
+
+\hyperref[b-figure1]{Figure B1} and \hyperref[b-figure2]{Figure B2} are useful for providing insights on temporal patterns. Since the shape of the birth cohort curve is affected both by varying age effects and by period effects, they do not provide an accurate quantitative evaluation of the sources of change. Each graph describes only the variation in the labor income that can be attributed to factors associated with age or year. From \hyperref[b-figure1]{Figure B1} we expect to see a positive cohort effect for younger generations because in a particular age group, younger cohorts earn more. However, the year effect might also account for this difference. Thus, there is a need for statistical regression modeling to capture how these three effects work simultaneously.
+
+\begin{figure}[htb]
+	\label{a-figure1}
+	\centering
+	\includegraphics[width=0.65\textwidth]{figure_a1.pdf}
+	\caption{Labor income over life-cycle by birth-cohort}
+\end{figure}
+
+\begin{figure}[htb]
+	\label{a-figure2}
+	\centering
+	\includegraphics[width=0.65\textwidth]{figure_a2.pdf}
+	\caption{Labor income over life-cycle by time periods}
+\end{figure}
+The main impediment to estimate the independent effect of age, period and cohort is the identification problem resulting from these three effects being perfectly collinear (cohort=year-age), i.e. given any two of them, one can precisely determine the third one. 
+
+\[W_{ij}=\mu+\alpha_i+\beta_j+\gamma_k+\epsilon_{ij} \tag{3} \]
+where $W_{ij}$ denotes the observed mean labor income values for the \textit{i}th age group for i=20,...,60 at the \textit{j}th year for j=2002,...,2014. $\mu$ stands for the intercept or adjusted mean labor income, $\alpha_i$ is the coefficient for the \textit{i}th age group, $\beta_j$ is the coefficient for the \textit{j}th year, $\gamma_k$ is the coefficient for the \textit{k}th cohort for k=1942,...,1995 and $\epsilon_{ij}$ is of the white noise form.
+
+After re-parametrization as follows,
+\[\sum_i \alpha_i = \sum_j \beta_j = \sum_k \gamma_k = 0 \tag{4} \]
+the model (3) can be written in the following matrix form:
+\[Y=Xb+\epsilon \tag{5} \]
+where $Y$ is a vector of mean labor income values, $X$ is the design matrix consisting of dummy variable column vectors (\citealp{Yang}) and $\epsilon$ is a vector of random errors with mean zero. Parameter \textit{b} is defined as follows:
+\[b=(\mu, \alpha_{20}, ..., \alpha_{59}, \beta_{2002}, ..., \beta_{2013}, \gamma_{1942}, ..., \gamma_{1992})^T \tag{6} \]
+
+It is important to note that $\alpha_{60}, \beta_{2014}$ and $\gamma_{1993}$ are excluded from (6) so that constraint (4) can be satisfied. The identification problem is clear when we reformulate (5):
+\[\hat{b}=(X^T X)^{-1} X^T Y \tag{7} \]
+Due to perfect multicollinearity of age, period and cohort, the design matrix $X$ is one less than full-column rank. Since the inverse of this singular matrix does not exist, it is not possible to estimate age, period or cohort effects without any further restrictions or constraints. That is why the main purpose is to break the linear dependency between these three effects. There are many solutions\footnote{Reduced two-factor models, constraint generalized linear models, non-linear transformation, and proxy variables are some of the solutions.} to the identification problem, but in this paper, we will consider the most recent technique, the intrinsic estimator (\citealp{Yang2}).
+
+The parameter space of the unconstrained model (5) can be decomposed into two orthogonal linear subspaces and formalized as follows:
+\[b=b_0+sB_0 \tag{8} \]
+where $b_0=P_{proj}b$ is the projection of the b to nonnull space of X. $B_0$ is a unique eigenvector and depends only on matrix $X$, which is determined by the number of age groups and periods. The intrinsic estimator imposes a constraint on the geometric orientation of the parameter b: the eigenvector $B_0$ in the null space of X has no influence on the parameter $b_0$. Since $B_0$ does not depend on observed values, it is a sensible constraint.
+\[B=(I-B_0 B_0^T)\hat{b} \tag{9} \]
+We first estimate $\hat{b}$ of model (4) and project $\hat{b}$ on the intrinsic estimator \textit{B} by removing the component in the $B_0$ direction (\citealp{Yang2}).
+\[X\hat{b}=X(B+tB_0)=XB+0=XB \tag{10} \]
+In short, intrinsic estimator allows us to estimate the projection of the unconstrained vector on the nonnull space of the matrix X by removing the influence of null space.\footnote{We use the $apc\_ie$ command in \texttt{STATA} to estimate age, period and cohort effects.}
+
+\begin{figure}[htb]
+	\label{a-figure3}
+	\centering
+	\begin{subfigure}[b]{0.48\textwidth}
+		\includegraphics[width=\textwidth]{figure_a3a.pdf}
+		\caption{Age Effects}
+	\end{subfigure}
+	~
+	\begin{subfigure}[b]{0.48\textwidth}
+		\includegraphics[width=\textwidth]{figure_a3b.pdf}
+		\caption{Period Effects}
+	\end{subfigure}    
+	\caption{Effect Coefficients}
+\end{figure}
+
+For robustness purposes, we use the conventional approach to APC models, i.e. the coefficient constraints approach. As the identifying constraint on the parameter vector \textit{b} in equation (6), the equality of the effect coefficients of the first two periods is imposed as the only constraint that makes the matrix $(X^T X)$ in equation (7) non-singular and allows the estimation of the effects separately. The results are consistent with the outcomes of the intrinsic estimator approach.\footnote{However, changing the constraint can produce widely different estimates for the effects.}
+
+\begin{figure}[htb]
+	\label{a-figure4}
+	\centering
+	\includegraphics[width=0.45\textwidth]{figure_a4.pdf}
+	\caption{Cohort Effects}
+\end{figure}
+
+The age effects are consistent with our findings: the labor income is increasing rapidly until age 35 and stays nearly the same, with small oscillations until age 60 for the working population. At the same time, we observe a monotonic increase for the period effects in \hyperref[a-figure3]{Figure A3}. Since the Turkish economy is constantly growing (with the exception of the year 2009), the year effect on labor income increases over time. Finally, as shown in \hyperref[a-figure4]{Figure A4}, the cohort effect shows an increasing trend, where some cycles are without any particular path. Since the share of university and high school graduates in the population increases with younger cohorts, we expect to see a higher cohort effect for younger cohorts. That is consistent with the data shown \hyperref[a-figure1]{Figure A1}, because at a particular age, younger cohorts earn more than older ones. The minor fall at the right end of the graph is due to the cohorts that are still in the education process. Similarly, the increasing period effect is consistent with the data in  \hyperref[a-figure2]{Figure A2} because the real labor income increases over the years due to positive GDP growth.
+
+\pagebreak
+
+
+\renewcommand{\thefigure}{B\arabic{figure}} 
+\setcounter{figure}{0}   
+%\iffalse
+
+\begin{center}
+	\label{AppendixB}
+	\textsc{\large{APPENDIX-B: Variance-to-Mean Income Ratio over Age}}
+\end{center}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.65\textwidth]{figure_c1.pdf}
+	\caption{Full sample}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.65\textwidth]{figure_c2.pdf}
+	\caption{Labor income by education}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\begin{subfigure}[b]{0.48\textwidth}
+		\includegraphics[width=\textwidth]{figure_c4a.pdf}
+		\caption{Private sector}
+	\end{subfigure}
+	~
+	\begin{subfigure}[b]{0.48\textwidth}
+		\includegraphics[width=\textwidth]{figure_c4b.pdf}
+		\caption{Public sector}
+	\end{subfigure}    
+	\caption{Variance-to-Mean Income Ratio}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\begin{subfigure}[b]{0.3\textwidth}
+		\includegraphics[width=\textwidth]{figure_c9a.pdf}
+		\caption{Primary school}
+	\end{subfigure}
+	~
+	\begin{subfigure}[b]{0.3\textwidth}
+		\includegraphics[width=\textwidth]{figure_c9b.pdf}
+		\caption{High school}
+	\end{subfigure}
+	~
+	\begin{subfigure}[b]{0.3\textwidth}
+		\includegraphics[width=\textwidth]{figure_c9c.pdf}
+		\caption{University}
+	\end{subfigure}        
+	\caption{Variance-to-Mean Income Ratio (Private sector)}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\begin{subfigure}[b]{0.3\textwidth}
+		\includegraphics[width=\textwidth]{figure_c9a_pub.pdf}
+		\caption{Primary school}
+	\end{subfigure}
+	~
+	\begin{subfigure}[b]{0.3\textwidth}
+		\includegraphics[width=\textwidth]{figure_c9b_pub.pdf}
+		\caption{High school}
+	\end{subfigure}
+	~
+	\begin{subfigure}[b]{0.3\textwidth}
+		\includegraphics[width=\textwidth]{figure_c9c_pub.pdf}
+		\caption{University}
+	\end{subfigure}        
+	\caption{Variance-to-Mean Income Ratio (Public sector)}
+\end{figure}
+
+\pagebreak
+
+\renewcommand{\thefigure}{C\arabic{figure}} 
+\setcounter{figure}{0}   
+
+\begin{center}
+	\label{AppendixC}
+	\textsc{\large{APPENDIX-C: Graphs on Marginal Age Effect}}
+\end{center}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.65\textwidth]{figure_age_d0.pdf}
+	\caption{Marginal age effect}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.65\textwidth]{figure_age_d1.pdf}
+	\caption{Marginal age effect by gender}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.65\textwidth]{figure_age_d2.pdf}
+	\caption{Marginal age effect by education and gender}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.65\textwidth]{figure_age_d3.pdf}
+	\caption{Marginal age effect by education and the public versus private sector employment}
+\end{figure}
+
+\pagebreak
+
+\begin{center}
+	\label{AppendixD}
+	\textsc{\large{APPENDIX-D: Pseudo-Panel Method}}
+\end{center}
+
+
+
+The pseudo-panel method has several advantages over standard genuine panel data estimations. In the standard genuine panel data analysis, the main concern is the measurement error. The pseudo-panel approach reduces measurement error bias due to the aggregation of individuals into cohorts. Yet, the bias and efficiency trade-off is also critical: increasing cohort size decreases measurement error and bias, but it also decreases the number of cohorts and efficiency. We optimally define cohorts considering with this trade-off in mind.
+
+The genuine panel data are subject to attrition and non-response bias, and that data spans short time periods such as 3 or 4 years for the Turkish data. On the other hand, pseudo-panel data tends to suffer less from attrition and non-response bias, because each individual is observed only once. The data is often larger, both in terms of the number of individuals and the time period it spans due to simply being repeated cross-sectional data (\citealp{Verbeek2}). Pseudo-panel data may consist of systematic heteroscedasticity via aggregation. To prevent associated estimation errors, following \cite{Gardes}, we weight each observation by a heteroscedasticity factor that is a function of cell size. Arguably, there are downsides of the pseudo-panel approach as well, such as the loss of individual information due to aggregation, but for our purposes and data in hand, this technique is one of the best possible empirical approaches, which is also widely accepted in the literature.
+
+Theoretically, the cohort size needs to go infinity in order to be able to treat pseudo-panel data as though they are genuine panels, so that conventional methods like fixed-effects estimator can be employed (\citealp{Inoue}), which is why the cohort size should be sufficiently large. More than one hundred individuals in each cohort is suggested by \cite{Verbeek} to reduce the measurement error bias to a negligible degree. Since measurement error becomes negligible only when cohort sizes are large (\citealp{Moffitt}) and HBS data is not large enough for Turkey, the minimum cohort size is set at 50, following \cite{Ziegelhofer} Monte Carlo Simulation outcomes. Ziegelhofer claims that the increasing bias resulting from decreasing the limit from 100 to 50 is not a significant amount for the estimation. At the same time, the number of total observations has to be large enough so that statistical efficiency can be obtained, which is 512 for our pseudo-panel data. That is to say, there is an obvious trade-off between cohort size and the number of cohorts (\citealp{Verbeek2}). The larger the number of cohorts, the smaller is the cohort size, which leads to better estimation efficiency but higher measurement error. That is why we have applied some variations in cohort forming such as excluding both the public and the private sectors, but the results do not change much.
+
+For each cohort and each year, we calculate the mean of log income. Our synthetic data includes 59 cohorts, 13 time periods and an average cohort size of 158. There are 512 observations, which is less than 59x13, because the pseudo-panel is not balanced owing to an insufficient number of observations for particular groups in some years. If only one year of data exists for a cohort, we exclude this cohort because it lacks the panel property.
+
+\pagebreak
+
+\begin{center}
+	\label{AppendixE}
+	\textsc{\large{APPENDIX-E: Descriptive Distributional Statistics}}
+\end{center}
+
+The sample includes 20-59 year-old individuals due to the limited number of observations beyond this range. The sample size is 86,666. The data covers the period 2002-2014. We convert nominal labor income into real units by deflating via the Turkish consumer price index (CPI), for which we use the base year as 2014; and workers who earn below the half of minimum wage are excluded.
+
+There is no sector variable from 2012 to 2014 in the data, so there are 20,566 missing values for the sector. Therefore, for some analyses the sample size is restricted to 66,100 observations.
+
+\renewcommand{\thetable}{E\arabic{table}} 
+\setcounter{table}{0}  
+
+\begin{table}[htbp]
+\label{tablee1}
+  \centering
+  \caption{Descriptive Distributional Statistics}
+\scalebox{0.51}{
+%\begin{footnotesize}
+    \begin{tabular}{|l|rrr|rrr|rrr|rrr|}
+    \hline
+    \multicolumn{13}{|c|}{Full Sample (2002-2014)} \\
+    \hline
+          & \multicolumn{3}{c|}{Primary School} & \multicolumn{3}{c|}{High School} & \multicolumn{3}{c|}{University} & \multicolumn{3}{c|}{All  Categories} \\
+    \hline
+          & Male  & Female & Total & Male  & Female & Total & Male  & Female & Total & Male  & Female & Total \\ \hline
+    Observations& 38904 & 5899  & 44803 & 18366 & 4491  & 22857 & 12254 & 6752  & 19006 & 69524 & 17142 & 86666 \\
+    Frequency& 44.89\% & 6.81\% & 51.70\% & 21.19\% & 5.18\% & 26.37\% & 14.13\% & 7.80\% & 21.93\% &  80.22\% & 19.78\% & 100.00\% \\
+    \hline
+    \multicolumn{13}{|c|}{Private Sector (2002-2011)} \\
+    \hline
+          & \multicolumn{3}{c|}{Primary School} & \multicolumn{3}{c|}{High School} & \multicolumn{3}{c|}{University} & \multicolumn{3}{c|}{All Categories} \\
+    \hline
+          & Male  & Female & Total & Male  & Female & Total & Male  & Female & Total & Male  & Female & Total \\ \hline
+    Observations& 26690 & 3893  & 30583 & 9749  & 2466  & 12215 & 3243  & 1578  & 4821  & 39682 & 7937  & 47619 \\
+    Frequency& 56.05\% & 8.17\% & 64.22\% & 20.47\% & 5.18\% & 25.65\% & 6.81\% & 3.31\% & 10.12\% & 83.33\% & 16.67\% & 100.00\% \\
+    \hline
+    \multicolumn{13}{|c|}{Public Sector (2002-2011)} \\
+    \hline
+          & \multicolumn{3}{c|}{Primary School} & \multicolumn{3}{c|}{High School} & \multicolumn{3}{c|}{University} & \multicolumn{3}{c|}{All Categories} \\
+    \hline
+          & Male  & Female & Total & Male  & Female & Total & Male  & Female & Total & Male  & Female & Total \\ \hline
+    Observations& 4339  & 225   & 4564  & 4731  & 949   & 5680  & 5378  & 2859  & 8237  & 14448 & 4033  & 18481 \\
+    Frequency& 22.47\% & 1.21\% & 24.70\% & 25.60\% & 5.13\% & 30.73\% & 29.10\% & 15.47\% & 44.57\% & 78.18\% & 21.82\% & 100.00\% \\
+    \hline
+    \end{tabular}%
+%\end{footnotesize} 
+}
+  \label{descriptivetable}%
+\end{table}%
+
+\begin{table}[htbp]
+	\label{tablee2}
+	\centering
+	\caption{Descriptive Distributional Statistics}
+	\scalebox{0.51}{
+		%\begin{footnotesize}
+		\begin{tabular}{|l|rr|rrr|r|}
+			\hline
+			{} & \multicolumn{2}{c|}{Gender} & \multicolumn{3}{c|}{Education} & {} \\
+			\hline
+			 		& Male  & Female & Primary & High School  & University & All \\ \hline
+			Private & 83.33\% & 16.67\%  & 64.22\% & 25.65\% & 10.12\%  & 72.04\% \\
+			Public & 78.18\% & 21.82\% & 23.84\% & 30.87\% & 45.26\% & 27.96\% \\ \hline
+			Full-Sample & 81.89\% & 18.11\% & 53.17\% & 27.07\% & 19.75\% & 100.00\% \\
+    	\hline
+\end{tabular}%
+%\end{footnotesize} 
+}
+\label{descriptivetable}%
+\end{table}%
+	
+\end{document}
