@@ -28,10 +28,10 @@
 \ead{rsk@ravshansk.com}
 \author{Tolga Umut Kuzubaş\corref{cor2}}
 \ead{umutkuzubas@gmail.com}
-\author{Burak Saltoğlu\corref{cor2}}
+\author{Burak Saltoğlu\corref{cor3}}
 \ead{burak.saltoglu@gmail.com}
 
-\cortext[cor1]{Corresponding author}
+\cortext[cor2]{Corresponding author}
 \address{Boğaziçi University, Department of Economics, Natuk Birkan Building, 34342 Bebek, Istanbul, Turkey}
 
 
@@ -116,79 +116,32 @@ Finally, \citet{ascheberg} illustrated the existence of long-term cointegration 
 
 In this paper, we calculate the wealth accumulated from lifetime investments given by all the strategies above and suggested by current Turkish banks. We benchmark the resulting welfare for heterogeneous agents in Turkey with varying sectors, levels of education and risk-aversion. We conclude with the separate investment advice for all types of households mentioned above.
 
-The remainder of the paper is organized as follows: Section \ref{model} presents the theoretical framework we will use in our analysis. Section \ref{data} contains detailed information about our data sources, parameter calibration and solves for the optimal investment strategies. Section \ref{welfare} provides the welfare benchmarking of every investment option for every agent and Section \ref{conclusion} concludes.
+The remainder of the paper is organized as follows: Section \ref{model} presents the theoretical framework we will use in our analysis. Section \ref{data} contains detailed information about our data sources, parameter calibration and solves for the optimal investment strategies. Section \ref{welfare} does the welfare benchmarking of every investment option for every agent, and Section \ref{conclusion} concludes.
 
 % THEORETICAL FRAMEWORK 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Theoretical framework}
 \label{model}
-\subsection{Labor income process}
 
-We model the labor income process as a function of individiual characteristics plus aggregate and idiosyncratic shocks for working people, and as the percentage $\lambda$ of the last received wage for the retired. This is summarized in Cocco et al. (2005) as follows:
+\subsection{House prices, stock prices and labor income series}
+In accordance with \citet{ccgm} and \citet{olear} we model the labor income process as a function of individiual characteristics $f(t, Z_{it})$ plus idiosyncratic shocks $v_{it}$. Upon reaching the retirement age $T$, an individual receives a certain percentage $\lambda$ of his/her last wage:
 
-\begin{center}
-	$\log(Y_{it}) =
-		\begin{cases}
-			f(t,Z_{it}) + v_{it} + \epsilon_{it}, & t \leq T \\
-			log(\lambda) + f(T, Z_{iT}) + v_{iT}, & t > T
-		\end{cases}
-	$
-\end{center}
-
-where $T$ is the retirement age and $f(t, Z_{it})$ is the log-wage regression outcome for individual $i$ at time $t$. The error terms are decomposed as:
-
-\begin{center}
-	$v_{it} = v_{i,t-1} + u_{it}$,\\
-	$u_{it} = \xi_t + \omega_{it}$
-\end{center}
-
-and distributed as:
-
-\begin{center}
-	$u_{i} \sim N(0, \sigma^2_u)$,\\
-	$\xi \sim N(0,\sigma^2_{\xi})$,\\
-	$\omega_{i} \sim N(0, \sigma^2_{\omega})$.
-\end{center}
-
-We use Olear's (2016) approach (Appendix B) to transform the main equation into the following:
-
-\begin{center}
-	$Y_{i,t+1} = 
+\begin{equation}
+	Y_{i,t+1} = 
 	\begin{cases}
-		Y_{it} (1 + g_{i,t+1} + \xi_t + \omega_{it}), & t \leq T \\
-		\lambda (1 + f(T, Z_{iT}) + v_{iT}), & t > T
+		Y_{it} (1 + \Delta f(t+1,Z_{i,t+1}) + v_{it}), 	& t \leq T \\
+		\lambda (1 + f(T, Z_{iT}) + v_{iT}), 			& t > T
 	\end{cases}	
-	$
-\end{center}
+\end{equation}
 
-where $g_{i,t+1} = f(t+1, Z_{i,t+1}) - f(t, Z_{it})$, $\xi$ is the aggregate shock and $\omega_{i}$ is idiosyncratic shock.
+We model house prices and stock prices as time series satisfying the discrete version of \citet{ascheberg}'s stock, housing and labor income correlation structure, mentioned in \ref{ascheberg}:
 
 
-\subsubsection{Correlations}
+\subsection{Calibration}
 
-To derive the above equation, we must construct the aggregate labor income shock $\xi$. Following the Approach of Ascheberg et al. (2013) we want labor income series to be correlated with both stock series and housing series. To do that we first create three uncorrelated standard normally distributed random series $\epsilon_{st}$, $\epsilon_{ht}$, $\epsilon_{yt}$ and multiply them by the Cholesky decomposition $Q$ of the correlation matrix $R$, i.e. $R = QQ'$, where:
+We calibrate the above parameters using data obtained from the repeated cross-sectional study by \citet{tuik}. In line with \citet{aktug} we aggregate these studies to obtain a pseudo-panel, which we will use to summarize labor income dynamics.
 
-\begin{center}
-	$R = \begin{bmatrix}
-					1 & \rho_{sh} & \rho_{sy} \\
-					\rho_{hs} & 1 & \rho_{hy} \\
-					\rho_{ys} & \rho_{yh} & 1
-			\end{bmatrix}
-	$
-\end{center}
-
-Stock, housing and labor income series then take the form of expected rate of return plus the volatility multiplied by the modified error terms. For details please refer to Appendix A:\\
-$\frac{\Delta S_{t+1}}{S_t} = \mu_s + \sigma_s \cdot \epsilon_{st}$\\
-$\frac{\Delta H_{t+1}}{H_t} = \mu_h + \sigma_h \cdot \left(\rho_{hs}\epsilon_{st} + (\sqrt{1-\rho^2_{hs}})\epsilon_{ht}\right)$\\
-$\frac{\Delta Y_{t+1}}{Y_t} = \mu_v + \sigma_v \cdot \left(\rho_{ys}\epsilon_{st} + \left(\frac{\rho_{yh} - \rho_{sh}\rho_{sy}}{\sqrt{1-\rho^2_{sh}}}\right)\epsilon_{ht} + \left(\sqrt{1-\rho^2_{ys}-(\frac{\rho_{yh} - \rho_{sh}\rho_{sy}}{\sqrt{1-\rho^2_{sh}}})^2}\right)\epsilon_{vt}\right)$
-
-ff
-\subsubsection{Calibration}
-
-To do our simulation, we must calibrate the above model parameters from the historical labor income data. The calibration is done using data obtained from the repeated cross-sectional study by TUIK (2003-2014). Aggregating these studies results in a pseudo-panel, which we will use to summarize labor income dynamics.
-
-\paragraph{}
 In summarizing the series we will use simple medians and means. In determining the expected values of time-series parameters, we will use simple arithmetic mean and standard deviation.
 
 \paragraph{}
@@ -803,21 +756,81 @@ In this thesis we have reviewed the current state of pension investments in Turk
 \bibitem[Flavin and Yamashita(2002)]{flavin} Flavin M., Yamashita T. (2002). Owner-Occupied Housing and the Composition of the Household Portfolio. \textit{The American Economic Review}, 1, 345-362.
 \bibitem[Munk(2016)]{munk} Munk C. (2016). A Mean-Variance Benchmark for Household Portfolios over the Life Cycle. \textit{Working Papers, Copenhagen Business School, Department of Finance}.
 \bibitem[Ascheberg et al.(2013)]{ascheberg} Ascheberg, M., Kraft, H., Munk, C., Weiss, F. (2013). The Joint Dynamics of Labor Income, Stock Prices, and House Prices and the Implications for Household Decisions. \textit{Working Papers, Dauphine Universite Paris, International Workshop on Pension, Insurance and Saving}.
+\bibitem[Campbell et al.(1999)]{ccgm} Campbell, J., Cocco, J.F., Gomes, F.J., Maenhout, P.J. (1999). Investing Retirement Wealth: A Life-Cycle Model. \textit{Working Papers, National Bureau of Economic Research}, 439-482.
+\bibitem[Olear(2016)]{olear} Olear G.M. (2016). Benefits of Individualized Lifecycle Investing: The Impact of Individual Wage Profile \& Housing Wealth. \textit{Master's Thesis, Tilburg University, School of Economics and Management}.
+\bibitem[TUIK Household Budget Survey(2003-2014)]{tuik} TUIK (2003-2014). Hanehalki Butce Anketi. \textit{Turkish Statistical Institute}.
 
 
 
 \bibitem[Aktug et al.(2017)]{aktug} Aktug, E., Kuzubas, T.U., Torul, O. (2017). An Investigation of Labor Income Profiles in Turkey. \textit{Working Papers, Bogazici University, Department of Economics}.
 \bibitem[Arts et al.(2016)]{arts} Arts, J., Ponds, E. (2016). The Need for Flexible Take-ups of Home Equity and Pension Wealth in Retirement. \textit{Working Papers, Tilburg University}.
-\bibitem[Campbell et al.(2001)]{ccgm} Campbell, J., Cocco, J.F., Gomes, F.J., Maenhout, P.J. (2001). Investing Retirement Wealth: A Life-Cycle Model. \textit{Working Papers, National Bureau of Economic Research}, 439-482.
 \bibitem[Campbell and Viceira(2002)]{camvic} Campbell, J.Y., Viceira, L.M. (2002). Strategic Asset Allocation: Portfolio Choice for Long-Term Investors. \textit{Oxford University Press}.
 \bibitem[Iscanoglu-Cekic(2016)]{iscan} Iscanoglu-Cekic, A. (2016). An Optimal Turkish Private Pension Plan with a Guarantee Feature. \textit{MDPI Risks Journal}, 4(19).
 \bibitem[OECD(2018)]{oecd} OECD (2018). Long-term interest rates forecast (indicator). \textit{https://data.oecd.org}
-\bibitem[Olear(2016)]{olear} Olear G.M. (2016). Benefits of Individualized Lifecycle Investing: The Impact of Individual Wage Profile \& Housing Wealth. \textit{Master's Thesis, Tilburg University, School of Economics and Management}.
 \bibitem[Pension Monitoring Center Annual Report (2016)]{egm} Pension Monitoring Center Annual Report (2016). \textit{https://www.egm.org.tr}.
 \bibitem[Torul and Oztunali(2018)]{torul} Torul, O., Oztunali, O. (2018). On Income and Wealth Inequality in Turkey. \textit{Working Papers, Bogazici University, Department of Economics}.
-\bibitem[TUIK Household Budget Survey(2003-2014)]{tuik} TUIK (2003-2014). Hanehalki Butce Anketi. \textit{Turkish Statistical Institute}.
 \end{thebibliography}
 
+% APPENDIX A
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{appendix}
+
+\section{Ascheberg's correlation structure}
+\label{ascheberg}
+
+The structure that returns desired correlation coefficients $\rho_{sy}$, $\rho_{hs}$ and $\rho_{hy}$ is as follows:
+
+\begin{subequations}
+	\begin{equation}
+		\frac{\Delta S_{t+1}}{S_t} = \mu_s + \sigma_s \cdot \epsilon_{st}
+	\end{equation}
+	\begin{equation}
+		\frac{\Delta H_{t+1}}{H_t} = \mu_h + \sigma_h \cdot \left(\rho_{hs}\epsilon_{st} + (\sqrt{1-\rho^2_{hs}})\epsilon_{ht}\right)
+	\end{equation}
+	\begin{equation}
+		\frac{\Delta Y_{t+1}}{Y_t} = \mu_v + \sigma_v \cdot \left(\rho_{ys}\epsilon_{st} + \left(\frac{\rho_{yh} - \rho_{sh}\rho_{sy}}{\sqrt{1-\rho^2_{sh}}}\right)\epsilon_{ht} + \left(\sqrt{1-\rho^2_{ys}-(\frac{\rho_{yh} - \rho_{sh}\rho_{sy}}{\sqrt{1-\rho^2_{sh}}})^2}\right)\epsilon_{vt}\right)
+	\end{equation}
+\end{subequations}
+
+To derive this, let $\Sigma$ be a correlation matrix of a vector $X = (x_1, x_2, ..., x_K)$. Also, let $\Sigma = LL'$ be a Cholesky decomposition of this matrix.
+
+Notice that the variance-covariance matrix of an i.i.d. random vector $\Omega = (\epsilon_1, \epsilon_2, ..., \epsilon_K)$ with variances equal to $1$, is an identity matrix. Thus, the product $L\Omega$ has the same correlation structure as $X$:
+
+\begin{center}
+  $cov(L\Omega) = E[(L\Omega)(L\Omega)'] = E[L\Omega\Omega'L']$,\\
+  $cov(L\Omega) = L \cdot E[\Omega\Omega'] \cdot L' = L \cdot var(\Omega) \cdot L'$,\\
+  $cov(L\Omega) = L\cdot I \cdot L' = LL' = \Sigma$
+\end{center}
+
+The conclusion comes from the fact that the Cholesky decomposition of a correlation matrix $R$:
+
+\begin{center}
+	$R = \begin{bmatrix}
+					1 & \rho_{sh} & \rho_{sy} \\
+					\rho_{hs} & 1 & \rho_{hy} \\
+					\rho_{ys} & \rho_{yh} & 1
+			\end{bmatrix}
+	$
+\end{center}
+
+can be easily calculated to be equal to $Q$:
+
+\begin{center}
+	$Q = \begin{bmatrix}
+					1 & 0 & 0 \\
+					\rho_{hs} & \sqrt{1-\rho^2_{hs}} & 0 \\
+					\rho_{ys} & \frac{\rho_{yh} - \rho_{sh}\rho_{sy}}{\sqrt{1-\rho^2_{sh}}} & \sqrt{1-\rho^2_{ys}-(\frac{\rho_{yh} - \rho_{sh}\rho_{sy}}{\sqrt{1-\rho^2_{sh}}})^2}
+			\end{bmatrix}
+	$
+\end{center}
+
+
+
+
+\end{appendix}
+
+
+
+
 
 \end{document}  
