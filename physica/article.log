@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/Arch Linux) (preloaded format=pdflatex 2018.8.7)  3 NOV 2018 00:09
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/Arch Linux) (preloaded format=pdflatex 2018.8.7)  26 NOV 2018 15:42
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -690,432 +690,256 @@ Package caption Info: End \AtBeginDocument code.
 [1
 
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-<figs/scf.png, id=42, 607.26875pt x 675.52374pt>
-File: figs/scf.png Graphic file (type png)
-<use figs/scf.png>
-Package pdftex.def Info: figs/scf.png  used on input line 94.
-(pdftex.def)             Requested size: 182.18202pt x 202.65868pt.
- [2 <./figs/scf.png>]
-[3] [4]
-<figs/bist.pdf, id=108, 505.89pt x 505.89pt>
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2] [3]
+<figs/bist.pdf, id=100, 505.89pt x 505.89pt>
 File: figs/bist.pdf Graphic file (type pdf)
 <use figs/bist.pdf>
-Package pdftex.def Info: figs/bist.pdf  used on input line 218.
+Package pdftex.def Info: figs/bist.pdf  used on input line 185.
 (pdftex.def)             Requested size: 202.3524pt x 202.3524pt.
 
-Overfull \hbox (8.85164pt too wide) in paragraph at lines 218--219
+Overfull \hbox (8.85164pt too wide) in paragraph at lines 185--186
  [][] 
  []
 
-<figs/reidin.pdf, id=109, 505.89pt x 505.89pt>
+<figs/reidin.pdf, id=101, 505.89pt x 505.89pt>
 File: figs/reidin.pdf Graphic file (type pdf)
 <use figs/reidin.pdf>
-Package pdftex.def Info: figs/reidin.pdf  used on input line 224.
+Package pdftex.def Info: figs/reidin.pdf  used on input line 192.
 (pdftex.def)             Requested size: 202.3524pt x 202.3524pt.
 
-Overfull \hbox (8.85164pt too wide) in paragraph at lines 224--225
+Overfull \hbox (8.85164pt too wide) in paragraph at lines 192--193
  [][] 
  []
 
-<figs/wage2median.pdf, id=110, 505.89pt x 505.89pt>
+<figs/wage2median.pdf, id=107, 505.89pt x 505.89pt>
 File: figs/wage2median.pdf Graphic file (type pdf)
 <use figs/wage2median.pdf>
-Package pdftex.def Info: figs/wage2median.pdf  used on input line 235.
-(pdftex.def)             Requested size: 303.53633pt x 303.53633pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[5 <./figs/bist.pdf> <./figs/reidin.pdf>]
-<figs/survival.pdf, id=130, 505.89pt x 505.89pt>
+Package pdftex.def Info: figs/wage2median.pdf  used on input line 202.
+(pdftex.def)             Requested size: 202.3524pt x 202.3524pt.
+[4 <./figs/bist.pdf> <./figs/reidin.pdf>]
+<figs/survival.pdf, id=143, 505.89pt x 505.89pt>
 File: figs/survival.pdf Graphic file (type pdf)
 <use figs/survival.pdf>
-Package pdftex.def Info: figs/survival.pdf  used on input line 254.
-(pdftex.def)             Requested size: 303.53633pt x 303.53633pt.
+Package pdftex.def Info: figs/survival.pdf  used on input line 226.
+(pdftex.def)             Requested size: 151.76816pt x 151.76816pt.
 
 
-LaTeX Warning: `h' float specifier changed to `ht'.
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[6 <./figs/wage2median.pdf>]
-<figs/wage2educ.pdf, id=147, 505.89pt x 505.89pt>
+[5 <./figs/wage2median.pdf>]
+<figs/wage2educ.pdf, id=170, 505.89pt x 505.89pt>
 File: figs/wage2educ.pdf Graphic file (type pdf)
 <use figs/wage2educ.pdf>
-Package pdftex.def Info: figs/wage2educ.pdf  used on input line 297.
-(pdftex.def)             Requested size: 303.53633pt x 303.53633pt.
+Package pdftex.def Info: figs/wage2educ.pdf  used on input line 272.
+(pdftex.def)             Requested size: 202.3524pt x 202.3524pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[7 <./figs/survival.pdf>]
-<figs/heterwage.pdf, id=163, 505.89pt x 505.89pt>
-File: figs/heterwage.pdf Graphic file (type pdf)
-<use figs/heterwage.pdf>
-Package pdftex.def Info: figs/heterwage.pdf  used on input line 320.
-(pdftex.def)             Requested size: 202.3524pt x 202.3524pt.
-
-Overfull \hbox (8.85164pt too wide) in paragraph at lines 320--321
- [][] 
- []
-
-<figs/heterwageless.pdf, id=164, 505.89pt x 505.89pt>
-File: figs/heterwageless.pdf Graphic file (type pdf)
-<use figs/heterwageless.pdf>
-Package pdftex.def Info: figs/heterwageless.pdf  used on input line 326.
-(pdftex.def)             Requested size: 202.3524pt x 202.3524pt.
-
-Overfull \hbox (8.85164pt too wide) in paragraph at lines 326--327
- [][] 
- []
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[8]
-<figs/wage2sec.pdf, id=174, 505.89pt x 505.89pt>
+[6 <./figs/survival.pdf>]
+<figs/wage2sec.pdf, id=190, 505.89pt x 505.89pt>
 File: figs/wage2sec.pdf Graphic file (type pdf)
 <use figs/wage2sec.pdf>
-Package pdftex.def Info: figs/wage2sec.pdf  used on input line 339.
-(pdftex.def)             Requested size: 303.53633pt x 303.53633pt.
+Package pdftex.def Info: figs/wage2sec.pdf  used on input line 305.
+(pdftex.def)             Requested size: 202.3524pt x 202.3524pt.
 
 
-LaTeX Warning: `h' float specifier changed to `ht'.
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[9 <./figs/wage2educ.pdf>]
-<figs/humancapital.pdf, id=189, 505.89pt x 505.89pt>
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[7 <./figs/wage2educ.pdf>]
+<figs/humancapital.pdf, id=212, 505.89pt x 505.89pt>
 File: figs/humancapital.pdf Graphic file (type pdf)
 <use figs/humancapital.pdf>
-Package pdftex.def Info: figs/humancapital.pdf  used on input line 393.
+Package pdftex.def Info: figs/humancapital.pdf  used on input line 349.
 (pdftex.def)             Requested size: 202.3524pt x 202.3524pt.
 
-Overfull \hbox (8.85164pt too wide) in paragraph at lines 393--394
+Overfull \hbox (8.85164pt too wide) in paragraph at lines 349--350
  [][] 
  []
 
-<figs/fincapital.pdf, id=190, 505.89pt x 505.89pt>
+<figs/fincapital.pdf, id=213, 505.89pt x 505.89pt>
 File: figs/fincapital.pdf Graphic file (type pdf)
 <use figs/fincapital.pdf>
-Package pdftex.def Info: figs/fincapital.pdf  used on input line 399.
+Package pdftex.def Info: figs/fincapital.pdf  used on input line 356.
 (pdftex.def)             Requested size: 202.3524pt x 202.3524pt.
 
-Overfull \hbox (8.85164pt too wide) in paragraph at lines 399--400
+Overfull \hbox (8.85164pt too wide) in paragraph at lines 356--357
  [][] 
  []
 
 
-LaTeX Warning: `h' float specifier changed to `ht'.
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[8 <./figs/wage2sec.pdf>]
+<figs/defaults.pdf, id=236, 505.89pt x 505.89pt>
+File: figs/defaults.pdf Graphic file (type pdf)
+<use figs/defaults.pdf>
+Package pdftex.def Info: figs/defaults.pdf  used on input line 397.
+(pdftex.def)             Requested size: 202.3524pt x 202.3524pt.
 
 
-LaTeX Warning: `h' float specifier changed to `ht'.
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[10 <./figs/heterwage.pdf> <./figs/heterwageless.pdf>]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 438.
+[9 <./figs/humancapital.pdf> <./figs/fincapital.pdf>]
+<figs/individuals15.pdf, id=263, 505.89pt x 505.89pt>
+File: figs/individuals15.pdf Graphic file (type pdf)
+<use figs/individuals15.pdf>
+Package pdftex.def Info: figs/individuals15.pdf  used on input line 411.
+(pdftex.def)             Requested size: 151.76816pt x 151.76816pt.
+<figs/individuals3.pdf, id=264, 505.89pt x 505.89pt>
+File: figs/individuals3.pdf Graphic file (type pdf)
+<use figs/individuals3.pdf>
+Package pdftex.def Info: figs/individuals3.pdf  used on input line 417.
+(pdftex.def)             Requested size: 151.76816pt x 151.76816pt.
+<figs/individuals5.pdf, id=265, 505.89pt x 505.89pt>
+File: figs/individuals5.pdf Graphic file (type pdf)
+<use figs/individuals5.pdf>
+Package pdftex.def Info: figs/individuals5.pdf  used on input line 424.
+(pdftex.def)             Requested size: 151.76816pt x 151.76816pt.
+<figs/individuals10.pdf, id=266, 505.89pt x 505.89pt>
+File: figs/individuals10.pdf Graphic file (type pdf)
+<use figs/individuals10.pdf>
+Package pdftex.def Info: figs/individuals10.pdf  used on input line 430.
+(pdftex.def)             Requested size: 151.76816pt x 151.76816pt.
+ [10 <./figs/defaults.pdf> <./figs/individuals15.pdf> <./figs/individuals3.pdf>
+]
+<figs/smunkhouse15.pdf, id=297, 505.89pt x 505.89pt>
+File: figs/smunkhouse15.pdf Graphic file (type pdf)
+<use figs/smunkhouse15.pdf>
+Package pdftex.def Info: figs/smunkhouse15.pdf  used on input line 444.
+(pdftex.def)             Requested size: 151.76816pt x 151.76816pt.
+<figs/hmunkhouse15.pdf, id=298, 505.89pt x 505.89pt>
+File: figs/hmunkhouse15.pdf Graphic file (type pdf)
+<use figs/hmunkhouse15.pdf>
+Package pdftex.def Info: figs/hmunkhouse15.pdf  used on input line 450.
+(pdftex.def)             Requested size: 151.76816pt x 151.76816pt.
+<figs/smunkhouse3.pdf, id=299, 505.89pt x 505.89pt>
+File: figs/smunkhouse3.pdf Graphic file (type pdf)
+<use figs/smunkhouse3.pdf>
+Package pdftex.def Info: figs/smunkhouse3.pdf  used on input line 457.
+(pdftex.def)             Requested size: 151.76816pt x 151.76816pt.
+<figs/hmunkhouse3.pdf, id=300, 505.89pt x 505.89pt>
+File: figs/hmunkhouse3.pdf Graphic file (type pdf)
+<use figs/hmunkhouse3.pdf>
+Package pdftex.def Info: figs/hmunkhouse3.pdf  used on input line 463.
+(pdftex.def)             Requested size: 151.76816pt x 151.76816pt.
+<figs/smunkhouse5.pdf, id=301, 505.89pt x 505.89pt>
+File: figs/smunkhouse5.pdf Graphic file (type pdf)
+<use figs/smunkhouse5.pdf>
+Package pdftex.def Info: figs/smunkhouse5.pdf  used on input line 470.
+(pdftex.def)             Requested size: 151.76816pt x 151.76816pt.
+<figs/hmunkhouse5.pdf, id=302, 505.89pt x 505.89pt>
+File: figs/hmunkhouse5.pdf Graphic file (type pdf)
+<use figs/hmunkhouse5.pdf>
+Package pdftex.def Info: figs/hmunkhouse5.pdf  used on input line 476.
+(pdftex.def)             Requested size: 151.76816pt x 151.76816pt.
+ [11 <./figs/individuals5.pdf> <./figs/individuals10.pdf> <./figs/smunkhouse15.
+pdf> <./figs/hmunkhouse15.pdf>]
+<figs/smunkhouse10.pdf, id=331, 505.89pt x 505.89pt>
+File: figs/smunkhouse10.pdf Graphic file (type pdf)
+<use figs/smunkhouse10.pdf>
+Package pdftex.def Info: figs/smunkhouse10.pdf  used on input line 483.
+(pdftex.def)             Requested size: 151.76816pt x 151.76816pt.
+<figs/hmunkhouse10.pdf, id=332, 505.89pt x 505.89pt>
+File: figs/hmunkhouse10.pdf Graphic file (type pdf)
+<use figs/hmunkhouse10.pdf>
+Package pdftex.def Info: figs/hmunkhouse10.pdf  used on input line 489.
+(pdftex.def)             Requested size: 151.76816pt x 151.76816pt.
+ [12 <./figs/smunkhouse3.pdf> <./figs/hmunkhouse3.pdf> <./figs/smunkhouse5.pdf>
+ <./figs/hmunkhouse5.pdf>]
 
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 556.
 
 (/usr/share/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 438.
- [11 <./figs/wage2sec.pdf>]
-<figs/defaults.pdf, id=222, 505.89pt x 505.89pt>
-File: figs/defaults.pdf Graphic file (type pdf)
-<use figs/defaults.pdf>
-Package pdftex.def Info: figs/defaults.pdf  used on input line 448.
-(pdftex.def)             Requested size: 303.53633pt x 303.53633pt.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 556.
+ [13 <./figs/smunkhouse10.pdf> <./figs/hmunkhouse10.pdf>] [14] [15] [16] [17] [
+18] [19] [20]
+<figs/bistdiff.pdf, id=430, 505.89pt x 505.89pt>
+File: figs/bistdiff.pdf Graphic file (type pdf)
+<use figs/bistdiff.pdf>
+Package pdftex.def Info: figs/bistdiff.pdf  used on input line 789.
+(pdftex.def)             Requested size: 151.76816pt x 151.76816pt.
+<figs/reidindiff.pdf, id=431, 505.89pt x 505.89pt>
+File: figs/reidindiff.pdf Graphic file (type pdf)
+<use figs/reidindiff.pdf>
+Package pdftex.def Info: figs/reidindiff.pdf  used on input line 814.
+(pdftex.def)             Requested size: 151.76816pt x 151.76816pt.
 
 
-LaTeX Warning: `h' float specifier changed to `ht'.
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<figs/individuals15.pdf, id=223, 505.89pt x 505.89pt>
-File: figs/individuals15.pdf Graphic file (type pdf)
-<use figs/individuals15.pdf>
-Package pdftex.def Info: figs/individuals15.pdf  used on input line 461.
-(pdftex.def)             Requested size: 202.3524pt x 202.3524pt.
+<figs/wagediff.pdf, id=432, 505.89pt x 505.89pt>
+File: figs/wagediff.pdf Graphic file (type pdf)
+<use figs/wagediff.pdf>
+Package pdftex.def Info: figs/wagediff.pdf  used on input line 840.
+(pdftex.def)             Requested size: 151.76816pt x 151.76816pt.
 
-Overfull \hbox (8.85164pt too wide) in paragraph at lines 461--462
- [][] 
- []
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<figs/individuals3.pdf, id=224, 505.89pt x 505.89pt>
-File: figs/individuals3.pdf Graphic file (type pdf)
-<use figs/individuals3.pdf>
-Package pdftex.def Info: figs/individuals3.pdf  used on input line 467.
-(pdftex.def)             Requested size: 202.3524pt x 202.3524pt.
+[21 <./figs/bistdiff.pdf>] [22 <./figs/reidindiff.pdf> <./figs/wagediff.pdf>]
+<figs/heterwage.pdf, id=466, 505.89pt x 505.89pt>
+File: figs/heterwage.pdf Graphic file (type pdf)
+<use figs/heterwage.pdf>
+Package pdftex.def Info: figs/heterwage.pdf  used on input line 877.
+(pdftex.def)             Requested size: 151.76816pt x 151.76816pt.
 
-Overfull \hbox (8.85164pt too wide) in paragraph at lines 467--468
- [][] 
- []
-
-<figs/individuals5.pdf, id=225, 505.89pt x 505.89pt>
-File: figs/individuals5.pdf Graphic file (type pdf)
-<use figs/individuals5.pdf>
-Package pdftex.def Info: figs/individuals5.pdf  used on input line 473.
-(pdftex.def)             Requested size: 202.3524pt x 202.3524pt.
-
-Overfull \hbox (8.85164pt too wide) in paragraph at lines 473--474
- [][] 
- []
-
-<figs/individuals10.pdf, id=226, 505.89pt x 505.89pt>
-File: figs/individuals10.pdf Graphic file (type pdf)
-<use figs/individuals10.pdf>
-Package pdftex.def Info: figs/individuals10.pdf  used on input line 479.
-(pdftex.def)             Requested size: 202.3524pt x 202.3524pt.
-
-Overfull \hbox (8.85164pt too wide) in paragraph at lines 479--480
- [][] 
- []
-
-[12 <./figs/humancapital.pdf> <./figs/fincapital.pdf>] [13 <./figs/defaults.pdf
->] [14 <./figs/individuals15.pdf> <./figs/individuals3.pdf> <./figs/individuals
-5.pdf> <./figs/individuals10.pdf>]
-<figs/smunkhouse15.pdf, id=284, 505.89pt x 505.89pt>
-File: figs/smunkhouse15.pdf Graphic file (type pdf)
-<use figs/smunkhouse15.pdf>
-Package pdftex.def Info: figs/smunkhouse15.pdf  used on input line 502.
-(pdftex.def)             Requested size: 202.3524pt x 202.3524pt.
-
-Overfull \hbox (8.85164pt too wide) in paragraph at lines 502--503
- [][] 
- []
-
-<figs/hmunkhouse15.pdf, id=285, 505.89pt x 505.89pt>
-File: figs/hmunkhouse15.pdf Graphic file (type pdf)
-<use figs/hmunkhouse15.pdf>
-Package pdftex.def Info: figs/hmunkhouse15.pdf  used on input line 508.
-(pdftex.def)             Requested size: 202.3524pt x 202.3524pt.
-
-Overfull \hbox (8.85164pt too wide) in paragraph at lines 508--509
- [][] 
- []
-
-<figs/smunkhouse3.pdf, id=286, 505.89pt x 505.89pt>
-File: figs/smunkhouse3.pdf Graphic file (type pdf)
-<use figs/smunkhouse3.pdf>
-Package pdftex.def Info: figs/smunkhouse3.pdf  used on input line 514.
-(pdftex.def)             Requested size: 202.3524pt x 202.3524pt.
-
-Overfull \hbox (8.85164pt too wide) in paragraph at lines 514--515
- [][] 
- []
-
-<figs/hmunkhouse3.pdf, id=287, 505.89pt x 505.89pt>
-File: figs/hmunkhouse3.pdf Graphic file (type pdf)
-<use figs/hmunkhouse3.pdf>
-Package pdftex.def Info: figs/hmunkhouse3.pdf  used on input line 520.
-(pdftex.def)             Requested size: 202.3524pt x 202.3524pt.
-
-Overfull \hbox (8.85164pt too wide) in paragraph at lines 520--521
- [][] 
- []
-
-<figs/smunkhouse5.pdf, id=288, 505.89pt x 505.89pt>
-File: figs/smunkhouse5.pdf Graphic file (type pdf)
-<use figs/smunkhouse5.pdf>
-Package pdftex.def Info: figs/smunkhouse5.pdf  used on input line 526.
-(pdftex.def)             Requested size: 202.3524pt x 202.3524pt.
-
-Overfull \hbox (8.85164pt too wide) in paragraph at lines 526--527
- [][] 
- []
-
-<figs/hmunkhouse5.pdf, id=289, 505.89pt x 505.89pt>
-File: figs/hmunkhouse5.pdf Graphic file (type pdf)
-<use figs/hmunkhouse5.pdf>
-Package pdftex.def Info: figs/hmunkhouse5.pdf  used on input line 532.
-(pdftex.def)             Requested size: 202.3524pt x 202.3524pt.
-
-Overfull \hbox (8.85164pt too wide) in paragraph at lines 532--533
- [][] 
- []
-
-<figs/smunkhouse10.pdf, id=290, 505.89pt x 505.89pt>
-File: figs/smunkhouse10.pdf Graphic file (type pdf)
-<use figs/smunkhouse10.pdf>
-Package pdftex.def Info: figs/smunkhouse10.pdf  used on input line 539.
-(pdftex.def)             Requested size: 202.3524pt x 202.3524pt.
-
-Overfull \hbox (8.85164pt too wide) in paragraph at lines 539--540
- [][] 
- []
-
-<figs/hmunkhouse10.pdf, id=291, 505.89pt x 505.89pt>
-File: figs/hmunkhouse10.pdf Graphic file (type pdf)
-<use figs/hmunkhouse10.pdf>
-Package pdftex.def Info: figs/hmunkhouse10.pdf  used on input line 545.
-(pdftex.def)             Requested size: 202.3524pt x 202.3524pt.
-
-Overfull \hbox (8.85164pt too wide) in paragraph at lines 545--546
- [][] 
- []
-
-[15]
-Overfull \vbox (103.58064pt too high) has occurred while \output is active []
-
-
-[16 <./figs/smunkhouse15.pdf> <./figs/hmunkhouse15.pdf> <./figs/smunkhouse3.pdf
-> <./figs/hmunkhouse3.pdf> <./figs/smunkhouse5.pdf> <./figs/hmunkhouse5.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 559--560
-
- []
-
-[17 <./figs/smunkhouse10.pdf> <./figs/hmunkhouse10.pdf>] [18]
-*geometry* verbose mode - [ newgeometry ] result:
-* driver: pdftex
-* paper: <default>
-* layout: <same size as paper>
-* layoutoffset:(h,v)=(0.0pt,0.0pt)
-* modes: 
-* h-part:(L,W,R)=(92.14519pt, 430.00462pt, 92.14519pt)
-* v-part:(T,H,B)=(56.9055pt, 681.15898pt, 56.9055pt)
-* \paperwidth=614.295pt
-* \paperheight=794.96999pt
-* \textwidth=430.00462pt
-* \textheight=681.15898pt
-* \oddsidemargin=19.8752pt
-* \evensidemargin=19.8752pt
-* \topmargin=-52.36449pt
-* \headheight=12.0pt
-* \headsep=25.0pt
-* \topskip=10.0pt
-* \footskip=30.0pt
-* \marginparwidth=65.0pt
-* \marginparsep=11.0pt
-* \columnsep=10.0pt
-* \skip\footins=24.0pt
-* \hoffset=0.0pt
-* \voffset=0.0pt
-* \mag=1000
-* \@twocolumnfalse
-* \@twosidefalse
-* \@mparswitchfalse
-* \@reversemarginfalse
-* (1in=72.27pt=25.4mm, 1cm=28.453pt)
-
-
-! Undefined control sequence.
-l.616 \resetgeometry
-                    
-? 
-[19]
-*geometry* verbose mode - [ newgeometry ] result:
-* driver: pdftex
-* paper: <default>
-* layout: <same size as paper>
-* layoutoffset:(h,v)=(0.0pt,0.0pt)
-* modes: 
-* h-part:(L,W,R)=(92.14519pt, 430.00462pt, 92.14519pt)
-* v-part:(T,H,B)=(56.9055pt, 681.15898pt, 56.9055pt)
-* \paperwidth=614.295pt
-* \paperheight=794.96999pt
-* \textwidth=430.00462pt
-* \textheight=681.15898pt
-* \oddsidemargin=19.8752pt
-* \evensidemargin=19.8752pt
-* \topmargin=-52.36449pt
-* \headheight=12.0pt
-* \headsep=25.0pt
-* \topskip=10.0pt
-* \footskip=30.0pt
-* \marginparwidth=65.0pt
-* \marginparsep=11.0pt
-* \columnsep=10.0pt
-* \skip\footins=24.0pt
-* \hoffset=0.0pt
-* \voffset=0.0pt
-* \mag=1000
-* \@twocolumnfalse
-* \@twosidefalse
-* \@mparswitchfalse
-* \@reversemarginfalse
-* (1in=72.27pt=25.4mm, 1cm=28.453pt)
-
-
-! Undefined control sequence.
-l.661 \resetgeometry
-                    
-? 
-[20
-
-
-] [21]
-*geometry* verbose mode - [ newgeometry ] result:
-* driver: pdftex
-* paper: <default>
-* layout: <same size as paper>
-* layoutoffset:(h,v)=(0.0pt,0.0pt)
-* modes: 
-* h-part:(L,W,R)=(92.14519pt, 430.00462pt, 92.14519pt)
-* v-part:(T,H,B)=(56.9055pt, 681.15898pt, 56.9055pt)
-* \paperwidth=614.295pt
-* \paperheight=794.96999pt
-* \textwidth=430.00462pt
-* \textheight=681.15898pt
-* \oddsidemargin=19.8752pt
-* \evensidemargin=19.8752pt
-* \topmargin=-52.36449pt
-* \headheight=12.0pt
-* \headsep=25.0pt
-* \topskip=10.0pt
-* \footskip=30.0pt
-* \marginparwidth=65.0pt
-* \marginparsep=11.0pt
-* \columnsep=10.0pt
-* \skip\footins=24.0pt
-* \hoffset=0.0pt
-* \voffset=0.0pt
-* \mag=1000
-* \@twocolumnfalse
-* \@twosidefalse
-* \@mparswitchfalse
-* \@reversemarginfalse
-* (1in=72.27pt=25.4mm, 1cm=28.453pt)
-
-
-! Undefined control sequence.
-l.723 \resetgeometry
-                    
-? 
-[22
-
-] [23] [24]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 836.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 836.
+[23 <./figs/heterwage.pdf>] [24] [25] [26] [27]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1108.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1108.
  (./article.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 836.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 836.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 836.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1108.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 1108.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1108.
  ) 
 Here is how much of TeX's memory you used:
- 18032 strings out of 492649
- 330506 string characters out of 6135779
- 413251 words of memory out of 5000000
- 21481 multiletter control sequences out of 15000+600000
+ 18088 strings out of 492649
+ 331382 string characters out of 6135779
+ 429650 words of memory out of 5000000
+ 21517 multiletter control sequences out of 15000+600000
  9666 words of font info for 35 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 55i,11n,54p,1575b,642s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/
-texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fon
-ts/type1/public/amsfonts/cmextra/cmex7.pfb></usr/share/texmf-dist/fonts/type1/p
-ublic/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts
-/cm/cmmi5.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb><
-/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texm
-f-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/ty
-pe1/public/amsfonts/cm/cmmi9.pfb></usr/share/texmf-dist/fonts/type1/public/amsf
-onts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.p
-fb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/t
-exmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texmf-dist/fonts/
-type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/ams
-fonts/cm/cmr9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.
-pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/share
-/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texmf-dist/fon
-ts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texmf-dist/fonts/type1/public
-/amsfonts/cm/cmti10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/c
-mti8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb>
-Output written on article.pdf (24 pages, 478860 bytes).
+ 55i,11n,54p,826b,642s stack positions out of 5000i,500n,10000p,200000b,80000s
+pdfTeX warning (dest): name{figure.caption.30} has been referenced but does n
+ot exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{table.caption.18} has been referenced but does not 
+exist, replaced by a fixed one
+
+</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts
+/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmmi5.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmm
+i6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/sh
+are/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/
+fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/share/texmf-dist/fonts/type1/pub
+lic/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm
+/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr
+/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texmf-dist/fonts/type1/pu
+blic/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm
+/cmr9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></us
+r/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/share/texmf-d
+ist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texmf-dist/fonts/type1
+/public/amsfonts/cm/cmsy7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfont
+s/cm/cmsy8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb
+></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb></usr/share/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb>
+Output written on article.pdf (27 pages, 474813 bytes).
 PDF statistics:
- 499 PDF objects out of 1000 (max. 8388607)
- 399 compressed objects within 4 object streams
- 127 named destinations out of 1000 (max. 500000)
- 133 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 606 PDF objects out of 1000 (max. 8388607)
+ 497 compressed objects within 5 object streams
+ 147 named destinations out of 1000 (max. 500000)
+ 138 words of extra memory for PDF output out of 10000 (max. 10000000)
 

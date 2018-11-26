@@ -77,12 +77,12 @@ dev.off()
 
 # FINCAPITAL INVESTMENT DEFAULTS
 
-pdf(file = "Dropbox/research/tex/figs/defaults.pdf")
+pdf(file = "~/Dropbox/research/mathesis/tex/figs/defaults.pdf")
 plot(age, stoage, ylim = c(0.2,1), xlim = c(param_Y,param_R), type="l", col="red", ylab = "stock share")
 lines(age, bodie, type="l", col="orange")
-lines(age, ahl, type="l", col="green")
+lines(age, markowitz, type="l", col="green")
 lines(age, ah0, type="l", col="purple")
-legend(x = "topright", y=0, legend = c("(100-t)%", "(200-2.5t)%", "50%", "30%"), fill = c("red", "orange", "green", "purple"))
+legend(x = "topright", y=0, legend = c("(100-t)%", "Cocco et al.", "Markowitz", "Anadolu Hayat"), fill = c("red", "orange", "green", "purple"))
 dev.off()
 
 # FINCAPITAL MERTON
@@ -91,3 +91,59 @@ dev.off()
 
 # FINCAPTIAL MUNK HOUSING
 
+
+
+
+
+# WAGE EDUC JUST THREE
+pdf(file = "~/Dropbox/research/mathesis/tex/figs/wage2educ.pdf")
+
+tmpsec <- subset(aktug, aktug$educ==2)
+for(satir in 1:nrow(tmpsec)){tmpsec$income[satir] <- tmpsec$income[satir]/cpiann$V2[tmpsec$year[satir]-2002]}
+tmpsec <- aggregate(x=tmpsec, FUN=median, by=list(tmpsec$age))[c("age","income")]
+tmpsec <- subset(tmpsec, tmpsec$age >= 26 & tmpsec$age <= 67)
+plot(tmpsec$age, tmpsec$income, type="l", ylim=c(0, 220), col="green", xlab="age", ylab="real wage")
+
+tmpsec <- subset(aktug, aktug$educ==7)
+for(satir in 1:nrow(tmpsec)){tmpsec$income[satir] <- tmpsec$income[satir]/cpiann$V2[tmpsec$year[satir]-2002]}
+tmpsec <- aggregate(x=tmpsec, FUN=median, by=list(tmpsec$age))[c("age","income")]
+tmpsec <- subset(tmpsec, tmpsec$age >= 25 & tmpsec$age <= 67)
+lines(tmpsec$age, tmpsec$income, col="blue")
+
+tmpsec <- subset(aktug, aktug$educ==10)
+for(satir in 1:nrow(tmpsec)){tmpsec$income[satir] <- tmpsec$income[satir]/cpiann$V2[tmpsec$year[satir]-2002]}
+tmpsec <- aggregate(x=tmpsec, FUN=median, by=list(tmpsec$age))[c("age","income")]
+tmpsec <- subset(tmpsec, tmpsec$age >= 25 & tmpsec$age <= 67)
+lines(tmpsec$age, tmpsec$income, col="red")
+  
+legend(x="topleft", y=0,legend = c("undergraduate", "high school", "no schooling"), fill = c("red", "blue", "green"), lty = c(1,1), cex=1.5)
+dev.off()
+
+
+
+
+pdf(file = "~/Dropbox/research/mathesis/tex/figs/wage2sec.pdf")
+
+tmpsec <- subset(aktug, aktug$sector=="1")
+for(satir in 1:nrow(tmpsec)){tmpsec$income[satir] <- tmpsec$income[satir]/cpiann$V2[tmpsec$year[satir]-2002]}
+tmpsec <- aggregate(x=tmpsec, FUN=median, by=list(tmpsec$year))[c("year","income")]
+plot(tmpsec$year, tmpsec$income, type="l", ylim=c(30,200), col="red", ylab="real wage", xlab="year")
+
+tmpsec <- subset(aktug, aktug$sector=="6")
+for(satir in 1:nrow(tmpsec)){tmpsec$income[satir] <- tmpsec$income[satir]/cpiann$V2[tmpsec$year[satir]-2002]}
+tmpsec <- aggregate(x=tmpsec, FUN=median, by=list(tmpsec$year))[c("year","income")]
+lines(tmpsec$year, tmpsec$income, type="l", col="orange")
+
+tmpsec <- subset(aktug, aktug$sector=="9")
+for(satir in 1:nrow(tmpsec)){tmpsec$income[satir] <- tmpsec$income[satir]/cpiann$V2[tmpsec$year[satir]-2002]}
+tmpsec <- aggregate(x=tmpsec, FUN=median, by=list(tmpsec$year))[c("year","income")]
+lines(tmpsec$year, tmpsec$income, type="l", col="blue")
+
+tmpsec <- subset(aktug, aktug$sector=="12")
+for(satir in 1:nrow(tmpsec)){tmpsec$income[satir] <- tmpsec$income[satir]/cpiann$V2[tmpsec$year[satir]-2002]}
+tmpsec <- aggregate(x=tmpsec, FUN=median, by=list(tmpsec$year))[c("year","income")]
+lines(tmpsec$year, tmpsec$income, type="l", col="green")
+
+legend(x="topleft", y=0,legend = c("finance", "education", "trade", "agriculture"), fill = c("blue", "green", "orange", "red"), lty = c(1,1), cex = 1.5)
+
+dev.off()

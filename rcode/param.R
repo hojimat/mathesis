@@ -82,20 +82,26 @@ print(cor(tmpsec, df$dstock))
 # Params:
 
 #common params
-param_mu_s <- 0.232 #0.1058 #mean(df$dstock)
-param_mu_h <- 0.113 #mean(subset(df$dhouse, df$dhouse>0))
-param_sig_s <- 0.36 #0.017 #0.13 #sd(df$dstock)
-param_sig_h <- 0.052 #0.01 #sd(subset(df$dhouse]))
-param_sig_w <- 0.056 #sd(df$dwage)
-param_rho_hs <- 0.24 #cor(df$dhouse, df$dstock)
-param_rho_hw <- 0.37 #cor(df$dhouse, df$dwage)
+#param_mu_s <- 0.232 #0.1058 #mean(df$dstock)
+param_mu_s <- (1 + param_mu_ss)^12 - 1
+param_mu_h <- (1 + param_mu_hh)^12 - 1
+param_sig_s <- param_sig_ss*sqrt(12)
+param_sig_h <- param_sig_hh*sqrt(12)
+param_sig_w <- param_sig_yy*sqrt(12)
+#param_mu_h <- 0.113 #mean(subset(df$dhouse, df$dhouse>0))
+#param_sig_s <- 0.36 #0.017 #0.13 #sd(df$dstock)
+#param_sig_s <- 0.297
+#param_sig_h <- 0.052 #0.01 #sd(subset(df$dhouse]))
+#param_sig_w <- 0.056 #sd(df$dwage)
+param_rho_hs <- 0.27 #cor(df$dhouse, df$dstock)
+param_rho_hw <- 0.35 #cor(df$dhouse, df$dwage)
 param_beta  <- 0.89
-param_r_f <- 0.108
+param_r_f <- 0.12 - 0.09
 param_inf <- 0.084
 param_gamma <- 1.5
-param_R <- 57 #retirement age
-param_Y <- 28 #life cycle period
-param_T <- param_R-param_Y+1
+param_R <- 65 #retirement age
+param_Y <- 25 #life cycle period
+param_T <- param_R-param_Y
 param_kappa <- 1
 
 #heter params
@@ -103,9 +109,9 @@ param_mu_w_flat
 param_mu_w_moderate
 param_mu_w_steep
 
-param_sig_eps_low <- 0.03
-param_sig_eps_medium <- 0.05
-param_sig_eps_high <- 0.07
+#param_sig_eps_low <- 0.03
+#param_sig_eps_medium <- 0.05
+#param_sig_eps_high <- 0.07
 
 param_rho_ws_low <- 0
 param_rho_ws_medium <- 0.2

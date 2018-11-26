@@ -21,11 +21,11 @@
 \begin{frontmatter}
 
 
-\title{Welfare Effects of Individualizing Life-Cycle Investments for Households in Turkey}
+\title{Welfare Benchmarking of Life-Cycle Investment Strategies for Households in Turkey}
 
 
 \author{Ravshanbek Khodzhimatov\corref{cor1}}
-\ead{rsk@ravshansk.com}
+\ead{ravshanbeksk@gmail.com}
 \author{Tolga Umut Kuzubaş\corref{cor2}}
 \ead{umutkuzubas@gmail.com}
 \author{Burak Saltoğlu\corref{cor3}}
@@ -36,7 +36,7 @@
 
 
 \begin{abstract}
-In this paper, we perform an in-depth welfare comparison of the most common life-cycle investment strategies provided by retirement funds or suggested by classical portfolio theory in the case of households in Turkey. To perform our benchmarking, we constructed heterogeneous agents who worked and invested throughout their lifetime, using parameters calibrated from the historical data. We find that to households with upper-to-middle income, individually customized portfolios result in considerable welfare gains, while ``off-the-shelf'' life-cycle portfolio allocations perform better for households with lower income. We also show that life-cycle investment options outperform ``fixed over the lifetime'' options. 
+In this paper, we perform an in-depth welfare comparison of the most common life-cycle investment strategies provided by retirement funds or suggested by classical portfolio theory in the case of households in Turkey. To perform our benchmarking, we construct heterogeneous agents who work and invest throughout their lifetime, using parameters calibrated from the historical data. We find that to households with upper-to-middle income, individually customized portfolios result in considerable welfare gains, while ``off-the-shelf'' life-cycle portfolio allocations perform better for households with lower income. We also show that life-cycle investment options outperform ``fixed over the lifetime'' options. 
 \end{abstract}
 
 
@@ -55,15 +55,15 @@ In this paper, we perform an in-depth welfare comparison of the most common life
 
 The field of financial economics has gone through big changes since its foundation by \citet{markowitz} and \citet{tobin}. They pioneered the mean-variance analysis, which, given some assumptions, suggested that if investors cared about maximizing returns (mean) and minimizing risks (variance), then the optimal ratio of stocks to bonds in a single-period portfolio would be fixed for everyone, the share of former being equal to:
 
-\begin{equation}
-	\alpha = \frac{E[R] - R_f}{\gamma\sigma^2}
+\begin{equation}\label{eq:markowitz}
+	\alpha = \frac{\mu - R_f}{\gamma\sigma^2}
 \end{equation}
 
 \citet{merton} generalized the problem to multiple periods using dynamic programming and found that it is optimal for all households to repeat the same fixed mean-variance solution every period.
 
 These results were inconsistent with the popular financial advice suggesting that younger investors should have higher share of stocks in portfolio, and older investors --- higher share of bonds. This advice was summarized by the famous rule of thumb:
 
-\begin{equation}
+\begin{equation}\label{eq:stominus}
 	\alpha_t = (100 - t)\%
 \end{equation}
 
@@ -71,13 +71,13 @@ Although \citet{samuelson} denied that risk-aversion changes by age, dismissing 
 
 \citet{bodie} solved this problem by adding human capital into the \citet{merton}'s dynamic model and found that for complete markets and constant risk-free labor income, the optimal share of stocks in a portfolio is:
 
-\begin{equation}
-	\alpha_t = \frac{\mu - R_f}{\gamma \sigma^2}(\frac{W_t + H_t}{W_t})
+\begin{equation}\label{eq:bodie}
+	\alpha_t = \frac{\mu - R_f}{\gamma \sigma^2} \left( \frac{F_t + L_t}{F_t} \right)
 \end{equation}
 
-Steady depletion of human capital through life explained the higher share of stocks in younger people. \citet{cgm} extended this idea to the case of variable labor income, to find a recursive solution which could be approximated by the following rule of thumb:
+Steady depletion of human capital $L_t$ relative to the financial wealth $F_t$ throughout life, explained the higher share of stocks in younger people. \citet{cgm} extended this idea to the case of variable labor income, to find a recursive solution which could be approximated by the following rule of thumb:
 
-\begin{equation}
+\begin{equation}\label{eq:cgm}
 	\alpha_t =
 	\begin{cases}
 		100\% 			& 	t<40\\
@@ -87,34 +87,15 @@ Steady depletion of human capital through life explained the higher share of sto
 \end{equation}
 
 
-However, the hump-shaped lifetime stock share graph, observed by \citet{chang} of Richmond Fed (see Figure \ref{fig:chang}) instead of expected downward sloping one, suggested the presence of an opposing force.
+However, the hump-shaped lifetime stock share graph, observed by \citet{chang} of Federal Reserve, instead of expected downward sloping one, suggested the presence of an opposing force.
 
-\begin{figure}[h!]
-	\centering
-	\includegraphics[scale=0.3]{figs/scf.png}
-	\caption{Hump-shaped unconditional lifetime stock share. Source: \citet{chang}}
-	\label{fig:chang}
-\end{figure}
+\citet{cocco} found that this force was housing investment, which, due to its large size, crowded out all stocks from younger investors' portfolios. \citet{flavin} supported this view by showing that younger people, who already own the house, tend to invest more aggressively, as was expected by \citet{bodie}.
 
-\citet{cocco} found that this force was housing investment, which, due to its large size, crowded out all stocks from younger investors' portfolios. \citet{flavin} supported this view by showing that younger people, who already own the house, tend to invest more aggressively, as expected by \citet{bodie}.
+\citet{munk} found the same patterns using a series of one-period mean-variance optimizations without any dynamic stochastic modeling tools.
 
-\citet{munk} found the same patterns using a series of one-period mean-variance optimizations without any dynamic stochastic modeling tools. He stated that in presence of housing, the optimal stock ($\pi$) and housing ($\pi_h$) shares can be solved analytically as follows:
+Finally, \citet{ascheberg} illustrated the existence of long-term cointegration among house prices, stock prices, and labor income, the fact often omitted by previous portfolio researchers for simplicity. In our analysis we will not neglect the correlations as being equal to zero. 
 
-\begin{subequations}
-	
-	\begin{equation}
-		\pi_{t+1} = \frac{1}{\gamma (1 - \rho^2_{SH}) \sigma_S} \cdot \frac{W_t}{F_t} \left( \frac{\mu_s - r_f}{\sigma_S} - \rho_{SH} \frac{\mu_h - r_f}{\sigma_h} \right) - \frac{L_t}{F_t} \cdot \frac{\sigma_L}{\sigma_S} \frac{\rho_{SL} - \rho_{SH}\rho_{HL}}{1 - \rho^2_{SH}}
-	\end{equation}
-
-	\begin{equation}
-		\pi_{h,t+1} = \frac{1}{\gamma (1 - \rho^2_{SH}) \sigma_H} \cdot \frac{W_t}{F_t} \left( \frac{\mu_h - r_f}{\sigma_h} - \rho_{SH} \frac{\mu_s - r_f}{\sigma_s} \right) - \frac{L_t}{F_t} \cdot \frac{\sigma_L}{\sigma_h} \frac{\rho_{HL} - \rho_{SH}\rho_{SL}}{1 - \rho^2_{SH}}
-	\end{equation}
-
-\end{subequations}
-	
-Finally, \citet{ascheberg} illustrated the existence of long-term cointegration among house prices, stock prices, and labor income, the fact often omitted by previous portfolio researches for simplicity. Therefore, in our analysis we will not neglect the correlations as being equal to zero. 
-
-In this paper, we calculate the wealth accumulated from lifetime investments given by all the strategies above and suggested by current Turkish banks. We benchmark the resulting welfare for heterogeneous agents in Turkey with varying sectors, levels of education and risk-aversion. We conclude with the separate investment advice for all types of households mentioned above.
+In this paper, we calculate the wealth, accumulated from lifetime investments given by all the strategies above and suggested by current Turkish banks. We benchmark the resulting welfare for heterogeneous agents in Turkey with varying sectors, levels of education and risk-aversion. We conclude with the separate investment advice for all types of households mentioned above. Such a comprehensive benchmarking has not been done yet in the overall literature, and almost none was done for Turkish households.
 
 The remainder of the paper is organized as follows: Section \ref{model} presents the theoretical framework we will use in our analysis. Section \ref{data} contains detailed information about our data sources, parameter calibration and solves for the optimal investment strategies. Section \ref{welfare} does the welfare benchmarking of every investment option for every agent, and Section \ref{conclusion} concludes.
 
@@ -125,224 +106,214 @@ The remainder of the paper is organized as follows: Section \ref{model} presents
 \label{model}
 
 \subsection{House prices, stock prices and labor income series}
-In accordance with \citet{ccgm} and \citet{olear} we model the labor income process as a function of individiual characteristics $f(t, Z_{it})$ plus idiosyncratic shocks $v_{it}$. Upon reaching the retirement age $T$, an individual receives a certain percentage $\lambda$ of his/her last wage:
+In accordance with \citet{ccgm} and \citet{olear} we model the labor income process as a function of individiual characteristics $f(t, Z_{it})$ plus idiosyncratic shocks $v_{it}$. Upon reaching the retirement age $R$, an individual receives a certain percentage $\lambda$ of his/her last wage:
 
 \begin{equation}
 	Y_{i,t+1} = 
 	\begin{cases}
-		Y_{it} (1 + \Delta f(t+1,Z_{i,t+1}) + v_{it}), 	& t \leq T \\
-		\lambda (1 + f(T, Z_{iT}) + v_{iT}), 			& t > T
+		Y_{it} (1 + f(t+1,Z_{i,t+1}) + v_{it}), 	& t < R \\
+		\lambda (1 + f(R, Z_{iR}) + v_{iR}), 			& t \geq R
 	\end{cases}	
 \end{equation}
 
-We model house prices and stock prices as time series satisfying the discrete version of \citet{ascheberg}'s stock, housing and labor income correlation structure, mentioned in \ref{ascheberg}:
+We model labor income, house prices, and stock prices as Geometric Brownian Motions with drifts $\mu_L$, $\mu_H$, $\mu_S$ and volatilities $\sigma_L$, $\sigma_H$, $\sigma_S$, satisfying the discrete version of \citet{ascheberg}'s correlation structure, that is having nonzero correlations $\rho_{HS}, \rho_{HL}, \rho_{SL}$. See \ref{ascheberg} for details.
 
+\subsection{Optimal portfolio}
+Along with the investment strategies, described in Equations \ref{eq:markowitz} - \ref{eq:cgm}, we consider in our benchmarking, the strategy proposed by \citet{munk}, who stated that in the presence of housing, the optimal stock ($\pi$) and housing ($\pi_h$) shares can be solved analytically as follows:
 
-\subsection{Calibration}
+\begin{subequations}
+	
+	\begin{equation}\label{eq:munka}
+		\pi_{t+1} = \frac{1}{\gamma (1 - \rho^2_{SH}) \sigma_S} \cdot \frac{F_t + L_t}{F_t} \left( \frac{\mu_S - r_f}{\sigma_S} - \rho_{SH} \frac{\mu_H - r_f}{\sigma_H} \right) - \frac{L_t}{F_t} \cdot \frac{\sigma_L}{\sigma_S} \frac{\rho_{SL} - \rho_{SH}\rho_{HL}}{1 - \rho^2_{SH}}
+	\end{equation}
 
-We calibrate the above parameters using data obtained from the repeated cross-sectional study by \citet{tuik}. In line with \citet{aktug} we aggregate these studies to obtain a pseudo-panel, which we will use to summarize labor income dynamics.
+	\begin{equation}\label{eq:munkb}
+		\pi_{h,t+1} = \frac{1}{\gamma (1 - \rho^2_{SH}) \sigma_H} \cdot \frac{F_t + L_t}{F_t} \left( \frac{\mu_H - r_f}{\sigma_H} - \rho_{SH} \frac{\mu_S - r_f}{\sigma_S} \right) - \frac{L_t}{F_t} \cdot \frac{\sigma_L}{\sigma_H} \frac{\rho_{HL} - \rho_{SH}\rho_{SL}}{1 - \rho^2_{SH}}
+	\end{equation}
 
-In summarizing the series we will use simple medians and means. In determining the expected values of time-series parameters, we will use simple arithmetic mean and standard deviation.
+\end{subequations}
 
-\paragraph{}
-In constructing the simulated labor income series, we used kinked ordinary least-squares (OLS) estimations with kinks at ages of 35 and 45 separately for every education level $i$:
+Setting $\rho_{SH} = 0$ and $\rho_{HL} = 0$, gives the optimal stock share by \citet{munk} in the absence of housing:
 
-\begin{center}
-	$\Delta\log (wage_{it}) = \alpha_0 + \alpha_1 \cdot d_{35} + \alpha_2 \cdot d_{45} + \alpha_3 \cdot t$
-\end{center}
-
-
+\begin{equation}\label{eq:munkno}
+	\pi_{t+1} = \frac{1}{\gamma \sigma_S} \cdot \frac{F_t + L_t}{F_t} \left( \frac{\mu_S - r_f}{\sigma_S} \right) - \frac{L_t}{F_t} \cdot \frac{\sigma_L}{\sigma_S} \rho_{SL}
+\end{equation}
 
 
 \subsection{Welfare measurement}
-Similarly to Cocco et al. (2005) we use CRRA utility function in our model:
 
-\begin{center}
-	$E_1[U(c)] = E_1 \left[\displaystyle\sum^T_{t=1} \delta^{t-1} \displaystyle\prod^{t-1}_{j=0} p_j \cdot \frac{c^{1-\gamma}_{it}}{1-\gamma}\right]$
-\end{center}
+We use stochastic constant relative risk-aversion utility function to compare welfare resulting from different income patterns:
 
-where $p_k$ is the probability of survival from time $k-1$ to time $k$. Note that we omitted the bequest motives from the original formulation, thus retired person consumes all of his income at any given time.
+\begin{equation}
+	E_1[U(c)] = \displaystyle\sum^T_{t=1} \delta^{t-1} \displaystyle\prod^{t-1}_{j=0} p_j \cdot \frac{c^{1-\gamma}_{it}}{1-\gamma}
+\end{equation}
 
-%\paragraph*{}Following Olear (2016) we use certainty equivalent consumptions (CEC) instead of expected utilities to compare the welfare effects between different lifecycle choices. Appendix C shows the calculation of the following formula for CEC:
+where $p_k$ is the probability of survival between ages $k-1$ and $k$. Unlike \citet{cgm}, we neglect the bequest motives, assuming that the retired person consumes all of his/her income at any given time. 
 
-%\begin{center}
-%	$CEC = \left( \frac{E[U(c)]\cdot(1-\gamma)}{\sum^T_{t=1} \delta^{t-1} \prod^{t-1}_{j=0} p_j} \right)^{1/(1-\gamma)}$
-%\end{center}
-
-
-\subsection{Individualization}
-
-To derive the individual lifecycle portfolios for every wealth type we use a special case of Munk (2016) with housing investment and human capital included. The similar approach and its solution has been done by Olear (2016), but she included housing capital as a pre-existing wealth bought for an outside mortgage, independent of the investment decision. In this paper, we consider housing as a purely financial investment, in line with Munk (2016). Munk provides the following optimal asset allocation:
-
-
-\begin{center}
-	$\pi_{t+1} = \frac{\mu_s - r_f}{\gamma \sigma^2_s}  + \frac{L_t}{F_t} \cdot \left(\frac{\mu_s - r_f}{\gamma \sigma^2_s} - \frac{\rho_{SL}\sigma_L}{\sigma_S} \right)$
-\end{center}
-
-without housing investment, and:
-
-\begin{center}
-	$\pi_{t+1} = \frac{1}{\gamma (1 - \rho^2_{SH}) \sigma_S} \cdot \frac{W_t}{F_t} \left( \frac{\mu_s - r_f}{\sigma_S} - \rho_{SH} \frac{\mu_h - r_f}{\sigma_h} \right) - \frac{L_t}{F_t} \cdot \frac{\sigma_L}{\sigma_S} \frac{\rho_{SL} - \rho_{SH}\rho_{HL}}{1 - \rho^2_{SH}}$\\
-	$\pi_{h,t+1} = \frac{1}{\gamma (1 - \rho^2_{SH}) \sigma_H} \cdot \frac{W_t}{F_t} \left( \frac{\mu_h - r_f}{\sigma_h} - \rho_{SH} \frac{\mu_s - r_f}{\sigma_s} \right) - \frac{L_t}{F_t} \cdot \frac{\sigma_L}{\sigma_h} \frac{\rho_{HL} - \rho_{SH}\rho_{SL}}{1 - \rho^2_{SH}}$
-\end{center}
-
-when housing is considered as a second risky financial investment. In line with Munk (2016), we calculate the risk free asset share as $\left( 1 - \pi - \pi_h \right)$ and only then impose constraints. If any of the above shares is negative, we equate it to zero, and if the sum of remaining shares exceeds $1$, we divde all of the shares by their sum to obtain a proportionate asset allocation. 
 
 \subsection{Retirement income}
 
-The funds invested in retirement are modeled to be paid back in annuities. Thus, we ignore the case when some share of matured fund can be withdrawn immediately. Further, in order for our individualization analysis (based on house posessions) to have an effect, we also use reverse mortgages proposed. In theory, reverse mortgages pay retired individuals fixed annuity in return for inheriting the house after she dies. This is a plausible tool, because we ignore all bequest motives, and it liquidifies the housing posessions, although it is not yet available for Turkish investors. 
+The funds invested in retirement are modeled to be paid back in annuities, not withdrawn immediately. Further, to include housing investment in welfare calculation, we use ``reverse mortgages'' --- annuities, paid to retired individuals in return for inheriting their house after their death. This is a plausible analysis tool, because it allows to liquidify the housing possessions, although such financial instrument is not yet available in Turkey. 
 
-\paragraph{}So, at the age of 57, the price of owned house is calculated and is added to the matured pension amount ($MP$) to obtain total wealth:
+Thus, at the age of retirement $R = 65$, the price of owned house is calculated and is added to the matured pension amount ($MP$) to obtain total wealth:
 
-\begin{center}
-	$W_{57} = H_{57} + MP$
-\end{center}
+\begin{equation}
+	W_{65} = H_{65} + MP
+\end{equation}
 
-All of the $W_{57}$ is used to buy an annuity which will repay an individual $\frac{W_{57}}{1+\sum^{100}_{t=58} \frac{p_t}{1+r_f}}$ annually. The calculation details are available in Appendix D. 
+All of the $W_{65}$ is used to buy an annuity which will annually repay an individual:
+
+\begin{equation}
+	A_t = W_{65} \cdot \left(1+\sum^{100}_{t=66} \frac{\prod^{t}_{j=66} p_j }{(1+r_f)^{t-65}} \right)^{-1}
+\end{equation}
 
 % DATA AND SIMULATION
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Data and simulation}
 \label{data}
 
-In our simulation we will compare welfare effects of default lifecycles and individualized lifecycles defined below. The magnitutes and sources of parameters are given in the next section. Default lifecycles are taken from the ones mentioned in our Literature Review chapter and from the real investment strategies of the largest Turkish pension fund provider Anadolu Hayat Emeklilik. Individualized lifecycles will be calculated using Munk's optimal portfolio formula from previous chapter taking idiosyncracies into consideration.
+In this section, we go over data sources, perform parameter calibrations and derive all investment strategies for our simulation.
 
-\subsection{Data}
+\subsection{Data sources}
 
-To measure the stock series we used BIST 30 index which measures the aggregate performance of 30 best companies in Turkey. The monthly data is taken from Borsa Istanbul. We can see from Figure 4.1 the general upward trend with collapse during 2008 crisis.
+We use historical monthly BIST 30\footnote{BIST 30 is an index measuring the stock performance of 30 largest companies in Turkey} and REIDIN\footnote{REIDIN provides residential sales price index for Turkey, using data, covering $200,000$ house listings in 62 cities and 221 counties, per month, weighted by population, and calculated using Laspeyres' formula.} data from 2004 to 2014, to construct stock and house price series respectively. Figures \ref{fig:bist30} and \ref{fig:reidin} illustrate the general upward trend in both series, with a collapse during 2008 crisis.
 
-\begin{figure}
+\begin{figure}[h!]
 	\centering
     \begin{minipage}{0.45\textwidth}
 		\centering
 		\includegraphics[scale=0.4]{figs/bist.pdf}
-		\caption{BIST30 Turkish stock market performance index}
+		\caption{BIST30 Turkish stock market prices}
+		\label{fig:bist30}
 	\end{minipage}
 	\hfill
     \begin{minipage}{0.45\textwidth}
 		\centering
 		\includegraphics[scale=0.4]{figs/reidin.pdf}
 		\caption{Reidin Turkish house price index}
+		\label{fig:reidin}
 	\end{minipage}
 \end{figure}
 
-\paragraph{}We used Reidin AEINDEXF index to obtain data on house prices in Istanbul. The historical dynamics of this index are illustrated in Figure 4.2.
+We construct labor income series from \citet{tuik}'s repeated cross-sectional study, and, in line with \citet{aktug}, we aggregate the data to obtain a pseudo-panel with 55 thousand data points for 170 households from 2001 to 2014. Figure \ref{fig:tuik} displays the hump-shaped lifetime income distribution, consistent with the results of \citet{aktug}, who analyzed labor income profiles in Turkey, and \citet{benporath}, who predicted a decline in productivity, as workers get older.
 
-\paragraph{}We used TUIK's Household Budget Survey Data and regression results of Aktug, Kuzubas, Torul (2017). We have 55 thousand panel data points for 170 households for 2001 to 2014 years. We can observe the hump-shaped lifetime income distribution in Figure 4.3. This corresponds well to an established literature in this field.
-
-\begin{figure}[h]
+\begin{figure}[h!]
 	\centering
-	\includegraphics[scale=0.6]{figs/wage2median.pdf}
+	\includegraphics[scale=0.4]{figs/wage2median.pdf}
 	\caption{Median Turkish salaries by age}
+	\label{fig:tuik}
 \end{figure}
 
-\subsubsection{Default parameters}
-In our simulation we start with a 28 years old individual who invests in her retirement for 30 years until she reaches retirement at 57. We set the default coefficient of relative risk aversion at $5$, but, in line with Torul et al. (2018), we check the sensitivity for $1.5$ and other values. Also, according to Torul et al. (2018), we set the subjective discount rate at $0.89$.
+\subsection{Default parameters}
+Similarly to \citet{munk}, we start our simulation with a 25-year-old individual who invests in his/her retirement for 40 years until he/she reaches retirement at 65. Similarly to \citet{torul}, we set the default relative risk aversion coefficient for Turkish households at $1.5$, and the subjective discount rate --- at $0.89$.
 
-\paragraph{}Stock returns for Turkey were estimated from historical data to be equal to $23.2\%$ annually, with standard deviation $36\%$. Risk-free rate forecasts are obtained from OECD Data Bank (2018) and are equal to $10.8\%$ per annum.
+We deflate the nominal wages, stock and house prices by CPI and work with real variables.
 
-\paragraph{}Housing capital appreciation averaged at $8.3\%$ with $9.5\%$ standard deviation. But in our simulation we have excluded the temporary housing price drop during 2008 crisis to clear from macroeconomic effects. Therefore, in our simulation, housing capital appreciaton averaged at $11.3\%$ with $5.2\%$ standard deviation.
+We obtain annual rate of return on stocks $6.69\%$ with volatility $38.44\%$, by annualizing long-term ARMA(2,2) forecasts of monthly return and volatility, based on historical BIST 30 data, mentioned above (see \ref{paramcalibx}).
 
-\paragraph{}Aggregate wage growth series showed $5.5\%$ standard deviation.
+Similarly, we use long-term ARMA(1,1) forecast of monthly return and volatilities on housing, and find annual real rate of return on housing $0.67\%$ with $5.42\%$ volatility (see \ref{paramcaliby}).
 
-\paragraph{}The correlations between house and stock prices, and house prices and wages gave $0.24$ and $0.37$ respectively.
+Risk-free rate $12\%$ is given by \citet{oecd} forecast\footnote{Data was obtained before the Turkish currency and debt crisis of 2018}, and, upon subtracting the medium-term inflation rate forecast $\pi = 9\%$ by \citet{tcmb}, is equal to $3\%$ per annum with zero volatility.
 
-\paragraph{}The data on survival probability for all ages has been taken from Turkish Statistical Institute's (TUIK) database and illustrated in Figure 4.4. All of these findings have been summarized in Table 4.1. 
+We consider real wage growth rates separately for different types of agents, but before introducing heterogeneity, the ARMA(5,2) forecast gives the volatility $4\%$ (see \ref{paramcalibz}).
 
-\begin{figure}[h]
+In our simulation, the house-stock and house-wage contemporaneous correlations are given by $0.27$ and $0.35$ respectively. 
+
+Survival probabilities for all ages are provided by \citet{tuik2} and illustrated in Figure \ref{fig:surv}.
+
+\begin{figure}[h!]
 	\centering
-	\includegraphics[scale=0.6]{figs/survival.pdf}
+	\includegraphics[scale=0.3]{figs/survival.pdf}
 	\caption{Survival probabilities by age}
+	\label{fig:surv}
 \end{figure}
 
-\begin{table}
+All of the above findings are summarized in Table \ref{table:default}. 
+
+\begin{table}[h!]
 	\centering
 	\caption{Benchmark Parameters}
+	\label{table:default}
 	\begin{tabular}[c]{lll}
 		\hline
 		Parameter&Description&Value\\
 		\hline
-		$Y$&Beginning age&$28$\\
-		$R$&Retirement age&$57$\\
+		$Y$&Beginning age&$25$\\
+		$R$&Retirement age&$65$\\
 		$T$&Lifespan (years)&$100$\\
-		$\gamma$&Risk aversion&$5$\\
+		$\gamma$&Risk aversion&$1.5$\\
 		$\beta$&Discount rate&$0.89$\\
-		$r_f$&Risk-free rate&$0.108$\\
-		$\pi$&Average inflation rate&$0.084$\\
+		$r_f$&Risk-free rate&$0.03$\\
 		\hline
-		$\mu_s$&Expected stock returns&$0.232$\\
-		$\mu_h$&Expected housing returns&$0.113$\\
-		$\sigma_s$&Stock returns volatility&$0.36$\\
-		$\sigma_h$&Housing returns volatility&$0.052$\\
-		$\sigma_w$&Wage growth volatility&$0.056$\\
-		$\rho_{hs}$&Housing-stock correlation&$0.24$\\
-		$\rho_{hw}$&Housing-wage correlation&$0.37$\\
+		$\mu_s$&Expected stock returns&$0.0669$\\
+		$\mu_h$&Expected housing returns&$0.0067$\\
+		$\sigma_s$&Stock returns volatility&$0.3844$\\
+		$\sigma_h$&Housing returns volatility&$0.0542$\\
+		$\sigma_w$&Wage growth volatility&$0.036$\\
+		$\rho_{hs}$&House-stock correlation&$0.24$\\
+		$\rho_{hw}$&House-wage correlation&$0.37$\\
 		\hline
-		$p_{28}$&Survival probability at age 28&$0.977$\\
-		$p_{57}$&Survival probability at age 57&$0.924$\\
+		$p_{25}$&Survival probability at age 25&$0.978$\\
+		$p_{65}$&Survival probability at age 65&$0.86$\\
 		$p_{100}$&Survival probability at age 100&$0$\\	
 		\hline
 	\end{tabular}
 \end{table}
 
 
-\subsubsection{Heterogeneity parameters}
-In the same manner as Olear(2014) we will use wage growth rate, stock-income correlation and idiosyncratic labor income risk to model heterogeneities in education and sector. Let's now consider the heterogeneities one at a time:
+\subsection{Heterogeneity parameters}
+Combining the approaches of \citet{olear} and \citet{munk}, we use wage growth rate, stock-income correlation and relative risk aversion level, to model heterogeneities among agents.
 
-\paragraph{Heterogeneity in education}
-In line with Olear's (2016) approach we model the heterogeneity in education using the differences in wage growth rates. Indeed, we expect the salaries for higher education level to grow faster than for the lower education level. Some of this expectation comes from the fact that people with lower education are restricted in their career ladders and cannot rise very high in a workplace. Another intuition is that while college dropouts start working immediately, college graduates and graduate students continue to study and thus report zero income. When they graduate, their salary immediately rises from zero to the average salary, and this constitutes a steeper wage growth curve at the beginning of their lives. Figure 4.5 shows the wage series for different levels of education. Note that the curves for the lowest education levels are practically flat and the those for the highest education levels have varying non-zero slopes. 
+\subsubsection{Heterogeneity in education}
+We model the heterogeneity in education using differences in wage growth rates. Figure \ref{fig:wageeduc} shows the lifetime labor income series for different levels of education. Notice that the curves are almost flat for the lower education levels and hump-shaped for the higher.
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[scale=0.6]{figs/wage2educ.pdf}
-	\caption{Lifetime wage dynamics by education level}
+	\includegraphics[scale=0.4]{figs/wage2educ.pdf}
+	\caption{Lifetime real wage dynamics by education level. While less educated individuals have flat wages through life, the more educated individuals observe a steeper and hump-shaped wages.}
+	\label{fig:wageeduc}
 \end{figure}
 
-Performing kinked regressions of log wages on ages, as described in the previous chapter, yielded best linear fits for three different education levels of our choice: postgraduate, high school, and no schooling. The corresponding labor income growth rates can be characterized as steep, moderate, and flat respectively. We considered wage data until 60 years, as Turkish retirement age is at 57, and have added empirically best kinks at ages 35 and 45. The results are summarized in Table 4.2 and illustrated in Figure 4.6. In this figure red lines represent the actual wages dynamics for postgraduate, high school, and no schooling, and blue lines are plots of the percentage changes proposed in Table 4.2, where the starting points all correspond to the actual starting points from the data. Figure 4.7 illustrates the same parameterized curves without actual wage curves. 
+We use undergraduate education, high school education, and no schooling, to model ``steep'', ``moderate'', and ``flat'' wage dynamics respectively. Performing regressions of wages on age, with kinks at $t=40$ and $t=55$:
 
-\begin{table}
+\begin{equation}
+	\Delta \log (wage_{it}) = \alpha_0 + \alpha_1 \cdot d_{40} + \alpha_2 \cdot d_{55}
+\end{equation}
+
+we estimate growth rates for different education levels, as summarized in Table \ref{table:dincome} (see \ref{paramcalibt} for regression results and line fits). 
+
+\begin{table}[h!]
 	\centering
 	\caption{Estimated Benchmark Wage Growth Rates $\mu_w$}
+	\label{table:dincome}
 	\begin{tabular}[c]{l|ccc}
 		Age&Flat&Moderate&Steep\\
 		\hline
-		0-35&0\%&3.5\%&6.5\%\\
-		36-45&0\%&3\%&2\%\\
-		46-60&0\%&0\%&0\%\\
+		25-40&0\%&3.8\%&2.2\%\\
+		41-55&0\%&1.4\%&1.2\%\\
+		56-65&0\%&0\%&1.5\%\\
 	\end{tabular}
 \end{table}
 
+We assume steep wage earners (college graduates) to have a starting real salary of $100$, and moderate and flat wage earners to have a starting real salary of $50$. This is consistent with the historical data (see Figure \ref{fig:wageeduc}) and the relevant discussion by \citet{olear}. This difference in starting values also explains why ``steep'' wage growth rates are less than ``moderate'' ones.  
 
-\begin{figure}[h]
+\subsubsection{Heterogeneity in sectors of work}
+
+We model the heterogeneity work sectors using corresponding stock-wage correlations ($\rho_{ws}$). Figure \ref{fig:wagesec} illustrates how, during 2008 crisis, income in financial sectors ($\rho_{ws} = 0.44$) dropped drastically, while it was unaffected in education and agriculture ($\rho_{ws} = 0.08$).
+\begin{figure}[h!]
 	\centering
-    \begin{minipage}{0.45\textwidth}
-		\centering
-		\includegraphics[scale=0.4]{figs/heterwage.pdf}
-		\caption{Actual and parameterized benchmark wage dynamics by age}
-	\end{minipage}
-	\hfill
-    \begin{minipage}{0.45\textwidth}
-		\centering
-		\includegraphics[scale=0.4]{figs/heterwageless.pdf}
-		\caption{Parameterized wage dynamics by age}
-	\end{minipage}
-
+	\includegraphics[scale=0.4]{figs/wage2sec.pdf}
+	\caption{Historical real wage dynamics by sector. Sectoral differences in degrees of correlation of wages to stock market, can be seen from the different behavior during 2008 crisis --- while income in finance sector dropped drastically, the wages in education sector were not affected at all.}
+	\label{fig:wagesec}
 \end{figure}
 
+We use three measures of $\rho_{sw}$ for our benchmark: $0$, $0.2$ and $0.4$ (see Table \ref{table:wagesec}).
 
-\paragraph{Heterogeneity in sectors of work}
 
-As we explained in Chapter 3, we model our labor income series as functions of age, gender, education, sector of work etc. We already showed in previous section how we incorporated the heterogeneity in education. We also stated at the beginning of this chapter that we consider only male individuals as heads of households; age is implicit in our analysis. In this section we will model the differences in sectors of work. Again, similar to Olear's (2016) approach we model these differences using correlations of wage growth rates with stock market returns. Indeed, it is expected that sectoral wages would be proportional to the stock returns only to the extent of their exposure to stock markets. In that sense, the stock-wage correlations are expected to be zero for public sector, where wages are fixed regardless the markets, and high in financial institutions. When we juxtaposed wages by sector and stock prices we obtained very high correlations, which was expected due to the economic growth over the years represented in Figure 4.8. Therefore we divided the wages by price levels to obtain the real wages, and, as expected, we obtained more realistic correlations. The financial sector's correlations were as high as $0.44$  and public sector, social service and education's were as low as $0.08$. Thus, our expectations that different sectors have different wage-stock correlation $\rho_{sw}$ were confirmed and we decided on three measures of $\rho_{sw}$ as our simulation benchmarks: $0$, $0.2$ and $0.4$ as stated in Table 4.3.
-
-\begin{figure}[h]
-	\centering
-	\includegraphics[scale=0.6]{figs/wage2sec.pdf}
-	\caption{Historical wage dynamics by sector}
-\end{figure}
-
-\begin{table}
+\begin{table}[h!]
 	\centering
 	\caption{Benchmark Wage to Stock Correlations}
+	\label{table:wagesec}
 	\begin{tabular}[c]{c|ccc}
 		&Low&Moderate&High\\
 		\hline
@@ -351,31 +322,16 @@ As we explained in Chapter 3, we model our labor income series as functions of a
 \end{table}
 
 
-\paragraph{Individual heterogeneity}
+\subsubsection{Individual heterogeneity}
 
-%We model individual heterogeneity using idiosyncratic labor income shocks $\sigma_{\epsilon}$. We consider three different values $0.03$,$0.05$ and $0.07$. Total variance is calculated, as stated in previous chapter, as a sum of squares of aggregate and idiosyncratic shocks $\sigma^2_W = \sigma^2_w + \sigma^2_{\epsilon}$. This heterogeneity is summarized in Table 4.4. 
+We model individual heterogeneity using different risk aversion levels of investors, as summarized in Table \ref{table:riskave}.
 
-
-%\begin{table}
-%	\centering
-%	\caption{Benchmark Wage Volatilities and Their Sum of Squares}
-%	\begin{tabular}[c]{l|ccc}
-%		&Low&Moderate&High\\
-%		\hline
-%		$\sigma_w$&$0.056$&$0.056$&$0.056$\\
-%		$\sigma_{\epsilon}$&$0.03$&$0.05$&$0.07$\\
-%		\hline
-%		$\sigma^2_{W}$&$0.004$&$0.0056$&$0.008$
-%	\end{tabular}
-%\end{table}
-
-We check for individual heterogeneity using a sensitivity analysis on different risk aversion coefficients, summarized in Table 4.4.
-
-\begin{table}
+\begin{table}[h!]
 	\centering
-	\caption{Coefficients of Risk Averion}
+	\caption{Coefficients of Risk Aversion}
+	\label{table:riskave}
 	\begin{tabular}[c]{r|cccc}
-		Values&Torul&low&default&high\\
+		Values&default&low&moderate&high\\
 		\hline
 		$\gamma$&1.5&3&5&10\\
 	\end{tabular}
@@ -384,28 +340,30 @@ We check for individual heterogeneity using a sensitivity analysis on different 
 \subsection{Capital series}
 
 \subsubsection{Human capital}
-Human capital at all ages has been calculated as a discounted sum of all future wages until retirement with the discount factor $r_f$. To construct the individualized capital we used steep, moderate and flat wage series mentioned in the previous section. It can be seen in Figure 4.9 that human capital is declining for flat wages and hump-shaped for moderate and steep wages. 
+Human capital at any period is the discounted sum of all future wages until retirement with the discount factor $r_f$. To construct the individualized capital we used steep, moderate and flat wage series mentioned in the previous section. Figure \ref{fig:humcap} illustrates the current human capital for flat, moderate, and steep wages for every age. 
 
-\begin{figure}[h]
+\begin{figure}[h!]
 	\centering
     \begin{minipage}{0.45\textwidth}
 		\centering
 		\includegraphics[scale=0.4]{figs/humancapital.pdf}
-		\caption{Human capital by age}
+		\caption{Human capital at every age for individuals with steep, moderate and flat wage growth curves. As individuals get older, their human capital gradually depletes.}
+		\label{fig:humcap}
 	\end{minipage}
 	\hfill
     \begin{minipage}{0.45\textwidth}
 		\centering
 		\includegraphics[scale=0.4]{figs/fincapital.pdf}
-		\caption{Financial capital by age}
+		\caption{Financial wealth accumulation through life, by a college graduate who invests $50\%$ in bonds and $50\%$ in stocks. Confidence intervals capture the volatility of stocks in the portfolio.}
+		\label{fig:fincap}
 	\end{minipage}
 \end{figure}
 
 \subsubsection{Financial capital}
 
-Financial capital evolves according to dynamic investment illustrated in Figure 4.11. Every period $t$ a certain percentage $c$ (equal to $3\%$ in Turkey) of that period's wage $w_t$ is invested in a retirement portfolio. At the same time, the previously invested amount accrues interest. We started with 28 years old individual who invests for 30 years until retirement, as has been mentioned previously numerous times.
+Financial capital evolves according to dynamic investment diagram in Figure \ref{fig:invdiag}. Every period, a certain percentage $c$ ($3\%$ for Turkey) of the wage $w_t$ is invested in a retirement portfolio, while the previously invested amount accrues interest at portfolio rate of return. Figure \ref{fig:fincap} demonstrates the evolution of financial capital and its confidence interval for a naive fixed investment strategy ($50\%$ in stocks and $50\%$ in bonds) by an individual with ``steep'' wage curve.
 
-\begin{figure}[h]
+\begin{figure}[h!]
 	\centering
 	\begin{tikzpicture}
 		\draw [->, line width=0.25mm] (0,0) -- (11,0);
@@ -420,147 +378,188 @@ Financial capital evolves according to dynamic investment illustrated in Figure 
 	    \draw (-1.5,0) node[below=18pt] {$ Invest: $};
     	\draw (-1.5,0) node[below=0pt] {$ Harvest: $};
 	\end{tikzpicture}
-	\caption{Law of motion of financial capital}
+	\caption{Law of motion of financial capital. Every period, a certain percentage $c$ of the wage $w_t$ is invested in a retirement portfolio, while the previously invested amount accrues interest at portfolio rate of return $r_p$.}
+	\label{fig:invdiag}
 \end{figure}
 
-\paragraph{}Note that the shape of the financial capital depends on $r_p$ --- the rate of return on portfolio, which itself depends on the risky-to-riskless asset ratio. Different such ratios are listed and analyzed in detail in the next section. Figure 4.10 demonstrates the evolution of financial capital for two investment options, provided by Anadolu Hayat Emeklilik --- $30\%$ in stocks and $70\%$ in bonds, and by solving Markowitz's formula --- $63\%$ in stocks and $37\%$ in bonds.
-
-\paragraph{}It is important to notice here that since human capital is declining by age and financial capital is increasing, the ratio $\frac{L_t}{F_t}$ is declining in $t$. Recalling Merton's formula for $\alpha_t$ from Chapter 2, $\frac{\mu - R_f}{\gamma \sigma^2}(1+\frac{L_t}{F_t})$, it should be now clear how the above fraction creates a lifecycle effect --- different ratios for different ages. 
-
-
-RESULTS HERE START In this chapter we present the results of our simulation. In the first section we will present the default and individualized lifecycle investment strategies, the former being provided by real retirement funds and the latter being solved by Merton and Munk. We will plug in the heterogeneous parameters, described in detail in the previous chapter. In the next section, we will calculate the resulting financial capital flows and compare their welfare effects using their expected utilities, as mentioned in Chapter 3. 
 
 \subsection{Investment strategies}
-\subsubsection{Default lifecyccles}
-As was discussed in the previous chapter, our individual decides between investing in risky (stocks) or risk-free (bonds) assets. The default allocations for share of risky asset are given by:
 
-\begin{itemize}
-	\item $100-t$, for all $t$
-	\item $\begin{cases} 100\%, & t<40\\(200-2.5t)\%, & t\in[40,57]\end{cases}$
-	\item $63\%$, for all $t$
-	\item $30\%$, for all $t$
-\end{itemize}
+Below, we present the life-cycle investment strategies to be benchmarked.
 
-where the latter two are Markowitz's solution and Anadolu Hayat's moderate investment option respectively. Since we are only interested in age span between 28 and 57, Figure 5.1 shows the risky asset share $\pi_t$ only for that interval. 
+\subsubsection{Homogeneous life-cycles}
 
-\begin{figure}[h]
+Homogeneous life-cycles are strategies, common to all individuals, regardless of their idiosyncratic characteristics. We benchmark strategies given by equations \ref{eq:markowitz}, \ref{eq:stominus}, \ref{eq:cgm}, and an aggressive portfolio allocation, offered by Turkish banks ($60\%$ in stocks, $40\%$ in bonds). Figure \ref{fig:defaults} illustrates the stock shares in these investment strategies.
+
+
+\begin{figure}[h!]
 	\centering
-	\includegraphics[scale=0.6]{figs/defaults.pdf}
-	\caption{Default portfolio allocations of stock investments}
+	\includegraphics[scale=0.4]{figs/defaults.pdf}
+	\caption{Share of stocks in a portfolio at every age, proposed by homogeneous life-cycle strategies}
+	\label{fig:defaults}
 \end{figure}
 
 
-\subsubsection{Individualized lifecycles}
+\subsubsection{Heterogeneous life-cycles}
 
-To derive individualized lifecycle strategies, we used Merton's (1971) and Munk's (2016) optimal portfolio allocation formulas mentioned in chapters 2 and 3. Since these formulas depended on intratemporal amounts of capital, we have constructed three human capital series corresponding to flat, moderate and steep wage growth curves mentioned in the previous chapter. Figure 5.2 illustrates the risky asset shares given by Merton and Munk without housing for various levels of labor income growth and risk aversion. The figure shows that the steeper the wage growth curves get or the lower their risk aversion is, the more aggressive investors are. However, as a whole, they follow the similar pattern. The figure also shows that for small correlations between labor income and stock prices, Munk's solution converges to Merton's solution, as was shown in Chapter 3.
+Heterogeneous life-cycles take idiosyncratic characteristics into consideration. We benchmark strategies by \citet{bodie} (see Equation \ref{eq:bodie}), and \citet{munk} (see Equation \ref{eq:munkno}), which are illustrated in Figure \ref{fig:individs} by blue and red curves respectively. The dashed lines illustrate the $68\%$-confidence interval ($\pm 1\sigma$). The figure proposes younger investors to allocate all of their funds in stocks, and gradually, through life, decrease their share in the portfolio --- the more risk-averse they are or the flatter their wage curve is, the sooner. It also shows that, other things being equal, \citet{munk}'s strategy without housing, is less aggressive than \citet{bodie}'s, which is consistent with equations \ref{eq:bodie} and \ref{eq:munkno}. 
 
-\begin{figure}
+\begin{figure}[h!]
 	\centering
     \begin{subfigure}{0.45\textwidth}
 		\centering
-		\includegraphics[scale=0.4]{figs/individuals15.pdf}
+		\includegraphics[scale=0.3]{figs/individuals15.pdf}
 		\caption{$\gamma = 1.5$}
 	\end{subfigure}
 	\hfill
     \begin{subfigure}{0.45\textwidth}
 		\centering
-		\includegraphics[scale=0.4]{figs/individuals3.pdf}
+		\includegraphics[scale=0.3]{figs/individuals3.pdf}
 		\caption{$\gamma = 3$}
 	\end{subfigure}
-	\hfill
+\end{figure}
+\begin{figure}[H]\ContinuedFloat
     \begin{subfigure}{0.45\textwidth}
 		\centering
-		\includegraphics[scale=0.4]{figs/individuals5.pdf}
+		\includegraphics[scale=0.3]{figs/individuals5.pdf}
 		\caption{$\gamma = 5$}
 	\end{subfigure}
 	\hfill
     \begin{subfigure}{0.45\textwidth}
 		\centering
-		\includegraphics[scale=0.4]{figs/individuals10.pdf}
+		\includegraphics[scale=0.3]{figs/individuals10.pdf}
 		\caption{$\gamma = 10$}
 	\end{subfigure}
-	\caption{Merton and Munk's solution without housing for different wage growth and risk aversion levels}
+	\caption{Shares of stocks in a portfolio, suggested by \citet{bodie} (blue curves) and \citet{munk} (red curves) in the absence of housing investment, for heterogeneous agents. The optimal allocations at every age depend on the previous realizations of volatile stock returns --- the dashed lines illustrate the confidence intervals for $\pm \sigma$. Higher risk-aversion, steeper wage curve and smaller stock-income correlation lead to less aggressive investment in stocks, and vice versa. }
+	\label{fig:individs}
 \end{figure}
 
-\paragraph{}Figure 5.3 illustrates the stock and housing asset shares determined by Munk with housing for flat, moderate and steep labor income curves and low, moderate and high stock-labor income correlations for different levels of risk aversion, to capture heterogeneity, as mentioned in the previous chapter. The figure confirms that steeper labor income curves result in larger share of stocks in portfolio and less of bonds. Around age of 45, the sum of optimal stock and housing investments falls below $1$ and optimal bond investment becomes positive. Also, the higher the risk aversion, the less the individuals want to invest in both housing and stocks --- for $\gamma=10$, the optimal Munk solutions are negative or add up to less than $1$, meaning that they should sell all stocks and housing to invest in risk-free long term bonds. In our analysis we do not allow for negative investing, since this is not a primary focus of our thesis.  
 
-
-
-\paragraph{}Full tables with actual solutions are available in Tables E.1 and E.2 of Appendix E for models without housing and in Table E.3 for a model with housing. 
-
-% WELFARE COMPARISON
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Welfare comparison}
-\label{welfare}
-
-In order to compare welfare we use CRRA expected utility function, mentioned in Chapter 3. The probabilities of survival are taken from TUIK as mentioned in the previous chapter. The consumption is calculated in numbers of consumption baskets which cost exactly $1$ CPI --- consumer price index at that period, which is increasing with inflation rate annually, and is equal to $100$ at retirement age $57$. The wealth for which consumption baskets are purchased is a total accumulated wealth, including stock returns, bond returns and housing returns, annuitized according to the formula described in Chapter 3. Discount rate is $0.89$, as mentioned in the previous chapter. We compare expected utilities for different levels of risk aversion.
+Figure \ref{fig:munkh} shows the stock and house shares, suggested by \citet{munk} for flat, moderate and steep labor income curves, low, moderate and high stock-wage correlations, and different levels of risk aversion. It confirms that steeper labor income curves results in a larger share of stocks in portfolio, and the more risk averse individuals are, the sooner they decrease both housing and stock investment, and buy more bonds.
 
 \begin{figure}[H]
 	\centering
     \begin{subfigure}{0.45\textwidth}
 		\centering
-		\includegraphics[scale=0.4]{figs/smunkhouse15.pdf}
+		\includegraphics[scale=0.3]{figs/smunkhouse15.pdf}
 		\caption{Stocks for $\gamma = 1.5$}
 	\end{subfigure}
 	\hfill
     \begin{subfigure}{0.45\textwidth}
 		\centering
-		\includegraphics[scale=0.4]{figs/hmunkhouse15.pdf}
+		\includegraphics[scale=0.3]{figs/hmunkhouse15.pdf}
 		\caption{Housing for $\gamma = 1.5$}
 	\end{subfigure}
-	\hfill
+\end{figure}
+\begin{figure}[H]\ContinuedFloat
     \begin{subfigure}{0.45\textwidth}
 		\centering
-		\includegraphics[scale=0.4]{figs/smunkhouse3.pdf}
+		\includegraphics[scale=0.3]{figs/smunkhouse3.pdf}
 		\caption{Stocks for $\gamma = 3$}
 	\end{subfigure}
 	\hfill
     \begin{subfigure}{0.45\textwidth}
 		\centering
-		\includegraphics[scale=0.4]{figs/hmunkhouse3.pdf}
+		\includegraphics[scale=0.3]{figs/hmunkhouse3.pdf}
 		\caption{Housing for $\gamma = 3$}
 	\end{subfigure}
-	\hfill
+\end{figure}
+\begin{figure}[H]\ContinuedFloat
     \begin{subfigure}{0.45\textwidth}
 		\centering
-		\includegraphics[scale=0.4]{figs/smunkhouse5.pdf}
+		\includegraphics[scale=0.3]{figs/smunkhouse5.pdf}
 		\caption{Stocks for $\gamma = 5$}
 	\end{subfigure}
 	\hfill
     \begin{subfigure}{0.45\textwidth}
 		\centering
-		\includegraphics[scale=0.4]{figs/hmunkhouse5.pdf}
+		\includegraphics[scale=0.3]{figs/hmunkhouse5.pdf}
 		\caption{Housing for $\gamma = 5$}
 	\end{subfigure}
 \end{figure}
 \begin{figure}[H]\ContinuedFloat
     \begin{subfigure}{0.45\textwidth}
 		\centering
-		\includegraphics[scale=0.4]{figs/smunkhouse10.pdf}
+		\includegraphics[scale=0.3]{figs/smunkhouse10.pdf}
 		\caption{Stocks for $\gamma = 10$}
 	\end{subfigure}
 	\hfill
     \begin{subfigure}{0.45\textwidth}
 		\centering
-		\includegraphics[scale=0.4]{figs/hmunkhouse10.pdf}
+		\includegraphics[scale=0.3]{figs/hmunkhouse10.pdf}
 		\caption{Housing for $\gamma = 10$}
 	\end{subfigure}
 	\caption{Munk's stock and housing shares for different wage growth, stock-wage correlation and risk aversion levels}
+	\label{fig:munkh}
 \end{figure}
+
+Tables with portfolio allocations can be reproduced using the data and methodology explained in this paper in detail.
+
+% WELFARE COMPARISON
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Welfare comparison and results}
+\label{welfare}
+
+In this section, we calculate the accumulated wealth for every investment option above and benchmark the resulting expected utilities.
+
+\subsection{Accumulated wealth}
+
+After the lifetime of investing, the household accumulates different levels of wealth, as summarized in Table \ref{table:wealth}.
+
+\begin{table}[h!]
+	\centering
+	\caption{Total Accumulated Wealth by Investment Option}
+	\label{table:wealth}
+	\begin{tabular}[c]{lrrrr}
+		\hline
+		Option&$\gamma=1.5$ (default) & $\gamma=3$ & $\gamma=5$ & $\gamma=10$\\
+		\hline
+		\multicolumn{5}{c}{Defaults}\\
+Anadolu Hayat (riskless)&2,000,694 TL&2,000,694 TL&2,000,694 TL&2,000,694 TL\\
+$(100-age)\%$&4,545,177 TL&4,545,177 TL&4,545,177 TL&4,545,177 TL\\
+Cocco et al.&10,918,994 TL&10,918,994 TL&10,918,994 TL&10,918,994 TL\\
+Markowitz (fixed) &6,287,647 TL&6,287,647 TL&6,287,647 TL&6,287,647 TL\\
+\multicolumn{5}{c}{}\\
+\multicolumn{5}{c}{Individualized (no housing)}\\
+Bodie et al. (steep)&25,513,822 TL&10,374,038 TL&6,526,269 TL&4,190,661 TL\\
+Bodie et al. (moderate)&11,248,905 TL&4,526,672 TL&2,828,304 TL&1,803,151 TL\\
+Bodie et al. (flat)&3,949,368 TL&1,514,867 TL&930,204 TL&586,732 TL\\
+Munk (steep-lo)&25,236,838 TL&9,924,172 TL&5,982,295 TL&3,371,281 TL\\
+Munk (steep-mod)&25,236,817 TL&9,924,152 TL&5,982,274 TL&3,371,260 TL\\
+Munk (steep-hi)&25,236,797 TL&9,924,132 TL&5,982,254 TL&3,371,240 TL\\
+Munk (moderate-lo)&11,111,057 TL&4,331,204 TL&2,584,866 TL&1,441,285 TL\\
+Munk (moderate-mod)&11,111,049 TL&4,331,196 TL&2,584,857 TL&1,441,277 TL\\
+Munk (moderate-hi)&11,111,040 TL&4,331,187 TL&2,584,849 TL&1,441,268 TL\\
+Munk (flat-lo)&3,906,648 TL&1,452,621 TL&852,150 TL&472,043 TL\\
+Munk (flat-mod)&3,906,646 TL&1,452,619 TL&852,148 TL&472,041 TL\\
+Munk (flat-hi)&3,906,644 TL&1,452,617 TL&852,146 TL&472,039 TL\\
+\multicolumn{5}{c}{}\\
+\multicolumn{5}{c}{Individualized (housing)}\\
+Munk (steep-lo)&74,168,102 TL&50,575,196 TL&30,149,576 TL&19,030,821 TL\\
+Munk (steep-mod)&72,868,088 TL&49,309,258 TL&29,030,131 TL&17,925,925 TL\\
+Munk (steep-hi)&71,559,554 TL&47,942,115 TL&27,909,489 TL&16,627,948 TL\\
+Munk (moderate-lo)&30,595,160 TL&20,817,931 TL&12,392,195 TL&7,826,582 TL\\
+Munk (moderate-mod)&30,059,601 TL&20,297,628 TL&11,939,450 TL&7,372,166 TL\\
+Munk (moderate-hi)&29,520,524 TL&19,737,247 TL&11,486,249 TL&6,845,005 TL\\
+Munk (flat-lo)&9,056,285 TL&6,068,133 TL&3,600,965 TL&2,280,512 TL\\
+Munk (flat-mod)&8,903,691 TL&5,921,315 TL&3,479,798 TL&2,150,420 TL\\
+Munk (flat-hi)&8,750,023 TL&5,762,054 TL&3,349,099 TL&2,003,530 TL\\
+		\hline
+	\end{tabular}
+\end{table}
 
 \subsubsection{Early results}
 
-After a lifetime of investing in the above portfolios, the household accumulates different levels of wealth, summarized in Table 5.1. Since the consumption preferences are monotonic, we can make early conclusions even without calculating expected utilities --- the higher the accumulated wealth, the better: 
+We can make some early conclusions before calculating utilities:
 
 \begin{itemize}
-\item Naively considering lifecycles does not guarantee the better investment. So, in our case, $(100-age)\%$ is worse than fixed Markowitz.
-\item Different stock-wage correlations don't make much difference in the outcome without housing, and make considerable difference in models with housing
-\item Stock-wage correlations are negatively correlated with total wealth
-\item Both too low and too high risk aversion results in less accumulated capital than moderate risk aversion for models with housing and only too high risk aversion --- for models without housing (because of monotonicity).\\
-\item Default options are better for people with flat wage growth rate and worse for people with moderate or steep wage curves
+\item Naively considering life-cycles does not guarantee the better investment --- in our scenario, $(100-age)\%$ is worse than fixed Markowitz.
+\item Different stock-wage correlations don't make big difference in the outcome without housing, and make considerable difference in models with housing.
+\item Stock-wage correlations are negatively correlated with total wealth.
+\item Default options are better for people with flat wages. Individualized options are better for people with moderate or steep wages.
 \end{itemize}
 
-\subsubsection{Annuitization}
+\subsection{Annuities}
 To formalize the observations made in the previous section, we will construct annuities and plug them into expected utility functions. As described in detail in Chapter 3, we define annuities by dividing the total wealth before retirement by the discount factor $1 + \sum^{100}_{t=58}\frac{p_t}{1+r_f}$. Using survival probabilities, obtained from TUIK, and risk-free rate of return, described in the previous chapter, we calculate the discount factor as $205.29$. The annuities are obtained by dividing all the values in the Table 5.1 by $205.29$. The resulting values are presented in Table 5.2. 
 
 
@@ -572,51 +571,7 @@ We model that the individuals spend their annuity returns to consume baskets whi
 Finally, we will plug the consumption streams, calculated in the previous section, into the constant relative risk-aversion expected utility functions to compare the welfare effects. The resulting expected utility values are presented in Table 5.3.
 
 
-\newgeometry{top=2cm,bottom=2cm}
-\begin{table}%TABLE 5.1
-	\centering
-	\caption{Total Accumulated Wealth by Investment Option}
-	\begin{tabular}[c]{lrrrr}
-		\hline
-		Option&$\gamma=5$ (default) & $\gamma=1.5$ & $\gamma=3$ & $\gamma=10$\\
-		\hline
-		\multicolumn{5}{c}{Defaults}\\
-Anadolu Hayat (riskless)&614,195 TL&614,195 TL&614,195 TL&614,195 TL\\
-$(100-age)\%$&1,160,977 TL&1,160,977 TL&1,160,977 TL&1,160,977 TL\\
-Cocco et al.&1,599,852 TL&1,599,852 TL&1,599,852 TL&1,599,852 TL\\
-Markowitz&1,300,187 TL&1,300,187 TL&1,300,187 TL&1,300,187 TL\\
-\multicolumn{5}{c}{}\\
-\multicolumn{5}{c}{Individualized (no housing)}\\
-Merton (steep)&3,812,053 TL&4,212,735 TL&3,104,746 TL&2,920,892 TL\\
-Merton (moderate)&1,629,904 TL&1,813,821 TL&1,447,951 TL&1,248,330 TL\\
-Merton (flat)&543,602 TL&612,548 TL&639,866 TL&398,235 TL\\
-Munk (steep-lo)&3,547,442 TL&4,168,823 TL&3,829,218 TL&2,085,883 TL\\
-Munk (steep-mod)&3,543,435 TL&4,164,850 TL&3,825,221 TL&2,081,872 TL\\
-Munk (steep-hi)&3,539,425 TL&4,160,872 TL&3,821,219 TL&2,077,854 TL\\
-Munk (moderate-lo)&1,513,198 TL&1,794,772 TL&1,689,491 TL&868,955 TL\\
-Munk (moderate-mod)&1,511,527 TL&1,793,113 TL&1,687,822 TL&867,281 TL\\
-Munk (moderate-hi)&1,509,853 TL&1,791,452 TL&1,686,152 TL&865,604 TL\\
-Munk (flat-lo)&508,757 TL&606,410 TL&657,762 TL&262,161 TL\\
-Munk (flat-mod)&508,371 TL&606,025 TL&657,376 TL&261,774 TL\\
-Munk (flat-hi)&507,984 TL&605,640 TL&656,990 TL&261,386 TL\\
-\multicolumn{5}{c}{}\\
-\multicolumn{5}{c}{Individualized (no housing)}\\
-Munk (steep-lo)&8,937,159 TL&3,087,377 TL&4,718,332 TL&3,920,863 TL\\
-Munk (steep-mod)&7,645,621 TL&2,966,467 TL&4,371,031 TL&2,900,022 TL\\
-Munk (steep-hi)&6,353,327 TL&2,846,577 TL&4,017,054 TL&1,872,799 TL\\
-Munk (moderate-lo)&3,652,223 TL&1,304,014 TL&1,998,234 TL&1,605,470 TL\\
-Munk (moderate-mod)&3,125,930 TL&1,252,432 TL&1,850,278 TL&1,189,240 TL\\
-Munk (moderate-hi)&2,599,301 TL&1,201,297 TL&1,700,235 TL&770,295 TL\\
-Munk (flat-lo)&1,026,845 TL&430,353 TL&614,929 TL&455,296 TL\\
-Munk (flat-mod)&881,934 TL&435,168 TL&598,789 TL&341,199 TL\\
-Munk (flat-hi)&736,896 TL&397,829 TL&527,533 TL&226,188 TL\\
-		\hline
-	\end{tabular}
-\end{table}
-\resetgeometry
 
-
-\newgeometry{top=2cm,bottom=2cm}
 \begin{table}%TABLE 5.2
 	\centering
 	\caption{Annual Pensions by Investment Option}
@@ -658,27 +613,25 @@ Munk (flat-hi) TL&3,590 TL&1,938 TL&2,570 TL&1,102 TL\\
 		\hline
 	\end{tabular}
 \end{table}
-\resetgeometry
 
 \subsubsection{Conclusions}
 Now, we can observe the final resutls:
 
 \begin{itemize}
 
-\item Naive lifecycle investment portfolios, such as $(100-age)\%$ don't overperform fixed-ratio Markowitz, because they don't take the risk aversion into consideration.
-\item Cocco et al.'s $(200-2.5\cdot age)\%$ approximation is the best default portfolio. It is easy to interpret and captures lifecycle effect.
+\item Naive life-cycle investment portfolios, such as $(100-age)\%$ don't overperform fixed-ratio Markowitz, because they don't take the risk aversion into consideration.
+\item Cocco et al.'s $(200-2.5\cdot age)\%$ approximation is the best default portfolio. It is easy to interpret and captures life-cycle effect.
 \item All models perform better for higher risk aversion and worse for lower risk aversion --- for everyone except flat-wagers.
 \item Higher stock-wage correlation considerably decreases the utility for moderate and flat wages, and doesn't affect much for steep wages.
 \item Merton's solution outperforms Munk's solution without housing for low levels of risk aversion, and performs same for high level of risk aversion ($\gamma=10$).
 \item Munk's solution with housing outperforms every other solution for high levels of risk aversion ($\gamma=10$) --- for everyone except flat-wagers.
 \item Munk's solution with housing outperforms Munk's solution without housing for $\gamma=5,10$.
 \item Markowitz's solution outperforms both Merton's and Munk's solutions for flat wages and low risk aversion.
-\item Individualizing lifecycles by wage growth rate and stock-wage correlation increases welfare for steep wagers and decreases welfare for flat wagers.
+\item Individualizing life-cycles by wage growth rate and stock-wage correlation increases welfare for steep wagers and decreases welfare for flat wagers.
 \end{itemize}
 
 \paragraph{}We did not provide numerical conclusions, since they are trivial --- they can be obtained by calculating percentage differences in Table 5.3.
 
-\newgeometry{top=2cm,bottom=2cm}
 \begin{table}%TABLE 5.3
 	\centering
 	\caption{Expected Utilities by Investment Option}
@@ -720,7 +673,6 @@ Munk (flat-hi)&-0.0004049&-4.4735990&-0.0336084&-0.4086488\\
 		\hline
 	\end{tabular}
 \end{table}
-\resetgeometry
 
 % CONCLUSION 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -728,13 +680,13 @@ Munk (flat-hi)&-0.0004049&-4.4735990&-0.0336084&-0.4086488\\
 \section{Conclusion}
 \label{conclusion}
 
-In this thesis we have reviewed the current state of pension investments in Turkey and the history and recent developments of a field of financial economics. We have reviewed the concept of "lifecycle investment" and summarized the common models and heuristics.
+In this thesis we have reviewed the current state of pension investments in Turkey and the history and recent developments of a field of financial economics. We have reviewed the concept of "life-cycle investment" and summarized the common models and heuristics.
 
 \paragraph{}We have presented our model as an application of Munk's (2016) recent findings and Olear's (2016) simulation techniques into Turkish retirement market. We have collected historical data to calibrate and estimate the best parameters to be used in our simulation.
 
 \paragraph{}Using these parameters, we have constructed heterogeneous agents, who worked and invested throughout their lifetime. We considered different investment models that our hypothetical agents would use and calculated the resulting investment capitals.
 
-\paragraph{}Finally, we have calculated and compared the welfare effects of all popular models to the individualized Munk's solutions. We have concluded that for rich-to-middle class citizens, the individiualized strategies considerably increase their welfare. Moreover, the solutions we proposed can be solved analytically without complex dynamic optimizations, and therefore are easy to interpret to households. We also found that even naive lifecycle investments perform better than fixed lifetime investment.
+\paragraph{}Finally, we have calculated and compared the welfare effects of all popular models to the individualized Munk's solutions. We have concluded that for rich-to-middle class citizens, the individiualized strategies considerably increase their welfare. Moreover, the solutions we proposed can be solved analytically without complex dynamic optimizations, and therefore are easy to interpret to households. We also found that even naive life-cycle investments perform better than fixed lifetime investment.
 
 \paragraph{}We propose these models to Turkish pension providers and to Turkish working-age households belonging to middle-to-upper class, as these options will increase their retirement welfare considerably.
 
@@ -758,37 +710,34 @@ In this thesis we have reviewed the current state of pension investments in Turk
 \bibitem[Ascheberg et al.(2013)]{ascheberg} Ascheberg, M., Kraft, H., Munk, C., Weiss, F. (2013). The Joint Dynamics of Labor Income, Stock Prices, and House Prices and the Implications for Household Decisions. \textit{Working Papers, Dauphine Universite Paris, International Workshop on Pension, Insurance and Saving}.
 \bibitem[Campbell et al.(1999)]{ccgm} Campbell, J., Cocco, J.F., Gomes, F.J., Maenhout, P.J. (1999). Investing Retirement Wealth: A Life-Cycle Model. \textit{Working Papers, National Bureau of Economic Research}, 439-482.
 \bibitem[Olear(2016)]{olear} Olear G.M. (2016). Benefits of Individualized Lifecycle Investing: The Impact of Individual Wage Profile \& Housing Wealth. \textit{Master's Thesis, Tilburg University, School of Economics and Management}.
-\bibitem[TUIK Household Budget Survey(2003-2014)]{tuik} TUIK (2003-2014). Hanehalki Butce Anketi. \textit{Turkish Statistical Institute}.
-
-
-
-\bibitem[Aktug et al.(2017)]{aktug} Aktug, E., Kuzubas, T.U., Torul, O. (2017). An Investigation of Labor Income Profiles in Turkey. \textit{Working Papers, Bogazici University, Department of Economics}.
-\bibitem[Arts et al.(2016)]{arts} Arts, J., Ponds, E. (2016). The Need for Flexible Take-ups of Home Equity and Pension Wealth in Retirement. \textit{Working Papers, Tilburg University}.
-\bibitem[Campbell and Viceira(2002)]{camvic} Campbell, J.Y., Viceira, L.M. (2002). Strategic Asset Allocation: Portfolio Choice for Long-Term Investors. \textit{Oxford University Press}.
-\bibitem[Iscanoglu-Cekic(2016)]{iscan} Iscanoglu-Cekic, A. (2016). An Optimal Turkish Private Pension Plan with a Guarantee Feature. \textit{MDPI Risks Journal}, 4(19).
-\bibitem[OECD(2018)]{oecd} OECD (2018). Long-term interest rates forecast (indicator). \textit{https://data.oecd.org}
-\bibitem[Pension Monitoring Center Annual Report (2016)]{egm} Pension Monitoring Center Annual Report (2016). \textit{https://www.egm.org.tr}.
-\bibitem[Torul and Oztunali(2018)]{torul} Torul, O., Oztunali, O. (2018). On Income and Wealth Inequality in Turkey. \textit{Working Papers, Bogazici University, Department of Economics}.
+\bibitem[Turkish Statistical Institute's Household Budget Survey(2003-2014)]{tuik} TUIK (2003-2014). Hanehalki Butce Anketi. \textit{Turkish Statistical Institute}.
+\bibitem[Aktug et al.(2017)]{aktug} Aktuğ, E., Kuzubaş, T.U., Torul, O. (2017). An Investigation of Labor Income Profiles in Turkey. \textit{Working Papers, Boğaziçi  University, Department of Economics}.
+\bibitem[Ben-Porath(1967)]{benporath} Ben-Porath, Y. (1967). The  Production  of  Human  Capital  and  the  Life-Cycle  of  Earnings. \textit{Journal of Political Economy}, 75, 352-365.
+\bibitem[Torul and Oztunali(2018)]{torul} Torul, O., Öztunalı, O. (2018). On Income and Wealth Inequality in Turkey. \textit{Working Papers, Boğaziçi University, Department of Economics}.
+\bibitem[OECD(2018)]{oecd} OECD(2018). Long-term interest rates forecast (indicator). \textit{https://data.oecd.org}
+\bibitem[Turkish Statistical Institute's Data Bank(2018)]{tuik2} TUIK (2018). General Statistics. \textit{http://www.turkstat.gov.tr}.
+\bibitem[Turkish Central Bank's Inflation Report (2018)]{tcmb} TCMB (2018). Enflasyon Raporu. \textit{http://www.tcmb.gov.tr}.
 \end{thebibliography}
 
 % APPENDIX A
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
 \begin{appendix}
 
 \section{Ascheberg's correlation structure}
 \label{ascheberg}
 
-The structure that returns desired correlation coefficients $\rho_{sy}$, $\rho_{hs}$ and $\rho_{hy}$ is as follows:
+The structure that returns desired correlation coefficients $\rho_{SL}$, $\rho_{SH}$ and $\rho_{HL}$ is as follows:
 
 \begin{subequations}
 	\begin{equation}
-		\frac{\Delta S_{t+1}}{S_t} = \mu_s + \sigma_s \cdot \epsilon_{st}
+		\frac{\Delta S_{t+1}}{S_t} = \mu_S + \sigma_S \cdot \epsilon_{St}
 	\end{equation}
 	\begin{equation}
-		\frac{\Delta H_{t+1}}{H_t} = \mu_h + \sigma_h \cdot \left(\rho_{hs}\epsilon_{st} + (\sqrt{1-\rho^2_{hs}})\epsilon_{ht}\right)
+		\frac{\Delta H_{t+1}}{H_t} = \mu_H + \sigma_H \cdot \left(\rho_{SH}\epsilon_{St} + (\sqrt{1-\rho^2_{SL}})\epsilon_{Ht}\right)
 	\end{equation}
 	\begin{equation}
-		\frac{\Delta Y_{t+1}}{Y_t} = \mu_v + \sigma_v \cdot \left(\rho_{ys}\epsilon_{st} + \left(\frac{\rho_{yh} - \rho_{sh}\rho_{sy}}{\sqrt{1-\rho^2_{sh}}}\right)\epsilon_{ht} + \left(\sqrt{1-\rho^2_{ys}-(\frac{\rho_{yh} - \rho_{sh}\rho_{sy}}{\sqrt{1-\rho^2_{sh}}})^2}\right)\epsilon_{vt}\right)
+		\frac{\Delta Y_{t+1}}{Y_t} = \mu_L + \sigma_L \cdot \left(\rho_{SL}\epsilon_{St} + \left(\frac{\rho_{HL} - \rho_{SH}\rho_{SL}}{\sqrt{1-\rho^2_{SH}}}\right)\epsilon_{Ht} + \left(\sqrt{1-\rho^2_{SL}-(\frac{\rho_{HL} - \rho_{SH}\rho_{SL}}{\sqrt{1-\rho^2_{SH}}})^2}\right)\epsilon_{Lt}\right)
 	\end{equation}
 \end{subequations}
 
@@ -806,9 +755,9 @@ The conclusion comes from the fact that the Cholesky decomposition of a correlat
 
 \begin{center}
 	$R = \begin{bmatrix}
-					1 & \rho_{sh} & \rho_{sy} \\
-					\rho_{hs} & 1 & \rho_{hy} \\
-					\rho_{ys} & \rho_{yh} & 1
+					1 & \rho_{SH} & \rho_{SL} \\
+					\rho_{SH} & 1 & \rho_{HL} \\
+					\rho_{SL} & \rho_{HL} & 1
 			\end{bmatrix}
 	$
 \end{center}
@@ -818,11 +767,334 @@ can be easily calculated to be equal to $Q$:
 \begin{center}
 	$Q = \begin{bmatrix}
 					1 & 0 & 0 \\
-					\rho_{hs} & \sqrt{1-\rho^2_{hs}} & 0 \\
-					\rho_{ys} & \frac{\rho_{yh} - \rho_{sh}\rho_{sy}}{\sqrt{1-\rho^2_{sh}}} & \sqrt{1-\rho^2_{ys}-(\frac{\rho_{yh} - \rho_{sh}\rho_{sy}}{\sqrt{1-\rho^2_{sh}}})^2}
+					\rho_{SH} & \sqrt{1-\rho^2_{SH}} & 0 \\
+					\rho_{SL} & \frac{\rho_{HL} - \rho_{SH}\rho_{SL}}{\sqrt{1-\rho^2_{SH}}} & \sqrt{1-\rho^2_{SL}-(\frac{\rho_{HL} - \rho_{SH}\rho_{SL}}{\sqrt{1-\rho^2_{SH}}})^2}
 			\end{bmatrix}
 	$
 \end{center}
+
+
+% APPENDIX B
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\section{Parameter Calibrations}
+\label{paramcalib}
+
+\subsection{Stock returns}
+\label{paramcalibx}
+We use log differences on our monthly stock price data to obtain historical monthly rates of return. The Augmented Dickey-Fuller test strongly shows that the modified series is stationary at $1\%$ significance level.
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[scale=0.3]{figs/bistdiff.pdf}
+	\caption{Historical monthly rates of return on stocks}
+	\label{fig:bistdiff}
+\end{figure}
+
+We use Akaike Information Criterion to find the optimal lag order for ARIMA estimation --- $p=q=2$.
+
+Performing ARIMA(2,0,2) estimation, we obtain the long-term forecasted monthly rate of return $\mu^S_{mon} = 0.541\%$ and volatility $\sigma^S_{mon} = 11.1\%$.
+
+Finally, we annualize these values as follows:
+
+\begin{equation}
+	\mu_S = (1 + \mu^S_{mon})^{12} - 1= 6.69\%
+\end{equation}
+
+\begin{equation}
+	\sigma_S = \sigma^S_{mon} \cdot \sqrt{12} = 38.44\%
+\end{equation}
+
+\subsection{Housing returns}
+\label{paramcaliby}
+Similarly, we log-differentiate monthly house prices to obtain growth rates. The house market collapse of 2008 brings large external shock, causing the Augmented Dickey-Fuller test to only find stationarity at $10\%$ significance level for 3 lags at most.
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[scale=0.3]{figs/reidindiff.pdf}
+	\caption{Historical monthly rates of return on housing}
+	\label{fig:reidindiff}
+\end{figure}
+
+Again, using Akaike Information Criterion, we find $p=q=1$.
+
+ARIMA(1,0,1) estimation provides long-term forecasts for monthly rate of return and volatility as $\mu^H_{mon} = 0.06\%$ and $\sigma^H_{mon} = 1.57\%$.
+
+Annualization gives:
+
+\begin{equation}
+	\mu_H = (1 + \mu^H_{mon})^{12} - 1= 0.67\%
+\end{equation}
+
+\begin{equation}
+	\sigma_H = \sigma^H_{mon} \cdot \sqrt{12} = 5.42 \%
+\end{equation}
+
+
+\subsection{Labor income volatility}
+\label{paramcalibz}
+The Augmented Dickey-Fuller test returns stationarity for up to 9 lags at $5\%$ significance level. 
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[scale=0.3]{figs/wagediff.pdf}
+	\caption{Historical monthly wage growth rates}
+	\label{fig:wagediff}
+\end{figure}
+
+Akaike Information Criterion suggests $p=5$ and $q=2$.
+
+ARIMA(5,0,2) estimation gives monthly volatility $\sigma^L_{mon} = 1.04\%$, which annualizes as follows:
+
+\begin{equation}
+	\sigma_L = \sigma^L_{mon} \cdot \sqrt{12} = 3.59 \%
+\end{equation}
+
+
+\subsection{Wage regression results}
+\label{paramcalibt}
+
+The regressions of wage growth rates by age with kinks at 40 and 55, return the following coefficients.
+
+\begin{table}[H]
+	\centering
+	\caption[]{Wage regression results by age}
+	\begin{tabular}[c]{lccc}
+		\hline
+		&flat&moderate&steep\\
+		\hline
+		(intercept)&0.1\%&0.4\%&1.5\%\\
+		d40&-0.7\%&3.3\%&0.7\%\\
+		d55&1.4\%&0.9\%&-0.4\%\\
+		\hline
+	\end{tabular}
+\end{table}
+
+The growth rates can be calculated using these coefficients. Note that we have rounded the growth rates for the flat wages to $0$. Figure \ref{fig:heterwage} illustrates how the estimated rates fit the data:
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[scale=0.3]{figs/heterwage.pdf}
+	\caption{Fitted values from wage regressions}
+	\label{fig:heterwage}
+\end{figure}
+
+
+% APPENDIX C
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\section{Investment strategies}
+\label{invstrat}
+
+\begin{table}[H]
+	\centering
+	\caption[]{Homogeneous life-cycles}
+	\begin{tabular}[c]{lcccc}
+		\hline
+		age&(100-age)\%&Bodie et al.&Anadolu Hayat Riskless&Markowitz\\
+		\hline
+		26&0.75&1&0.3&0.63\\
+		27&0.74&1&0.3&0.63\\
+		28&0.73&1&0.3&0.63\\
+		29&0.72&1&0.3&0.63\\
+		30&0.71&1&0.3&0.63\\
+		31&0.7&1&0.3&0.63\\
+		32&0.69&1&0.3&0.63\\
+		33&0.68&1&0.3&0.63\\
+		34&0.67&1&0.3&0.63\\
+		35&0.66&1&0.3&0.63\\
+		36&0.65&1&0.3&0.63\\
+		37&0.64&1&0.3&0.63\\
+		38&0.63&1&0.3&0.63\\
+		39&0.62&1&0.3&0.63\\
+		40&0.61&1&0.3&0.63\\
+		41&0.6&0.975&0.3&0.63\\
+		42&0.59&0.95&0.3&0.63\\
+		43&0.58&0.925&0.3&0.63\\
+		44&0.57&0.9&0.3&0.63\\
+		45&0.56&0.875&0.3&0.63\\
+		46&0.55&0.85&0.3&0.63\\
+		47&0.54&0.825&0.3&0.63\\
+		48&0.53&0.8&0.3&0.63\\
+		49&0.52&0.775&0.3&0.63\\
+		50&0.51&0.75&0.3&0.63\\
+		51&0.5&0.725&0.3&0.63\\
+		52&0.49&0.7&0.3&0.63\\
+		53&0.48&0.675&0.3&0.63\\
+		54&0.47&0.65&0.3&0.63\\
+		55&0.46&0.625&0.3&0.63\\
+		56&0.45&0.6&0.3&0.63\\
+		57&0.44&0.575&0.3&0.63\\
+		58&0.43&0.55&0.3&0.63\\
+		59&0.42&0.525&0.3&0.63\\
+		60&0.41&0.5&0.3&0.63\\
+		61&0.4&0.5&0.3&0.63\\
+		62&0.39&0.5&0.3&0.63\\
+		63&0.38&0.5&0.3&0.63\\
+		64&0.37&0.5&0.3&0.63\\
+		65&0.36&0.5&0.3&0.63\\
+		\hline
+	\end{tabular}
+\end{table}
+
+\begin{table}[H]
+	\centering
+	\caption[]{Munk's life-cycles for $\gamma = 1.5$ (1 of 3)}
+	\begin{tabular}[c]{lcccccc}
+&\multicolumn{3}{c}{Munk stock}&\multicolumn{3}{c}{Munk housing}\\
+		\hline
+age&steep-lo&steep-mod&steep-hi&steep-lo&steep-mod&steep-hi\\
+		\hline
+26&0.742&0.714&0.684&0.258&0.286&0.316\\
+27&0.730&0.702&0.674&0.270&0.298&0.326\\
+28&0.715&0.689&0.663&0.285&0.311&0.337\\
+29&0.698&0.675&0.650&0.302&0.325&0.350\\
+30&0.680&0.659&0.637&0.320&0.341&0.363\\
+31&0.661&0.642&0.622&0.339&0.358&0.378\\
+32&0.643&0.626&0.608&0.357&0.374&0.392\\
+33&0.624&0.609&0.594&0.376&0.391&0.406\\
+34&0.606&0.593&0.581&0.394&0.407&0.419\\
+35&0.589&0.579&0.568&0.411&0.421&0.432\\
+36&0.573&0.564&0.556&0.427&0.436&0.444\\
+37&0.560&0.553&0.546&0.440&0.447&0.454\\
+38&0.548&0.543&0.537&0.452&0.457&0.463\\
+39&0.539&0.534&0.530&0.461&0.466&0.470\\
+40&0.532&0.528&0.524&0.468&0.472&0.476\\
+41&0.525&0.522&0.519&0.475&0.478&0.481\\
+42&0.519&0.517&0.515&0.481&0.483&0.485\\
+43&0.515&0.514&0.512&0.485&0.486&0.488\\
+44&0.512&0.511&0.509&0.488&0.489&0.491\\
+45&0.509&0.508&0.507&0.491&0.492&0.493\\
+46&0.507&0.506&0.505&0.493&0.494&0.495\\
+47&0.505&0.505&0.504&0.495&0.495&0.496\\
+48&0.504&0.504&0.503&0.496&0.496&0.497\\
+49&0.503&0.503&0.502&0.497&0.497&0.498\\
+50&0.503&0.502&0.502&0.497&0.498&0.498\\
+51&0.502&0.502&0.501&0.498&0.498&0.499\\
+52&0.501&0.501&0.501&0.499&0.499&0.499\\
+53&0.501&0.501&0.501&0.499&0.499&0.499\\
+54&0.501&0.501&0.501&0.499&0.499&0.499\\
+55&0.501&0.500&0.500&0.499&0.500&0.500\\
+56&0.500&0.500&0.500&0.500&0.500&0.500\\
+57&0.500&0.500&0.500&0.500&0.500&0.500\\
+58&0.500&0.500&0.500&0.500&0.500&0.500\\
+59&0.500&0.500&0.500&0.500&0.500&0.500\\
+60&0.500&0.500&0.500&0.500&0.500&0.500\\
+61&0.500&0.500&0.500&0.500&0.500&0.500\\
+62&0.500&0.500&0.500&0.500&0.500&0.500\\
+63&0.500&0.500&0.500&0.500&0.500&0.500\\
+64&0.500&0.500&0.500&0.500&0.500&0.500\\
+		\hline
+	\end{tabular}
+\end{table}
+
+
+\begin{table}[H]
+	\centering
+	\caption[]{Munk's life-cycles for $\gamma = 1.5$ (2 of 3)}
+	\begin{tabular}[c]{lcccccc}
+&\multicolumn{3}{c}{Munk stock}&\multicolumn{3}{c}{Munk housing}\\
+		\hline
+age&mod-lo&mod-mod&mod-hi&mod-lo&mod-mod&mod-hi\\
+		\hline
+26&0.742&0.714&0.684&0.258&0.286&0.316\\
+27&0.729&0.702&0.674&0.271&0.298&0.326\\
+28&0.714&0.688&0.662&0.286&0.312&0.338\\
+29&0.697&0.674&0.650&0.303&0.326&0.350\\
+30&0.679&0.658&0.636&0.321&0.342&0.364\\
+31&0.659&0.640&0.621&0.341&0.360&0.379\\
+32&0.641&0.624&0.607&0.359&0.376&0.393\\
+33&0.622&0.607&0.593&0.378&0.393&0.407\\
+34&0.604&0.592&0.579&0.396&0.408&0.421\\
+35&0.588&0.577&0.567&0.412&0.423&0.433\\
+36&0.572&0.563&0.555&0.428&0.437&0.445\\
+37&0.559&0.552&0.545&0.441&0.448&0.455\\
+38&0.548&0.542&0.537&0.452&0.458&0.463\\
+39&0.539&0.534&0.529&0.461&0.466&0.471\\
+40&0.532&0.528&0.524&0.468&0.472&0.476\\
+41&0.525&0.522&0.519&0.475&0.478&0.481\\
+42&0.520&0.517&0.515&0.480&0.483&0.485\\
+43&0.515&0.514&0.512&0.485&0.486&0.488\\
+44&0.512&0.511&0.509&0.488&0.489&0.491\\
+45&0.509&0.508&0.507&0.491&0.492&0.493\\
+46&0.507&0.506&0.506&0.493&0.494&0.494\\
+47&0.506&0.505&0.504&0.494&0.495&0.496\\
+48&0.504&0.504&0.503&0.496&0.496&0.497\\
+49&0.503&0.503&0.503&0.497&0.497&0.497\\
+50&0.503&0.502&0.502&0.497&0.498&0.498\\
+51&0.502&0.502&0.501&0.498&0.498&0.499\\
+52&0.501&0.501&0.501&0.499&0.499&0.499\\
+53&0.501&0.501&0.501&0.499&0.499&0.499\\
+54&0.501&0.501&0.501&0.499&0.499&0.499\\
+55&0.501&0.501&0.500&0.499&0.499&0.500\\
+56&0.500&0.500&0.500&0.500&0.500&0.500\\
+57&0.500&0.500&0.500&0.500&0.500&0.500\\
+58&0.500&0.500&0.500&0.500&0.500&0.500\\
+59&0.500&0.500&0.500&0.500&0.500&0.500\\
+60&0.500&0.500&0.500&0.500&0.500&0.500\\
+61&0.500&0.500&0.500&0.500&0.500&0.500\\
+62&0.500&0.500&0.500&0.500&0.500&0.500\\
+63&0.500&0.500&0.500&0.500&0.500&0.500\\
+64&0.500&0.500&0.500&0.500&0.500&0.500\\
+		\hline
+	\end{tabular}
+\end{table}
+
+\begin{table}[H]
+	\centering
+	\caption[]{Munk's life-cycles for $\gamma = 1.5$ (3 of 3)}
+	\begin{tabular}[c]{lcccccc}
+&\multicolumn{3}{c}{Munk stock}&\multicolumn{3}{c}{Munk housing}\\
+		\hline
+age&flat-lo&flat-mod&flat-hi&flat-lo&flat-mod&flat-hi\\
+		\hline
+26&0.742&0.713&0.684&0.258&0.287&0.316\\
+27&0.729&0.701&0.674&0.271&0.299&0.326\\
+28&0.713&0.687&0.661&0.287&0.313&0.339\\
+29&0.695&0.672&0.648&0.305&0.328&0.352\\
+30&0.675&0.654&0.633&0.325&0.346&0.367\\
+31&0.654&0.636&0.617&0.346&0.364&0.383\\
+32&0.634&0.618&0.602&0.366&0.382&0.398\\
+33&0.614&0.601&0.587&0.386&0.399&0.413\\
+34&0.596&0.585&0.573&0.404&0.415&0.427\\
+35&0.579&0.570&0.560&0.421&0.430&0.440\\
+36&0.564&0.556&0.549&0.436&0.444&0.451\\
+37&0.551&0.545&0.539&0.449&0.455&0.461\\
+38&0.541&0.536&0.531&0.459&0.464&0.469\\
+39&0.532&0.529&0.525&0.468&0.471&0.475\\
+40&0.526&0.523&0.520&0.474&0.477&0.480\\
+41&0.520&0.518&0.515&0.480&0.482&0.485\\
+42&0.516&0.514&0.512&0.484&0.486&0.488\\
+43&0.512&0.511&0.509&0.488&0.489&0.491\\
+44&0.509&0.508&0.507&0.491&0.492&0.493\\
+45&0.507&0.506&0.505&0.493&0.494&0.495\\
+46&0.506&0.505&0.504&0.494&0.495&0.496\\
+47&0.504&0.504&0.503&0.496&0.496&0.497\\
+48&0.503&0.503&0.503&0.497&0.497&0.497\\
+49&0.503&0.502&0.502&0.497&0.498&0.498\\
+50&0.502&0.502&0.502&0.498&0.498&0.498\\
+51&0.502&0.501&0.501&0.498&0.499&0.499\\
+52&0.501&0.501&0.501&0.499&0.499&0.499\\
+53&0.501&0.501&0.501&0.499&0.499&0.499\\
+54&0.501&0.501&0.500&0.499&0.499&0.500\\
+55&0.500&0.500&0.500&0.500&0.500&0.500\\
+56&0.500&0.500&0.500&0.500&0.500&0.500\\
+57&0.500&0.500&0.500&0.500&0.500&0.500\\
+58&0.500&0.500&0.500&0.500&0.500&0.500\\
+59&0.500&0.500&0.500&0.500&0.500&0.500\\
+60&0.500&0.500&0.500&0.500&0.500&0.500\\
+61&0.500&0.500&0.500&0.500&0.500&0.500\\
+62&0.500&0.500&0.500&0.500&0.500&0.500\\
+63&0.500&0.500&0.500&0.500&0.500&0.500\\
+64&0.500&0.500&0.500&0.500&0.500&0.500\\
+		\hline
+	\end{tabular}
+\end{table}
+
+
+
+% APPENDIX D
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
 

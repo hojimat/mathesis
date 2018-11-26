@@ -4,7 +4,8 @@
 #HH[2:30] <- 1+rnorm(29,param_house[i-1],param_sig_h)
 #HH <- cumprod(HH)
 #plot(c(28:57),HH)
-
+param_house <- rnorm(39, param_mu_h, param_sig_h)
+#param_house <- rep(param_mu_h, 39)
 
 # Munk solution with housing
 hc <- data.frame("init" = rep(0,param_T))
@@ -70,7 +71,7 @@ hmunkh_s_h <- rep(0,param_T-1)
 hmunkh_s_l <- rep(0,param_T-1)
 hmunkh_s_m <- rep(0,param_T-1)
 
-gammas <- data.frame(init=rep(0,29))
+gammas <- data.frame(init=rep(0,39))
 #dynamic portfolios
 for(i in 2:param_T){
   #calculate optimal risky asset share
@@ -95,7 +96,6 @@ for(i in 2:param_T){
   hmunkh_s_l[i-1] <- munk(t = i-1, dwi = L_steep, dfi = fc$munkhouse_steep_low, rhowsi = param_rho_ws_low, rhowhi = param_rho_hw,house = TRUE)$pih
   hmunkh_s_m[i-1] <- munk(t = i-1, dwi = L_steep, dfi = fc$munkhouse_steep_mod, rhowsi = param_rho_ws_medium, rhowhi = param_rho_hw,house = TRUE)$pih
   
-    
   if(smunkh_f_h[i-1] + hmunkh_f_h[i-1] > 1){
     gammas$smunkh_f_h[i-1] <- smunkh_f_h[i-1] / (smunkh_f_h[i-1] + hmunkh_f_h[i-1])
     gammas$hmunkh_f_h[i-1] <- hmunkh_f_h[i-1] / (smunkh_f_h[i-1] + hmunkh_f_h[i-1])
@@ -106,7 +106,6 @@ for(i in 2:param_T){
     gammas$hmunkh_f_h[i-1] <- hmunkh_f_h[i-1]
   }
   
-
   if(smunkh_f_l[i-1] + hmunkh_f_l[i-1] > 1){
     gammas$smunkh_f_l[i-1] <- smunkh_f_l[i-1] / (smunkh_f_l[i-1] + hmunkh_f_l[i-1])
     gammas$hmunkh_f_l[i-1] <- hmunkh_f_l[i-1] / (smunkh_f_l[i-1] + hmunkh_f_l[i-1])
@@ -118,7 +117,6 @@ for(i in 2:param_T){
   }
   
   
-
   if(smunkh_f_m[i-1] + hmunkh_f_m[i-1] > 1){
     gammas$smunkh_f_m[i-1] <- smunkh_f_m[i-1] / (smunkh_f_m[i-1] + hmunkh_f_m[i-1])
     gammas$hmunkh_f_m[i-1] <- hmunkh_f_h[i-1] / (smunkh_f_m[i-1] + hmunkh_f_m[i-1])
@@ -129,7 +127,6 @@ for(i in 2:param_T){
     gammas$hmunkh_f_m[i-1] <- hmunkh_f_m[i-1]
   }
   
-
   if(smunkh_m_h[i-1] + hmunkh_m_h[i-1] > 1){
     gammas$smunkh_m_h[i-1] <- smunkh_m_h[i-1] / (smunkh_m_h[i-1] + hmunkh_m_h[i-1])
     gammas$hmunkh_m_h[i-1] <- hmunkh_m_h[i-1] / (smunkh_m_h[i-1] + hmunkh_m_h[i-1])
@@ -150,6 +147,7 @@ for(i in 2:param_T){
     gammas$hmunkh_m_l[i-1] <- hmunkh_m_l[i-1]
   }
   
+  
   if(smunkh_m_m[i-1] + hmunkh_m_m[i-1] > 1){
     gammas$smunkh_m_m[i-1] <- smunkh_m_m[i-1] / (smunkh_m_m[i-1] + hmunkh_m_m[i-1])
     gammas$hmunkh_m_m[i-1] <- hmunkh_m_m[i-1] / (smunkh_m_m[i-1] + hmunkh_m_m[i-1])
@@ -159,7 +157,7 @@ for(i in 2:param_T){
     gammas$smunkh_m_m[i-1] <- smunkh_m_m[i-1]
     gammas$hmunkh_m_m[i-1] <- hmunkh_m_m[i-1]
   }
-  
+
   if(smunkh_s_h[i-1] + hmunkh_s_h[i-1] > 1){
     gammas$smunkh_s_h[i-1] <- smunkh_s_h[i-1] / (smunkh_s_h[i-1] + hmunkh_s_h[i-1])
     gammas$hmunkh_s_h[i-1] <- hmunkh_s_h[i-1] / (smunkh_s_h[i-1] + hmunkh_s_h[i-1])
@@ -193,28 +191,28 @@ for(i in 2:param_T){
 }
 
 # 
-# pdf(file = "Dropbox/research/tex/figs/smunkhouse.pdf")
-# plot(c(28:56),gammas$smunkh_s_h, type="l", ylim=c(0,1), col="red", xlab="age", ylab="stock share")
-# lines(c(28:56),gammas$smunkh_s_m, col="orange")
-# lines(c(28:56),gammas$smunkh_s_l, col="green")
-# lines(c(28:56),gammas$smunkh_m_h, col="blue")
-# lines(c(28:56),gammas$smunkh_m_m, col="violet")
-# lines(c(28:56),gammas$smunkh_m_l, col="purple")
-# lines(c(28:56),gammas$smunkh_f_h, col="grey")
-# lines(c(28:56),gammas$smunkh_f_m, col="grey3")
-# lines(c(28:56),gammas$smunkh_f_l, col="red3")
-# legend(x = "bottomleft", y=0, legend = c("steep-high", "steep-low", "steep-moderate", "moderate-high", "moderate-low", "moderate-moderate", "flat-high", "flat-low", "flat-moderate"), fill=c("red","orange","green", "blue", "violet", "purple", "grey", "grey3", "red3"))
-# dev.off()
+pdf(file = "~/Dropbox/research/mathesis/tex/figs/smunkhouse3.pdf")
+plot(c(26:64),gammas$smunkh_s_h, type="l", ylim=c(0,1), col="red", xlab="age", ylab="stock share")
+lines(c(26:64),gammas$smunkh_s_m, col="orange")
+lines(c(26:64),gammas$smunkh_s_l, col="green")
+lines(c(26:64),gammas$smunkh_m_h, col="blue")
+lines(c(26:64),gammas$smunkh_m_m, col="violet")
+lines(c(26:64),gammas$smunkh_m_l, col="purple")
+lines(c(26:64),gammas$smunkh_f_h, col="grey")
+lines(c(26:64),gammas$smunkh_f_m, col="grey3")
+lines(c(26:64),gammas$smunkh_f_l, col="red3")
+legend(x = "bottomleft", y=0, legend = c("steep-high", "steep-low", "steep-moderate", "moderate-high", "moderate-low", "moderate-moderate", "flat-high", "flat-low", "flat-moderate"), fill=c("red","orange","green", "blue", "violet", "purple", "grey", "grey3", "red3"))
+dev.off()
 # 
-# pdf(file = "Dropbox/research/tex/figs/hmunkhouse.pdf")
-# plot(c(28:56),gammas$hmunkh_s_h, type="l", ylim=c(0.05,0.5), col="red", xlab="age", ylab="house share")
-# lines(c(28:56),gammas$hmunkh_s_m, col="orange")
-# lines(c(28:56),gammas$hmunkh_s_l, col="green")
-# lines(c(28:56),gammas$hmunkh_m_h, col="blue")
-# lines(c(28:56),gammas$hmunkh_m_m, col="violet")
-# lines(c(28:56),gammas$hmunkh_m_l, col="purple")
-# lines(c(28:56),gammas$hmunkh_f_h, col="grey")
-# lines(c(28:56),gammas$hmunkh_f_m, col="grey3")
-# lines(c(28:56),gammas$hmunkh_f_l, col="red3")
-# legend(x = "topleft", y=0, legend = c("steep-high", "steep-low", "steep-moderate", "moderate-high", "moderate-low", "moderate-moderate", "flat-high", "flat-low", "flat-moderate"), fill=c("red","orange","green", "blue", "violet", "purple", "grey", "grey3", "red3"))
-# dev.off()
+pdf(file = "~/Dropbox/research/mathesis/tex/figs/hmunkhouse3.pdf")
+plot(c(26:64),gammas$hmunkh_s_h, type="l", ylim=c(0.05,0.5), col="red", xlab="age", ylab="house share")
+lines(c(26:64),gammas$hmunkh_s_m, col="orange")
+lines(c(26:64),gammas$hmunkh_s_l, col="green")
+lines(c(26:64),gammas$hmunkh_m_h, col="blue")
+lines(c(26:64),gammas$hmunkh_m_m, col="violet")
+lines(c(26:64),gammas$hmunkh_m_l, col="purple")
+lines(c(26:64),gammas$hmunkh_f_h, col="grey")
+lines(c(26:64),gammas$hmunkh_f_m, col="grey3")
+lines(c(26:64),gammas$hmunkh_f_l, col="red3")
+legend(x = "bottomright", y=0, legend = c("steep-high", "steep-low", "steep-moderate", "moderate-high", "moderate-low", "moderate-moderate", "flat-high", "flat-low", "flat-moderate"), fill=c("red","orange","green", "blue", "violet", "purple", "grey", "grey3", "red3"))
+dev.off()

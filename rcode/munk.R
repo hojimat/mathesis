@@ -1,4 +1,4 @@
-munk <- function(t, dwi, dfi, rhowsi, rhowhi, rave=param_gamma, house=TRUE){
+munk <- function(t, dwi, dfi, rhowsi, rhowhi=param_rho_hw, rave=param_gamma, house=TRUE){
   pismunk <- 0
   pihmunk <- 0
   
