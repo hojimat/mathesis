@@ -36,7 +36,7 @@
 
 
 \begin{abstract}
-In this paper, we perform an in-depth welfare comparison of the most common life-cycle investment strategies provided by retirement funds or suggested by classical portfolio theory in the case of households in Turkey. To perform our benchmarking, we construct heterogeneous agents who work and invest throughout their lifetime, using parameters calibrated from the historical data. We find that to households with upper-to-middle income, individually customized portfolios result in considerable welfare gains, while ``off-the-shelf'' life-cycle portfolio allocations perform better for households with lower income. We also show that life-cycle investment options outperform ``fixed over the lifetime'' options. 
+In this paper, we perform an in-depth welfare comparison of the most common life-cycle investment strategies provided by retirement funds or suggested by classical portfolio theory in the case of households in Turkey. To perform our benchmarking, we construct heterogeneous agents who work and invest throughout their lifetime, using parameters calibrated from the historical data. We find that to households with upper-to-middle income, individually customized portfolios result in considerable welfare gains, while ``off-the-shelf'' life-cycle portfolio allocations perform better for households with lower income. We also show that life-cycle investment options outperform ``fixed over the lifetime'' options. Finally, we find that risk-averse individuals with volatile wages, can maximize their welfare by investing in housing as suggested by \citet{munk}.
 \end{abstract}
 
 
@@ -504,175 +504,296 @@ In this section, we calculate the accumulated wealth for every investment option
 
 \subsection{Accumulated wealth}
 
-After the lifetime of investing, the household accumulates different levels of wealth, as summarized in Table \ref{table:wealth}.
+After the lifetime of investing, households accumulate different levels of wealth. Tables \ref{table:wealthhom} and \ref{table:wealthhet} summarize the mean and standard deviation of 10,000 stock and house price realizations from a Monte Carlo simulation. It is important to note that the values are $\chi^2$-distributed since they depend on two random normal variables --- stock and house prices.
 
 \begin{table}[h!]
 	\centering
-	\caption{Total Accumulated Wealth by Investment Option}
-	\label{table:wealth}
-	\begin{tabular}[c]{lrrrr}
+	\caption{Monte Carlo Results of Accumulated Wealth for Homogeneous Investment Strategies}
+	\label{table:wealthhom}
+	\begin{tabular}[c]{|l|c|c|c|}
 		\hline
-		Option&$\gamma=1.5$ (default) & $\gamma=3$ & $\gamma=5$ & $\gamma=10$\\
+		 wages& steep & moderate & flat\\
 		\hline
-		\multicolumn{5}{c}{Defaults}\\
-Anadolu Hayat (riskless)&2,000,694 TL&2,000,694 TL&2,000,694 TL&2,000,694 TL\\
-$(100-age)\%$&4,545,177 TL&4,545,177 TL&4,545,177 TL&4,545,177 TL\\
-Cocco et al.&10,918,994 TL&10,918,994 TL&10,918,994 TL&10,918,994 TL\\
-Markowitz (fixed) &6,287,647 TL&6,287,647 TL&6,287,647 TL&6,287,647 TL\\
-\multicolumn{5}{c}{}\\
-\multicolumn{5}{c}{Individualized (no housing)}\\
-Bodie et al. (steep)&25,513,822 TL&10,374,038 TL&6,526,269 TL&4,190,661 TL\\
-Bodie et al. (moderate)&11,248,905 TL&4,526,672 TL&2,828,304 TL&1,803,151 TL\\
-Bodie et al. (flat)&3,949,368 TL&1,514,867 TL&930,204 TL&586,732 TL\\
-Munk (steep-lo)&25,236,838 TL&9,924,172 TL&5,982,295 TL&3,371,281 TL\\
-Munk (steep-mod)&25,236,817 TL&9,924,152 TL&5,982,274 TL&3,371,260 TL\\
-Munk (steep-hi)&25,236,797 TL&9,924,132 TL&5,982,254 TL&3,371,240 TL\\
-Munk (moderate-lo)&11,111,057 TL&4,331,204 TL&2,584,866 TL&1,441,285 TL\\
-Munk (moderate-mod)&11,111,049 TL&4,331,196 TL&2,584,857 TL&1,441,277 TL\\
-Munk (moderate-hi)&11,111,040 TL&4,331,187 TL&2,584,849 TL&1,441,268 TL\\
-Munk (flat-lo)&3,906,648 TL&1,452,621 TL&852,150 TL&472,043 TL\\
-Munk (flat-mod)&3,906,646 TL&1,452,619 TL&852,148 TL&472,041 TL\\
-Munk (flat-hi)&3,906,644 TL&1,452,617 TL&852,146 TL&472,039 TL\\
-\multicolumn{5}{c}{}\\
-\multicolumn{5}{c}{Individualized (housing)}\\
-Munk (steep-lo)&74,168,102 TL&50,575,196 TL&30,149,576 TL&19,030,821 TL\\
-Munk (steep-mod)&72,868,088 TL&49,309,258 TL&29,030,131 TL&17,925,925 TL\\
-Munk (steep-hi)&71,559,554 TL&47,942,115 TL&27,909,489 TL&16,627,948 TL\\
-Munk (moderate-lo)&30,595,160 TL&20,817,931 TL&12,392,195 TL&7,826,582 TL\\
-Munk (moderate-mod)&30,059,601 TL&20,297,628 TL&11,939,450 TL&7,372,166 TL\\
-Munk (moderate-hi)&29,520,524 TL&19,737,247 TL&11,486,249 TL&6,845,005 TL\\
-Munk (flat-lo)&9,056,285 TL&6,068,133 TL&3,600,965 TL&2,280,512 TL\\
-Munk (flat-mod)&8,903,691 TL&5,921,315 TL&3,479,798 TL&2,150,420 TL\\
-Munk (flat-hi)&8,750,023 TL&5,762,054 TL&3,349,099 TL&2,003,530 TL\\
-		\hline
+Markowitz			&  343  &   201&   130\\
+							& (87)  &  (50)&   (35)\\
+$100-age$					&  449  &   261&  175\\  
+							& (442) & (246)& (191)\\
+Cocco et al.				&  556  &   320&  222\\  
+							&(1,348)& (728)& (611)\\
+Turkish banks			 	&  483  &   280&  189\\  
+							&  (619)& (348)& (264)\\
+	\hline
 	\end{tabular}
 \end{table}
 
-\subsubsection{Early results}
+\begin{table}[h!]
+	\centering
+	\caption{Monte Carlo Results of Accumulated Wealth for Heterogeneous Investment Strategies}
+	\label{table:wealthhet}
+	\begin{tabular}[c]{|l|ccc|ccc|ccc|}
+		\hline
+		 wages& \multicolumn{3}{c|}{steep} & \multicolumn{3}{c|}{moderate} & \multicolumn{3}{c|}{flat}\\
+		\hline
+		$\rho_{ws}$&high&moderate&low&high&moderate&low&high&moderate&low\\
+		\hline
+	\multicolumn{10}{|c|}{$\gamma=1.5$}\\
+		\hline
+Bodie et al.			 	&-&  544  &-&-&   315&-&-&  206&-\\  
+							&-&  (756)&-&-& (433)&-&-& (281)&-\\
+Munk (no housing)			&  524  &  531&   538&  304&  309&  312&  199&  202&  204\\
+							&  (663)&  (700)&  (733)&  (379)&  (400)&  (418)&  (249)&  (263)&  (275)\\
+Munk (housing)				&  403  &  416&  430&  235&  243&  251&  154&  159&  165\\
+							&  (495)&  (541)&  (591)&  (280)&  (306)&  (334)&  (201)&  (219)&  (239)\\
+	\hline
+	\multicolumn{10}{|c|}{$\gamma=3$}\\
+	\hline
+Bodie et al.			 	&-&  484  &-&-&281  &-&-& 182&-\\
+							&-&  (479)&-&-&(276)&-&-& (176)&-\\
+Munk (no housing)			&  449&  468&  482&  262&  272&  280&  168&  176&  181\\
+							&  (352)&  (419)&  (473)&  (204)&  (241)&  (272)&  (129)&  (154)&  (174)\\
+Munk (housing)				&  514&  534&  546&  299&  310&  317&  194&  202&  206\\
+							&  (711)&  (778)&  (826)&  (407)&  (446)&  (473)&  (264)&  (289)&  (307)\\
+	\hline
+	\multicolumn{10}{|c|}{$\gamma=5$}\\
 
-We can make some early conclusions before calculating utilities:
+		\hline
+Bodie et al.			 	&-& 450&-&-& 262&-&-& 168&-\\
+							&-& (344)&-&-& (199)&-&-& (125)&-\\
+Munk (no housing)			&  377&  423&  448&  221&  247&  262&  140&  158&  168\\
+							&  (149)&  (263)&  (343)&  (87)&  (153)&  (198)&  (54)&  (95)&  (125)\\
+Munk (housing)				&  497&  509&  520&  289&  296&  302&  187&  192&  196\\
+							&  (513)&  (563)&  (608)&  (295)&  (324)&  (349)&  (189)&  (208)&  (224)\\
+	\hline
+	\multicolumn{10}{|c|}{$\gamma=10$}\\
 
-\begin{itemize}
-\item Naively considering life-cycles does not guarantee the better investment --- in our scenario, $(100-age)\%$ is worse than fixed Markowitz.
-\item Different stock-wage correlations don't make big difference in the outcome without housing, and make considerable difference in models with housing.
-\item Stock-wage correlations are negatively correlated with total wealth.
-\item Default options are better for people with flat wages. Individualized options are better for people with moderate or steep wages.
-\end{itemize}
+		\hline
+Bodie et al.			 	&-&  402&-&-&  235&-&-& 149&- \\
+							&-&  (212)&-&-&  (124)&-&-&  (76)&- \\
+Munk (no housing)			&  302&  345&  401&  178&  203&  235&  113&  128&  149\\
+							&    (1)&   (80)&  (212)&    (1)&   (47)&  (124)&    (1)&   (28)&   (76)\\
+Munk (housing)				&  418&  446&  465&  244&  260&  271&  156&  167&  174\\
+							&  (252)&  (339)&  (405)&  (147)&  (196)&  (234)&   (91)&  (123)&  (148)\\
+	\hline
+	\end{tabular}
+\end{table}
+
 
 \subsection{Annuities}
-To formalize the observations made in the previous section, we will construct annuities and plug them into expected utility functions. As described in detail in Chapter 3, we define annuities by dividing the total wealth before retirement by the discount factor $1 + \sum^{100}_{t=58}\frac{p_t}{1+r_f}$. Using survival probabilities, obtained from TUIK, and risk-free rate of return, described in the previous chapter, we calculate the discount factor as $205.29$. The annuities are obtained by dividing all the values in the Table 5.1 by $205.29$. The resulting values are presented in Table 5.2. 
+
+Retired individuals will sell all of their accumulated wealth to buy annuities and consume them fully until their death, enjoying the utility of this consumption. Recall that we ignore bequest motives and savings after the retirement. We define annuities by dividing the total wealth before retirement by the discount factor $1 + \sum^{100}_{t=66}\frac{p_t}{(1+r_f)^{t-65}}$. Using survival probabilities, obtained from TUIK, and risk-free rate of return, described in the previous chapter, we calculate the discount factor as $13.73$. The annuities are obtained by dividing all the values in the Tables \ref{table:wealthhom} and \ref{table:wealthhet} by $13.73$. 
 
 
-\subsubsection{Consumption during retirement}
-We model that the individuals spend their annuity returns to consume baskets which cost $100$ TL during the year, when our agent is 58 years old, and increase by inflation rate $\pi = 8.4\%$. Thus, every period $t>57$ our agent consumes $\frac{annuity}{100\cdot\left(1.084\right)^{t-58}}$. We do not provide the separate table with the value streams, as they will be implicitly included in utility values.
+\subsection{Expected utilities}
+Recall that we have defined the wages in real terms, dividing the nominal wages by CPI. Therefore we can plug the values, obtained above, to the CRRA utility function as consumption level. Table \ref{table:util} provides mean and standard deviation of accumulated wealth from different scenarios of a Monte Carlo experiment, mentioned above. Note that the distributions are heavily skewed to the left.
 
-
-\subsubsection{Expected utilities}
-Finally, we will plug the consumption streams, calculated in the previous section, into the constant relative risk-aversion expected utility functions to compare the welfare effects. The resulting expected utility values are presented in Table 5.3.
-
-
-
-\begin{table}%TABLE 5.2
+\newgeometry{left=1.5cm}
+\begin{table}[h!]
 	\centering
-	\caption{Annual Pensions by Investment Option}
-	\begin{tabular}[c]{lrrrr}
+	\caption{A: Summary of Expected Utilities from Simulation for $\gamma=1.5$}
+	\label{table:util}
+	\begin{tabular}[c]{|l|ccc|ccc|ccc|}
 		\hline
-		Option&$\gamma=5$ (default) & $\gamma=1.5$ & $\gamma=3$ & $\gamma=10$\\
+		 wages& \multicolumn{3}{c|}{steep} & \multicolumn{3}{c|}{moderate} & \multicolumn{3}{c|}{flat}\\
 		\hline
-		\multicolumn{5}{c}{Defaults}\\
-Anadolu Hayat (riskless) TL&2,992 TL&2,992 TL&2,992 TL&2,992 TL\\
-$(100-age)\%$ TL&5,655 TL&5,655 TL&5,655 TL&5,655 TL\\
-Cocco et al. TL&7,793 TL&7,793 TL&7,793 TL&7,793 TL\\
-Markowitz TL&6,333 TL&6,333 TL&6,333 TL&6,333 TL\\
-\multicolumn{5}{c}{}\\
-\multicolumn{5}{c}{Individualized (no housing)}\\
-Merton (steep) TL&18,569 TL&20,521 TL&15,124 TL&14,228 TL\\
-Merton (moderate) TL&7,940 TL&8,835 TL&7,053 TL&6,081 TL\\
-Merton (flat) TL&2,648 TL&2,984 TL&3,117 TL&1,940 TL\\
-Munk (steep-lo) TL&17,280 TL&20,307 TL&18,653 TL&10,161 TL\\
-Munk (steep-mod) TL&17,261 TL&20,288 TL&18,633 TL&10,141 TL\\
-Munk (steep-hi) TL&17,241 TL&20,268 TL&18,614 TL&10,122 TL\\
-Munk (moderate-lo) TL&7,371 TL&8,743 TL&8,230 TL&4,233 TL\\
-Munk (moderate-mod) TL&7,363 TL&8,735 TL&8,222 TL&4,225 TL\\
-Munk (moderate-hi) TL&7,355 TL&8,726 TL&8,214 TL&4,216 TL\\
-Munk (flat-lo) TL&2,478 TL&2,954 TL&3,204 TL&1,277 TL\\
-Munk (flat-mod) TL&2,476 TL&2,952 TL&3,202 TL&1,275 TL\\
-Munk (flat-hi) TL&2,474 TL&2,950 TL&3,200 TL&1,273 TL\\
-\multicolumn{5}{c}{}\\
-\multicolumn{5}{c}{Individualized (housing)}\\
-Munk (steep-lo) TL&43,534 TL&15,039 TL&22,984 TL&19,099 TL\\
-Munk (steep-mod) TL&37,243 TL&14,450 TL&21,292 TL&14,126 TL\\
-Munk (steep-hi) TL&30,948 TL&13,866 TL&19,568 TL&9,123 TL\\
-Munk (moderate-lo) TL&17,791 TL&6,352 TL&9,734 TL&7,820 TL\\
-Munk (moderate-mod) TL&15,227 TL&6,101 TL&9,013 TL&5,793 TL\\
-Munk (moderate-hi) TL&12,662 TL&5,852 TL&8,282 TL&3,752 TL\\
-Munk (flat-lo) TL&5,002 TL&2,096 TL&2,995 TL&2,218 TL\\
-Munk (flat-mod) TL&4,296 TL&2,120 TL&2,917 TL&1,662 TL\\
-Munk (flat-hi) TL&3,590 TL&1,938 TL&2,570 TL&1,102 TL\\
+		$\rho_{ws}$&high&moderate&low&high&moderate&low&high&moderate&low\\
+		\hline
+Markowitz					&-2.515&-2.515&-2.515&-3.282&-3.282&-3.282&-4.096&-4.096&-4.096\\
+							&(0.314)&(0.314)&(0.314)&(0.403)&(0.403)&(0.403)&(0.547)&(0.547)&(0.547)\\
+$100-age$					&-2.593&-2.593&-2.593&-3.374&-3.374&-3.374&-4.285&-4.285&-4.285\\
+							&(0.874)&(0.874)&(0.874)&(1.116)&(1.116)&(1.116)&(1.568)&(1.568)&(1.568)\\
+Cocco et al.				&-2.889&-2.889&-2.889&-3.734&-3.734&-3.734&-4.899&-4.899&-4.899\\
+							&(1.299)&(1.299)&(1.299)&(1.623)&(1.623)&(1.623)&(2.333)&(2.333)&(2.333)\\
+Turkish banks			 	&-2.772&-2.772&-2.772&-3.608&-3.608&-3.608&-4.612&-4.612&-4.612\\
+							&(1.187)&(1.187)&(1.187)&(1.531)&(1.531)&(1.531)&(2.122)&(2.122)&(2.122)\\
+Bodie et al.			 	&-3.389&-3.389&-3.389&-4.389&-4.389&-4.389&-5.695&-5.695&-5.695\\
+							&(2.352)&(2.352)&(2.352)&(3.048)&(3.048)&(3.048)&(4.252)&(4.252)&(4.252)\\
+Munk (no housing)			&-3.355&-3.415&-3.476&-4.346&-4.435&-4.499&-5.61&-5.729&-5.841\\
+							&(2.334)&(2.403)&(2.506)&(3.096)&(3.242)&(3.304)&(4.253)&(4.37)&(4.553)\\
+Munk (housing)				&-3.043&-3.071&-3.103&-3.952&-3.987&-4.027&-5.105&-5.159&-5.22\\
+							&(1.327)&(1.398)&(1.472)&(1.71)&(1.802)&(1.899)&(2.387)&(2.519)&(2.656)\\
+	\hline
+	\end{tabular}
+\end{table}
+\begin{table}[h!]\ContinuedFloat
+	\centering
+	\caption{B: Summary of Expected Utilities from Simulation for $\gamma=3$}
+	\label{table:util}
+	\begin{tabular}[c]{|l|ccc|ccc|ccc|}
+		\hline
+		 wages& \multicolumn{3}{c|}{steep} & \multicolumn{3}{c|}{moderate} & \multicolumn{3}{c|}{flat}\\
+		\hline
+		$\rho_{ws}$&high&moderate&low&high&moderate&low&high&moderate&low\\
+		\hline
+Markowitz					&-0.006&-0.006&-0.006&-0.017&-0.017&-0.017&-0.042&-0.042&-0.042\\
+							&(0.003)&(0.003)&(0.003)&(0.009)&(0.009)&(0.009)&(0.023)&(0.023)&(0.023)\\
+$100-age$					&-0.011&-0.011&-0.011&-0.031&-0.031&-0.031&-0.09&-0.09&-0.09\\
+							&(0.016)&(0.016)&(0.016)&(0.045)&(0.045)&(0.045)&(0.151)&(0.151)&(0.151)\\
+Cocco et al.				&-0.023&-0.023&-0.023&-0.062&-0.062&-0.062&-0.216&-0.216&-0.216\\
+							&(0.042)&(0.042)&(0.042)&(0.115)&(0.115)&(0.115)&(0.469)&(0.469)&(0.469)\\
+Turkish banks			 	&-0.019&-0.019&-0.019&-0.055&-0.055&-0.055&-0.17&-0.17&-0.17\\
+							&(0.043)&(0.043)&(0.043)&(0.124)&(0.124)&(0.124)&(0.418)&(0.418)&(0.418)\\
+Bodie et al.			 	&-0.372&-0.372&-0.372&-0.579&-0.579&-0.579&-1.182&-1.182&-1.182\\
+							&(22.2)&(22.2)&(22.2)&(25.6)&(25.6)&(25.6)&(53.1)&(53.1)&(53.1)\\
+Munk (no housing)			&-0.04&-0.063&-0.212&-0.099&-0.192&-0.427&-0.287&-0.963&-3.585\\
+							&(0.507)&(0.608)&(10.291)&(0.665)&(3.287)&(15.333)&(1.914)&(28.294)&(176.463)\\
+Munk (housing)				&-0.515&-0.289&-1.132&-3.637&-3.403&-1.226&-55.076&-7.09&-507.406\\
+							&(39.222)&(11.653)&(86.736)&(312.4)&(291)&(50.427)&(3832)&(533.61)&(50503)\\
+	\hline
+	\end{tabular}
+\end{table}
+\begin{table}[h!]\ContinuedFloat
+	\centering
+	\caption{C: Summary of Expected Utilities from Simulation for $\gamma=5$}
+	\label{table:util}
+	\begin{tabular}[c]{|l|ccc|ccc|ccc|}
+		\hline
+		 wages& \multicolumn{3}{c|}{steep} & \multicolumn{3}{c|}{moderate} & \multicolumn{3}{c|}{flat}\\
+		\hline
+		$\rho_{ws}$&high&moderate&low&high&moderate&low&high&moderate&low\\
+		\hline
+Markowitz					&0&0&0&0&0&0&0&0&0\\
+							&(0)&(0)&(0)&(0)&(0)&(0)&(0.001)&(0.001)&(0.001)\\
+$100-age$					&0&0&0&-0.001&-0.001&-0.001&-0.005&-0.005&-0.005\\
+							&(0)&(0)&(0)&(0.003)&(0.003)&(0.003)&(0.044)&(0.044)&(0.044)\\
+Cocco et al.				&-0.002&-0.002&-0.002&-0.003&-0.003&-0.003&-1.372&-1.372&-1.372\\
+							&(0.201)&(0.201)&(0.201)&(0.027)&(0.027)&(0.027)&(90.495)&(90.495)&(90)\\
+Turkish banks			 	&0&0&0&-0.003&-0.003&-0.003&-0.039&-0.039&-0.039\\
+							&(0.005)&(0.005)&(0.005)&(0.04)&(0.04)&(0.04)&(0.598)&(0.598)&(0.598)\\
+Bodie et al.			 	&-0.14&-0.14&-0.14&-1.684&-1.684&-1.684&-34.122&-34.122&-34.122\\
+							&(10.141)&(10.141)&(10.141)&(139.3)&(139.3)&(139.3)&(2926)&(2926)&(2926)\\
+Munk (no housing)			&-0.007&-0.228&-33879.48&-0.047&-4.169&-3.2&-0.518&-321.58&-11420.369\\
+							&(0.226)&(14.403)&(3387924)&(1.387)&(388.399)&(190)&(12.701)&(31692)&(1102401)\\
+Munk (housing)				&-0.608&-198.462&-3.52&-6.667&-930.941&-78.93&-23.559&-41341.4&-93.43\\
+							&(51.7)&(19257)&(267.51)&(598)&(86349)&(6966)&(1401)&(3920139)&(5322)\\
+	\hline
+	\end{tabular}
+\end{table}
+\begin{table}[h!]\ContinuedFloat
+	\centering
+	\caption{D: Summary of Expected Utilities from Simulation for $\gamma=10$}
+	\label{table:util}
+	\begin{tabular}[c]{|l|ccc|ccc|ccc|}
+		\hline
+		 wages& \multicolumn{3}{c|}{steep} & \multicolumn{3}{c|}{moderate} & \multicolumn{3}{c|}{flat}\\
+		\hline
+		$\rho_{ws}$&high&moderate&low&high&moderate&low&high&moderate&low\\
+		\hline
+Markowitz					&0&0&0&0&0&0&0&0&0\\
+							&(0)&(0)&(0)&(0)&(0)&(0)&(0)&(0)&(0)\\
+$100-age$					&0&0&0&0&0&0&0&0&0\\
+							&(0)&(0)&(0)&(0)&(0)&(0)&(0.016)&(0.016)&(0.016)\\
+Cocco et al.				&0.001&0.001&0.001&-1.32&-1.32&-1.32&843&843&843\\
+							&(0.12)&(0.12)&(0.12)&(138.203)&(138.203)&(138.203)&(923)&(923)&(923)\\
+Turkish banks			 	&0&0&0&0&0&0&-0.031&-0.031&-0.031\\
+							&(0)&(0)&(0)&(0.003)&(0.003)&(0.003)&(1.06)&(1.06)&(1.06)\\
+Bodie et al.			 	&0&0&0&-0.002&-0.002&-0.002&-1.432&-1.432&-1.432\\
+							&(0.001)&(0.001)&(0.001)&(0.09)&(0.09)&(0.09)&(85.945)&(85.945)&(85.945)\\
+Munk (no housing)			&0&0&0&0&0&-0.001&0&0&-0.781\\
+							&(0)&(0)&(0.001)&(0)&(0)&(0.086)&(0)&(0)&(56.102)\\
+Munk (housing)				&0&-0.001&-19368&-0.002&-0.1&-9661.276&-1.283&-57.043&-3694.293\\
+							&(0.001)&(0.051)&(1936894)&(0.106)&(5.981)&(699694)&(75)&(4115)&(281712)\\
+	\hline
+	\end{tabular}
+\end{table}
+\restoregeometry
 
+\subsection{Pairwise comparisons}
+In this section we provide the pairwise comparisons of utilities for different investment options. Table \ref{table:compareutils} shows percentages of scenarios at which the utilities from some investment options are greater than from the other. We ignored small percentage differences (up to $3\%$) as noise, and interpreted percentages close to $50\%$ as ``no conclusion''.
+
+We can see that homogeneous investment options return same ordering regardless of risk aversion, even though $\gamma$ enters the utility equation. Similarly, steepness of labor income curve does not affect within-group ordering. At the same time, level of risk-aversion, and correlation of wages to stocks, do affect the ordering.
+
+
+\newgeometry{left=1cm}
+\begin{table}[h!]
+	\centering
+	\caption{A: Utility Comparison for $\gamma=1.5$}
+	\label{table:compareutils}
+	\begin{tabular}[c]{|l|ccccccc|}
 		\hline
+		L $\geq$ R			&Markowitz&$100-age$&Cocco et al.&TR Banks&Bodie et al.&Munk (no h.)&Munk (h.)\\
+		\hline
+Markowitz					&100\%&51\%&60\%&54\%&55\%&55\%&64\%\\
+$100-age$					&&100\%&72\%&61\%&58\%&57\%&80\%\\
+Cocco et al.				&&&100\%&32\%&55\%&56\%&70\%\\
+Turkish banks			 	&&&&100\%&65\%&65\%&95\%\\
+Bodie et al.			 	&&&&&100\%&58\% (81\% if $\rho_{ws}=0$)&48\%\\
+Munk (no housing)			&&&&&&100\%&46\%\\
+Munk (housing)				&&&&&&&100\%\\
+	\hline
+	\end{tabular}
+\end{table}
+\begin{table}[h!]\ContinuedFloat
+	\centering
+	\caption{B: Utility Comparison for $\gamma=3$}
+	\label{table:compareutils}
+	\begin{tabular}[c]{|l|ccccccc|}
+		\hline
+		L $\geq$ R			&Markowitz&$100-age$&Cocco et al.&TR Banks&Bodie et al.&Munk (no h.)&Munk (h.)\\
+		\hline
+Markowitz					&100\%&51\%&60\%&54\%&49\%&48\%&57\%\\
+$100-age$					&&100\%&72\%&60\%&56\%&56\%&61\%\\
+Cocco et al.				&&&100\%&31\%&51\%&50\%&58\%\\
+Turkish banks			 	&&&&100\%&58\%&54\%;57\%;60\% ($\rho_{ws} \searrow$ )&66\%\\
+Bodie et al.			 	&&&&&100\%&55\% (70\% if $\rho_{ws}=0$)&55\%\\
+Munk (no housing)			&&&&&&100\%&55\%\\
+Munk (housing)				&&&&&&&100\%\\
+	\hline
+	\end{tabular}
+\end{table}
+\begin{table}[h!]\ContinuedFloat
+	\centering
+	\caption{C: Utility Comparison for $\gamma=5$}
+	\label{table:compareutils}
+	\begin{tabular}[c]{|l|ccccccc|}
+		\hline
+		L $\geq$ R			&Markowitz&$100-age$&Cocco et al.&TR Banks&Bodie et al.&Munk (no h.)&Munk (h.)\\
+		\hline
+Markowitz					&100\%&51\%&61\%&54\%&50\%&50\%&57\%\\
+$100-age$					&&100\%&72\%&61\%&56\%&56\%&62\%\\
+Cocco et al.				&&&100\%&30\%&50\%&50\%&59\%\\
+Turkish banks			 	&&&&100\%&58\%&53\%;57\%;60\% ($\rho_{ws}\searrow$)&67\%\\
+Bodie et al.			 	&&&&&100\%&55\% (70\% if $\rho_{ws}=0$)&54\%\\
+Munk (no housing)			&&&&&&100\%&55\%\\
+Munk (housing)				&&&&&&&100\%\\
+	\hline
+	\end{tabular}
+\end{table}
+\begin{table}[h!]\ContinuedFloat
+	\centering
+	\caption{D: Utility Comparison for $\gamma=10$}
+	\label{table:compareutils}
+	\begin{tabular}[c]{|l|ccccccc|}
+		\hline
+		L $\geq$ R			&Markowitz&$100-age$&Cocco&TR Banks&Bodie&Munk (no h.)&Munk (h.)\\
+		\hline
+Markowitz					&100\%&51\%&61\%&55\%&43\%&65\%;48\%;42\% ($\rho_{ws}\searrow$)&43\%;46\%;49\% ($\rho_{ws}\searrow$)\\
+$100-age$					&&100\%&73\%&61\%&52\%&50\%&53\%($\rho_{ws}=0.4$);57\%\\
+Cocco et al.				&&&100\%&30\%&40\%&45\% ($\rho_{ws}=0.4$);40\%&41\%;46\%;51\% ($\rho_{ws}\searrow$)\\
+Turkish banks			 	&&&&100\%&47\%&50\% ($\rho_{ws}=0.4$);47\%&48\%;54\%;58\% ($\rho_{ws}\searrow$)\\
+Bodie et al.			 	&&&&&100\%&62\%;99\% ($\rho_{ws}=0$)&42\%;45\%;47\% ($\rho_{ws}\searrow$)\\
+Munk (no housing)			&&&&&&100\%&38\%;45\%;47\% ($\rho_{ws} \searrow$)\\
+Munk (housing)				&&&&&&&100\%\\
+	\hline
 	\end{tabular}
 \end{table}
 
-\subsubsection{Conclusions}
-Now, we can observe the final resutls:
+
+\restoregeometry
+
+The main comparison results are as follows:
 
 \begin{itemize}
 
-\item Naive life-cycle investment portfolios, such as $(100-age)\%$ don't overperform fixed-ratio Markowitz, because they don't take the risk aversion into consideration.
-\item Cocco et al.'s $(200-2.5\cdot age)\%$ approximation is the best default portfolio. It is easy to interpret and captures life-cycle effect.
-\item All models perform better for higher risk aversion and worse for lower risk aversion --- for everyone except flat-wagers.
-\item Higher stock-wage correlation considerably decreases the utility for moderate and flat wages, and doesn't affect much for steep wages.
-\item Merton's solution outperforms Munk's solution without housing for low levels of risk aversion, and performs same for high level of risk aversion ($\gamma=10$).
-\item Munk's solution with housing outperforms every other solution for high levels of risk aversion ($\gamma=10$) --- for everyone except flat-wagers.
-\item Munk's solution with housing outperforms Munk's solution without housing for $\gamma=5,10$.
-\item Markowitz's solution outperforms both Merton's and Munk's solutions for flat wages and low risk aversion.
-\item Individualizing life-cycles by wage growth rate and stock-wage correlation increases welfare for steep wagers and decreases welfare for flat wagers.
+\item Naive life-cycle investment portfolio $(100-age)\%$ overperforms all investment options except for Markowitz.
+\item Cocco et al.'s $(200-2.5\cdot age)\%$ performs worse than other homogeneous portfolios.
+\item All models perform better for higher risk aversion and worse for lower risk aversion.
+\item Munk's solution performs worse for flat wages than for steep wages.
+\item When $\rho_{ws}=0$, Bodie's solution is equivalent to Munk's solution without housing.
+\item Munk's solution with housing performs as well or worse than other options most of the time, except for higly risk-averse individuals, and especially for high wage-stock correlations --- in these cases, investing in housing is the best option. 
+\item Munk's solution without housing outperforms other strategies as risk aversion gets higher.
+\item Fixed moderate Turkish bank's investment suggestion, outperforms Cocco et al.'s lifecycle heuristic 70\% of the time.
+\item For risk-takers ($\gamma < 5$), heterogeneous outcomes are better for steep and moderate labor income curves.
 \end{itemize}
-
-\paragraph{}We did not provide numerical conclusions, since they are trivial --- they can be obtained by calculating percentage differences in Table 5.3.
-
-\begin{table}%TABLE 5.3
-	\centering
-	\caption{Expected Utilities by Investment Option}
-	\begin{tabular}[c]{lrrrr}
-		\hline
-		Option&$\gamma=5$ (default) & $\gamma=1.5$ & $\gamma=3$ & $\gamma=10$\\
-		\hline
-\multicolumn{5}{c}{Defaults}\\
-Anadolu Hayat (riskless)&-0.0008389&-3.6004130&-0.0247934&-0.0000509\\
-(100-age)\%&-0.0000657&-2.6187470&-0.0069390&-0.0000002\\
-Cocco et al.&-0.0000182&-2.2308240&-0.0036542&0.0000000\\
-Markowitz&-0.0000418&-2.4745850&-0.0055327&-0.0000001\\
-\multicolumn{5}{c}{}\\
-\multicolumn{5}{c}{Individualized (no housing)}\\
-Merton (steep)&-0.0000006&-1.3747480&-0.0009703&0.0000000\\
-Merton (moderate)&-0.0000169&-2.0951160&-0.0044611&-0.0000001\\
-Merton (flat)&-0.0013672&-3.6052480&-0.0228439&-0.0025138\\
-Munk (steep-lo)&-0.0000008&-1.3819700&-0.0006379&0.0000000\\
-Munk (steep-mod)&-0.0000008&-1.3826290&-0.0006392&0.0000000\\
-Munk (steep-hi)&-0.0000008&-1.3832900&-0.0006405&0.0000000\\
-Munk (moderate-lo)&-0.0000228&-2.1062050&-0.0032767&-0.0000022\\
-Munk (moderate-mod)&-0.0000229&-2.1071790&-0.0032832&-0.0000023\\
-Munk (moderate-hi)&-0.0000230&-2.1081550&-0.0032897&-0.0000023\\
-Munk (flat-lo)&-0.0017820&-3.6234500&-0.0216177&-0.1082611\\
-Munk (flat-mod)&-0.0017874&-3.6245990&-0.0216431&-0.1097095\\
-Munk (flat-hi)&-0.0017929&-3.6257500&-0.0216686&-0.1111816\\
-\multicolumn{5}{c}{}\\
-\multicolumn{5}{c}{Individualized (housing)}\\
-Munk (steep-lo)&0.0000000&-1.6058700&-0.0004201&0.0000000\\
-Munk (steep-mod)&0.0000000&-1.6382700&-0.0004895&0.0000000\\
-Munk (steep-hi)&-0.0000001&-1.6724140&-0.0005796&0.0000000\\
-Munk (moderate-lo)&-0.0000007&-2.4709510&-0.0023424&0.0000000\\
-Munk (moderate-mod)&-0.0000013&-2.5213210&-0.0027320&-0.0000001\\
-Munk (moderate-hi)&-0.0000026&-2.5744240&-0.0032354&-0.0000066\\
-Munk (flat-lo)&-0.0001074&-4.3012340&-0.0247341&-0.0007532\\
-Munk (flat-mod)&-0.0001973&-4.2773710&-0.0260855&-0.0101044\\
-Munk (flat-hi)&-0.0004049&-4.4735990&-0.0336084&-0.4086488\\
-
-		\hline
-	\end{tabular}
-\end{table}
 
 % CONCLUSION 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -680,17 +801,7 @@ Munk (flat-hi)&-0.0004049&-4.4735990&-0.0336084&-0.4086488\\
 \section{Conclusion}
 \label{conclusion}
 
-In this thesis we have reviewed the current state of pension investments in Turkey and the history and recent developments of a field of financial economics. We have reviewed the concept of "life-cycle investment" and summarized the common models and heuristics.
-
-\paragraph{}We have presented our model as an application of Munk's (2016) recent findings and Olear's (2016) simulation techniques into Turkish retirement market. We have collected historical data to calibrate and estimate the best parameters to be used in our simulation.
-
-\paragraph{}Using these parameters, we have constructed heterogeneous agents, who worked and invested throughout their lifetime. We considered different investment models that our hypothetical agents would use and calculated the resulting investment capitals.
-
-\paragraph{}Finally, we have calculated and compared the welfare effects of all popular models to the individualized Munk's solutions. We have concluded that for rich-to-middle class citizens, the individiualized strategies considerably increase their welfare. Moreover, the solutions we proposed can be solved analytically without complex dynamic optimizations, and therefore are easy to interpret to households. We also found that even naive life-cycle investments perform better than fixed lifetime investment.
-
-\paragraph{}We propose these models to Turkish pension providers and to Turkish working-age households belonging to middle-to-upper class, as these options will increase their retirement welfare considerably.
-
-
+In this paper we have reviewed the concept of "life-cycle investment" and summarized the common models and heuristics. We have presented our model as an application of Munk's (2016) recent findings and Olear's (2016) simulation techniques into Turkish retirement market. We have collected historical data to calibrate and estimate the best parameters to be used in our simulation. Using these parameters, we have constructed heterogeneous agents, who worked and invested throughout their lifetime. We considered different investment models that our hypothetical agents would use and calculated the resulting investment capitals. Finally, we have calculated and compared the welfare effects of all popular models to the individualized Munk's solutions. We have concluded that for rich-to-middle class risk-loving citizens, the individiualized strategies considerably increase their welfare. Moreover, the solutions we proposed can be solved analytically without complex dynamic optimizations, and therefore are easy to interpret to households. We also found that even naive life-cycle investment heuristics perform better than fixed lifetime investments. Our simulation showed that for risk-averse individuals with volatile wages, it is best to invest in housing in a proportion proposed by Munk. We propose these models to Turkish pension providers and to Turkish working-age households belonging to middle-to-upper class, as these options will increase their retirement welfare considerably.
 
 % BIBLIOGRAPHY
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -882,219 +993,9 @@ The growth rates can be calculated using these coefficients. Note that we have r
 
 % APPENDIX C
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\newpage
-\section{Investment strategies}
-\label{invstrat}
-
-\begin{table}[H]
-	\centering
-	\caption[]{Homogeneous life-cycles}
-	\begin{tabular}[c]{lcccc}
-		\hline
-		age&(100-age)\%&Bodie et al.&Anadolu Hayat Riskless&Markowitz\\
-		\hline
-		26&0.75&1&0.3&0.63\\
-		27&0.74&1&0.3&0.63\\
-		28&0.73&1&0.3&0.63\\
-		29&0.72&1&0.3&0.63\\
-		30&0.71&1&0.3&0.63\\
-		31&0.7&1&0.3&0.63\\
-		32&0.69&1&0.3&0.63\\
-		33&0.68&1&0.3&0.63\\
-		34&0.67&1&0.3&0.63\\
-		35&0.66&1&0.3&0.63\\
-		36&0.65&1&0.3&0.63\\
-		37&0.64&1&0.3&0.63\\
-		38&0.63&1&0.3&0.63\\
-		39&0.62&1&0.3&0.63\\
-		40&0.61&1&0.3&0.63\\
-		41&0.6&0.975&0.3&0.63\\
-		42&0.59&0.95&0.3&0.63\\
-		43&0.58&0.925&0.3&0.63\\
-		44&0.57&0.9&0.3&0.63\\
-		45&0.56&0.875&0.3&0.63\\
-		46&0.55&0.85&0.3&0.63\\
-		47&0.54&0.825&0.3&0.63\\
-		48&0.53&0.8&0.3&0.63\\
-		49&0.52&0.775&0.3&0.63\\
-		50&0.51&0.75&0.3&0.63\\
-		51&0.5&0.725&0.3&0.63\\
-		52&0.49&0.7&0.3&0.63\\
-		53&0.48&0.675&0.3&0.63\\
-		54&0.47&0.65&0.3&0.63\\
-		55&0.46&0.625&0.3&0.63\\
-		56&0.45&0.6&0.3&0.63\\
-		57&0.44&0.575&0.3&0.63\\
-		58&0.43&0.55&0.3&0.63\\
-		59&0.42&0.525&0.3&0.63\\
-		60&0.41&0.5&0.3&0.63\\
-		61&0.4&0.5&0.3&0.63\\
-		62&0.39&0.5&0.3&0.63\\
-		63&0.38&0.5&0.3&0.63\\
-		64&0.37&0.5&0.3&0.63\\
-		65&0.36&0.5&0.3&0.63\\
-		\hline
-	\end{tabular}
-\end{table}
-
-\begin{table}[H]
-	\centering
-	\caption[]{Munk's life-cycles for $\gamma = 1.5$ (1 of 3)}
-	\begin{tabular}[c]{lcccccc}
-&\multicolumn{3}{c}{Munk stock}&\multicolumn{3}{c}{Munk housing}\\
-		\hline
-age&steep-lo&steep-mod&steep-hi&steep-lo&steep-mod&steep-hi\\
-		\hline
-26&0.742&0.714&0.684&0.258&0.286&0.316\\
-27&0.730&0.702&0.674&0.270&0.298&0.326\\
-28&0.715&0.689&0.663&0.285&0.311&0.337\\
-29&0.698&0.675&0.650&0.302&0.325&0.350\\
-30&0.680&0.659&0.637&0.320&0.341&0.363\\
-31&0.661&0.642&0.622&0.339&0.358&0.378\\
-32&0.643&0.626&0.608&0.357&0.374&0.392\\
-33&0.624&0.609&0.594&0.376&0.391&0.406\\
-34&0.606&0.593&0.581&0.394&0.407&0.419\\
-35&0.589&0.579&0.568&0.411&0.421&0.432\\
-36&0.573&0.564&0.556&0.427&0.436&0.444\\
-37&0.560&0.553&0.546&0.440&0.447&0.454\\
-38&0.548&0.543&0.537&0.452&0.457&0.463\\
-39&0.539&0.534&0.530&0.461&0.466&0.470\\
-40&0.532&0.528&0.524&0.468&0.472&0.476\\
-41&0.525&0.522&0.519&0.475&0.478&0.481\\
-42&0.519&0.517&0.515&0.481&0.483&0.485\\
-43&0.515&0.514&0.512&0.485&0.486&0.488\\
-44&0.512&0.511&0.509&0.488&0.489&0.491\\
-45&0.509&0.508&0.507&0.491&0.492&0.493\\
-46&0.507&0.506&0.505&0.493&0.494&0.495\\
-47&0.505&0.505&0.504&0.495&0.495&0.496\\
-48&0.504&0.504&0.503&0.496&0.496&0.497\\
-49&0.503&0.503&0.502&0.497&0.497&0.498\\
-50&0.503&0.502&0.502&0.497&0.498&0.498\\
-51&0.502&0.502&0.501&0.498&0.498&0.499\\
-52&0.501&0.501&0.501&0.499&0.499&0.499\\
-53&0.501&0.501&0.501&0.499&0.499&0.499\\
-54&0.501&0.501&0.501&0.499&0.499&0.499\\
-55&0.501&0.500&0.500&0.499&0.500&0.500\\
-56&0.500&0.500&0.500&0.500&0.500&0.500\\
-57&0.500&0.500&0.500&0.500&0.500&0.500\\
-58&0.500&0.500&0.500&0.500&0.500&0.500\\
-59&0.500&0.500&0.500&0.500&0.500&0.500\\
-60&0.500&0.500&0.500&0.500&0.500&0.500\\
-61&0.500&0.500&0.500&0.500&0.500&0.500\\
-62&0.500&0.500&0.500&0.500&0.500&0.500\\
-63&0.500&0.500&0.500&0.500&0.500&0.500\\
-64&0.500&0.500&0.500&0.500&0.500&0.500\\
-		\hline
-	\end{tabular}
-\end{table}
-
-
-\begin{table}[H]
-	\centering
-	\caption[]{Munk's life-cycles for $\gamma = 1.5$ (2 of 3)}
-	\begin{tabular}[c]{lcccccc}
-&\multicolumn{3}{c}{Munk stock}&\multicolumn{3}{c}{Munk housing}\\
-		\hline
-age&mod-lo&mod-mod&mod-hi&mod-lo&mod-mod&mod-hi\\
-		\hline
-26&0.742&0.714&0.684&0.258&0.286&0.316\\
-27&0.729&0.702&0.674&0.271&0.298&0.326\\
-28&0.714&0.688&0.662&0.286&0.312&0.338\\
-29&0.697&0.674&0.650&0.303&0.326&0.350\\
-30&0.679&0.658&0.636&0.321&0.342&0.364\\
-31&0.659&0.640&0.621&0.341&0.360&0.379\\
-32&0.641&0.624&0.607&0.359&0.376&0.393\\
-33&0.622&0.607&0.593&0.378&0.393&0.407\\
-34&0.604&0.592&0.579&0.396&0.408&0.421\\
-35&0.588&0.577&0.567&0.412&0.423&0.433\\
-36&0.572&0.563&0.555&0.428&0.437&0.445\\
-37&0.559&0.552&0.545&0.441&0.448&0.455\\
-38&0.548&0.542&0.537&0.452&0.458&0.463\\
-39&0.539&0.534&0.529&0.461&0.466&0.471\\
-40&0.532&0.528&0.524&0.468&0.472&0.476\\
-41&0.525&0.522&0.519&0.475&0.478&0.481\\
-42&0.520&0.517&0.515&0.480&0.483&0.485\\
-43&0.515&0.514&0.512&0.485&0.486&0.488\\
-44&0.512&0.511&0.509&0.488&0.489&0.491\\
-45&0.509&0.508&0.507&0.491&0.492&0.493\\
-46&0.507&0.506&0.506&0.493&0.494&0.494\\
-47&0.506&0.505&0.504&0.494&0.495&0.496\\
-48&0.504&0.504&0.503&0.496&0.496&0.497\\
-49&0.503&0.503&0.503&0.497&0.497&0.497\\
-50&0.503&0.502&0.502&0.497&0.498&0.498\\
-51&0.502&0.502&0.501&0.498&0.498&0.499\\
-52&0.501&0.501&0.501&0.499&0.499&0.499\\
-53&0.501&0.501&0.501&0.499&0.499&0.499\\
-54&0.501&0.501&0.501&0.499&0.499&0.499\\
-55&0.501&0.501&0.500&0.499&0.499&0.500\\
-56&0.500&0.500&0.500&0.500&0.500&0.500\\
-57&0.500&0.500&0.500&0.500&0.500&0.500\\
-58&0.500&0.500&0.500&0.500&0.500&0.500\\
-59&0.500&0.500&0.500&0.500&0.500&0.500\\
-60&0.500&0.500&0.500&0.500&0.500&0.500\\
-61&0.500&0.500&0.500&0.500&0.500&0.500\\
-62&0.500&0.500&0.500&0.500&0.500&0.500\\
-63&0.500&0.500&0.500&0.500&0.500&0.500\\
-64&0.500&0.500&0.500&0.500&0.500&0.500\\
-		\hline
-	\end{tabular}
-\end{table}
-
-\begin{table}[H]
-	\centering
-	\caption[]{Munk's life-cycles for $\gamma = 1.5$ (3 of 3)}
-	\begin{tabular}[c]{lcccccc}
-&\multicolumn{3}{c}{Munk stock}&\multicolumn{3}{c}{Munk housing}\\
-		\hline
-age&flat-lo&flat-mod&flat-hi&flat-lo&flat-mod&flat-hi\\
-		\hline
-26&0.742&0.713&0.684&0.258&0.287&0.316\\
-27&0.729&0.701&0.674&0.271&0.299&0.326\\
-28&0.713&0.687&0.661&0.287&0.313&0.339\\
-29&0.695&0.672&0.648&0.305&0.328&0.352\\
-30&0.675&0.654&0.633&0.325&0.346&0.367\\
-31&0.654&0.636&0.617&0.346&0.364&0.383\\
-32&0.634&0.618&0.602&0.366&0.382&0.398\\
-33&0.614&0.601&0.587&0.386&0.399&0.413\\
-34&0.596&0.585&0.573&0.404&0.415&0.427\\
-35&0.579&0.570&0.560&0.421&0.430&0.440\\
-36&0.564&0.556&0.549&0.436&0.444&0.451\\
-37&0.551&0.545&0.539&0.449&0.455&0.461\\
-38&0.541&0.536&0.531&0.459&0.464&0.469\\
-39&0.532&0.529&0.525&0.468&0.471&0.475\\
-40&0.526&0.523&0.520&0.474&0.477&0.480\\
-41&0.520&0.518&0.515&0.480&0.482&0.485\\
-42&0.516&0.514&0.512&0.484&0.486&0.488\\
-43&0.512&0.511&0.509&0.488&0.489&0.491\\
-44&0.509&0.508&0.507&0.491&0.492&0.493\\
-45&0.507&0.506&0.505&0.493&0.494&0.495\\
-46&0.506&0.505&0.504&0.494&0.495&0.496\\
-47&0.504&0.504&0.503&0.496&0.496&0.497\\
-48&0.503&0.503&0.503&0.497&0.497&0.497\\
-49&0.503&0.502&0.502&0.497&0.498&0.498\\
-50&0.502&0.502&0.502&0.498&0.498&0.498\\
-51&0.502&0.501&0.501&0.498&0.499&0.499\\
-52&0.501&0.501&0.501&0.499&0.499&0.499\\
-53&0.501&0.501&0.501&0.499&0.499&0.499\\
-54&0.501&0.501&0.500&0.499&0.499&0.500\\
-55&0.500&0.500&0.500&0.500&0.500&0.500\\
-56&0.500&0.500&0.500&0.500&0.500&0.500\\
-57&0.500&0.500&0.500&0.500&0.500&0.500\\
-58&0.500&0.500&0.500&0.500&0.500&0.500\\
-59&0.500&0.500&0.500&0.500&0.500&0.500\\
-60&0.500&0.500&0.500&0.500&0.500&0.500\\
-61&0.500&0.500&0.500&0.500&0.500&0.500\\
-62&0.500&0.500&0.500&0.500&0.500&0.500\\
-63&0.500&0.500&0.500&0.500&0.500&0.500\\
-64&0.500&0.500&0.500&0.500&0.500&0.500\\
-		\hline
-	\end{tabular}
-\end{table}
-
-
-
-% APPENDIX D
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\newpage
+%\section{appendixname}
+%\label{appendix label}
 
 
 
@@ -1106,3 +1007,18 @@ age&flat-lo&flat-mod&flat-hi&flat-lo&flat-mod&flat-hi\\
 
 
 \end{document}  
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+
+
+
+

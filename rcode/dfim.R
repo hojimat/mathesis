@@ -30,7 +30,7 @@ df$dwage <- append(diff(log(df$wage)),NA,0)
 df$inf <- append(diff(df$cpi, 12)/df$cpi[1:132],rep(NA,12),0)
 df <- df[-c(1:12),]
 
-#realstock <- df$stock/df$cpi
+realstock <- df$stock/df$cpi
 drealstock <- append(diff(log(realstock)),NA,0)
 adf.test(drealstock[-1])
 wewe <- arima(drealstock[-1],c(2,0,2))
@@ -46,9 +46,9 @@ drealwage <- append(diff(log(realwage)),NA,0)
 adf.test(drealwage[-1])
 dfdf <- arima(drealwage[-1], c(5,0,2) )
 param_sig_yy <- as.data.frame(forecast(dfdf,200))[200,1] - as.data.frame(forecast(dfdf,200))[200,2]
-pdf(file="~/Dropbox/research/mathesis/tex/figs/wagediff.pdf")
+#pdf(file="~/Dropbox/research/mathesis/tex/figs/wagediff.pdf")
 plot(df$date[-1], drealwage[-1], type="l", col='blue3', xlab="months", ylab="real wage growth")
-dev.off()
+#dev.off()
 
 
 realhouse <- df$house/df$cpi
@@ -58,9 +58,9 @@ asas <- arima(drealhouse[-1],c(1,0,1))
 plot(df$date[-1], drealhouse[-1], type='l', col='red3', xlab='months', ylab='real housing returns ')
 param_mu_hh <- as.data.frame(forecast(asas, 200))[200,1]
 param_sig_hh <- as.data.frame(forecast(asas, 200))[200,3] - param_mu_hh
-pdf(file="~/Dropbox/research/mathesis/tex/figs/reidindiff.pdf")
+#pdf(file="~/Dropbox/research/mathesis/tex/figs/reidindiff.pdf")
 plot(df$date[-1], drealhouse[-1], type="l", col='green3', xlab="months", ylab="real housing returns")
-dev.off()
+#dev.off()
 
 plot(drealstock, type='l', col='blue')
 lines(drealhouse, type='l', col='red')

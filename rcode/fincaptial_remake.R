@@ -107,13 +107,27 @@ dev.off()
 
 
 fc <- data.frame(
-  mrk = as.numeric(vosmrk[40,]),
-  sto = as.numeric(vossto[40,]),
-  coc = as.numeric(voscoc[40,]),
-  bnk = as.numeric(vosbnk[40,]),
-  bod = as.numeric(vosbod[40,]),
-  mnk = as.numeric(vosmnk[40,]),
-  mnkh=as.numeric(vosmnkh[40,])
+  mrk = as.numeric(vosmrk[40,seq(2,27,3)]),
+  mrku = as.numeric(vosmrk[40,seq(1,27,3)]),
+  mrkd = as.numeric(vosmrk[40,seq(3,27,3)]),
+  sto = as.numeric(vossto[40,seq(2,27,3)]),
+  stou = as.numeric(vossto[40,seq(1,27,3)]),
+  stod = as.numeric(vossto[40,seq(3,27,3)]),
+  coc = as.numeric(voscoc[40,seq(2,27,3)]),
+  cocu = as.numeric(voscoc[40,seq(1,27,3)]),
+  cocd = as.numeric(voscoc[40,seq(3,27,3)]),
+  bnk = as.numeric(vosbnk[40,seq(2,27,3)]),
+  bnku = as.numeric(vosbnk[40,seq(1,27,3)]),
+  bnkd = as.numeric(vosbnk[40,seq(3,27,3)]),
+  bod = as.numeric(vosbod[40,seq(2,27,3)]),
+  bodu = as.numeric(vosbod[40,seq(1,27,3)]),
+  bodd = as.numeric(vosbod[40,seq(3,27,3)]),
+  mnk = as.numeric(vosmnk[40,seq(2,27,3)]),
+  mnku = as.numeric(vosmnk[40,seq(1,27,3)]),
+  mnkd = as.numeric(vosmnk[40,seq(3,27,3)]),
+  mnkh = as.numeric(vosmnkh[40,seq(2,27,3)]),
+  mnkhu = as.numeric(vosmnkh[40,seq(1,27,3)]),
+  mnkhd = as.numeric(vosmnkh[40,seq(3,27,3)])
 )
 
-#write.csv(fc, "~/Dropbox/research/mathesis/misc/fins.csv")
+#write.table(format(t(round(fc,0)),big.mark=","), "~/Dropbox/research/mathesis/misc/fins10.csv",sep = "&", eol = "\\\\\n")
