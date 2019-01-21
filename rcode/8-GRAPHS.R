@@ -147,3 +147,80 @@ lines(tmpsec$year, tmpsec$income, type="l", col="green")
 legend(x="topleft", y=0,legend = c("finance", "education", "trade", "agriculture"), fill = c("blue", "green", "orange", "red"), lty = c(1,1), cex = 1.5)
 
 dev.off()
+
+
+
+
+
+
+
+
+
+pdf(file="~/Dropbox/research/mathesis/tex/figs/humancapital.pdf")
+plot(c(25:64), L_steep, type="l", xlab="age", ylab="human capital", ylim=c(50, 3300),col="red3")
+lines(c(25:64), L_moderate, col="orange2")
+lines(c(25:64), L_flat, col="green3")
+legend(x = "topright", y =0, legend = c("steep","moderate","flat"), fill=c("red3","orange2","green3"), cex=1.4)
+dev.off()
+
+
+
+pdf(file = "Dropbox/research/mathesis/tex/figs/heterwageless.pdf")
+plot(LL_steep, type="l", col="red", xlab = "age", ylab = "wage", ylim = c(50,200))
+lines(LL_moderate, type="l", col="orange")
+lines(LL_flat, type="l", col="green")
+legend(x="topleft", y=0,legend = c("steep", "moderate", "flat"), fill = c("red", "orange", "green"), lty = c(1,1), cex = 1.5)
+dev.off()
+
+
+
+# 
+# pdf("~/Dropbox/research/mathesis/tex/figs/individuals10.pdf")
+# plot(0, type="n", ylim=c(0,1), xlim=c(25,63), ylab="fin capital", xlab="age")
+# for(i in 1:27){
+#   ltype<-2;if(i%%3==2){ltype<-1}
+#   coltype1<-"gray";if(i%%3==2){coltype1<-"red"}
+#   coltype2<-"gray";if(i%%3==2){coltype2<-"blue"}
+#   lines(c(25:63), latmnk[1:39,i], lty=ltype, col=coltype1)
+#   lines(c(25:63), latbod[1:39,i], lty=ltype, col=coltype2)
+# }
+# legend(x = "bottomleft", y=0, legend = c("Bodie et al.", "Munk"), fill=c("blue", "red3"), cex=1.5)
+# dev.off()
+
+
+#pdf("~/Dropbox/research/mathesis/tex/figs/hmunkhouse10.pdf")
+# plot(0, type="n", ylim=c(0,1), xlim=c(25,63), ylab="fin capital", xlab="age")
+# for(i in 1:27){
+#   ltype<-3;if(i%%3==2){ltype<-1}
+#   coltype1<-"gray";if(i%%3==2){coltype1<-"red"}
+#   lines(c(25:63), latmnkh[1:39,i], lty=ltype, col=coltype1)
+# }
+#dev.off()
+
+#pdf("~/Dropbox/research/mathesis/tex/figs/smunkhouse10.pdf")
+# plot(0, type="n", ylim=c(0,1), xlim=c(25,63), ylab="fin capital", xlab="age")
+# for(i in 1:27){
+#   ltype<-3;if(i%%3==2){ltype<-1}
+#   coltype1<-"gray";if(i%%3==2){coltype1<-"blue"}
+#   lines(c(25:63), latmnks[1:39,i], lty=lt
+#pdf(file="~/Dropbox/research/mathesis/tex/figs/reidindiff.pdf")
+plot(df$date[-1], drealhouse[-1], type="l", col='green3', xlab="months", ylab="real housing returns")
+#dev.off()
+
+plot(drealstock, type='l', col='blue')
+lines(drealhouse, type='l', col='red')
+lines(drealwage, type='l', col='green')ype, col=coltype1)
+# }
+#dev.off()
+
+
+#pdf(file="~/Dropbox/research/mathesis/tex/figs/bistdiff.pdf")
+plot(df$date[-1], drealstock[-1], type="l", col='red3', xlab="months", ylab="real stock returns")
+#dev.off()
+
+
+#pdf(file="~/Dropbox/research/mathesis/tex/figs/wagediff.pdf")
+plot(df$date[-1], drealwage[-1], type="l", col='blue3', xlab="months", ylab="real wage growth")
+#dev.off()
+
+

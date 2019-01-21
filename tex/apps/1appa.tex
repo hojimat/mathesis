@@ -1,0 +1,50 @@
+\chapter{Ascheberg's correlation structure}
+\label{ascheberg}
+
+The structure that returns desired correlation coefficients $\rho_{SL}$, $\rho_{SH}$ and $\rho_{HL}$ is as follows:
+
+\begin{subequations}
+	\begin{equation}
+		\frac{\Delta S_{t+1}}{S_t} = \mu_S + \sigma_S \cdot \epsilon_{St}
+	\end{equation}
+	\begin{equation}
+		\frac{\Delta H_{t+1}}{H_t} = \mu_H + \sigma_H \cdot \left(\rho_{SH}\epsilon_{St} + (\sqrt{1-\rho^2_{SL}})\epsilon_{Ht}\right)
+	\end{equation}
+	\begin{equation}
+		\frac{\Delta Y_{t+1}}{Y_t} = \mu_L + \sigma_L \cdot \left(\rho_{SL}\epsilon_{St} + \left(\frac{\rho_{HL} - \rho_{SH}\rho_{SL}}{\sqrt{1-\rho^2_{SH}}}\right)\epsilon_{Ht} + \left(\sqrt{1-\rho^2_{SL}-(\frac{\rho_{HL} - \rho_{SH}\rho_{SL}}{\sqrt{1-\rho^2_{SH}}})^2}\right)\epsilon_{Lt}\right)
+	\end{equation}
+\end{subequations}
+
+To derive this, let $\Sigma$ be a correlation matrix of a vector $X = (x_1, x_2, ..., x_K)$. Also, let $\Sigma = LL'$ be a Cholesky decomposition of this matrix.
+
+Notice that the variance-covariance matrix of an i.i.d. random vector $\Omega = (\epsilon_1, \epsilon_2, ..., \epsilon_K)$ with variances equal to $1$, is an identity matrix. Thus, the product $L\Omega$ has the same correlation structure as $X$:
+
+\begin{center}
+  $cov(L\Omega) = E[(L\Omega)(L\Omega)'] = E[L\Omega\Omega'L']$,\\
+  $cov(L\Omega) = L \cdot E[\Omega\Omega'] \cdot L' = L \cdot var(\Omega) \cdot L'$,\\
+  $cov(L\Omega) = L\cdot I \cdot L' = LL' = \Sigma$
+\end{center}
+
+The conclusion comes from the fact that the Cholesky decomposition of a correlation matrix $R$:
+
+\begin{center}
+	$R = \begin{bmatrix}
+					1 & \rho_{SH} & \rho_{SL} \\
+					\rho_{SH} & 1 & \rho_{HL} \\
+					\rho_{SL} & \rho_{HL} & 1
+			\end{bmatrix}
+	$
+\end{center}
+
+can be easily calculated to be equal to $Q$:
+
+\begin{center}
+	$Q = \begin{bmatrix}
+					1 & 0 & 0 \\
+					\rho_{SH} & \sqrt{1-\rho^2_{SH}} & 0 \\
+					\rho_{SL} & \frac{\rho_{HL} - \rho_{SH}\rho_{SL}}{\sqrt{1-\rho^2_{SH}}} & \sqrt{1-\rho^2_{SL}-(\frac{\rho_{HL} - \rho_{SH}\rho_{SL}}{\sqrt{1-\rho^2_{SH}}})^2}
+			\end{bmatrix}
+	$
+\end{center}
+
+

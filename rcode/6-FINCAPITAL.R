@@ -100,39 +100,22 @@ for(realization in 1:MCNO){
 # 
 # write.table(format(round(carlo,0),big.mark=","), "~/Dropbox/research/mathesis/misc/carlo15.csv",sep = "&", eol = "\\\\\n")
 
-# 
-# pdf("~/Dropbox/research/mathesis/tex/figs/individuals10.pdf")
-# plot(0, type="n", ylim=c(0,1), xlim=c(25,63), ylab="fin capital", xlab="age")
-# for(i in 1:27){
-#   ltype<-2;if(i%%3==2){ltype<-1}
-#   coltype1<-"gray";if(i%%3==2){coltype1<-"red"}
-#   coltype2<-"gray";if(i%%3==2){coltype2<-"blue"}
-#   lines(c(25:63), latmnk[1:39,i], lty=ltype, col=coltype1)
-#   lines(c(25:63), latbod[1:39,i], lty=ltype, col=coltype2)
-# }
-# legend(x = "bottomleft", y=0, legend = c("Bodie et al.", "Munk"), fill=c("blue", "red3"), cex=1.5)
-# dev.off()
 
+write.csv(mcmrk, "~/Dropbox/research/mathesis/misc/mcmrk15.csv")
+write.csv(mcsto, "~/Dropbox/research/mathesis/misc/mcsto15.csv")
+write.csv(mccoc, "~/Dropbox/research/mathesis/misc/mccoc15.csv")
+write.csv(mcbnk, "~/Dropbox/research/mathesis/misc/mcbnk15.csv")
+write.csv(mcbod, "~/Dropbox/research/mathesis/misc/mcbod15.csv")
+write.csv(mcmnk, "~/Dropbox/research/mathesis/misc/mcmnk15.csv")
+write.csv(mcmnkh, "~/Dropbox/research/mathesis/misc/mcmnkh15.csv")
 
-#pdf("~/Dropbox/research/mathesis/tex/figs/hmunkhouse10.pdf")
-# plot(0, type="n", ylim=c(0,1), xlim=c(25,63), ylab="fin capital", xlab="age")
-# for(i in 1:27){
-#   ltype<-3;if(i%%3==2){ltype<-1}
-#   coltype1<-"gray";if(i%%3==2){coltype1<-"red"}
-#   lines(c(25:63), latmnkh[1:39,i], lty=ltype, col=coltype1)
-# }
-#dev.off()
-
-#pdf("~/Dropbox/research/mathesis/tex/figs/smunkhouse10.pdf")
-# plot(0, type="n", ylim=c(0,1), xlim=c(25,63), ylab="fin capital", xlab="age")
-# for(i in 1:27){
-#   ltype<-3;if(i%%3==2){ltype<-1}
-#   coltype1<-"gray";if(i%%3==2){coltype1<-"blue"}
-#   lines(c(25:63), latmnks[1:39,i], lty=ltype, col=coltype1)
-# }
-#dev.off()
-
-
-
-#write.table(format(t(round(fc,0)),big.mark=","), "~/Dropbox/research/mathesis/misc/fins10.csv",sep = "&", eol = "\\\\\n")
+fc15 <- t(data.frame(
+  mrk = colMeans(mcmrk),
+  sto = colMeans(mcsto),
+  coc = colMeans(mccoc),
+  bnk = colMeans(mcbnk),
+  bod = colMeans(mcbod),
+  mnk = colMeans(mcmnk),
+  mnkh= colMeans(mcmnkh)
+))
 

@@ -1,0 +1,64 @@
+\chapter{Model}
+\label{model}
+
+\section{House prices, stock prices and labor income series}
+In accordance with \citet{ccgm} and \citet{olear} we model the labor income process as a function of individiual characteristics $f(t, Z_{it})$ plus idiosyncratic shocks $v_{it}$. Upon reaching the retirement age $R$, an individual receives a certain percentage $\lambda$ of his/her last wage:
+
+\begin{equation}
+	Y_{i,t+1} = 
+	\begin{cases}
+		Y_{it} (1 + f(t+1,Z_{i,t+1}) + v_{it}), 	& t < R \\
+		\lambda (1 + f(R, Z_{iR}) + v_{iR}), 			& t \geq R
+	\end{cases}	
+\end{equation}
+
+We model labor income, house prices, and stock prices as Geometric Brownian Motions with drifts $\mu_L$, $\mu_H$, $\mu_S$ and volatilities $\sigma_L$, $\sigma_H$, $\sigma_S$, satisfying the discrete version of \citet{ascheberg}'s correlation structure, that is having nonzero correlations $\rho_{HS}, \rho_{HL}, \rho_{SL}$. See Appendix \ref{ascheberg} for details.
+
+\section{Optimal portfolio}
+Along with the investment strategies, described in Equations \ref{eq:markowitz} - \ref{eq:cgm}, we consider in our benchmarking, the strategy proposed by \citet{munk}, who stated that in the presence of housing, the optimal stock ($\pi$) and housing ($\pi_h$) shares can be solved analytically as follows:
+
+\begin{subequations}
+	
+	\begin{equation}\label{eq:munka}
+		\pi_{t+1} = \frac{1}{\gamma (1 - \rho^2_{SH}) \sigma_S} \cdot \frac{F_t + L_t}{F_t} \left( \frac{\mu_S - r_f}{\sigma_S} - \rho_{SH} \frac{\mu_H - r_f}{\sigma_H} \right) - \frac{L_t}{F_t} \cdot \frac{\sigma_L}{\sigma_S} \frac{\rho_{SL} - \rho_{SH}\rho_{HL}}{1 - \rho^2_{SH}}
+	\end{equation}
+
+	\begin{equation}\label{eq:munkb}
+		\pi_{h,t+1} = \frac{1}{\gamma (1 - \rho^2_{SH}) \sigma_H} \cdot \frac{F_t + L_t}{F_t} \left( \frac{\mu_H - r_f}{\sigma_H} - \rho_{SH} \frac{\mu_S - r_f}{\sigma_S} \right) - \frac{L_t}{F_t} \cdot \frac{\sigma_L}{\sigma_H} \frac{\rho_{HL} - \rho_{SH}\rho_{SL}}{1 - \rho^2_{SH}}
+	\end{equation}
+
+\end{subequations}
+
+Setting $\rho_{SH} = 0$ and $\rho_{HL} = 0$, gives the optimal stock share by \citet{munk} in the absence of housing:
+
+\begin{equation}\label{eq:munkno}
+	\pi_{t+1} = \frac{1}{\gamma \sigma_S} \cdot \frac{F_t + L_t}{F_t} \left( \frac{\mu_S - r_f}{\sigma_S} \right) - \frac{L_t}{F_t} \cdot \frac{\sigma_L}{\sigma_S} \rho_{SL}
+\end{equation}
+
+
+\section{Welfare measurement}
+
+We use stochastic constant relative risk-aversion utility function to compare welfare resulting from different income patterns:
+
+\begin{equation}
+	E_1[U(c)] = \displaystyle\sum^T_{t=1} \delta^{t-1} \displaystyle\prod^{t-1}_{j=0} p_j \cdot \frac{c^{1-\gamma}_{it}}{1-\gamma}
+\end{equation}
+
+where $p_k$ is the probability of survival between ages $k-1$ and $k$. Unlike \citet{cgm}, we neglect the bequest motives, assuming that the retired person consumes all of his/her income at any given time. 
+
+
+\section{Retirement income}
+
+The funds invested in retirement are modeled to be paid back in annuities, not withdrawn immediately. Further, to include housing investment in welfare calculation, we use ``reverse mortgages'' --- annuities, paid to retired individuals in return for inheriting their house after their death. This is a plausible analysis tool, because it allows to liquidify the housing possessions, although such financial instrument is not yet available in Turkey. 
+
+\paragraph{}Thus, at the age of retirement $R = 65$, the price of owned house is calculated and is added to the matured pension amount ($MP$) to obtain total wealth:
+
+\begin{equation}
+	W_{65} = H_{65} + MP
+\end{equation}
+
+All of the $W_{65}$ is used to buy an annuity which will annually repay an individual:
+
+\begin{equation}
+	A_t = W_{65} \cdot \left(1+\sum^{100}_{t=66} \frac{\prod^{t}_{j=66} p_j }{(1+r_f)^{t-65}} \right)^{-1}
+\end{equation}
