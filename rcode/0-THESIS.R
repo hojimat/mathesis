@@ -2,23 +2,29 @@ rm(list=ls())
 library("zoo")
 library("tseries")
 library("forecast")
+options(scipen = 999)
 
 # Define functions for Bodie, Munk, CRRA Utility. Simply formulas.
-source("/home/ravshan/Dropbox/research/mathesis/rcode/FUNCTIONS.R")
+source("1-FUNCTIONS.R")
 
 # Import datasets for wages, stock prices, house prices
-source("/home/ravshan/Dropbox/research/mathesis/rcode/DATA.R")
+source("2-DATA.R")
+
+# Do calculations
+source("3-CALCULATIONS.R")
 
 # Calculate main parameters
-source("/home/ravshan/Dropbox/research/mathesis/rcode/PARAMETERS.R")
+source("4-PARAMETERS.R")
 
 # Derive human capital from estimated wage series
-source("/home/ravshan/Dropbox/research/mathesis/rcode/HUMCAPITAL.R")
+source("5-HUMCAPITAL.R")
 
 # Perform a Monte Carlo simulation for each investment option
-source("/home/ravshan/Dropbox/research/mathesis/rcode/FINCAPITAL.R")
+source("6-FINCAPITAL.R")
 
+# Perform a benchmarking of the results
+source("7-BENCHMARK.R")
 
+# Access the graphs
+source("8-GRAPHS.R")
 
-# Calculations
-#source("/home/ravshan/Dropbox/research/mathesis/rcode/CALCULATIONS.R.R")

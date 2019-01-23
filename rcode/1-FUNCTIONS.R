@@ -1,3 +1,4 @@
+# Bodie et al.
 bodie <- function(t, dwi, dfi){
   ans <- (param_mu_s - param_r_f)/(param_gamma*param_sig_s^2)
   ans <- ans * (1+dwi[t]/dfi[t])
@@ -6,6 +7,7 @@ bodie <- function(t, dwi, dfi){
 
 #####################################################################################
 
+# Constant Relative Risk Aversion Utility function
 crrautil <- function(C, rave=param_gamma){
   delta <- 0.89
   crra <- 0
@@ -18,6 +20,7 @@ crrautil <- function(C, rave=param_gamma){
 
 #####################################################################################
 
+# Munk (2016)
 munk <- function(t, dwi, dfi, rhowsi, rhowhi=param_rho_hw, rave=param_gamma, house=TRUE){
   pismunk <- 0
   pihmunk <- 0

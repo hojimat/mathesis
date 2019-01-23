@@ -37,9 +37,9 @@ param_T <- param_R-param_Y
 param_kappa <- 1
 
 #heter params
-param_mu_w_flat
-param_mu_w_moderate
-param_mu_w_steep
+# param_mu_w_flat
+# param_mu_w_moderate
+# param_mu_w_steep
 
 param_rho_ws_low <- 0
 param_rho_ws_medium <- 0.2

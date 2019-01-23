@@ -28,17 +28,17 @@ vosmnk[1,] <- init_capital
 vosmnkh[1,]<- init_capital
 
 MCNO <- 10000
-mcmrk5 <- data.frame(matrix(0, MCNO, 3*3))
-mcsto5 <- data.frame(matrix(0, MCNO, 3*3))
-mccoc5 <- data.frame(matrix(0, MCNO, 3*3))
-mcbnk5 <- data.frame(matrix(0, MCNO, 3*3))
-mcbod5 <- data.frame(matrix(0, MCNO, 3*3))
-mcmnk5 <- data.frame(matrix(0, MCNO, 3*3))
-mcmnkh5<- data.frame(matrix(0, MCNO, 3*3))
+mcmrk <- data.frame(matrix(0, MCNO, 3*3))
+mcsto <- data.frame(matrix(0, MCNO, 3*3))
+mccoc <- data.frame(matrix(0, MCNO, 3*3))
+mcbnk <- data.frame(matrix(0, MCNO, 3*3))
+mcbod <- data.frame(matrix(0, MCNO, 3*3))
+mcmnk <- data.frame(matrix(0, MCNO, 3*3))
+mcmnkh<- data.frame(matrix(0, MCNO, 3*3))
 
 for(realization in 1:MCNO){
-  sex <- rnorm(n=param_T,mean=param_mu_s,sd=param_sig_s)
-  hex <- rnorm(n=param_T,mean=param_mu_h,sd=param_sig_h)
+  set.seed(realization); sex <- rnorm(n=param_T,mean=param_mu_s,sd=param_sig_s)
+  set.seed(realization+MCNO); hex <- rnorm(n=param_T,mean=param_mu_h,sd=param_sig_h)
   for(dydt in 1:3){#wage growth STEEP-MOD-FLAT
     for(rhows in 1:3){#stock-wage correlation HIGH-MOD-LOW
       lex <- 0; if(dydt==1){lex<-LL_steep}else if(dydt==2){lex<-LL_moderate}else if(dydt==3){lex<-LL_flat}
@@ -79,43 +79,20 @@ for(realization in 1:MCNO){
     }
   }
   
-  mcmrk5[realization,] <- vosmrk[40,]
-  mcsto5[realization,] <- vossto[40,]
-  mccoc5[realization,] <- voscoc[40,]
-  mcbnk5[realization,] <- vosbnk[40,]
-  mcbod5[realization,] <- vosbod[40,]
-  mcmnk5[realization,] <- vosmnk[40,]
-  mcmnkh5[realization,] <- vosmnkh[40,]
+  mcmrk[realization,] <- vosmrk[40,]
+  mcsto[realization,] <- vossto[40,]
+  mccoc[realization,] <- voscoc[40,]
+  mcbnk[realization,] <- vosbnk[40,]
+  mcbod[realization,] <- vosbod[40,]
+  mcmnk[realization,] <- vosmnk[40,]
+  mcmnkh[realization,] <- vosmnkh[40,]
   print(realization)
 }
 
-# carlo <- rbind(colMeans(mcmrk), apply(mcmrk,2,sd),
-#               colMeans(mcsto), apply(mcsto,2,sd),
-#               colMeans(mccoc), apply(mccoc,2,sd),
-#               colMeans(mcbnk), apply(mcbnk,2,sd),
-#               colMeans(mcbod), apply(mcbod,2,sd),
-#               colMeans(mcmnk), apply(mcmnk,2,sd),
-#               colMeans(mcmnkh),apply(mcmnkh,2,sd)
-# )
-# 
-# write.table(format(round(carlo,0),big.mark=","), "~/Dropbox/research/mathesis/misc/carlo15.csv",sep = "&", eol = "\\\\\n")
-
-
-write.csv(mcmrk, "~/Dropbox/research/mathesis/misc/mcmrk15.csv")
-write.csv(mcsto, "~/Dropbox/research/mathesis/misc/mcsto15.csv")
-write.csv(mccoc, "~/Dropbox/research/mathesis/misc/mccoc15.csv")
-write.csv(mcbnk, "~/Dropbox/research/mathesis/misc/mcbnk15.csv")
-write.csv(mcbod, "~/Dropbox/research/mathesis/misc/mcbod15.csv")
-write.csv(mcmnk, "~/Dropbox/research/mathesis/misc/mcmnk15.csv")
-write.csv(mcmnkh, "~/Dropbox/research/mathesis/misc/mcmnkh15.csv")
-
-fc15 <- t(data.frame(
-  mrk = colMeans(mcmrk),
-  sto = colMeans(mcsto),
-  coc = colMeans(mccoc),
-  bnk = colMeans(mcbnk),
-  bod = colMeans(mcbod),
-  mnk = colMeans(mcmnk),
-  mnkh= colMeans(mcmnkh)
-))
-
+write.csv(mcmrk, "~/Dropbox/research/mathesis/misc/mcmrk10.csv")
+write.csv(mcsto, "~/Dropbox/research/mathesis/misc/mcsto10.csv")
+write.csv(mccoc, "~/Dropbox/research/mathesis/misc/mccoc10.csv")
+write.csv(mcbnk, "~/Dropbox/research/mathesis/misc/mcbnk10.csv")
+write.csv(mcbod, "~/Dropbox/research/mathesis/misc/mcbod10.csv")
+write.csv(mcmnk, "~/Dropbox/research/mathesis/misc/mcmnk10.csv")
+write.csv(mcmnkh, "~/Dropbox/research/mathesis/misc/mcmnkh10.csv")

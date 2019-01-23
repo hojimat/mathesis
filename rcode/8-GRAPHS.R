@@ -224,3 +224,48 @@ plot(df$date[-1], drealwage[-1], type="l", col='blue3', xlab="months", ylab="rea
 #dev.off()
 
 
+
+#pdf(file = "~/Dropbox/research/mathesis/tex/figs/heterwage.pdf")
+plot(Ftmpeduc$income, ylim=c(30,200), col="green", xlab="age", ylab="real wages")
+lines(rep(Ftmpeduc[1,2],40))
+points(Mtmpeduc$income, col="blue")
+lines(cumprod(c(Mtmpeduc[1,2],Mxx$fitted.values + 1)))
+points(Stmpeduc$income, col="red")
+lines(cumprod(c(Stmpeduc[1,2],Sxx$fitted.values + 1)))
+legend(x="topleft", y=0,legend = c("steep", "moderate", "high"), fill = c("red", "blue", "green"), lty = c(1,1), cex=1.5)
+#dev.off()
+
+
+
+
+#pdf(file = "Dropbox/research/mathesis/tex/figs/heterwage.pdf")
+# plot(Stmpeduc, type="l", col="red")
+# lines(Mtmpeduc, type="l", col="red")
+# lines(Ftmpeduc, type="l", col="red")
+# lines(param_mu_w_steep, type="l", col="blue")
+# lines(param_mu_w_moderate, type="l", col="blue")
+# lines(param_mu_w_flat, type="l", col="blue")
+# legend(x="topleft", y=0,legend = c("actual", "parameterized"), fill = c("red", "blue"), lty = c(1,1), cex = 1.5)
+#dev.off()
+
+
+#pdf(file = "Dropbox/research/tex/figs/heterwageless.pdf")
+plot(param_mu_w_steep, type="l", col="red", xlab = "age", ylab = "wage")
+lines(param_mu_w_moderate, type="l", col="orange")
+lines(param_mu_w_flat, type="l", col="green")
+legend(x="topleft", y=0,legend = c("steep", "moderate", "flat"), fill = c("red", "orange", "green"), lty = c(1,1), cex = 1.5)
+#dev.off()
+
+#pdf(file = "Dropbox/research/tex/figs/survival.pdf")
+plot(surv, xlab = "age", ylab = "survival probability")
+#dev.off()
+
+
+# plot(density(mcmnk3[,1]),ylim=c(0,0.009),col='red')
+# lines(density(mcmrk3[,1]),col='green')
+# lines(density(mcmnkh3[,1]),col='blue')
+# lines(density(mcbnk3[,1]),col='grey')
+# lines(density(mcbod3[,1]),col='orange')
+# lines(density(mccoc3[,1]),col='black')
+# lines(density(mcsto3[,1]),col='purple')
+

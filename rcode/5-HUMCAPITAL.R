@@ -21,3 +21,30 @@ for(i in 1:40){
   L_moderate[i] <- anm
   L_flat[i] <- anf
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+# x <- c(rep(1.065,40), rep(1.02,15), rep(1,10))
+# x[1] <- 100
+# x[1:40] <- cumprod(x[1:40]);x[40:55] <- cumprod(x[40:55]);x[55:65] <- cumprod(x[55:65])
+# param_mu_w_steep <- x
+# 
+# x <- c(rep(1.035,40), rep(1.03,15), rep(1,10))
+# x[1] <- 50
+# x[1:40] <- cumprod(x[1:40]);x[40:55] <- cumprod(x[40:55]);x[55:65] <- cumprod(x[55:65])
+# param_mu_w_moderate <- x
+# 
+# x <- c(rep(1,40), rep(1,15), rep(1,10))
+# x[1] <- 50
+# x[1:40] <- cumprod(x[1:40]);x[40:55] <- cumprod(x[40:55]);x[55:65] <- cumprod(x[55:65])
+# param_mu_w_flat <- x
