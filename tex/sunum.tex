@@ -2,7 +2,7 @@
 \usetheme{metropolis}
 \usepackage{lmodern}
 \author{Ravshanbek Khodzhimatov \\Thesis Advisor: Assoc. Prof. Dr. Tolga Umut Kuzuba\c{s}}
-\title{Welfare Effects of Individualizing Life-Cycle Pension Investments to Households in Turkey}
+\title{Welfare Comparison of Different Life-Cycle Investment Strategies for Turkey}
 \subtitle{Master's Thesis}
 \usepackage{amsmath}
 \usepackage{booktabs}
@@ -28,8 +28,8 @@
 	\item Retirement is one of the most important investment decisions we face in our lives.
 	\item Current investment menus are either too simplistic and inefficient or too complicated and unintuitive.
 	\item Most individuals find active involvement in investment too complex.
-	\item Lifecycle investments --- investments that solve for asset allocations separately for every age, as opposed to fixed investments.
-	\item Naive investments --- asset allocations that do not consider indivdual characteristics. 
+	\item Lifecycle investments --- investments that are designed for different age profiles, as opposed to fixed-over-lifetime investments.
+	\item Naive investments --- asset allocations that do not consider individual characteristics. 
 
 \framebreak
 
@@ -40,14 +40,14 @@
 		\hline
 		Fund name&Fund size\\
 		\hline
-		Anadolu Hayat Emeklilik&8.7 bln\\
-		Garanti Emeklilik ve Hayat&7.4 bln\\
-		AvivaSA Emeklilik ve Hayat&9.1 bln\\
-		Allianz Yasam ve Emeklilik&6.8 bln\\
-		Vakif Emeklili&3.5 bln\\
+		AvivaSA Emeklilik ve Hayat&14.8 bln\\
+		Anadolu Hayat Emeklilik&14.1 bln\\
+		Garanti Emeklilik ve Hayat&11.1 bln\\
+		Allianz Yasam ve Emeklilik&10.4 bln\\
+		Vakif Emeklilik&6.1 bln\\
 		\hline
 	\end{tabular}\\
-	Source: Pension Monitoring Center (2016)
+	Source: Pension Monitoring Center (2018)
 \end{table}
 	
   \end{itemize}
@@ -68,19 +68,22 @@ solution:
 \end{center}
 where $\alpha$ is risky asset share in portfolio.
 
-	\item Markowitz derived fixed solution and didn't capture lifecycle differences.
+	\item Markowitz derived fixed one-period solution.
 
 \framebreak
+	
+	\item Merton (1971) generalized the problem to multiple periods, found it optimal to repeat Markowitz every period.
+	
+	\item Contradicted financial advice and rationality $\alpha_t = (100-t)\%$
 
-	\item Merton (1971) added human capital (discounted sum of future fixed wage) into the model:
+	\item Bodie (1992) added human capital (discounted sum of future fixed wage) into the model:
   
 \begin{center}
-	$\alpha_t = \frac{\mu - R_f}{\gamma \sigma^2}\left(1+\frac{H_t}{W_t}\right)$
+	$\alpha_t = \frac{\mu - R_f}{\gamma \sigma^2}\left(1+\frac{L_t}{F_t}\right)$
 \end{center}
 
-	\item $H_t/W_t$ changed over time and captured lifecycle effect. Moreover, since young people had higher human capital, they would be more aggressive than Markowitz, and old people would converge to Markowitz.
+	\item $L_t/F_t$ changed over time and captured lifecycle effect. Young people would be more aggressive than Markowitz, and old people would converge to Markowitz.
 
-	\item Bodie et al. (1992) solved Merton for variable wage and used dynamic optimization to solve it. 
 \framebreak
 	
 	\item Cocco et al. (2005) did similar analysis and added the following heuristic:
@@ -90,7 +93,11 @@ where $\alpha$ is risky asset share in portfolio.
 	$\alpha_t = \begin{cases} 100\% & t<40\\(200-2.5t)\% & t\in[40,60]\\50\% & t>60 \end{cases}$,
 \end{center}
 
-	\item Flavin and Yamashita (2002) added housing capital as well and concluded that if individuals possessed housing, they would be even more aggressive. Solution was still done using dynamic optimization.
+	\item Did not explain hump-shaped stock share (Chang (2014))
+	\begin{center}
+		\includegraphics[scale=0.3]{figs/chang.png}
+	\end{center}
+	\item Cocco and Flavin and Yamashita (2002) found that if individuals possessed housing, they would be even more aggressive, using dynamic optimization.
 
 \framebreak
 
@@ -105,42 +112,6 @@ where total wealth is a sum of financial and human wealth: $W_t = F_t + L_t$ and
 \begin{center}
 	$\pi^* = \frac{1}{\gamma} \frac{W_0}{F_0} \cdot \Sigma^{-1} (\mu - r_f \cdot 1) - \frac{L_0}{F_0} \cdot \Sigma^{-1} cov(r,r_L)$
 \end{center}
-
-
-  \end{itemize}
-\end{frame}
-
-\section{Model}
-
-\begin{frame}[allowframebreaks]{Model}
-  \begin{itemize}
-	\item We use Olear's (2016) approach to model labor income:
-
-\begin{center}
-	$Y_{i,t+1} = 
-	\begin{cases}
-		Y_{it} (1 + g_{i,t+1} + \xi_t + \omega_{it}), & t \leq T \\
-		\lambda (1 + f(T, Z_{iT}) + v_{iT}), & t > T
-	\end{cases}	
-	$
-\end{center}
-
-	\item We model two risky assets and a wage as correlated discrete series:\\
-$\frac{\Delta S_{t+1}}{S_t} = \mu_s + \sigma_s \cdot \epsilon_{st}$\\
-$\frac{\Delta H_{t+1}}{H_t} = \mu_h + \sigma_h \cdot \left(\rho_{hs}\epsilon_{st} + (\sqrt{1-\rho^2_{hs}})\epsilon_{ht}\right)$\\
-$\frac{\Delta Y_{t+1}}{Y_t} = \mu_v + \sigma_v \cdot \left(\rho_{ys}\epsilon_{st} + \left(\frac{\rho_{yh} - \rho_{sh}\rho_{sy}}{\sqrt{1-\rho^2_{sh}}}\right)\epsilon_{ht} + \left(\sqrt{1-\rho^2_{ys}-(\frac{\rho_{yh} - \rho_{sh}\rho_{sy}}{\sqrt{1-\rho^2_{sh}}})^2}\right)\epsilon_{vt}\right)$
-
-\framebreak
-
-	\item Welfare measurement --- we use CRRA utility:
-
-\begin{center}
-	$E_1[U(c)] = E_1 \left[\displaystyle\sum^T_{t=1} \delta^{t-1} \displaystyle\prod^{t-1}_{j=0} p_j \cdot \frac{c^{1-\gamma}_{it}}{1-\gamma}\right]$
-\end{center}
-
-where $p_k$ is the probability of survival from time $k-1$ to time $k$.
-
-	\item We omitted the bequest motives from the original formulation, thus retired person consumes all of his income at any given time.
 
 \framebreak
 
@@ -162,18 +133,54 @@ where $p_k$ is the probability of survival from time $k-1$ to time $k$.
 	$\pi_{R_f} = \left( 1 - \pi - \pi_h \right)$
 \end{center}
 
+  \end{itemize}
+\end{frame}
+
+\section{Model}
+
+\begin{frame}[allowframebreaks]{Model}
+  \begin{itemize}
+	\item We use Olear's (2016) approach to model labor income:
+
+\begin{center}
+	$Y_{i,t+1} = 
+	\begin{cases}
+		Y_{it} (1 + g_{i,t+1} + \xi_t + \omega_{it}), & t \leq T \\
+		\lambda (1 + f(T, Z_{iT}) + v_{iT}), & t > T
+	\end{cases}	
+	$
+\end{center}
+
+	\item We model labor income, house prices, and stock prices as Geometric Brownian Motions with drifts $\mu_L$, $\mu_H$, $\mu_S$ and volatilities $\sigma_L$, $\sigma_H$, $\sigma_S$,
+%	\item We model two risky assets and a wage as correlated discrete series:\\
+%$\frac{\Delta S_{t+1}}{S_t} = \mu_s + \sigma_s \cdot \epsilon_{st}$\\
+%$\frac{\Delta H_{t+1}}{H_t} = \mu_h + \sigma_h \cdot \left(\rho_{hs}\epsilon_{st} + (\sqrt{1-\rho^2_{hs}})\epsilon_{ht}\right)$\\
+%$\frac{\Delta Y_{t+1}}{Y_t} = \mu_v + \sigma_v \cdot \left(\rho_{ys}\epsilon_{st} + \left(\frac{\rho_{yh} - \rho_{sh}\rho_{sy}}{\sqrt{1-\rho^2_{sh}}}\right)\epsilon_{ht} + \left(\sqrt{1-\rho^2_{ys}-(\frac{\rho_{yh} - \rho_{sh}\rho_{sy}}{\sqrt{1-\rho^2_{sh}}})^2}\right)\epsilon_{vt}\right)$
+
+\framebreak
+
+	\item Welfare measurement --- we use CRRA utility:
+
+\begin{center}
+$	E_1[U(c)] = \displaystyle\sum^T_{t=1} \delta^{t-1} \displaystyle\prod^{t-1}_{j=0} p_j \cdot \frac{c^{1-\gamma}_{it}}{1-\gamma}$
+\end{center}
+
+where $p_k$ is the probability of survival from time $k-1$ to time $k$.
+
+	\item We omitted the bequest motives from the original formulation, thus retired person consumes all of his income at any given time.
+
+
 \framebreak
 	
 	\item Retirement income --- accumulated financial wealth is repaid back in annuities.
 	\item Reverse mortgages --- housing wealth is reinvested for annuities in return of inheriting a house to the payer (no bequest motives) 
 
 \begin{center}
-	$W_{57} = H_{57} + MP$
+$	W_{65} = H_{65} + MP$
 \end{center}
 
 	\item Annuity is equal to:
-$\frac{W_{57}}{1+\sum^{100}_{t=58} \frac{p_t}{1+r_f}}$ 
-	
+$	A_t = W_{65} \cdot \left(1+\sum^{100}_{t=66} \frac{\prod^{t}_{j=66} p_j }{(1+r_f)^{t-65}} \right)^{-1}$	
 	\item Welfare calculation --- we convert annuity stream into consumption (considering the inflation) and plug into CRRA expected utility function.
 
   \end{itemize}
@@ -215,11 +222,9 @@ $\frac{W_{57}}{1+\sum^{100}_{t=58} \frac{p_t}{1+r_f}}$
 
 \framebreak
 
-	\item We start with 28 years old individual, who invests for 30 years until retirement at 57.
-	\item In line with Torul et al. (2018), $\delta = 0.89$
-	\item Stock returns: $23.2\%$ with standard deviation $36\%$
-	\item Bond returns obtained from OECD Data Bank (2018) and are equal to $10.8\%$
-	\item Housing capital appreciation: $11.3\%$ with standard deviation $5.2\%$
+	\item We start with 25 years old individual, who invests for 40 years until retirement at 65.
+	\item The investments are done from $3\%$ of every wage from 25 to 64 years.
+	\item In line with Torul et al. (2018), $\delta = 0.89$ and $\gamma = 1.5$ for Turkey is chosen as a default. 
 
 \framebreak
 
@@ -230,21 +235,24 @@ $\frac{W_{57}}{1+\sum^{100}_{t=58} \frac{p_t}{1+r_f}}$
 		\hline
 		Parameter&Description&Value\\
 		\hline
-		$Y$&Beginning age&$28$\\
-		$R$&Retirement age&$57$\\
+		$Y$&Beginning age&$25$\\
+		$R$&Retirement age&$65$\\
 		$T$&Lifespan (years)&$100$\\
-		$\gamma$&Risk aversion&$5$\\
+		$\gamma$&Risk aversion&$1.5$\\
 		$\beta$&Discount rate&$0.89$\\
-		$r_f$&Risk-free rate&$0.108$\\
-		$\pi$&Average inflation rate&$0.084$\\
+		$r_f$&Risk-free rate&$0.03$\\
 		\hline
-		$\mu_s$&Expected stock returns&$0.232$\\
-		$\mu_h$&Expected housing returns&$0.113$\\
-		$\sigma_s$&Stock returns volatility&$0.36$\\
-		$\sigma_h$&Housing returns volatility&$0.052$\\
-		$\sigma_w$&Wage growth volatility&$0.056$\\
-		$\rho_{hs}$&Housing-stock correlation&$0.24$\\
-		$\rho_{hw}$&Housing-wage correlation&$0.37$\\
+		$\mu_s$&Expected stock returns&$0.0669$\\
+		$\mu_h$&Expected housing returns&$0.0067$\\
+		$\sigma_s$&Stock returns volatility&$0.3844$\\
+		$\sigma_h$&Housing returns volatility&$0.0542$\\
+		$\sigma_w$&Wage growth volatility&$0.036$\\
+		$\rho_{hs}$&House-stock correlation&$0.24$\\
+		$\rho_{hw}$&House-wage correlation&$0.37$\\
+		\hline
+		$p_{25}$&Survival probability at age 25&$0.978$\\
+		$p_{65}$&Survival probability at age 65&$0.86$\\
+		$p_{100}$&Survival probability at age 100&$0$\\	
 		\hline
 	\end{tabular}
 \end{table}
@@ -272,8 +280,12 @@ $\frac{W_{57}}{1+\sum^{100}_{t=58} \frac{p_t}{1+r_f}}$
 
 
 \framebreak
+	\item We use undergraduate, high school, and no schooling, to model ``steep'', ``moderate'', and ``flat'' wages.
+	\item Performing regressions of wages on age, with kinks at $t=40$ and $t=55$:
 
-	\item Performing kinked regressions results in the following three wage growth rates:
+\begin{equation}
+	\Delta \log (wage_{it}) = \alpha_0 + \alpha_1 \cdot d_{40} + \alpha_2 \cdot d_{55}
+\end{equation}
 
 \begin{table}
 	\centering
@@ -281,9 +293,9 @@ $\frac{W_{57}}{1+\sum^{100}_{t=58} \frac{p_t}{1+r_f}}$
 	\begin{tabular}[c]{l|ccc}
 		Age&Flat&Moderate&Steep\\
 		\hline
-		0-35&0\%&3.5\%&6.5\%\\
-		36-45&0\%&3\%&2\%\\
-		46-60&0\%&0\%&0\%\\
+		25-40&0\%&3.8\%&2.2\%\\
+		41-55&0\%&1.4\%&1.2\%\\
+		56-65&0\%&0\%&1.5\%\\
 	\end{tabular}
 \end{table}
 
@@ -296,10 +308,10 @@ $\frac{W_{57}}{1+\sum^{100}_{t=58} \frac{p_t}{1+r_f}}$
 		\includegraphics[scale=0.25]{figs/heterwageless.pdf}
 \end{figure}
 
+	\item Starting salary: 100 for steep wages, 50 for moderate and flat.
 
 	\framebreak
 
-	\item The investments are done from $0.03\%$ of every wage from 28 to 56 years.
 	\item Heterogeneity in sectors of work --- it is captured by differing stock-wage correlations
 	\item Zero for agricultural sector / teaching
 	\item As high as $0.4$ for financial sector
@@ -320,7 +332,7 @@ $\frac{W_{57}}{1+\sum^{100}_{t=58} \frac{p_t}{1+r_f}}$
 	\centering
 	\caption{Coefficients of Risk Averion}
 	\begin{tabular}[c]{r|cccc}
-		Values&Torul&low&default&high\\
+		Values&default&low&moderate&high\\
 		\hline
 		$\gamma$&1.5&3&5&10\\
 	\end{tabular}
@@ -329,19 +341,37 @@ $\frac{W_{57}}{1+\sum^{100}_{t=58} \frac{p_t}{1+r_f}}$
 \framebreak
 
 	\item We constructed human capital and financial capital series taking the heterogeneities into consideration:
-	\item $H_t/F_t$ is declining in $t$ --- optimal risky asset share is declining
+	\item $L_t/F_t$ is declining in $t$ --- optimal risky asset share is declining
 
 \begin{figure}[h]
 		\includegraphics[scale=0.25]{figs/humancapital.pdf}
 		\includegraphics[scale=0.25]{figs/fincapital.pdf}
 \end{figure}
 
+\begin{figure}[h!]
+	\begin{tikzpicture}[scale=0.83]
+		\draw [->, line width=0.mm] (0,0) -- (11,0);
+		\foreach \x in {0,4,8}
+			\draw (\x cm,3pt) -- (\x cm, -3pt);
+		\draw (0,0) node[below=21pt] {$ cw_0 $} node[above=3pt] {$ t_0 $};
+    	\draw (4,0) node[below=21pt] {$ +cw_1 $} node[above=3pt] {$ t_1 $};
+    	\draw (8,0) node[below=21pt] {$ +cw_2 $} node[above=3pt] {$ t_2 $};
+		\draw (0,0) node[below=3pt] {$ 0 $} node[above=3pt] {$ t_0 $};
+    	\draw (4,0) node[below=3pt] {$ cw_0(1+r_p) $};
+    	\draw (8,0) node[below=3pt] {$ \left[cw_0(1+r_p) + cw_1 \right] \cdot (1+r_p) $};
+	    \draw (-1.5,0) node[below=18pt] {$I:$};
+    	\draw (-1.5,0) node[below=0pt] {$H:$};
+	\end{tikzpicture}
+	\caption{Law of motion of financial capital. Every period, a certain percentage $c$ of the wage $w_t$ is invested in a retirement portfolio, while the previously invested amount accrues interest at portfolio rate of return $r_p$.}
+	\label{fig:invdiag}
+\end{figure}
+
   \end{itemize}
 \end{frame}
 
-\section{Results}
+\section{All Strategies}
 
-\begin{frame}[allowframebreaks]{Results}
+\begin{frame}[allowframebreaks]{Strategies}
   \begin{itemize}
 	\item First, we list default and derived investment strategies
 	\item Then we calculate the capital movements using these strategies
@@ -352,7 +382,7 @@ $\frac{W_{57}}{1+\sum^{100}_{t=58} \frac{p_t}{1+r_f}}$
 
 \framebreak
 
-	\item Default strategies
+	\item Homogeneous strategies
 
 \begin{figure}[h]
 	\centering
@@ -402,55 +432,49 @@ $\frac{W_{57}}{1+\sum^{100}_{t=58} \frac{p_t}{1+r_f}}$
 			\item If optimal stock and housing allocations sum up to a number greater than $1$, then we allocate our wealth proportionately between the two
 			\item If optimal stock and housing allocations sum up to a number less than $1$, then we allocate those very shares and invest the rest into risk-free bonds 
 		\end{itemize}
-	\item The detailed tables with results are presented in Appendix E of our thesis
 
-	\item Note that around age of 45 this sum falls below $1$ and kink happens. Bond share becomes nonnegative.
 	\item Note that as risk aversion coefficeint increases, the kink happens earlier
-	\item Note that for $\gamma=10$ the optimal housing is mostly negative and the sum is less than $1$, causing more allocation into risk-free bonds.
 	\item Note that the steeper the wage curve is, the more aggressive the individual is
 	\item Note that stock-wage correlation does not influence steep and flat wagers much
-			
+\end{itemize}
+\end{frame}
+
+\begin{frame}[allowframebreaks]{Results}
+  \begin{itemize}
+	\begin{figure}[H]
+		\includegraphics[scale=0.4]{figs/montecarlo_hom.png}
+		\includegraphics[scale=0.3]{figs/montecarlo_het.png}
+		\includegraphics[scale=0.2]{figs/util15.png}
+		\includegraphics[scale=0.2]{figs/util3.png}
+		\includegraphics[scale=0.2]{figs/util5.png}
+		\includegraphics[scale=0.2]{figs/util10.png}
+		\includegraphics[scale=0.25]{figs/pair153.png}
+		\includegraphics[scale=0.25]{figs/pair510.png}
+	\end{figure}
+
+\framebreak	
+
+\framebreak
 
 \framebreak
 
 	\item After a lifetime of investing, the household accumulated various levels of wealth, summarized in the Table 5.1 of our thesis
 	\item Looking at these total wealth levels, we can make early conclusions even before calculating utilities:
 	\begin{itemize}
-		\item Considering lifecycles, even naively, like $(100-age)\%$, is better than investing a fixed amount throughout lifetime
-		\item Different stock-wage correlations don't make much difference in the outcome without housing, and make considerable difference in models with housing
-		\item Stock-wage correlations are negatively correlated with total wealth
-		\item The risk aversion is negatively correlated with total wealth for models without housing and positively --- for models with housing
-		\item Default options are better for people with flat wage growth rate and worse for people with moderate or steep wage curves
+\item Cocco et al.'s $(200-2.5\cdot age)\%$ performs better, on average, than any other portfolio.
+\item Even a naive life-cycle investment portfolio $(100-age)\%$ overperforms fixed-over-lifetime Markowitz.
+\item All models perform better for higher risk aversion and worse for lower risk aversion.
+\item Munk's solution performs worse for flat wages than for steep wages.
+\item Munk's solution with housing is better than without housing when $\gamma > 1.5$.
+\item When $\rho_{ws}=0$, Bodie's solution is almost equal to Munk's solution without housing, with the former performing slightly better than the latter.
+\item Munk's solution with housing performs better for sectors with low stock-wage correlation, being a low-risk investment.
 	\end{itemize}
 
-\framebreak
-
-	\item Annuitization --- is done using the formula mentioned earlier,
-	\item Consumption levels --- are calculated as amounts of consumption baskets that cost exactly $1$ $CPI_{r}$, which is equal to $100 TL$ at age 58.
-	\item Consumption baskets increase in price every year by an inflation level $\pi = 8.4\%$
-	\item Expected Utilities --- are calculated by plugging in survival probabilities, discount rate and corresponding risk aversion defined earlier and consumption levels just defined.
 	\item Expected utilities are summarized in Table 5.3 of our thesis.
-
   \end{itemize}
 \end{frame}
 
 \section{Conclusion}
-
-\begin{frame}[allowframebreaks]{Conclusion}
-  \begin{itemize}
-
-\item Naive lifecycle investment portfolios, such as $(100-age)\%$ don't overperform fixed-ratio Markowitz, because they don't take the risk aversion into consideration.
-\item Cocco et al.'s $(200-2.5\cdot age)\%$ approximation is the best default portfolio. It is easy to interpret and captures lifecycle effect.
-\item All models perform better for higher risk aversion and worse for lower risk aversion.
-\item Higher stock-wage correlation considerably decreases the utility for moderate and flat wages, and doesn't affect much for steep wages.
-\item Merton's solution outperforms Munk's solution without housing for low levels of risk aversion, and performs save for high level of risk aversion ($\gamma=10$).
-\item Munk's solution with housing outperforms every other solution for high levels of risk aversion ($\gamma=10$).
-\item Munk's solution with housing outperforms Munk's solution without housing for $\gamma=5,10$.
-\item Markowitz's solution outperforms both Merton's and Munk's solutions for flat wages.
-\item Individualizing lifecycles by wage growth rate and stock-wage correlation increases welfare for steep wagers and decreases welfare for flat wagers.
-  \end{itemize}
-\end{frame}
-
 
 
 \end{document}  

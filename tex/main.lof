@@ -2,25 +2,21 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces BIST30 Turkish stock market prices\relax }}{9}
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Reidin Turkish house price index\relax }}{9}
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Median Turkish salaries by age\relax }}{10}
-\contentsline {figure}{\numberline {4.4}{\ignorespaces Survival probabilities by age\relax }}{11}
-\contentsline {figure}{\numberline {4.5}{\ignorespaces Lifetime real wage dynamics by education level. While less educated individuals have flat wages through life, the more educated individuals observe a steeper and hump-shaped wages.\relax }}{13}
-\contentsline {figure}{\numberline {4.6}{\ignorespaces Historical real wage dynamics by sector. Sectoral differences in degrees of correlation of wages to stock market, can be seen from the different behavior during 2008 crisis --- while income in finance sector dropped drastically, the wages in education sector were not affected at all.\relax }}{14}
-\contentsline {figure}{\numberline {4.7}{\ignorespaces Human capital at every age for individuals with steep, moderate and flat wage growth curves. As individuals get older, their human capital gradually depletes.\relax }}{15}
-\contentsline {figure}{\numberline {4.8}{\ignorespaces Financial wealth accumulation through life, by a college graduate who invests $50\%$ in bonds and $50\%$ in stocks. Confidence intervals capture the volatility of stocks in the portfolio.\relax }}{15}
-\contentsline {figure}{\numberline {4.9}{\ignorespaces Law of motion of financial capital. Every period, a certain percentage $c$ of the wage $w_t$ is invested in a retirement portfolio, while the previously invested amount accrues interest at portfolio rate of return $r_p$.\relax }}{16}
-\contentsline {figure}{\numberline {4.10}{\ignorespaces Share of stocks in a portfolio at every age, proposed by homogeneous life-cycle strategies\relax }}{16}
-\contentsline {figure}{\numberline {4.11}{\ignorespaces Shares of stocks in a portfolio, suggested by \citet {bodie} (blue curves) and \citet {munk} (red curves) in the absence of housing investment, for heterogeneous agents. The optimal allocations at every age depend on the previous realizations of volatile stock returns --- the dashed lines illustrate the confidence intervals for $\pm \sigma $. Higher risk-aversion, steeper wage curve and smaller stock-income correlation lead to less aggressive investment in stocks, and vice versa. \relax }}{18}
-\contentsline {figure}{\numberline {4.12}{\ignorespaces Munk's stock and housing shares for different wage growth, stock-wage correlation and risk aversion levels\relax }}{19}
+\contentsline {figure}{\numberline {1}{\ignorespaces BIST30 Turkish stock market prices\relax }}{9}
+\contentsline {figure}{\numberline {2}{\ignorespaces Reidin Turkish house price index\relax }}{9}
+\contentsline {figure}{\numberline {3}{\ignorespaces Median Turkish salaries by age\relax }}{10}
+\contentsline {figure}{\numberline {4}{\ignorespaces Survival probabilities by age\relax }}{11}
+\contentsline {figure}{\numberline {5}{\ignorespaces Lifetime real wage dynamics by education level.\relax }}{13}
+\contentsline {figure}{\numberline {6}{\ignorespaces Historical real wage dynamics by sector.\relax }}{14}
+\contentsline {figure}{\numberline {7}{\ignorespaces Human capital at every age for steep, moderate and flat wages.\relax }}{15}
+\contentsline {figure}{\numberline {8}{\ignorespaces Financial capital at every age.\relax }}{15}
+\contentsline {figure}{\numberline {9}{\ignorespaces Law of motion of financial capital.\relax }}{15}
+\contentsline {figure}{\numberline {10}{\ignorespaces Share of stocks in a portfolio at every age, proposed by homogeneous life-cycle strategies\relax }}{16}
+\contentsline {figure}{\numberline {11}{\ignorespaces Shares of stocks in a portfolio, suggested by \citet {bodie} and \citet {munk}.\relax }}{17}
+\contentsline {figure}{\numberline {12}{\ignorespaces Munk's stock and housing shares for different wage growth, stock-wage correlation and risk aversion levels\relax }}{18}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {B.1}{\ignorespaces Historical monthly rates of return on stocks\relax }}{36}
-\contentsline {figure}{\numberline {B.2}{\ignorespaces Historical monthly rates of return on housing\relax }}{37}
-\contentsline {figure}{\numberline {B.3}{\ignorespaces Historical monthly wage growth rates\relax }}{38}
 \contentsfinish 
 \contentsfinish 
-\contentsline {figure}{\numberline {B.4}{\ignorespaces Fitted values from wage regressions\relax }}{39}

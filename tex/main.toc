@@ -1,51 +1,56 @@
 \contentsline {chapter}{\numberline {1}Introduction}{1}
 \contentsline {section}{\numberline {1.1}Theory and heuristics of life-cycle investments}{1}
 \contentsline {section}{\numberline {1.2}Turkish pension system}{1}
-\contentsline {section}{\numberline {1.3}Focus of this thesis}{3}
+\contentsline {section}{\numberline {1.3}Focus of this thesis}{2}
 \contentsline {chapter}{\numberline {2}Literature Review}{4}
+\contentsline {paragraph}{}{4}
+\contentsline {paragraph}{}{4}
+\contentsline {paragraph}{}{5}
+\contentsline {paragraph}{}{5}
+\contentsline {paragraph}{}{5}
 \contentsline {chapter}{\numberline {3}Model}{6}
 \contentsline {section}{\numberline {3.1}House prices, stock prices and labor income series}{6}
 \contentsline {section}{\numberline {3.2}Optimal portfolio}{6}
 \contentsline {section}{\numberline {3.3}Welfare measurement}{7}
 \contentsline {section}{\numberline {3.4}Retirement income}{7}
-\contentsline {paragraph}{}{8}
+\contentsline {paragraph}{}{7}
 \contentsline {chapter}{\numberline {4}Data and simulation}{9}
 \contentsline {section}{\numberline {4.1}Data sources}{9}
 \contentsline {section}{\numberline {4.2}Default parameters}{10}
 \contentsline {paragraph}{}{10}
 \contentsline {paragraph}{}{10}
+\contentsline {paragraph}{}{10}
 \contentsline {paragraph}{}{11}
 \contentsline {paragraph}{}{11}
 \contentsline {paragraph}{}{11}
 \contentsline {paragraph}{}{11}
-\contentsline {paragraph}{}{11}
-\contentsline {section}{\numberline {4.3}Heterogeneity parameters}{12}
+\contentsline {section}{\numberline {4.3}Heterogeneity parameters}{11}
 \contentsline {subsection}{\numberline {4.3.1}Heterogeneity in education}{12}
-\contentsline {subsection}{\numberline {4.3.2}Heterogeneity in sectors of work}{14}
+\contentsline {subsection}{\numberline {4.3.2}Heterogeneity in sectors of work}{13}
 \contentsline {subsection}{\numberline {4.3.3}Individual heterogeneity}{14}
-\contentsline {section}{\numberline {4.4}Capital series}{15}
-\contentsline {subsection}{\numberline {4.4.1}Human capital}{15}
+\contentsline {section}{\numberline {4.4}Capital series}{14}
+\contentsline {subsection}{\numberline {4.4.1}Human capital}{14}
 \contentsline {subsection}{\numberline {4.4.2}Financial capital}{15}
-\contentsline {section}{\numberline {4.5}Investment strategies}{16}
-\contentsline {subsection}{\numberline {4.5.1}Homogeneous life-cycles}{16}
-\contentsline {subsection}{\numberline {4.5.2}Heterogeneous life-cycles}{17}
-\contentsline {chapter}{\numberline {5}Results}{20}
-\contentsline {section}{\numberline {5.1}Accumulated wealth}{20}
-\contentsline {section}{\numberline {5.2}Annuities}{22}
-\contentsline {section}{\numberline {5.3}Expected utilities}{22}
-\contentsline {section}{\numberline {5.4}Pairwise comparisons}{27}
-\contentsline {paragraph}{}{27}
-\contentsline {chapter}{\numberline {6}Conclusion}{31}
-\contentsline {paragraph}{}{31}
-\contentsline {paragraph}{}{31}
-\contentsline {paragraph}{}{31}
-\contentsline {paragraph}{}{31}
-\contentsline {chapter}{REFERENCES}{32}
+\contentsline {section}{\numberline {4.5}Investment strategies}{15}
+\contentsline {subsection}{\numberline {4.5.1}Homogeneous life-cycles}{15}
+\contentsline {subsection}{\numberline {4.5.2}Heterogeneous life-cycles}{16}
+\contentsline {chapter}{\numberline {5}Results}{19}
+\contentsline {section}{\numberline {5.1}Accumulated wealth}{19}
+\contentsline {section}{\numberline {5.2}Annuities}{19}
+\contentsline {section}{\numberline {5.3}Expected utilities}{20}
+\contentsline {chapter}{\numberline {6}Conclusion}{23}
+\contentsline {paragraph}{}{23}
+\contentsline {paragraph}{}{23}
+\contentsline {paragraph}{}{23}
+\contentsline {paragraph}{}{23}
+\contentsline {paragraph}{}{23}
+\contentsline {chapter}{REFERENCES}{24}
 \let \chaptertitlename \appendixname 
-\contentsline {chapter}{\numberline {A}Ascheberg's correlation structure}{34}
-\contentsline {chapter}{\numberline {B}Parameter Calibrations}{36}
-\contentsline {section}{\numberline {B.1}Stock returns}{36}
-\contentsline {section}{\numberline {B.2}Housing returns}{37}
-\contentsline {section}{\numberline {B.3}Labor income volatility}{37}
-\contentsline {section}{\numberline {B.4}Wage regression results}{38}
+\setcounter {tocdepth}{0}
+\contentsline {chapter}{\numberline {A}Ascheberg's correlation structure}{26}
+\contentsline {chapter}{\numberline {B}Parameter Calibrations}{28}
+\contentsline {section}{\numberline {B.1}Stock returns}{28}
+\contentsline {section}{\numberline {B.2}Housing returns}{29}
+\contentsline {section}{\numberline {B.3}Labor income volatility}{29}
+\contentsline {section}{\numberline {B.4}Wage regression results}{30}
 \contentsfinish 

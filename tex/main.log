@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/Arch Linux) (preloaded format=pdflatex 2018.11.28)  9 JAN 2019 14:43
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/Arch Linux) (preloaded format=pdflatex 2019.2.7)  20 FEB 2019 11:00
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -162,11 +162,16 @@ Package: titlesec 2016/03/21 v2.10.2 Sectioning titles
 Package: titletoc 2011/12/15 v1.6 TOC entries
 \ttl@leftsep=\dimen119
 )
+(/usr/share/texmf-dist/tex/latex/chngcntr/chngcntr.sty
+Package: chngcntr 2018/04/09 v1.1a change counter resetting
+Package chngcntr Info: \counterwithout already defined.
+(chngcntr)             Quitting chngcntr on input line 21.
+)
 (/usr/share/texmf-dist/tex/latex/geometry/geometry.sty
 Package: geometry 2018/04/16 v5.8 Page Geometry
 
 (/usr/share/texmf-dist/tex/generic/oberdiek/ifpdf.sty
-Package: ifpdf 2017/03/15 v3.2 Provides the ifpdf switch
+Package: ifpdf 2018/09/07 v3.3 Provides the ifpdf switch
 )
 (/usr/share/texmf-dist/tex/generic/oberdiek/ifvtex.sty
 Package: ifvtex 2016/05/16 v1.6 Detect VTeX and its facilities (HO)
@@ -192,10 +197,10 @@ Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 Package: setspace 2011/12/19 v6.7a set line spacing
 )
 (/usr/share/texmf-dist/tex/latex/caption/caption.sty
-Package: caption 2018/05/01 v3.3-147 Customizing captions (AR)
+Package: caption 2018/10/06 v3.3-154 Customizing captions (AR)
 
 (/usr/share/texmf-dist/tex/latex/caption/caption3.sty
-Package: caption3 2018/05/27 v1.8a caption3 kernel (AR)
+Package: caption3 2018/09/12 v1.8c caption3 kernel (AR)
 Package caption3 Info: TeX engine: e-TeX on input line 64.
 \captionmargin=\dimen128
 \captionmargin@=\dimen129
@@ -205,7 +210,8 @@ Package caption3 Info: TeX engine: e-TeX on input line 64.
 \caption@parindent=\dimen133
 \caption@hangindent=\dimen134
 )
-\c@ContinuedFloat=\count111
+\c@caption@flags=\count111
+\c@ContinuedFloat=\count112
 )
 (/usr/share/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty
 (/usr/share/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty
@@ -249,10 +255,10 @@ Package: pgfsys 2014/07/09 v3.0.1a (rcs-revision 1.48)
 \pgf@yc=\dimen144
 \w@pgf@writea=\write3
 \r@pgf@reada=\read1
-\c@pgf@counta=\count112
-\c@pgf@countb=\count113
-\c@pgf@countc=\count114
-\c@pgf@countd=\count115
+\c@pgf@counta=\count113
+\c@pgf@countb=\count114
+\c@pgf@countc=\count115
+\c@pgf@countd=\count116
 \t@pgf@toka=\toks29
 \t@pgf@tokb=\toks30
 \t@pgf@tokc=\toks31
@@ -270,8 +276,8 @@ File: pgfsys-common-pdf.def 2013/10/10  (rcs-revision 1.13)
 )))
 (/usr/share/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.code.tex
 File: pgfsyssoftpath.code.tex 2013/09/09  (rcs-revision 1.9)
-\pgfsyssoftpath@smallbuffer@items=\count116
-\pgfsyssoftpath@bigbuffer@items=\count117
+\pgfsyssoftpath@smallbuffer@items=\count117
+\pgfsyssoftpath@bigbuffer@items=\count118
 )
 (/usr/share/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.code.tex
 File: pgfsysprotocol.code.tex 2006/10/16  (rcs-revision 1.4)
@@ -301,7 +307,7 @@ Package: pgfcore 2010/04/11 v3.0.1a (rcs-revision 1.7)
 (/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex)
 (/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
 \pgfmath@dimen=\dimen145
-\pgfmath@count=\count118
+\pgfmath@count=\count119
 \pgfmath@box=\box30
 \pgfmath@toks=\toks32
 \pgfmath@stack@operand=\toks33
@@ -318,7 +324,7 @@ x) (/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.base.code.tex)
 (/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.misc.code.tex)
 (/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integerarithmetics
 .code.tex))) (/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex
-\c@pgfmathroundto@lastzeros=\count119
+\c@pgfmathroundto@lastzeros=\count120
 )) (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.code.tex
 File: pgfcorepoints.code.tex 2013/10/07  (rcs-revision 1.27)
 \pgf@picminx=\dimen146
@@ -350,7 +356,7 @@ File: pgfcorescopes.code.tex 2015/05/08  (rcs-revision 1.46)
 \pgfpic=\box31
 \pgf@hbox=\box32
 \pgf@layerbox@main=\box33
-\pgf@picture@serial@count=\count120
+\pgf@picture@serial@count=\count121
 )
 (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicstate.code.tex
 File: pgfcoregraphicstate.code.tex 2014/11/02  (rcs-revision 1.12)
@@ -378,7 +384,7 @@ File: pgfcorearrows.code.tex 2015/05/14  (rcs-revision 1.43)
 (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.code.tex
 File: pgfcoreshade.code.tex 2013/07/15  (rcs-revision 1.15)
 \pgf@max=\dimen169
-\pgf@sys@shading@range@num=\count121
+\pgf@sys@shading@range@num=\count122
 )
 (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.code.tex
 File: pgfcoreimage.code.tex 2013/07/15  (rcs-revision 1.18)
@@ -430,7 +436,7 @@ Package: tikz 2015/08/07 v3.0.1a (rcs-revision 1.151)
 (/usr/share/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothandlers.code.te
 x
 File: pgflibraryplothandlers.code.tex 2013/08/31 v3.0.1a (rcs-revision 1.20)
-\pgf@plot@mark@count=\count122
+\pgf@plot@mark@count=\count123
 \pgfplotmarksize=\dimen174
 )
 \tikz@lastx=\dimen175
@@ -443,17 +449,17 @@ File: pgflibraryplothandlers.code.tex 2013/08/31 v3.0.1a (rcs-revision 1.20)
 \tikz@figbox@bg=\box37
 \tikz@tempbox=\box38
 \tikz@tempbox@bg=\box39
-\tikztreelevel=\count123
-\tikznumberofchildren=\count124
-\tikznumberofcurrentchild=\count125
-\tikz@fig@count=\count126
+\tikztreelevel=\count124
+\tikznumberofchildren=\count125
+\tikznumberofcurrentchild=\count126
+\tikz@fig@count=\count127
  (/usr/share/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.code.tex
 File: pgfmodulematrix.code.tex 2013/09/17  (rcs-revision 1.8)
-\pgfmatrixcurrentrow=\count127
-\pgfmatrixcurrentcolumn=\count128
-\pgf@matrix@numberofcolumns=\count129
+\pgfmatrixcurrentrow=\count128
+\pgfmatrixcurrentcolumn=\count129
+\pgf@matrix@numberofcolumns=\count130
 )
-\tikz@expandcount=\count130
+\tikz@expandcount=\count131
 
 (/usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrary
 topaths.code.tex
@@ -464,21 +470,21 @@ Package: longtable 2014/10/28 v4.11 Multi-page Table package (DPC)
 \LTright=\skip49
 \LTpre=\skip50
 \LTpost=\skip51
-\LTchunksize=\count131
+\LTchunksize=\count132
 \LTcapwidth=\dimen181
 \LT@head=\box40
 \LT@firsthead=\box41
 \LT@foot=\box42
 \LT@lastfoot=\box43
-\LT@cols=\count132
-\LT@rows=\count133
-\c@LT@tables=\count134
-\c@LT@chunks=\count135
+\LT@cols=\count133
+\LT@rows=\count134
+\c@LT@tables=\count135
+\c@LT@chunks=\count136
 \LT@p@ftn=\toks37
 )
 (/usr/share/texmf-dist/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count136
+\c@float@type=\count137
 \float@exts=\toks38
 \float@box=\box44
 \@float@everytoks=\toks39
@@ -486,22 +492,83 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 )
 (/usr/share/texmf-dist/tex/latex/caption/subcaption.sty
 Package: subcaption 2018/05/01 v1.1-162 Sub-captions (AR)
-\c@subfigure=\count137
-\c@subtable=\count138
+\c@subfigure=\count138
+\c@subtable=\count139
 )
 (/usr/share/texmf-dist/tex/latex/natbib/natbib.sty
 Package: natbib 2010/09/13 8.31b (PWD, AO)
 \bibhang=\skip52
 \bibsep=\skip53
 LaTeX Info: Redefining \cite on input line 694.
-\c@NAT@ctr=\count139
+\c@NAT@ctr=\count140
+)
+(/usr/share/texmf-dist/tex/latex/datetime/datetime.sty
+Package: datetime 2015/03/20 v2.60 Date Time Package
+
+(/usr/share/texmf-dist/tex/latex/fmtcount/fmtcount.sty
+Package: fmtcount 2017/12/24 v3.05
+
+(/usr/share/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
+)
+(/usr/share/texmf-dist/tex/latex/xkeyval/xkeyval.sty
+Package: xkeyval 2014/12/03 v2.7a package option processing (HA)
+
+(/usr/share/texmf-dist/tex/generic/xkeyval/xkeyval.tex
+(/usr/share/texmf-dist/tex/generic/xkeyval/xkvutils.tex
+\XKV@toks=\toks40
+\XKV@tempa@toks=\toks41
+)
+\XKV@depth=\count141
+File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
+))
+(/usr/share/texmf-dist/tex/latex/fmtcount/fcprefix.sty
+Package: fcprefix 2012/09/28
+
+(/usr/share/texmf-dist/tex/latex/fmtcount/fcnumparser.sty
+Package: fcnumparser 2017/06/15
+\fc@digit@counter=\count142
+))
+\c@padzeroesN=\count143
+\fc@tmpcatcode=\count144
+\@DT@modctr=\count145
+\@ordinalctr=\count146
+\@orgargctr=\count147
+\@strctr=\count148
+\@tmpstrctr=\count149
+\@DT@loopN=\count150
+\@DT@X=\count151
+)
+(/usr/share/texmf-dist/tex/latex/datetime/datetime-defaults.sty
+Package: datetime-defaults 2013/09/10
+)
+\@day=\count152
+\@month=\count153
+\@year=\count154
+\c@HOUR=\count155
+\c@HOURXII=\count156
+\c@MINUTE=\count157
+\c@TOHOUR=\count158
+\c@TOMINUTE=\count159
+\c@SECOND=\count160
+\currenthour=\count161
+\currentminute=\count162
+\currentsecond=\count163
+Package datetime Info: No datetime.cfg file found, using default settings on in
+put line 308.
+\@dtctr=\count164
+\dayofyear=\count165
+\dayofweek=\count166
+LaTeX Info: Redefining \today on input line 736.
+\dt@a=\toks42
+\dt@b=\toks43
 )
 Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... none found.
 
 
 Package csquotes Warning: No multilingual support.
-(csquotes)                Cannot enable multilingual quotes on input line 65.
+(csquotes)                Cannot enable multilingual quotes on input line 71.
 
 
 LaTeX Warning: Unused global option(s):
@@ -510,58 +577,39 @@ LaTeX Warning: Unused global option(s):
 (./main.aux (./pres/title.aux) (./pres/approval.aux) (./pres/declaration.aux)
 (./pres/abstract.aux) (./pres/acknowledgement.aux) (./chaps/chap10.aux)
 (./chaps/chap11.aux) (./chaps/chap12.aux) (./chaps/chap13.aux)
-(./chaps/chap14.aux
-
-LaTeX Warning: Label `table:util' multiply defined.
-
-
-LaTeX Warning: Label `table:util' multiply defined.
-
-
-LaTeX Warning: Label `table:util' multiply defined.
-
-
-LaTeX Warning: Label `table:compareutils' multiply defined.
-
-
-LaTeX Warning: Label `table:compareutils' multiply defined.
-
-
-LaTeX Warning: Label `table:compareutils' multiply defined.
-
-) (./chaps/chap15.aux) (./pres/bibliography.aux))
+(./chaps/chap14.aux) (./chaps/chap15.aux) (./pres/bibliography.aux))
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 65.
-LaTeX Font Info:    ... okay on input line 65.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 65.
-LaTeX Font Info:    ... okay on input line 65.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 65.
-LaTeX Font Info:    ... okay on input line 65.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 65.
-LaTeX Font Info:    ... okay on input line 65.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 65.
-LaTeX Font Info:    ... okay on input line 65.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 65.
-LaTeX Font Info:    ... okay on input line 65.
-LaTeX Font Info:    Try loading font information for T1+ptm on input line 65.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 71.
+LaTeX Font Info:    ... okay on input line 71.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 71.
+LaTeX Font Info:    ... okay on input line 71.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 71.
+LaTeX Font Info:    ... okay on input line 71.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 71.
+LaTeX Font Info:    ... okay on input line 71.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 71.
+LaTeX Font Info:    ... okay on input line 71.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 71.
+LaTeX Font Info:    ... okay on input line 71.
+LaTeX Font Info:    Try loading font information for T1+ptm on input line 71.
 
 (/usr/share/texmf-dist/tex/latex/psnfss/t1ptm.fd
 File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
 )
 (/usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count140
+\scratchcounter=\count167
 \scratchdimen=\dimen182
 \scratchbox=\box46
-\nofMPsegments=\count141
-\nofMParguments=\count142
-\everyMPshowfont=\toks40
-\MPscratchCnt=\count143
+\nofMPsegments=\count168
+\nofMParguments=\count169
+\everyMPshowfont=\toks44
+\MPscratchCnt=\count170
 \MPscratchDim=\dimen183
-\MPnumerator=\count144
-\makeMPintoPDFobject=\count145
-\everyMPtoPDFconversion=\toks41
+\MPnumerator=\count171
+\makeMPintoPDFobject=\count172
+\everyMPtoPDFconversion=\toks45
 ) (/usr/share/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
 
@@ -596,7 +644,7 @@ Package etexcmds Info: Could not find \expanded.
 (etexcmds)             In the latter case, load this package earlier.
 )))
 (/usr/share/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
-Package: pdftexcmds 2018/01/30 v0.27 Utility functions of pdfTeX for LuaTeX (HO
+Package: pdftexcmds 2018/09/10 v0.29 Utility functions of pdfTeX for LuaTeX (HO
 )
 Package pdftexcmds Info: LuaTeX not detected.
 Package pdftexcmds Info: \pdf@primitive is available.
@@ -652,27 +700,25 @@ Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: float package is loaded.
 Package caption Info: longtable package is loaded.
 (/usr/share/texmf-dist/tex/latex/caption/ltcaption.sty
-Package: ltcaption 2013/06/09 v1.4-94 longtable captions (AR)
+Package: ltcaption 2018/08/26 v1.4-95 longtable captions (AR)
 )
 Package caption Info: End \AtBeginDocument code.
 
 ABD: EveryShipout initializing macros
+(/usr/share/texmf-dist/tex/latex/fmtcount/fc-english.def
+File: fc-english.def 2016/01/12
+)
 \openout2 = `pres/title.aux'.
 
- (./pres/title.tex [1
+ (./pres/title.tex
+[1
 
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]) [2]
 \openout2 = `pres/approval.aux'.
 
- (./pres/approval.tex
-! Missing } inserted.
-<inserted text> 
-                }
-l.24 \endgroup
-              
-? 
-) [3
+
+(./pres/approval.tex) [3
 
 
 ]
@@ -702,10 +748,10 @@ LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <12> not available
 ! Missing { inserted.
 <to be read again> 
                    \parindent 
-l.1 \chapter*{Abstract}
-                       
+l.1 \chapter*{Abstract\\\ttitle}
+                                
 ? 
-[5
+[4
 
 
 
@@ -713,10 +759,10 @@ l.1 \chapter*{Abstract}
 ! Missing { inserted.
 <to be read again> 
                    \parindent 
-l.8 \chapter*{Özet}
-                    
+l.6 \chapter*{Özet\\\ttitletr}
+                               
 ? 
-) [6
+) [5
 
 ]
 \openout2 = `pres/acknowledgement.aux'.
@@ -730,7 +776,7 @@ l.1 \chapter*{Acknowledgements}
 ? 
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <12> not available
 (Font)              Font shape `T1/ptm/b/n' tried instead on input line 3.
-) [7
+) [6
 
 
 
@@ -738,47 +784,54 @@ LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <12> not available
 ! Missing { inserted.
 <to be read again> 
                    \parindent 
-l.73 \tableofcontents
+l.81 \tableofcontents
                      
 ? 
-(./main.toc [8
-
-
-])
+(./main.toc)
 \tf@toc=\write4
 \openout4 = `main.toc'.
 
- [9]
-! Missing { inserted.
-<to be read again> 
-                   \parindent 
-l.74 \listoffigures
-                   
-? 
-(./main.lof [10
+ [7
+
 
 ]
-Overfull \hbox (1.21956pt too wide) in paragraph at lines 16--16
-[]|\T1/ptm/m/n/12 Figure 4.12. Munk's stock and hous-ing shares for dif-fer-ent
- wage growth, stock- 
- []
-
-)
-\tf@lof=\write5
-\openout5 = `main.lof'.
-
- [11]
 ! Missing { inserted.
 <to be read again> 
                    \parindent 
-l.75 \listoftables
+l.84 \listoftables
                   
 ? 
 (./main.lot)
-\tf@lot=\write6
-\openout6 = `main.lot'.
+\tf@lot=\write5
+\openout5 = `main.lot'.
 
- [12
+ [8
+
+]
+! Missing { inserted.
+<to be read again> 
+                   \parindent 
+l.85 \listoffigures
+                   
+? 
+(./main.lof)
+\tf@lof=\write6
+\openout6 = `main.lof'.
+
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.86 \endgroup
+              
+? 
+! Missing } inserted.
+<inserted text> 
+                }
+l.86 \endgroup
+              
+? 
+[9
 
 ]
 \openout2 = `chaps/chap10.aux'.
@@ -806,37 +859,11 @@ Chapter 2.
 l.1 \chapter{Literature Review}
                                 % Main chapter title
 ? 
-! Undefined control sequence.
-l.12 \paraphraph
-                {}These results were inconsistent with the popular financial...
-
-? 
-! Undefined control sequence.
-l.20 \paraphraph
-                {}\citet{bodie} solved this problem by adding human capital ...
-
-? 
 [4
 
 
 
-]
-! Undefined control sequence.
-l.40 \paraphraph
-                {}\citet{cocco} found that this force was housing investment...
-
-? 
-! Undefined control sequence.
-l.42 \paraphraph
-                {}\citet{munk} found the same patterns using a series of one...
-
-? 
-! Undefined control sequence.
-l.44 \paraphraph
-                {}Finally, \citet{ascheberg} illustrated the existence of lo...
-
-? 
-) [5]
+]) [5]
 \openout2 = `chaps/chap12.aux'.
 
  (./chaps/chap12.tex
@@ -868,7 +895,7 @@ Chapter 4.
 l.1 \chapter{Data and simulation}
                                  
 ? 
-<figs/bist.pdf, id=78, 505.89pt x 505.89pt>
+<figs/bist.pdf, id=71, 505.89pt x 505.89pt>
 File: figs/bist.pdf Graphic file (type pdf)
 <use figs/bist.pdf>
 Package pdftex.def Info: figs/bist.pdf  used on input line 14.
@@ -878,7 +905,7 @@ Overfull \hbox (16.69943pt too wide) in paragraph at lines 14--15
  [][] 
  []
 
-<figs/reidin.pdf, id=79, 505.89pt x 505.89pt>
+<figs/reidin.pdf, id=72, 505.89pt x 505.89pt>
 File: figs/reidin.pdf Graphic file (type pdf)
 <use figs/reidin.pdf>
 Package pdftex.def Info: figs/reidin.pdf  used on input line 21.
@@ -893,13 +920,13 @@ Overfull \hbox (16.69943pt too wide) in paragraph at lines 21--22
 
 
  <./figs/bist.pdf> <./figs/reidin.pdf>]
-<figs/wage2median.pdf, id=95, 505.89pt x 505.89pt>
+<figs/wage2median.pdf, id=89, 505.89pt x 505.89pt>
 File: figs/wage2median.pdf Graphic file (type pdf)
 <use figs/wage2median.pdf>
 Package pdftex.def Info: figs/wage2median.pdf  used on input line 31.
 (pdftex.def)             Requested size: 202.3524pt x 202.3524pt.
  [10 <./figs/wage2median.pdf>]
-<figs/survival.pdf, id=105, 505.89pt x 505.89pt>
+<figs/survival.pdf, id=99, 505.89pt x 505.89pt>
 File: figs/survival.pdf Graphic file (type pdf)
 <use figs/survival.pdf>
 Package pdftex.def Info: figs/survival.pdf  used on input line 55.
@@ -909,7 +936,7 @@ Package pdftex.def Info: figs/survival.pdf  used on input line 55.
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [11 <./figs/survival.pdf>]
-<figs/wage2educ.pdf, id=115, 505.89pt x 505.89pt>
+<figs/wage2educ.pdf, id=109, 505.89pt x 505.89pt>
 File: figs/wage2educ.pdf Graphic file (type pdf)
 <use figs/wage2educ.pdf>
 Package pdftex.def Info: figs/wage2educ.pdf  used on input line 101.
@@ -918,115 +945,117 @@ Package pdftex.def Info: figs/wage2educ.pdf  used on input line 101.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-
-Overfull \hbox (0.99712pt too wide) in paragraph at lines 106--107
-[]\T1/ptm/m/n/12 We use un-der-grad-u-ate ed-u-ca-tion, high school ed-u-ca-tio
-n, and no school-ing, to model
- []
-
 [12]
-<figs/wage2sec.pdf, id=119, 505.89pt x 505.89pt>
+<figs/wage2sec.pdf, id=113, 505.89pt x 505.89pt>
 File: figs/wage2sec.pdf Graphic file (type pdf)
 <use figs/wage2sec.pdf>
 Package pdftex.def Info: figs/wage2sec.pdf  used on input line 134.
 (pdftex.def)             Requested size: 202.3524pt x 202.3524pt.
- [13 <./figs/wage2educ.pdf>]
+
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[14 <./figs/wage2sec.pdf>]
-<figs/humancapital.pdf, id=137, 505.89pt x 505.89pt>
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[13 <./figs/wage2educ.pdf>] [14 <./figs/wage2sec.pdf>]
+<figs/humancapital.pdf, id=130, 505.89pt x 505.89pt>
 File: figs/humancapital.pdf Graphic file (type pdf)
 <use figs/humancapital.pdf>
-Package pdftex.def Info: figs/humancapital.pdf  used on input line 178.
+Package pdftex.def Info: figs/humancapital.pdf  used on input line 182.
 (pdftex.def)             Requested size: 202.3524pt x 202.3524pt.
 
-Overfull \hbox (16.69943pt too wide) in paragraph at lines 178--179
+Overfull \hbox (16.69943pt too wide) in paragraph at lines 182--183
  [][] 
  []
 
-<figs/fincapital.pdf, id=138, 505.89pt x 505.89pt>
+<figs/fincapital.pdf, id=131, 505.89pt x 505.89pt>
 File: figs/fincapital.pdf Graphic file (type pdf)
 <use figs/fincapital.pdf>
-Package pdftex.def Info: figs/fincapital.pdf  used on input line 185.
+Package pdftex.def Info: figs/fincapital.pdf  used on input line 189.
 (pdftex.def)             Requested size: 202.3524pt x 202.3524pt.
 
-Overfull \hbox (16.69943pt too wide) in paragraph at lines 185--186
+Overfull \hbox (16.69943pt too wide) in paragraph at lines 189--190
  [][] 
  []
 
 [15 <./figs/humancapital.pdf> <./figs/fincapital.pdf>]
-<figs/defaults.pdf, id=152, 505.89pt x 505.89pt>
+<figs/defaults.pdf, id=146, 505.89pt x 505.89pt>
 File: figs/defaults.pdf Graphic file (type pdf)
 <use figs/defaults.pdf>
 Package pdftex.def Info: figs/defaults.pdf  used on input line 226.
 (pdftex.def)             Requested size: 202.3524pt x 202.3524pt.
- [16 <./figs/defaults.pdf>]
-<figs/individuals15.pdf, id=161, 505.89pt x 505.89pt>
+<figs/individuals15.pdf, id=147, 505.89pt x 505.89pt>
 File: figs/individuals15.pdf Graphic file (type pdf)
 <use figs/individuals15.pdf>
 Package pdftex.def Info: figs/individuals15.pdf  used on input line 240.
 (pdftex.def)             Requested size: 151.76816pt x 151.76816pt.
-<figs/individuals3.pdf, id=162, 505.89pt x 505.89pt>
+<figs/individuals3.pdf, id=148, 505.89pt x 505.89pt>
 File: figs/individuals3.pdf Graphic file (type pdf)
 <use figs/individuals3.pdf>
 Package pdftex.def Info: figs/individuals3.pdf  used on input line 246.
 (pdftex.def)             Requested size: 151.76816pt x 151.76816pt.
-<figs/individuals5.pdf, id=163, 505.89pt x 505.89pt>
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<figs/individuals5.pdf, id=149, 505.89pt x 505.89pt>
 File: figs/individuals5.pdf Graphic file (type pdf)
 <use figs/individuals5.pdf>
 Package pdftex.def Info: figs/individuals5.pdf  used on input line 253.
 (pdftex.def)             Requested size: 151.76816pt x 151.76816pt.
-<figs/individuals10.pdf, id=164, 505.89pt x 505.89pt>
+<figs/individuals10.pdf, id=150, 505.89pt x 505.89pt>
 File: figs/individuals10.pdf Graphic file (type pdf)
 <use figs/individuals10.pdf>
 Package pdftex.def Info: figs/individuals10.pdf  used on input line 259.
 (pdftex.def)             Requested size: 151.76816pt x 151.76816pt.
- [17 <./figs/individuals15.pdf> <./figs/individuals3.pdf>]
-<figs/smunkhouse15.pdf, id=179, 505.89pt x 505.89pt>
+[16 <./figs/defaults.pdf>] [17 <./figs/individuals15.pdf> <./figs/individuals3.
+pdf> <./figs/individuals5.pdf> <./figs/individuals10.pdf>]
+<figs/smunkhouse15.pdf, id=183, 505.89pt x 505.89pt>
 File: figs/smunkhouse15.pdf Graphic file (type pdf)
 <use figs/smunkhouse15.pdf>
-Package pdftex.def Info: figs/smunkhouse15.pdf  used on input line 273.
-(pdftex.def)             Requested size: 151.76816pt x 151.76816pt.
-<figs/hmunkhouse15.pdf, id=180, 505.89pt x 505.89pt>
+Package pdftex.def Info: figs/smunkhouse15.pdf  used on input line 274.
+(pdftex.def)             Requested size: 126.47218pt x 126.47218pt.
+<figs/hmunkhouse15.pdf, id=184, 505.89pt x 505.89pt>
 File: figs/hmunkhouse15.pdf Graphic file (type pdf)
 <use figs/hmunkhouse15.pdf>
-Package pdftex.def Info: figs/hmunkhouse15.pdf  used on input line 279.
-(pdftex.def)             Requested size: 151.76816pt x 151.76816pt.
-<figs/smunkhouse3.pdf, id=181, 505.89pt x 505.89pt>
+Package pdftex.def Info: figs/hmunkhouse15.pdf  used on input line 280.
+(pdftex.def)             Requested size: 126.47218pt x 126.47218pt.
+<figs/smunkhouse3.pdf, id=185, 505.89pt x 505.89pt>
 File: figs/smunkhouse3.pdf Graphic file (type pdf)
 <use figs/smunkhouse3.pdf>
-Package pdftex.def Info: figs/smunkhouse3.pdf  used on input line 286.
-(pdftex.def)             Requested size: 151.76816pt x 151.76816pt.
-<figs/hmunkhouse3.pdf, id=182, 505.89pt x 505.89pt>
+Package pdftex.def Info: figs/smunkhouse3.pdf  used on input line 287.
+(pdftex.def)             Requested size: 126.47218pt x 126.47218pt.
+<figs/hmunkhouse3.pdf, id=186, 505.89pt x 505.89pt>
 File: figs/hmunkhouse3.pdf Graphic file (type pdf)
 <use figs/hmunkhouse3.pdf>
-Package pdftex.def Info: figs/hmunkhouse3.pdf  used on input line 292.
-(pdftex.def)             Requested size: 151.76816pt x 151.76816pt.
-<figs/smunkhouse5.pdf, id=183, 505.89pt x 505.89pt>
+Package pdftex.def Info: figs/hmunkhouse3.pdf  used on input line 293.
+(pdftex.def)             Requested size: 126.47218pt x 126.47218pt.
+<figs/smunkhouse5.pdf, id=187, 505.89pt x 505.89pt>
 File: figs/smunkhouse5.pdf Graphic file (type pdf)
 <use figs/smunkhouse5.pdf>
-Package pdftex.def Info: figs/smunkhouse5.pdf  used on input line 299.
-(pdftex.def)             Requested size: 151.76816pt x 151.76816pt.
-<figs/hmunkhouse5.pdf, id=184, 505.89pt x 505.89pt>
+Package pdftex.def Info: figs/smunkhouse5.pdf  used on input line 300.
+(pdftex.def)             Requested size: 126.47218pt x 126.47218pt.
+<figs/hmunkhouse5.pdf, id=188, 505.89pt x 505.89pt>
 File: figs/hmunkhouse5.pdf Graphic file (type pdf)
 <use figs/hmunkhouse5.pdf>
-Package pdftex.def Info: figs/hmunkhouse5.pdf  used on input line 305.
-(pdftex.def)             Requested size: 151.76816pt x 151.76816pt.
- [18 <./figs/individuals5.pdf> <./figs/individuals10.pdf> <./figs/smunkhouse15.
-pdf> <./figs/hmunkhouse15.pdf>]
-<figs/smunkhouse10.pdf, id=208, 505.89pt x 505.89pt>
+Package pdftex.def Info: figs/hmunkhouse5.pdf  used on input line 306.
+(pdftex.def)             Requested size: 126.47218pt x 126.47218pt.
+<figs/smunkhouse10.pdf, id=189, 505.89pt x 505.89pt>
 File: figs/smunkhouse10.pdf Graphic file (type pdf)
 <use figs/smunkhouse10.pdf>
-Package pdftex.def Info: figs/smunkhouse10.pdf  used on input line 312.
-(pdftex.def)             Requested size: 151.76816pt x 151.76816pt.
-<figs/hmunkhouse10.pdf, id=209, 505.89pt x 505.89pt>
+Package pdftex.def Info: figs/smunkhouse10.pdf  used on input line 313.
+(pdftex.def)             Requested size: 126.47218pt x 126.47218pt.
+<figs/hmunkhouse10.pdf, id=190, 505.89pt x 505.89pt>
 File: figs/hmunkhouse10.pdf Graphic file (type pdf)
 <use figs/hmunkhouse10.pdf>
-Package pdftex.def Info: figs/hmunkhouse10.pdf  used on input line 318.
-(pdftex.def)             Requested size: 151.76816pt x 151.76816pt.
-) [19 <./figs/smunkhouse3.pdf> <./figs/hmunkhouse3.pdf> <./figs/smunkhouse5.pdf
-> <./figs/hmunkhouse5.pdf> <./figs/smunkhouse10.pdf> <./figs/hmunkhouse10.pdf>]
+Package pdftex.def Info: figs/hmunkhouse10.pdf  used on input line 319.
+(pdftex.def)             Requested size: 126.47218pt x 126.47218pt.
+) [18
+
+ <./figs/smunkhouse15.pdf> <./figs/hmunkhouse15.pdf> <./figs/smunkhouse3.pdf> <
+./figs/hmunkhouse3.pdf> <./figs/smunkhouse5.pdf> <./figs/hmunkhouse5.pdf> <./fi
+gs/smunkhouse10.pdf> <./figs/hmunkhouse10.pdf>]
 \openout2 = `chaps/chap14.aux'.
 
  (./chaps/chap14.tex
@@ -1037,187 +1066,26 @@ Chapter 5.
 l.1 \chapter{Results}
                      
 ? 
-[20
-
-
-
-]
-*geometry* verbose mode - [ newgeometry ] result:
-* driver: pdftex
-* paper: a4paper
-* layout: <same size as paper>
-* layoutoffset:(h,v)=(0.0pt,0.0pt)
-* modes: 
-* h-part:(L,W,R)=(48.36958pt, 459.5112pt, 89.62709pt)
-* v-part:(T,H,B)=(101.40665pt, 591.5302pt, 152.11pt)
-* \paperwidth=597.50787pt
-* \paperheight=845.04684pt
-* \textwidth=459.5112pt
-* \textheight=591.5302pt
-* \oddsidemargin=-23.9004pt
-* \evensidemargin=-23.9004pt
-* \topmargin=-7.86334pt
-* \headheight=12.0pt
-* \headsep=25.0pt
-* \topskip=12.0pt
-* \footskip=30.0pt
-* \marginparwidth=44.0pt
-* \marginparsep=10.0pt
-* \columnsep=10.0pt
-* \skip\footins=10.8pt plus 4.0pt minus 2.0pt
-* \hoffset=0.0pt
-* \voffset=0.0pt
-* \mag=1000
-* \@twocolumnfalse
-* \@twosidefalse
-* \@mparswitchfalse
-* \@reversemarginfalse
-* (1in=72.27pt=25.4mm, 1cm=28.453pt)
-
-
-Overfull \hbox (43.0583pt too wide) in paragraph at lines 35--80
- [][] 
- []
-
-
-LaTeX Warning: Float too large for page by 91.8688pt on input line 80.
-
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[21] [22
+[19
 
 
-]
-*geometry* verbose mode - [ newgeometry ] result:
-* driver: pdftex
-* paper: a4paper
-* layout: <same size as paper>
-* layoutoffset:(h,v)=(0.0pt,0.0pt)
-* modes: 
-* h-part:(L,W,R)=(2.84544pt, 505.03534pt, 89.62709pt)
-* v-part:(T,H,B)=(101.40665pt, 591.5302pt, 152.11pt)
-* \paperwidth=597.50787pt
-* \paperheight=845.04684pt
-* \textwidth=505.03534pt
-* \textheight=591.5302pt
-* \oddsidemargin=-69.42455pt
-* \evensidemargin=-69.42455pt
-* \topmargin=-7.86334pt
-* \headheight=12.0pt
-* \headsep=25.0pt
-* \topskip=12.0pt
-* \footskip=30.0pt
-* \marginparwidth=44.0pt
-* \marginparsep=10.0pt
-* \columnsep=10.0pt
-* \skip\footins=10.8pt plus 4.0pt minus 2.0pt
-* \hoffset=0.0pt
-* \voffset=0.0pt
-* \mag=1000
-* \@twocolumnfalse
-* \@twosidefalse
-* \@mparswitchfalse
-* \@reversemarginfalse
-* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+] [20]
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-Overfull \hbox (26.65817pt too wide) in paragraph at lines 96--118
- [][] 
- []
-
-
-Overfull \hbox (58.66222pt too wide) in paragraph at lines 123--145
+Overfull \hbox (3.2092pt too wide) in paragraph at lines 152--167
  [][] 
  []
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-
-Overfull \hbox (81.34306pt too wide) in paragraph at lines 150--172
- [][] 
- []
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-Overfull \hbox (90.00668pt too wide) in paragraph at lines 177--199
- [][] 
- []
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[23
-
-] [24] [25] [26] [27
-
-]
-*geometry* verbose mode - [ newgeometry ] result:
-* driver: pdftex
-* paper: a4paper
-* layout: <same size as paper>
-* layoutoffset:(h,v)=(0.0pt,0.0pt)
-* modes: 
-* h-part:(L,W,R)=(1.42271pt, 506.45807pt, 89.62709pt)
-* v-part:(T,H,B)=(101.40665pt, 591.5302pt, 152.11pt)
-* \paperwidth=597.50787pt
-* \paperheight=845.04684pt
-* \textwidth=506.45807pt
-* \textheight=591.5302pt
-* \oddsidemargin=-70.84727pt
-* \evensidemargin=-70.84727pt
-* \topmargin=-7.86334pt
-* \headheight=12.0pt
-* \headsep=25.0pt
-* \topskip=12.0pt
-* \footskip=30.0pt
-* \marginparwidth=44.0pt
-* \marginparsep=10.0pt
-* \columnsep=10.0pt
-* \skip\footins=10.8pt plus 4.0pt minus 2.0pt
-* \hoffset=0.0pt
-* \voffset=0.0pt
-* \mag=1000
-* \@twocolumnfalse
-* \@twosidefalse
-* \@mparswitchfalse
-* \@reversemarginfalse
-* (1in=72.27pt=25.4mm, 1cm=28.453pt)
-
-
-Overfull \hbox (75.30688pt too wide) in paragraph at lines 213--226
- [][] 
- []
-
-
-Overfull \hbox (87.29578pt too wide) in paragraph at lines 231--244
- [][] 
- []
-
-
-Overfull \hbox (84.29578pt too wide) in paragraph at lines 249--262
- [][] 
- []
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-Overfull \hbox (98.77148pt too wide) in paragraph at lines 267--280
- [][] 
- []
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[28
-
-] [29]) [30
-
-]
+) [21] [22]
 \openout2 = `chaps/chap15.aux'.
 
  (./chaps/chap15.tex
@@ -1228,7 +1096,7 @@ Chapter 6.
 l.1 \chapter{Conclusion}
                         
 ? 
-) [31
+) [23
 
 
 
@@ -1242,11 +1110,11 @@ l.1 \chapter{Conclusion}
 l.1 \chapter*{References}
                          
 ? 
-[32
+[24
 
 
 
-]) [33] (./apps/1appa.tex
+]) [25] (./apps/1appa.tex
 Appendix A.
 ! Missing { inserted.
 <to be read again> 
@@ -1255,22 +1123,56 @@ l.1 \chapter{Ascheberg's correlation structure}
                                                
 ? 
 
-Overfull \hbox (55.8353pt too wide) detected at line 15
-[] \OT1/cmr/m/n/12 = \OML/cmm/m/it/12 ^^V[] \OT1/cmr/m/n/12 + \OML/cmm/m/it/12 
-^^[[] \OMS/cmsy/m/n/12 ^^A []
+LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 14
+.
+
+
+Overfull \hbox (0.42973pt too wide) detected at line 16
+[] \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 ^^V[] \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 
+^^[[] \OMS/cmsy/m/n/10 ^^A []
  []
 
+LaTeX Font Info:    Calculating math sizes for size <> on input line 16.
 
-Overfull \hbox (21.32088pt too wide) in paragraph at lines 20--21
-[]\T1/ptm/m/n/12 Notice that the variance-covariance ma-trix of an i.i.d. ran-d
-om vec-tor $\OT1/cmr/m/n/12 
- = (\OML/cmm/m/it/12 ^^O[]; ^^O[]; :::; ^^O[]\OT1/cmr/m/n/12 )$
- []
-
-[34
+LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <> not available
+(Font)              size <5> substituted on input line 16.
 
 
-]) (./apps/1appb.tex [35]
+LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <0.7> not available
+(Font)              size <5> substituted on input line 16.
+
+
+LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <0.5> not available
+(Font)              size <5> substituted on input line 16.
+
+
+LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <> not available
+(Font)              size <5> substituted on input line 16.
+
+
+LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <0.7> not available
+(Font)              size <5> substituted on input line 16.
+
+
+LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <0.5> not available
+(Font)              size <5> substituted on input line 16.
+
+
+LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <> not available
+(Font)              size <5> substituted on input line 16.
+
+
+LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <0.7> not available
+(Font)              size <5> substituted on input line 16.
+
+
+LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <0.5> not available
+(Font)              size <5> substituted on input line 16.
+
+[26
+
+
+]) (./apps/1appb.tex [27]
 Appendix B.
 ! Missing { inserted.
 <to be read again> 
@@ -1278,20 +1180,20 @@ Appendix B.
 l.1 \chapter{Parameter Calibrations}
                                     
 ? 
-<figs/bistdiff.pdf, id=297, 505.89pt x 505.89pt>
+<figs/bistdiff.pdf, id=268, 505.89pt x 505.89pt>
 File: figs/bistdiff.pdf Graphic file (type pdf)
 <use figs/bistdiff.pdf>
 Package pdftex.def Info: figs/bistdiff.pdf  used on input line 10.
 (pdftex.def)             Requested size: 151.76816pt x 151.76816pt.
-[36
+[28
 
  <./figs/bistdiff.pdf>]
-<figs/reidindiff.pdf, id=306, 505.89pt x 505.89pt>
+<figs/reidindiff.pdf, id=277, 505.89pt x 505.89pt>
 File: figs/reidindiff.pdf Graphic file (type pdf)
 <use figs/reidindiff.pdf>
 Package pdftex.def Info: figs/reidindiff.pdf  used on input line 35.
 (pdftex.def)             Requested size: 151.76816pt x 151.76816pt.
-<figs/wagediff.pdf, id=307, 505.89pt x 505.89pt>
+<figs/wagediff.pdf, id=278, 505.89pt x 505.89pt>
 File: figs/wagediff.pdf Graphic file (type pdf)
 <use figs/wagediff.pdf>
 Package pdftex.def Info: figs/wagediff.pdf  used on input line 61.
@@ -1300,29 +1202,38 @@ Package pdftex.def Info: figs/wagediff.pdf  used on input line 61.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[37 <./figs/reidindiff.pdf>]
-<figs/heterwage.pdf, id=317, 505.89pt x 505.89pt>
+[29 <./figs/reidindiff.pdf>]
+
+Package caption Warning: \label without proper reference on input line 100.
+See the caption package documentation for explanation.
+
+
+LaTeX Warning: Reference `fig:heterwage' on page 30 undefined on input line 94.
+
+
+<figs/heterwage.pdf, id=287, 505.89pt x 505.89pt>
 File: figs/heterwage.pdf Graphic file (type pdf)
 <use figs/heterwage.pdf>
 Package pdftex.def Info: figs/heterwage.pdf  used on input line 98.
 (pdftex.def)             Requested size: 151.76816pt x 151.76816pt.
 
-
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-) [38 <./figs/wagediff.pdf>] [39 <./figs/heterwage.pdf>] (./main.aux
+) [30 <./figs/wagediff.pdf>] [31 <./figs/heterwage.pdf>] (./main.aux
 (./pres/title.aux) (./pres/approval.aux) (./pres/declaration.aux)
 (./pres/abstract.aux) (./pres/acknowledgement.aux) (./chaps/chap10.aux)
 (./chaps/chap11.aux) (./chaps/chap12.aux) (./chaps/chap13.aux)
 (./chaps/chap14.aux) (./chaps/chap15.aux) (./pres/bibliography.aux))
 
-LaTeX Warning: There were multiply-defined labels.
+LaTeX Font Warning: Size substitutions with differences
+(Font)              up to 4.5pt have occurred.
+
+
+LaTeX Warning: There were undefined references.
 
  )
-(\end occurred inside a group at level 16)
+(\end occurred inside a group at level 14)
 
-### simple group (level 16) entered at line 1 ({)
-### simple group (level 15) entered at line 1 ({)
 ### simple group (level 14) entered at line 1 ({)
 ### simple group (level 13) entered at line 1 ({)
 ### simple group (level 12) entered at line 1 ({)
@@ -1330,39 +1241,41 @@ LaTeX Warning: There were multiply-defined labels.
 ### simple group (level 10) entered at line 1 ({)
 ### simple group (level 9) entered at line 1 ({)
 ### simple group (level 8) entered at line 1 ({)
-### simple group (level 7) entered at line 75 ({)
-### simple group (level 6) entered at line 74 ({)
-### simple group (level 5) entered at line 73 ({)
+### simple group (level 7) entered at line 1 ({)
+### simple group (level 6) entered at line 1 ({)
+### simple group (level 5) entered at line 81 ({)
 ### simple group (level 4) entered at line 1 ({)
-### simple group (level 3) entered at line 8 ({)
+### simple group (level 3) entered at line 6 ({)
 ### simple group (level 2) entered at line 1 ({)
 ### simple group (level 1) entered at line 1 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 16026 strings out of 492642
- 298980 string characters out of 6135565
- 395133 words of memory out of 5000000
- 19491 multiletter control sequences out of 15000+600000
- 30284 words of font info for 48 fonts, out of 8000000 for 9000
+ 16952 strings out of 492639
+ 312530 string characters out of 6135498
+ 408008 words of memory out of 5000000
+ 20381 multiletter control sequences out of 15000+600000
+ 32072 words of font info for 52 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 55i,11n,54p,917b,1024s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 55i,11n,79p,986b,995s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/
 texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fon
 ts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/publi
 c/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/
-cmmi6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr
-/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-di
-st/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/
-public/amsfonts/cm/cmr6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/
-cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></
-usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texmf
--dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist/fonts/typ
-e1/urw/times/utmr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/times/utmri8a.pf
-b>
-Output written on main.pdf (51 pages, 375109 bytes).
+cmmi6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr
+/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts
+/cm/cmr6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></u
+sr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-d
+ist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type
+1/public/amsfonts/cm/cmsy6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfon
+ts/cm/cmsy8.pfb></usr/share/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/s
+hare/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texmf-dist/fonts/t
+ype1/urw/times/utmri8a.pfb>
+Output written on main.pdf (41 pages, 382638 bytes).
 PDF statistics:
- 384 PDF objects out of 1000 (max. 8388607)
- 264 compressed objects within 3 object streams
+ 364 PDF objects out of 1000 (max. 8388607)
+ 251 compressed objects within 3 object streams
  0 named destinations out of 1000 (max. 500000)
  138 words of extra memory for PDF output out of 10000 (max. 10000000)
 

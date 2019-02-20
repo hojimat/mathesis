@@ -99,7 +99,7 @@ We model the heterogeneity in education using differences in wage growth rates. 
 \begin{figure}[h]
 	\centering
 	\includegraphics[scale=0.4]{figs/wage2educ.pdf}
-	\caption{Lifetime real wage dynamics by education level. While less educated individuals have flat wages through life, the more educated individuals observe a steeper and hump-shaped wages.}
+	\caption{Lifetime real wage dynamics by education level.}
 	\label{fig:wageeduc}
 \end{figure}
 
@@ -132,7 +132,7 @@ We model the heterogeneity work sectors using corresponding stock-wage correlati
 \begin{figure}[h!]
 	\centering
 	\includegraphics[scale=0.4]{figs/wage2sec.pdf}
-	\caption{Historical real wage dynamics by sector. Sectoral differences in degrees of correlation of wages to stock market, can be seen from the different behavior during 2008 crisis --- while income in finance sector dropped drastically, the wages in education sector were not affected at all.}
+	\caption{Historical real wage dynamics by sector.}
 	\label{fig:wagesec}
 \end{figure}
 
@@ -171,26 +171,26 @@ We model individual heterogeneity using different risk aversion levels of invest
 \subsection{Human capital}
 Human capital at any period is the discounted sum of all future wages until retirement with the discount factor $r_f$. To construct the individualized capital we used steep, moderate and flat wage series mentioned in the previous section. Figure \ref{fig:humcap} illustrates the current human capital for flat, moderate, and steep wages for every age. 
 
+\subsection{Financial capital}
+
+Financial capital evolves according to dynamic investment diagram in Figure \ref{fig:invdiag}. Every period, a certain percentage $c$ ($3\%$ for Turkey) of the wage $w_t$ is invested in a retirement portfolio, while the previously invested amount accrues interest at portfolio rate of return. Figure \ref{fig:fincap} demonstrates the evolution of financial capital and its confidence interval for a naive fixed investment strategy ($50\%$ in stocks and $50\%$ in bonds) by an individual with ``steep'' wage curve.
+
 \begin{figure}[h!]
 	\centering
     \begin{minipage}{0.45\textwidth}
 		\centering
 		\includegraphics[scale=0.4]{figs/humancapital.pdf}
-		\caption{Human capital at every age for individuals with steep, moderate and flat wage growth curves. As individuals get older, their human capital gradually depletes.}
+		\caption{Human capital at every age for steep, moderate and flat wages.}
 		\label{fig:humcap}
 	\end{minipage}
 	\hfill
     \begin{minipage}{0.45\textwidth}
 		\centering
 		\includegraphics[scale=0.4]{figs/fincapital.pdf}
-		\caption{Financial wealth accumulation through life, by a college graduate who invests $50\%$ in bonds and $50\%$ in stocks. Confidence intervals capture the volatility of stocks in the portfolio.}
+		\caption{Financial capital at every age.}
 		\label{fig:fincap}
 	\end{minipage}
 \end{figure}
-
-\subsection{Financial capital}
-
-Financial capital evolves according to dynamic investment diagram in Figure \ref{fig:invdiag}. Every period, a certain percentage $c$ ($3\%$ for Turkey) of the wage $w_t$ is invested in a retirement portfolio, while the previously invested amount accrues interest at portfolio rate of return. Figure \ref{fig:fincap} demonstrates the evolution of financial capital and its confidence interval for a naive fixed investment strategy ($50\%$ in stocks and $50\%$ in bonds) by an individual with ``steep'' wage curve.
 
 \begin{figure}[h!]
 	\centering
@@ -207,7 +207,7 @@ Financial capital evolves according to dynamic investment diagram in Figure \ref
 	    \draw (-1.5,0) node[below=18pt] {$ Invest: $};
     	\draw (-1.5,0) node[below=0pt] {$ Harvest: $};
 	\end{tikzpicture}
-	\caption{Law of motion of financial capital. Every period, a certain percentage $c$ of the wage $w_t$ is invested in a retirement portfolio, while the previously invested amount accrues interest at portfolio rate of return $r_p$.}
+	\caption{Law of motion of financial capital.}
 	\label{fig:invdiag}
 \end{figure}
 
@@ -259,68 +259,66 @@ Heterogeneous life-cycles take idiosyncratic characteristics into consideration.
 		\includegraphics[scale=0.3]{figs/individuals10.pdf}
 		\caption{$\gamma = 10$}
 	\end{subfigure}
-	\caption{Shares of stocks in a portfolio, suggested by \citet{bodie} (blue curves) and \citet{munk} (red curves) in the absence of housing investment, for heterogeneous agents. The optimal allocations at every age depend on the previous realizations of volatile stock returns --- the dashed lines illustrate the confidence intervals for $\pm \sigma$. Higher risk-aversion, steeper wage curve and smaller stock-income correlation lead to less aggressive investment in stocks, and vice versa. }
+	\caption{Shares of stocks in a portfolio, suggested by \citet{bodie} and \citet{munk}.}
 	\label{fig:individs}
 \end{figure}
 
 
 Figure \ref{fig:munkh} shows the stock and house shares, suggested by \citet{munk} for flat, moderate and steep labor income curves, low, moderate and high stock-wage correlations, and different levels of risk aversion. It confirms that steeper labor income curves results in a larger share of stocks in portfolio, and the more risk averse individuals are, the sooner they decrease both housing and stock investment, and buy more bonds.
 
+\clearpage
 \begin{figure}[H]
 	\centering
     \begin{subfigure}{0.45\textwidth}
 		\centering
-		\includegraphics[scale=0.3]{figs/smunkhouse15.pdf}
+		\includegraphics[scale=0.25]{figs/smunkhouse15.pdf}
 		\caption{Stocks for $\gamma = 1.5$}
 	\end{subfigure}
 	\hfill
     \begin{subfigure}{0.45\textwidth}
 		\centering
-		\includegraphics[scale=0.3]{figs/hmunkhouse15.pdf}
+		\includegraphics[scale=0.25]{figs/hmunkhouse15.pdf}
 		\caption{Housing for $\gamma = 1.5$}
 	\end{subfigure}
 \end{figure}
 \begin{figure}[H]\ContinuedFloat
     \begin{subfigure}{0.45\textwidth}
 		\centering
-		\includegraphics[scale=0.3]{figs/smunkhouse3.pdf}
+		\includegraphics[scale=0.25]{figs/smunkhouse3.pdf}
 		\caption{Stocks for $\gamma = 3$}
 	\end{subfigure}
 	\hfill
     \begin{subfigure}{0.45\textwidth}
 		\centering
-		\includegraphics[scale=0.3]{figs/hmunkhouse3.pdf}
+		\includegraphics[scale=0.25]{figs/hmunkhouse3.pdf}
 		\caption{Housing for $\gamma = 3$}
 	\end{subfigure}
 \end{figure}
 \begin{figure}[H]\ContinuedFloat
     \begin{subfigure}{0.45\textwidth}
 		\centering
-		\includegraphics[scale=0.3]{figs/smunkhouse5.pdf}
+		\includegraphics[scale=0.25]{figs/smunkhouse5.pdf}
 		\caption{Stocks for $\gamma = 5$}
 	\end{subfigure}
 	\hfill
     \begin{subfigure}{0.45\textwidth}
 		\centering
-		\includegraphics[scale=0.3]{figs/hmunkhouse5.pdf}
+		\includegraphics[scale=0.25]{figs/hmunkhouse5.pdf}
 		\caption{Housing for $\gamma = 5$}
 	\end{subfigure}
 \end{figure}
 \begin{figure}[H]\ContinuedFloat
     \begin{subfigure}{0.45\textwidth}
 		\centering
-		\includegraphics[scale=0.3]{figs/smunkhouse10.pdf}
+		\includegraphics[scale=0.25]{figs/smunkhouse10.pdf}
 		\caption{Stocks for $\gamma = 10$}
 	\end{subfigure}
 	\hfill
     \begin{subfigure}{0.45\textwidth}
 		\centering
-		\includegraphics[scale=0.3]{figs/hmunkhouse10.pdf}
+		\includegraphics[scale=0.25]{figs/hmunkhouse10.pdf}
 		\caption{Housing for $\gamma = 10$}
 	\end{subfigure}
 	\caption{Munk's stock and housing shares for different wage growth, stock-wage correlation and risk aversion levels}
 	\label{fig:munkh}
 \end{figure}
-
-Tables with portfolio allocations can be reproduced using the data and methodology explained in this paper in detail.
-
